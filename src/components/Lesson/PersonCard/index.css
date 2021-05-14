@@ -1,0 +1,47 @@
+.persona_card{
+    position: relative;
+}
+.persona_card .card_wrapper .top{
+    background: #8E97FD;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 16px 16px;
+    box-shadow: 0px 2px 2px 0px #00000042;
+    display: inline-block;
+    width: 100%;
+}
+.persona_card .card_wrapper .top .card_number{
+    background: #6b72be;
+    padding: 8.5px 16px;
+    border-radius: 25px;
+    color: white;
+    margin-right: 8px;
+}
+.persona_card .card_wrapper .top .card_count{
+    background: #6b72be;
+    padding: 8.5px 11px;
+    color: white;
+    border-radius: 10px 4px 4px 10px;
+    letter-spacing: 5px;
+}
+.persona_card .card_wrapper .bottom{
+    background: #6b72be;
+    padding: 16px 24px;
+    color: white;
+}
+.persona_card .card_wrapper p{
+    margin: 0;
+    padding: 0;
+}
+.persona_card .card_wrapper p:first-child{
+    font-size: 20px;
+}
+.persona_card .card_wrapper p:last-child{
+    font-size: 14px;
+    margin-top: 8px;
+}
+.persona_card .card_wrapper .card_image{
+    position: absolute;
+    right: 17px;
+    top: 18px;
+}
