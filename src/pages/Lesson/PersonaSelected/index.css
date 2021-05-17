@@ -1,0 +1,86 @@
+.persona_selection_content .selected_persona{
+    background: var(--mediumSlateBlue);
+    position: relative;
+    padding: 16px 16px;
+    border-radius: 20px;
+    height: 64px;
+}
+.persona_selection_content .selected_persona .selected_persona_img{
+    position: absolute;
+    bottom: 0;
+    left: 45rem;
+    width: 160px;
+}
+.persona_selection_content .selected_persona .selected_persona_info{
+    display: grid;
+    grid-template-columns: 19% 23% 28% 25% 5%;
+}
+.persona_selection_content .selected_persona .selected_persona_number{
+    color: var(--white);
+    background: var(--slateBlue);
+    padding: 5px 12px;
+    font-size: var(--card-secondary-head-text);
+    border-radius: 50px;
+    width: 32px;
+    height: 32px;
+}
+.persona_selection_content .selected_persona .selected_persona_name{
+    font-size: var(--secondary-head-text);
+    color: var(--white);
+}
+.persona_selection_content .selected_persona .selected_persona_type{
+    font-size: var(--content-text);
+    color: var(--white);
+    margin-top: 9px;
+}
+.persona_selection_content .selected_persona .selected_persona_count{
+    background: var(--slateBlue);
+    color: var(--white);
+    font-size: var(--card-secondary-head-text);
+    line-height: 15px;
+    width: 69px;
+    height: 32px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 9px 0;
+    float: right;
+    align-items: flex-end;
+}
+.persona_selection .persona_selection_content .selected_persona_content{
+    display: grid;
+    grid-template-columns: 20% 78%;
+    margin-top: 24px;
+    grid-column-gap: 24px;
+}
+.persona_selection .persona_selection_content .selected_persona_content .selected_persona_content_left .selected_persona_content_folder_btn_wrapper{
+    background: var(--white);
+    color: var(--lightSkyBlue);
+    border-radius: 8px;
+    padding: 9px 31px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-top: 8px;
+    box-shadow: 2px 4px 9px 0px rgb(0 0 0 / 23%), inset 0px -1px 0px rgb(0 0 0 / 14%);
+}
+.persona_selection .persona_selection_content .selected_persona_content .selected_persona_content_left .selected_persona_content_folder_btn_wrapper.active{
+    background: var(--lightSkyBlue);
+    color: var(--white);
+}
+.persona_selection .persona_selection_content .selected_persona_content .selected_persona_content_left .selected_persona_content_folder_btn_wrapper:first-child{
+    border-radius: 20px 20px 8px 8px;
+}
+.persona_selection .persona_selection_content .selected_persona_content .selected_persona_content_left .selected_persona_content_folder_btn_wrapper:last-child{
+    border-radius: 8px 8px 20px 20px;
+}
+.persona_selection .persona_selection_content .selected_persona_content .selected_persona_content_left .selected_persona_content_folder_btn_wrapper .fa-angle-right{
+    color: var(--icon-btn);
+}
+
+.persona_selection .persona_selection_content .selected_persona_content .selected_persona_content_right .selected_persona_folder_cards{
+    display: grid;
+    grid-template-columns: 32% 32% 32%;
+    grid-column-gap: 21px;
+    grid-row-gap: 24px;
+}
