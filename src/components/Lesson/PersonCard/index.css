@@ -34,14 +34,26 @@
     padding: 0;
 }
 .persona_card .card_wrapper p:first-child{
-    font-size: 20px;
+    font-size: var(--secondary-head-text);
 }
 .persona_card .card_wrapper p:last-child{
-    font-size: 14px;
+    font-size: var(--content-text);
     margin-top: 8px;
 }
 .persona_card .card_wrapper .card_image{
     position: absolute;
     right: 17px;
     top: 18px;
+}
+.persona_card .card_wrapper .top .card_status{
+    background: white;
+    padding: 8.5px 11px;
+    border-radius: 4px 10px 10px 4px;
+    margin-left: 4px;
+}
+.persona_card .card_wrapper .top .card_status .ellipse{
+    margin-right: 8px;
+}
+.persona_card .card_wrapper .top .card_status .ellipse-text{
+    font-size: var(--card-secondary-head-text);
 }

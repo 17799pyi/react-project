@@ -70,6 +70,9 @@ h6 {
   --heading-text: 32px;
   --secondary-head-text: 20px;
   --content-text: 14px;
+  --card-title: 16px;
+  --card-btn-title: 12px;
+  --card-secondary-head-text: 15px;
   
   --darkGray: #3f414e;
   --dimGray: #2f313a;
