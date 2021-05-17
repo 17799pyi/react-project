@@ -7,6 +7,7 @@ import HomePage from '../pages/HomePage';
 import HeaderBar from '../components/HeaderBar/HeaderBar';
 import React from 'react';
 import '../pages/index.css'
+import Index from '../pages/TrainingRersultList/Index';
 
 const Routes = () => {
   return (
@@ -18,6 +19,7 @@ const Routes = () => {
             <Switch>
               <Route exact path="/" component={HomePage} />
               <Route exact path="/welcome" component={WelcomePage} />
+              <Route exact path="/agency" component={Index} />
               <Route path="*" component={PageNotFound} />
             </Switch>
           </div>

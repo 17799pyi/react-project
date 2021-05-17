@@ -1,0 +1,65 @@
+.card:first-child {
+    color: lime;
+    border-radius: 20px 20px 8px 8px;
+  }
+
+.card {
+  /* Add shadows to create the "card" effect */
+  /* 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s; */
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  height: 108px;
+  width: 262px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  position: static;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;
+}
+
+ul {
+  list-style: none;
+  margin-top: 25px;
+  padding: 0;
+}
+
+li{
+    margin-top: 5px;
+}
+.grid_1 {
+    grid-area: g_1;
+}
+.grid_2 {
+    grid-area: g_2;
+}
+.grid_3 {
+    grid-area: g_3;
+}
+.grid_4 {
+    grid-area: g_4;
+}
+
+.agency-box{
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 50% 50%;
+    margin: 2px;
+    grid-template-areas:
+      "g_1 g_2"
+      "g_3 g_4";
+}
