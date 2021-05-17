@@ -2,7 +2,7 @@
     position: relative;
 }
 .persona_card .card_wrapper .top{
-    background: #8E97FD;
+    background: var(--mediumSlateBlue);
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     padding: 16px 16px;
@@ -11,21 +11,21 @@
     width: 100%;
 }
 .persona_card .card_wrapper .top .card_number{
-    background: #6b72be;
+    background: var(--slateBlue);
     padding: 8.5px 16px;
     border-radius: 25px;
-    color: white;
+    color: var(--white);
     margin-right: 8px;
 }
 .persona_card .card_wrapper .top .card_count{
-    background: #6b72be;
+    background: var(--slateBlue);
     padding: 8.5px 11px;
-    color: white;
+    color: var(--white);
     border-radius: 10px 4px 4px 10px;
     letter-spacing: 5px;
 }
 .persona_card .card_wrapper .bottom{
-    background: #6b72be;
+    background: var(--slateBlue);
     padding: 16px 24px;
     color: white;
 }
