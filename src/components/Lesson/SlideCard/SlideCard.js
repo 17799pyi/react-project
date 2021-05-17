@@ -4,11 +4,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import './index.css';
 
-function SlideCard() {
+function SlideCard({show}) {
     return (
         <SlideToggle
                 duration={200}
-                collapsed
+                collapsed={show?'':'collapsed'}
                 interpolateOnReverse
                 render={({ onToggle, setCollapsibleElement, progress }) => (
                 <div className="my-collapsible slide-card-wrapper">
