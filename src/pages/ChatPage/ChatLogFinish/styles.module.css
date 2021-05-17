@@ -8,7 +8,7 @@
 .chat_msg {
   max-width: 420px;
   background: #1CA8DF;
-  padding: 4px 16px 8px; 
+  padding: 6px 16px 4px; 
   border: 0.5px solid rgba(0, 0, 0, 0.15);
   color: #fff;
   display: inline-block;
@@ -20,6 +20,9 @@
 }
 .chat_msg p {
   margin-bottom: 0;
+}
+.chat_msg>span {
+  font-size: 10px;
 }
 .chat_msg_bot_start {
   border-radius: 10px 10px 5px 5px;
@@ -40,10 +43,31 @@
   width: 20px;
   height: 17px;
 }
+.chat_msg_admin {
+  background: #fff;
+  color: #3F414E;
+  border-bottom-left-radius: 15px;
+}
+.chat_msg_admin>span {
+  background: #fff;
+  color: #63A6DC;
+}
+.chat_msg_admin:last-child:before {
+  content: "";
+  background: url(../../../assets/images/chatlog/admin_msg_bg.png) no-repeat bottom center;
+  position: absolute;
+  left: -6.4px;
+  bottom: 0px;
+  z-index: 1;
+  background-size: cover;
+  width: 20px;
+  height: 17px;
+}
 .chat_msg_customer {
   background: #8E97FD;
+  min-width: 210px;
 }
-.chat_msg_customer:last-child:before {
+.chat_msg_customer.last:before {
   content: "";
   background: url(../../../assets/images/chatlog/client_msg_bg.png) no-repeat bottom center;
   position: absolute;

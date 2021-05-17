@@ -1,10 +1,11 @@
 .nav-bar{
     display: grid;
     grid-template-columns: 40% 60%;
-    background: #3F414E;
+    background: var(--darkGray);
     color: #A0A3B1;
     border-radius: 20px;
     font-size: 14px;
+    margin-bottom: 24px;
 }
 
 .nav-bar .left .person_selection{
@@ -31,7 +32,7 @@
 }
 
 .nav-bar .right ul li:hover{
-    background: #000000;
+    background: var(--dimGray); 
     opacity: 0.25;
 }
 .nav-bar .right ul li:hover:last-child {

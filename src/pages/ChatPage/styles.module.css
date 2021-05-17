@@ -1,5 +1,5 @@
 .chat_log_msg__sec {    
-    min-height: calc(100vh - 208px);
+    min-height: calc(100vh - 205px);
 }
 .sample_chat_img {
     background: #FAF7F2;
@@ -15,7 +15,8 @@
     color: #A66E19;
 }
 .chat_descr_img {
-    border-radius: 8px;;
+    border-radius: 8px;
+    cursor: pointer;
 }
 .chat_log_msg_type_sec {
     padding: 16px 0;
@@ -38,6 +39,14 @@
     top: 50%;
     transform: translateY(-50%);
 }
-.chatlog_text_box_icon>img {
+.chatlog_text_box_icon>img,
+.chatlog_text_box_icon>button {
     max-width: 46px;
+}
+.chatlog_text_box_icon>button {
+    padding: 0;
+    outline: none;
+}
+.chatlog_text_box_icon>button:focus {
+    box-shadow: initial;
 }

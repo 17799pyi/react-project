@@ -6,6 +6,8 @@ import PageNotFound from '../pages/PageNotFound';
 import HomePage from '../pages/HomePage';
 import HeaderBar from '../components/HeaderBar/HearderBarChatLog';
 import ChatPage from '../pages/ChatPage'
+import PersonaSelection from '../pages/Lesson/PersonaSelection/PersonaSelection';
+// import HeaderBar from '../components/HeaderBar/HeaderBar';
 import React from 'react';
 // import '../pages/index.css'
 
@@ -19,7 +21,9 @@ const Routes = () => {
             <Switch>
               <Route exact path="/" component={HomePage} />
               <Route exact path="/welcome" component={WelcomePage} />
+
               <Route exact path="/ChatPage" component={ChatPage} />
+              <Route exact path="/lessons" component={PersonaSelection} />
               <Route path="*" component={PageNotFound} />
             </Switch>
           {/* </div>
