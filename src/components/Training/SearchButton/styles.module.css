@@ -1,4 +1,4 @@
-.search-button {
+.search_button {
   font-family: Hiragino Maru Gothic ProN;
   font-style: normal;
   font-weight: normal;
@@ -17,4 +17,5 @@
   height: 48px;
   margin-top: -2px;
   color: #FFFFFF;
+  border: 0;
 }

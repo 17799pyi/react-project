@@ -1,7 +1,7 @@
 import React from "react";
 import Table from "react-bootstrap/Table";
 import './AgencyList.css'
-import ellipse from '../../assets/icons/ellipse.png';
+import ellipse from '../../../assets/icons/ellipse.png';
 
 function AgencyList() {
   return (
