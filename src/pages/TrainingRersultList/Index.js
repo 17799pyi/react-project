@@ -6,28 +6,32 @@ import classes from "./styles.module.css";
 
 function Index() {
   return (
-    <div className={`${classes.agency_page}`}>
-      <ul>
-        <li>
-          <Agency />
-        </li>
-        <li>
-          <Agency />
-        </li>
-        <li>
-          <Agency />
-        </li>
-        <li>
-          <Agency />
-        </li>
-        <li>
-          <Agency />
-        </li>
-        <li>
-          <SearchButton />
-        </li>
-      </ul>
-      <AgencyList />
+    <div className="container">
+      <div className="container-wrapper">
+      <div className={`${classes.agency_page}`}>
+        <ul>
+          <li>
+            <Agency />
+          </li>
+          <li>
+            <Agency />
+          </li>
+          <li>
+            <Agency />
+          </li>
+          <li>
+            <Agency />
+          </li>
+          <li>
+            <Agency />
+          </li>
+          <li>
+            <SearchButton />
+          </li>
+        </ul>
+        <AgencyList />
+      </div>
+    </div>
     </div>
   );
 }

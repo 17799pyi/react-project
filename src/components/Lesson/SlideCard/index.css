@@ -4,6 +4,9 @@
     border-radius: 7px;
     margin-top: 8px;
 }
+.slide-card-wrapper:first-child{
+    margin-top: 0;
+}
 .slide-card-wrapper .show-wrapper{
     display: flex;
     justify-content: space-between;
@@ -26,4 +29,9 @@
     background: transparent;
     color: #8E97FD;
     font-size: var(--card-btn-title);
+    display: flex;
+    align-items: center;
+}
+.slide-card-wrapper .show-wrapper .slide-card-button>svg {
+    margin-left: 8px;
 }

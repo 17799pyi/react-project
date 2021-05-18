@@ -6,7 +6,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const HeaderBar = () => {
     return (
-        <div className="nav-bar">
+        <div className="nav-bar-container">
+            <div className="nav-bar">
             <div className="left">
                 <span className="person_selection">
                     Person Selection
@@ -32,6 +33,7 @@ const HeaderBar = () => {
                     </li>
                 </ul>
             </div>
+        </div>
         </div>
     );
 }
