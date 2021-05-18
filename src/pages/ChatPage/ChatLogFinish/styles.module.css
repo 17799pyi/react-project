@@ -83,3 +83,8 @@
   background: #3F414E;
   border-radius: 8px 14px 14px 14px;
 }
+@media screen and (max-width: 575.98px) {
+  .chat_msg {
+    max-width: 210px;
+  }
+}
