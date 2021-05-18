@@ -1,30 +1,29 @@
-
-.slide-card-wrapper{
+.slide_card_wrapper{
     border: 1px solid #0000005e;
     border-radius: 7px;
     margin-top: 8px;
 }
-.slide-card-wrapper:first-child{
+.slide_card_wrapper:first-child{
     margin-top: 0;
 }
-.slide-card-wrapper .show-wrapper{
+.show_wrapper{
     display: flex;
     justify-content: space-between;
     padding: 16px 16px;
 }
-.slide-card-wrapper .my-collapsible__content{
+.collapsible_content{
     overflow: hidden;
     padding: 0 15px;
     font-size: var(--content-text);
     line-height: 22px;
 }
-.slide-card-wrapper .show-wrapper .slide-card-title{
+.slide_card_title{
     margin: 0;
     padding: 0;
     margin-top: 2px;
     font-size: var(--card-title);
 }
-.slide-card-wrapper .show-wrapper .slide-card-button{
+.slide_card_button{
     border: none;
     background: transparent;
     color: #8E97FD;
@@ -32,6 +31,6 @@
     display: flex;
     align-items: center;
 }
-.slide-card-wrapper .show-wrapper .slide-card-button>svg {
+ .slide_card_button>svg {
     margin-left: 8px;
 }
