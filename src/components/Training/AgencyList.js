@@ -1,10 +1,12 @@
 import React from "react";
 import Table from "react-bootstrap/Table";
 import './AgencyList.css'
+import ellipse from '../../assets/icons/ellipse.png';
 
 function AgencyList() {
   return (
     <div>
+      <div className="container">
       <Table className="agency-list">
         <thead>
           <tr>
@@ -17,27 +19,29 @@ function AgencyList() {
         </thead>
         <tbody>
           <tr>
-            <td>1</td>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <td> df <a href="#">link1</a> <a href="#">Link2</a></td>
+            <td className="border-top-non">120078</td>
+            <td className="border-top-non">Jiro Suzuki</td>
+            <td className="border-top-non">Letter problem</td>
+            <td className="border-top-non">2020/10/5 9:30</td>
+            <td className="border-top-non"><img className="card_image" src={ellipse} /> 95% <a href="#" className="scenariolink" >Scenario selection</a> <a className="historylink" href="#">Scenario History</a></td>
           </tr>
           <tr>
-            <td>2</td>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-            <td>fd</td>
+            <td>120078</td>
+            <td>Jiro Suzuki</td>
+            <td>Conservation Proposal Intro</td>
+            <td>2020/10/5 9:30</td>
+            <td><img className="card_image" src={ellipse} />75% <a href="#" className="scenariolink" >Scenario selection</a> <a className="historylink" href="#">Scenario History</a></td>
           </tr>
           <tr>
-            <td>3</td>
-            <td colSpan="2">Larry the Bird</td>
-            <td>@twitter</td>
-            <td>df</td>
+            <td>120078</td>
+            <td>Jiro Suzuki</td>
+            <td>Recipient confirmation intro</td>
+            <td>2020/10/5 9:30</td>
+            <td><img className="card_image" src={ellipse} />55% <a href="#" className="scenariolink" >Scenario selection</a> <a className="historylink" href="#">Scenario History</a></td>
           </tr>
         </tbody>
       </Table>
+      </div>
     </div>
   );
 }

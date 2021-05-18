@@ -1,0 +1,12 @@
+.persona_selection .text p{
+    font-size: 32px;
+    margin-top: 48px;
+    margin-bottom: 32px;
+}
+
+.persona_selection .persona_wrapper{
+    display: grid;
+    grid-template-columns: 32% 32% 32%;
+    grid-column-gap: 24px;
+    justify-content: center;
+}

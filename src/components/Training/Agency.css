@@ -1,13 +1,16 @@
-.card:first-child {
-    color: lime;
-    border-radius: 20px 20px 8px 8px;
-  }
+/* .card:first-child {
+  color: lime;
+  background-color: aqua;
+  border-radius: 20px 20px 8px 8px;
+} */
+
+.styles_agency_page__2a12_ ul li:first-child div .card {
+  /* color: lime; */
+  /* background-color: aqua; */
+  border-radius: 20px 20px 8px 8px;
+}
 
 .card {
-  /* Add shadows to create the "card" effect */
-  /* 
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition: 0.3s; */
   left: 0%;
   right: 0%;
   top: 0%;
@@ -38,28 +41,116 @@ ul {
   padding: 0;
 }
 
-li{
-    margin-top: 5px;
+li {
+  margin-top: 5px;
 }
 .grid_1 {
-    grid-area: g_1;
+  grid-area: g_1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 56px;
+  height: 26px;
+  background: #3f414e;
+  border-radius: 6px;
+  flex: none;
+  order: 0;
+  position: static;
+  margin: 24px 24px;
+  padding: 10px;
+  font-size: 12px;
+  line-height: 18px;
+  font-family: Hiragino Maru Gothic ProN;
+  color: #faf7f2;
 }
 .grid_2 {
-    grid-area: g_2;
+  grid-area: g_2;
 }
 .grid_3 {
-    grid-area: g_3;
+  grid-area: g_3;
+  position: static;
+  font-size: 18px;
+  line-height: 100%;
+  color: #3f414e;
+  font-family: Hiragino Maru Gothic ProN;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 100%;
+  margin-left: 24px;
+  margin-bottom: 24px;
 }
 .grid_4 {
-    grid-area: g_4;
+  grid-area: g_4;
 }
 
-.agency-box{
-    display: grid;
-    grid-template-rows: 50% 50%;
-    grid-template-columns: 50% 50%;
-    margin: 2px;
-    grid-template-areas:
-      "g_1 g_2"
-      "g_3 g_4";
+.agency-box {
+  display: grid;
+  grid-template-rows: 50% 50%;
+  grid-template-columns: 50% 50%;
+  margin: 2px;
+  grid-template-areas:
+    "g_1 g_2"
+    "g_3 g_4";
+}
+
+.grid_4 {
+  /* position: relative;
+  
+  
+  float: left;
+  min-width: 200px;
+  margin: 50px 33%; */
+  position: relative;
+  float: left;
+  min-width: 100px;
+  margin: -32px -4%;
+}
+
+/* IE11 hide native button (thanks Matt!) */
+select::-ms-expand {
+  display: none;
+}
+
+.grid_4:after {
+  content: "<>";
+  font: 17px "Consolas", monospace;
+  color: #333;
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  right: 11px;
+  top: 27px;
+  position: absolute;
+  pointer-events: none;
+}
+
+.grid_4 select {
+  font-family: Hiragino Maru Gothic ProN;
+  font-style: normal;
+  font-weight: normal;
+  /* font-size: 12px;
+  line-height: 50px; */
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* Add some styling */
+
+  appearance: none;
+  display: block;
+  width: 65%;
+  max-width: 320px;
+  height: 33px;
+  float: right;
+  margin: 19px 9px;
+  padding: 4px 10px;
+  font-size: 12px;
+  line-height: 18px;
+  color: #333;
+  background-color: #ffffff;
+  background-image: none;
+  border: none;
+  -ms-word-break: normal;
+  word-break: normal;
 }
