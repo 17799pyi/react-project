@@ -20,10 +20,10 @@ function Index() {
             <Agency />
           </li>
           <li>
-            <Agency />
+            <Agency disable={true} />
           </li>
           <li>
-            <Agency />
+            <Agency disable={true} />
           </li>
           <li>
             <SearchButton />

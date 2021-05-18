@@ -80,6 +80,11 @@ li {
   margin-left: 24px;
   margin-bottom: 24px;
 }
+
+.disable .grid_3 {
+  opacity: 0.25;
+}
+
 .grid_4 {
   grid-area: g_4;
 }
@@ -113,14 +118,15 @@ select::-ms-expand {
 }
 
 .grid_4:after {
+  transform: matrix(0, -1, -1, 0, 0, 0);
   content: "<>";
-  font: 17px "Consolas", monospace;
-  color: #333;
+  font: 12px "Consolas", monospace;
+  color: #8E97FD;
   -moz-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
-  right: 11px;
-  top: 27px;
+  right: 20px;
+  top: 30px;
   position: absolute;
   pointer-events: none;
 }
@@ -129,28 +135,23 @@ select::-ms-expand {
   font-family: Hiragino Maru Gothic ProN;
   font-style: normal;
   font-weight: normal;
-  /* font-size: 12px;
-  line-height: 50px; */
-
   -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none;
-  /* Add some styling */
-
   appearance: none;
   display: block;
   width: 65%;
   max-width: 320px;
   height: 33px;
   float: right;
-  margin: 19px 9px;
+  margin: 22px 3px;
   padding: 4px 10px;
   font-size: 12px;
   line-height: 18px;
-  color: #333;
+  color: #8E97FD;
   background-color: #ffffff;
   background-image: none;
   border: none;
   -ms-word-break: normal;
   word-break: normal;
 }
+
