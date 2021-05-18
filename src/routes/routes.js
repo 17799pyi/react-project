@@ -10,6 +10,7 @@ import PersonaSelection from '../pages/Lesson/PersonaSelection/PersonaSelection'
 // import HeaderBar from '../components/HeaderBar/HeaderBar';
 import React from 'react';
 import '../pages/index.css'
+import Index from '../pages/TrainingRersultList/Index';
 import PersonaSelected from '../pages/Lesson/PersonaSelected/PersonaSelected';
 import PersonaScenaio from '../pages/Lesson/PersonaScenario/PersonaScenaio';
 
@@ -22,7 +23,7 @@ const Routes = () => {
             <Switch>
               <Route exact path="/" component={HomePage} />
               <Route exact path="/welcome" component={WelcomePage} />
-
+              <Route exact path="/agency" component={Index} />
               <Route exact path="/ChatPage" component={ChatPage} />
               <Route exact path="/lessons" component={PersonaSelection} />
               <Route exact path="/lessons/1" component={PersonaSelected} />

@@ -1,0 +1,157 @@
+/* .card:first-child {
+  color: lime;
+  background-color: aqua;
+  border-radius: 20px 20px 8px 8px;
+} */
+
+.styles_agency_page__2a12_ ul li:first-child div .card {
+  /* color: lime; */
+  /* background-color: aqua; */
+  border-radius: 20px 20px 8px 8px;
+}
+
+.card {
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  height: 108px;
+  width: 262px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  position: static;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;
+}
+
+ul {
+  list-style: none;
+  margin-top: 25px;
+  padding: 0;
+}
+
+li {
+  margin-top: 5px;
+}
+.grid_1 {
+  grid-area: g_1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 56px;
+  height: 26px;
+  background: #3f414e;
+  border-radius: 6px;
+  flex: none;
+  order: 0;
+  position: static;
+  margin: 24px 24px;
+  padding: 10px;
+  font-size: 12px;
+  line-height: 18px;
+  font-family: Hiragino Maru Gothic ProN;
+  color: #faf7f2;
+}
+.grid_2 {
+  grid-area: g_2;
+}
+.grid_3 {
+  grid-area: g_3;
+  position: static;
+  font-size: 18px;
+  line-height: 100%;
+  color: #3f414e;
+  font-family: Hiragino Maru Gothic ProN;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 100%;
+  margin-left: 24px;
+  margin-bottom: 24px;
+}
+
+.disable .grid_3 {
+  opacity: 0.25;
+}
+
+.grid_4 {
+  grid-area: g_4;
+}
+
+.agency-box {
+  display: grid;
+  grid-template-rows: 50% 50%;
+  grid-template-columns: 50% 50%;
+  margin: 2px;
+  grid-template-areas:
+    "g_1 g_2"
+    "g_3 g_4";
+}
+
+.grid_4 {
+  /* position: relative;
+  
+  
+  float: left;
+  min-width: 200px;
+  margin: 50px 33%; */
+  position: relative;
+  float: left;
+  min-width: 100px;
+  margin: -32px -4%;
+}
+
+/* IE11 hide native button (thanks Matt!) */
+select::-ms-expand {
+  display: none;
+}
+
+.grid_4:after {
+  transform: matrix(0, -1, -1, 0, 0, 0);
+  content: "<>";
+  font: 12px "Consolas", monospace;
+  color: #8E97FD;
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  right: 20px;
+  top: 30px;
+  position: absolute;
+  pointer-events: none;
+}
+
+.grid_4 select {
+  font-family: Hiragino Maru Gothic ProN;
+  font-style: normal;
+  font-weight: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: block;
+  width: 65%;
+  max-width: 320px;
+  height: 33px;
+  float: right;
+  margin: 22px 3px;
+  padding: 4px 10px;
+  font-size: 12px;
+  line-height: 18px;
+  color: #8E97FD;
+  background-color: #ffffff;
+  background-image: none;
+  border: none;
+  -ms-word-break: normal;
+  word-break: normal;
+}
+
