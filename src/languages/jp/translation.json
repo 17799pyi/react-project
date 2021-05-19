@@ -12,5 +12,16 @@
         "female" : "JP Female",
         "product_detail" : "JP Product Detail",
         "view_detail" : "JP View Detail"
+    },
+    "training":{
+        "table_head_text_trainee" : "研修者",
+        "table_head_text_persona" : "ペルソナ",
+        "table_head_text_scenario" : "シナリオ",
+        "table_head_text_date" : "最終実施日時",
+        "table_head_text_rate" : "最終回答率",
+        "scenario_selection" : "シナリオ選択",
+        "scenario_history" : "シナリオ実施履歴",
+        "training_search_button" : "検索",
+        "training_select_box_text" : "選択する"
     }
 }

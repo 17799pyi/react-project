@@ -39,5 +39,4 @@ i18n
     });
 
 (i18n.language !== 'en' && i18n.language !== 'jp') && i18n.changeLanguage('jp');
-
 export default i18n;

@@ -12,5 +12,19 @@
         "female" : "Female",
         "product_detail" : "Product Detail",
         "view_detail" : "View Detail"
+    },
+    "training":{
+        "table_head_text_trainee" : "Trainee",
+        "table_head_text_persona" : "Persona",
+        "table_head_text_scenario" : "Scenario",
+        "table_head_text_date" : "Last Date and Time",
+        "table_head_text_rate" : "Final response rate",
+        "scenario_selection" : "Scenario selection",
+        "scenario_history" : "Scenario History",
+        "training_search_button" : "Search",
+        "training_select_box_text" : "Select"
+    },
+    "chat" : {
+        "" : ""
     }
 }
