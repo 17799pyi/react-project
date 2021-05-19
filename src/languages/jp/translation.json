@@ -1,3 +1,16 @@
 {
-    "TextLabel": "第10条"
+    "general": {
+        "cancel": "JP Cancel",
+        "del": "JP Delete",
+        "edit": "JP Edit",
+        "save": "JP Save",
+        "update": "JP Update"
+    },
+    "lesson": {
+        "head_text" : "JP Please select a persona",
+        "male" : "JP Male",
+        "female" : "JP Female",
+        "product_detail" : "JP Product Detail",
+        "view_detail" : "JP View Detail"
+    }
 }
