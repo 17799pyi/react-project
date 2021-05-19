@@ -4,6 +4,10 @@
     margin: 2px;
 }
 
-.li_agency_card:first-child div .card {
+/* .li_agency_card:first-child div .card {
     border-radius: 20px 20px 8px 8px;
-  }
+  } */
+
+  .agency_page li:first-child>div>div{
+    border-radius: 20px 20px 8px 8px;
+}
