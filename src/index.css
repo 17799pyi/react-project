@@ -65,7 +65,7 @@ h6 {
 :root{
   --white: white;
   --black: black;
-  --red: red;
+  --red: #FA6E5A;
 
   --heading-text: 32px;
   --secondary-head-text: 20px;
@@ -184,6 +184,56 @@ cmn modal box
   padding: 0;
   opacity: 1;
 }
+.font-red {
+  color: var(--red);
+}
+button.font-red:hover
+a.font-red:hover {
+  color: var(--red);
+  text-decoration: underline;
+}
+.font-gray {
+  color: var(--darkGray) !important;
+}
+.font-gray2 {
+  color: var(--disable-low) !important;
+}
+.font-white {
+  color: var(--white) !important;
+}
+.font-purple {
+  color: var(--mediumSlateBlue) !important;
+}
+.font-gold {
+  color: var(--goldenrod) !important;
+}
+.font-black {
+  color: var(--darkGray) !important;
+}
+button.font-purple:hover
+a.font-purple:hover {
+  color: var(--mediumSlateBlue) !important;
+  text-decoration: underline;
+}
+.bg-green {
+  background: #6CB28E !important !important;
+}
+.no-btn {
+  outline: none;
+  padding: 0;
+}
+.no-btn:focus {
+  box-shadow: initial;
+}
+.no-border {
+  border: 0 !important;
+}
+.form-control {
+  font-size: 14px;
+}
+.d-grid {
+  display: grid;
+}
 @media screen and (min-width: 576px) {
   .smallest-padding-box {
     margin-left: -4px;
@@ -250,6 +300,11 @@ cmn modal box
   }
   .font-16 {
     font-size: 14px;
+  }
+  
+  .container .container-wrapper{
+    margin: 0 auto;
+    padding: 0 15px;
   }
 }
 @media (max-width: 575.98px){

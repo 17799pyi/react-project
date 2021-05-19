@@ -17,15 +17,15 @@ const HeaderBar = () => {
             <div className="container">
                 <div className="container-wrapper">                    
                     <div className="nav-bar mb-0">
-                        <div > 
+                        <div className=""> 
                             <GeneralButton title="Suspension" className="font-16 px-32"/>                   
+                        </div>
+                        <div className="order-3">       
+                            <PersonalInfoPopUp/>
+                            <GeneralButton title="Start over" className="font-16 ml-2"/>                        
                         </div>
                         <div className="d-flex algin-items-center">
                             <h3 className="mb-0 font-weight-normal">Scenario 4</h3>                         
-                        </div>
-                        <div>       
-                            <PersonalInfoPopUp/>
-                            <GeneralButton title="Start over" className="font-16 ml-2"/>                        
                         </div>
                     </div>
             

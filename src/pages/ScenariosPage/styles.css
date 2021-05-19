@@ -1,0 +1,148 @@
+.scenario_person_box {
+    background-color: #8E97FD;
+    padding: 8px 16px 0;
+    color: var(--white);
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15), inset 0px -1px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+}
+.scenario_person_box_row>div:first-child .scenario_person_box {
+    border-radius: 20px 8px 8px 20px;
+}
+.scenario_person_box_row>div:last-child .scenario_person_box {
+    border-radius: 8px 20px 20px 8px;
+}
+.scenario_person_box.active {
+    position: relative;
+    background-color: #6B72BF;
+    box-shadow: inset 0px 1px 0px rgba(0, 0, 0, 0.15);
+}
+.scenario_person_box.active:after {
+    content: url('../../assets/images/scenarios/tip.png');
+    position: absolute;
+    bottom: -14px;
+    /* border-top: 12px solid #6B72BF;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent; */
+    left: 50%; 
+    transform: translateX(-50%);  
+    width: 32px;
+    height: 16px;
+}
+.scenario_person_box img {
+    max-width: 100px;
+    margin: -32px 16px 0;
+}
+.scenario_person_box>span,
+.scenario_person_box>div {
+    margin-bottom: 8px;
+}
+.scenarios-btn-box {
+    padding: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 15px 15px 8px 8px;
+}
+.cmn-btn {
+    min-height: 44px;
+    padding: 8px 32px;
+    background-color: var(--white);
+    border: 0;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15), inset 0px -1px 0px rgba(0, 0, 0, 0.15);
+}
+.save-btn {
+    background: #8E97FD;
+    border-radius: 15px 8px 8px 15px;
+    color: var(--white);
+}
+.private-btn {
+    border-radius: 8px 15px 15px 8px;
+}
+.delete-btn {
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    color: #FA6E5A;
+    box-shadow: initial;
+}
+.scenarios-action-box {
+    min-height: 123px;
+    padding: 32px;
+    margin-bottom: 8px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0px 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    color: #3F414E;
+}
+.add-img-box>img {
+    max-height: 90px;
+    display: block;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 0 auto 4px;
+}
+.sent-box {
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0px 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 8px;
+}
+.btn-img {
+    width: 10px;
+    max-width: 10px;
+}
+.scenarios-trainee-row {    
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.scenarios-trainee-row:last-child {    
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: 0;
+}
+.scenarios-trainee-row .add-btn {
+    background-color: var(--white);
+    padding: 8px;
+}
+.cmn-confirm-modal .modal-dialog {
+    max-width: 700px;
+}
+.cmn-modal-msg-row {
+    padding: 80px 24px;
+}
+.cmn-modal-msg-row .modal-msg p {
+    color: var(--darkGray);
+}
+.cmn-modal-msg-row .modal-btn-gp {
+    margin-top: 40px;
+} 
+.modal-btn-gp button {
+    min-width: 160px;
+    background: #FA6E5A;
+    padding: 16px 8px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15), inset 0px -1px 0px rgba(0, 0, 0, 0.15);
+    color: var(--white);
+    border: 0;
+}
+.modal-btn-gp .modal-msg-ok {
+    border-radius: 15px 8px 8px 15px;
+}
+.modal-btn-gp .modal-msg-cancel {
+    background-color: var(--white);
+    border-radius: 8px 15px 15px 8px;
+    color: var(--darkGray);
+}
+@media (max-width: 991.98px){
+    .scenario_person_box {
+        display: block;
+        margin-bottom: 16px;
+        text-align: center;
+    }
+    .scenario_person_box img {
+        display: block;
+        margin: 8px auto;
+    }
+}

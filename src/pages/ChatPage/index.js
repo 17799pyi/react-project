@@ -6,7 +6,7 @@ import { Container, Row, Col } from 'reactstrap';
 
 import MandatoryTitle from '../../components/MandatoryTitle'
 import SlideCard from '../../components/Lesson/SlideCard/SlideCard'
-import Model from '../../components/Model/Model'
+import ImagePopup from '../../components/PopupBox/ImagePopup'
 import FinishButton from '../../components/Button/FinishButton'
 import classes from './styles.module.css'
 
@@ -51,13 +51,13 @@ function ChatPage() {
                                 <MandatoryTitle title="Explanatory material"/>
                                 <Row className="smallest-padding-box">
                                     <Col xs="4"> 
-                                        <Model title="Explanatory material" data={DescriptionImage} alt="Description Image" classes={`img-fluid ${classes.chat_descr_img}`}/>
+                                        <ImagePopup title="Explanatory material" data={DescriptionImage} alt="Description Image" classes={`img-fluid ${classes.chat_descr_img}`}/>
                                     </Col>
                                     <Col xs="4">
-                                        <Model title="Explanatory material" data={DescriptionImage} alt="Description Image" classes={`img-fluid ${classes.chat_descr_img}`}/>
+                                        <ImagePopup title="Explanatory material" data={DescriptionImage} alt="Description Image" classes={`img-fluid ${classes.chat_descr_img}`}/>
                                     </Col>
                                     <Col xs="4">
-                                        <Model title="Explanatory material" data={DescriptionImage} alt="Description Image" classes={`img-fluid ${classes.chat_descr_img}`}/>
+                                        <ImagePopup title="Explanatory material" data={DescriptionImage} alt="Description Image" classes={`img-fluid ${classes.chat_descr_img}`}/>
                                     </Col>
                                 </Row>
                             </div>
