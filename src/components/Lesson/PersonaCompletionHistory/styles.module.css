@@ -34,7 +34,8 @@
 .completion_status{
     background: #3F414E;
     color: #FAF7F2;
-    width: 125px;
+    width: auto;
+    display: inline;
     height: 19px;
     padding: 1px 6px;
     font-size: var(--card-btn-title);
@@ -55,19 +56,20 @@
     display: grid;
     grid-template-columns: 20% 38% 27% 15%;
 }
-.total_accuracy span ul{
+/* .total_accuracy span ul{
     display: flex;
     list-style: none;
     padding-top: 26px;
-}
+} */
 .result_state{
-    width: 49px;
+    width: auto;
+    max-width: 66px;
     height: 26px;
     background: var(--white);
     color: var(--black);
     border-radius: 6px;
     margin: 20px 20px;
-    padding: 4px 5px;
+    padding: 6px 5px;
     font-size: var(--card-btn-title);
 }
 .total_accuracy_text{
@@ -115,7 +117,8 @@
     grid-template-columns: 10% 90%;
 }
 .content_left p{
-    width: 64px;
+    width: auto;
+    max-width: 81px;
     height: 26px;
     background: var(--black);
     color: var(--white);
@@ -146,7 +149,7 @@
     background: #6CB28E;
     color: white;
 }
-.word_content.check svg{
+.word_content.word_content_check svg{
     top: 4px;
     position: relative;
     margin-right: 4px;
@@ -156,4 +159,10 @@
     border-radius: 6px;
     height: 600px;
     margin-top: 23px;
+}
+
+.percentage_lists{
+    display: flex;
+    list-style: none;
+    padding-top: 0;
 }

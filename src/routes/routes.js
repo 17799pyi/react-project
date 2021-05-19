@@ -12,7 +12,7 @@ import React from 'react';
 import '../pages/index.css'
 import Index from '../pages/TrainingRersultList/Index';
 import PersonaSelected from '../pages/Lesson/PersonaSelected/PersonaSelected';
-import PersonaScenaio from '../pages/Lesson/PersonaScenario/PersonaScenaio';
+import PersonaScenario from '../pages/Lesson/PersonaScenario/PersonaScenario';
 import SettingPage from '../pages/SettingPage/SettingPage';
 
 const Routes = () => {
@@ -28,7 +28,7 @@ const Routes = () => {
               <Route exact path="/ChatPage" component={ChatPage} />
               <Route exact path="/lessons" component={PersonaSelection} />
               <Route exact path="/lessons/1" component={PersonaSelected} />
-              <Route exact path="/lessons/1/scenario" component={PersonaScenaio} />
+              <Route exact path="/lessons/1/scenario" component={PersonaScenario} />
               <Route exact path="/setting" component={SettingPage} />
               <Route path="*" component={PageNotFound} />
             </Switch>

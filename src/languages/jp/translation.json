@@ -1,16 +1,49 @@
 {
     "general": {
-        "cancel": "JP Cancel",
+        "cancel": "キャンセル",
         "del": "JP Delete",
         "edit": "JP Edit",
-        "save": "JP Save",
+        "save": "保存",
         "update": "JP Update"
     },
     "lesson": {
-        "head_text" : "JP Please select a persona",
-        "male" : "JP Male",
-        "female" : "JP Female",
-        "product_detail" : "JP Product Detail",
-        "view_detail" : "JP View Detail"
+        "head_text" : "ペルソナを選択してください。",
+        "male" : "男性",
+        "female" : "女性",
+        "product_detail" : "商品内容",
+        "view_detail" : "詳細の表示",
+        "private" : "非公開",
+        "perfect" : "完璧",
+        "any_folder" : "任意のフォルダ",
+        "year_old": "歳",
+        "list_of_scenarios_by" : "のシナリオ一覧",
+        "re_implement" : "再実施",
+        "and_the_f_point" : "及第点",
+        "scenario" : {
+            "content_head": "研修結果を確認し、総回答精度が90%以上になって いない場合は再度シナリオを実行してください。",
+            "time_required" : "所用時間",
+            "context" : "コンテキスト",
+            "start_the_scenario" : "シナリオを開始",
+            "redo_the_scenario" : "シナリオをやり直す",
+            "total_ans_accuracy" : "総回答精度",
+            "accuracy_answer" : "の精度の答え",
+            "avg_accuracy_of_scenario" : "シナリオの平均精度",
+            "base_on_the_mark" : "シナリオ4を完了した42人のマークに基づいています",
+            "complete_history" : "完了履歴",
+            "result" : "結果",
+            "keyword" : "キーワード",
+            "letter_problem" : "手紙の問題",
+            "word" : "言葉"
+        }
+    },
+    "setting" : {
+        "synonym" : "同義語",
+        "add_keywords" : "キーワードを追加",
+        "export" : "エクスポート",
+        "keyword" : "キーワード",
+        "add_synonym" : "同義語を追加",
+        "seach_f_keywords_and_synonyms" : "キーワードや同義語を探す",
+        "word" : "言葉",
+        "Sync" : "同義語1"
     }
 }

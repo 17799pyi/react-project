@@ -20,12 +20,12 @@ function PersonCard() {
                     </span>
                     <span className={classes.card_status}>
                         <img className={classes.ellipse} src={ellipse} />
-                        <span className={classes.ellipse_text}>Perfect</span>
+                        <span className={classes.ellipse_text}>{t('lesson.perfect')}</span>
                     </span>
                 </div>
                 <div className={classes.card_wrapper_bottom}>
                     <p>Taro Sato</p>
-                    <p>75 Years Old / {t('lesson.male')}</p>
+                    <p>75 {t('lesson.year_old')} / {t('lesson.male')}</p>
                 </div>
             </div>
             <div className={classes.slide_card}>

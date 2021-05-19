@@ -4,11 +4,15 @@ import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import classes from './styles.module.css'
 import bubble from '../../../assets/icons/bubble.png';
+import { useTranslation } from 'react-i18next';
 
 function PersonaCompletionHistory() {
+
+    const { t } = useTranslation();
+
     return (
         <div className={classes.completion_history_wapper}>
-            <p className={classes.completion_status}>Completion History</p>
+            <p className={classes.completion_status}>{t('lesson.scenario.complete_history')}</p>
             <div className={classes.completion_history_content}>
                 <div className="content_left">
                     <div className={`${classes.selected_persona_content_folder_btn_wrapper} ${classes.selected_persona_content_active}`}>
@@ -26,10 +30,10 @@ function PersonaCompletionHistory() {
                 </div>
                 <div className="content_right">
                     <div className={classes.total_accuracy}>
-                        <p className={classes.result_state}>Result</p>
-                        <p className={classes.total_accuracy_text}>Total Answer Accuracy: 91%</p>
+                        <p className={classes.result_state}>{t('lesson.scenario.result')}</p>
+                        <p className={classes.total_accuracy_text}>{t('lesson.scenario.total_ans_accuracy')}: 91%</p>
                         <span>
-                            <ul className="percentage_lists">
+                            <ul className={classes.percentage_lists}>
                                 <li className={classes.percentage_list}>
                                     <span className={`${classes.circle_li} ${classes.circle_green}`}></span>2
                                 </li>
@@ -47,18 +51,18 @@ function PersonaCompletionHistory() {
                     <div className={classes.key_words}>
                         <div className={classes.key_word_content}>
                             <div className={classes.content_left}>
-                                <p>Keyword</p>
+                                <p>{t('lesson.scenario.keyword')}</p>
                             </div>
                             <div className={classes.content_right}>
                                 <span className={`${classes.word_content} ${classes.word_content_check}`}>
                                     <FontAwesomeIcon icon={faCheck} />
-                                    <span>Word</span>
+                                    <span>{t('lesson.scenario.word')}</span>
                                 </span>
                                 <span className={classes.word_content}>
-                                    <span>Word</span>
+                                    <span>{t('lesson.scenario.word')}</span>
                                 </span>
                                 <span className={classes.word_content}>
-                                    <span>Word</span>
+                                    <span>{t('lesson.scenario.word')}</span>
                                 </span>
                             </div>
                         </div>

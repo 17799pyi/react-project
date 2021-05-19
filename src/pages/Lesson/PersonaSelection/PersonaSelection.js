@@ -3,7 +3,6 @@ import PersonCard from '../../../components/Lesson/PersonCard/PersonCard'
 import classes from './styles.module.css'
 import { useTranslation } from 'react-i18next';
 
-
 function PersonaSelection() {
 
     const { t } = useTranslation();

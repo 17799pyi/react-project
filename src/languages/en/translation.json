@@ -11,6 +11,39 @@
         "male" : "Male",
         "female" : "Female",
         "product_detail" : "Product Detail",
-        "view_detail" : "View Detail"
+        "view_detail" : "View Detail",
+        "private" : "Private",
+        "perfect" : "Perfect",
+        "any_folder" : "Any Folder",
+        "year_old": "Year Old",
+        "list_of_scenarios_by" : "List of scenarios by",
+        "re_implement" : "Re-Implementation",
+        "and_the_f_point" : "And the first point",
+        "scenario" : {
+            "content_head": "Check the contents of the scenario and start training.",
+            "time_required" : "Time Required",
+            "context" : "Context",
+            "start_the_scenario" : "Start the Scenario",
+            "redo_the_scenario" : "Redo the scenario",
+            "total_ans_accuracy" : "Total answer accuracy",
+            "accuracy_answer" : "accuracy answer",
+            "avg_accuracy_of_scenario" : "Average accuracy of scenario",
+            "base_on_the_mark" : "Based on the mark of 42 people who completed Scenario 4",
+            "complete_history" : "Complete History",
+            "result" : "Result",
+            "keyword" : "Keyword",
+            "letter_problem" : "Letter Problem",
+            "word" : "Word"
+        }
+    },
+    "setting" : {
+        "synonym" : "Synonym",
+        "add_keywords" : "Add Keyword",
+        "export" : "Export",
+        "keyword" : "Keyword",
+        "add_synonym" : "Add Synonym",
+        "seach_f_keywords_and_synonyms" : "Search for keywords and synonyms",
+        "word" : "Word",
+        "Sync" : "Sync"
     }
 }
