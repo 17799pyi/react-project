@@ -1,9 +1,9 @@
-.persona_scenaio .text p{
+.head_text{
     font-size: var(--heading-text);
     margin-top: 48px;
     margin-bottom: 32px;
 }
-.persona_scenaio .persona_scenaio_content .scenaio_content_header{
+.scenaio_content_header{
     background: var(--mediumSlateBlue);
     padding: 17px 18px;
     border-radius: 20px;
@@ -12,7 +12,7 @@
     grid-template-columns: 40% 60%;
     height: 64px;
 }
-.persona_scenaio .persona_scenaio_content .scenaio_content_header .scenaio_count{
+.scenaio_count{
     background: var(--slateBlue);
     padding: 5px 12px;
     border-radius: 25px;
@@ -20,22 +20,22 @@
     width: 32px;
     height: 32px;
 }
-.persona_scenaio .persona_scenaio_content .scenaio_content_header .scenaio_name{
+.scenaio_name{
     font-size: var(--secondary-head-text);
     color: var(--white);
 }
-.persona_scenaio .persona_scenaio_content .scenaio_content_body{
+.scenaio_content_body{
     display: grid;
     grid-template-columns: 25% 74%;
     grid-column-gap: 8px;
     margin-top: 24px;
 }
-.persona_scenaio .persona_scenaio_content .scenaio_content_body .left_body .left_body_top{
+.left_body_top{
     background: var(--lightSkyBlue);
     padding: 16px 0;
     border-radius: 20px 8px 0 0;
 }
-.persona_scenaio .persona_scenaio_content .scenaio_content_body .left_body .left_body_top .left_body_count{
+.left_body_count{
     background: var(--cornflowerBlue);
     padding: 7px 17px;
     margin: 0 auto;
@@ -45,28 +45,28 @@
     border-radius: 10px;
     font-size: var(--secondary-head-text);
 }
-.persona_scenaio .persona_scenaio_content .scenaio_content_body .left_body .left_body_bottom{
+.left_body_bottom{
     background: var(--cornflowerBlue);
     color: var(--white);
     text-align: center;
     border-radius: 0 0 8px 20px;
     padding: 16px 13px;
 }
-.persona_scenaio .persona_scenaio_content .scenaio_content_body .left_body .left_body_bottom .left_body_letter{
+.left_body_letter{
     display: block;
     font-size: var(--heading-text);
 }
-.persona_scenaio .persona_scenaio_content .scenaio_content_body .left_body .left_body_bottom .left_body_time{
+.left_body_time{
     display: block;
     font-size: var(--card-title);
 }
-.persona_scenaio .persona_scenaio_content .scenaio_content_body .right_body{
+.right_body{
     border: 1px solid rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
     border-radius: 8px 20px 20px 8px;
     padding: 32px;
 }
-.persona_scenaio .persona_scenaio_content .scenaio_content_body .right_body .right_body_context_status{
+.right_body_context_status{
     background: var(--darkGray);
     color: var(--white);
     display: inline;
@@ -74,12 +74,12 @@
     border-radius: 6px;
     font-size: var(--card-btn-title);
 }
-.persona_scenaio .persona_scenaio_content .scenaio_content_body .right_body .right_body_context_text{
+.right_body_context_text{
     font-size: var(--card-title);
     line-height: 22px;
     margin-top: 12px;
 }
-.persona_scenaio .persona_scenaio_footer{
+.persona_scenaio_footer{
     position: absolute;
     width: 100%;
     background: #dcdce1;
@@ -88,7 +88,7 @@
     padding: 33px 0;
     margin-top: 84px;
 }
-.persona_scenaio .persona_scenaio_footer button{
+.persona_scenaio_footer_btn{
     border: none;
     background: var(--mediumSlateBlue);
     color: var(--white);

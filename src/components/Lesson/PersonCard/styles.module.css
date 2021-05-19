@@ -1,7 +1,7 @@
 .persona_card{
     position: relative;
 }
-.persona_card .card_wrapper .top{
+.card_wrapper_top{
     background: var(--mediumSlateBlue);
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -10,50 +10,53 @@
     display: inline-block;
     width: 100%;
 }
-.persona_card .card_wrapper .top .card_number{
+.card_number{
     background: var(--slateBlue);
     padding: 8.5px 16px;
     border-radius: 25px;
     color: var(--white);
     margin-right: 8px;
 }
-.persona_card .card_wrapper .top .card_count{
+.card_count{
     background: var(--slateBlue);
     padding: 8.5px 11px;
     color: var(--white);
     border-radius: 10px 4px 4px 10px;
     letter-spacing: 5px;
 }
-.persona_card .card_wrapper .bottom{
+.card_wrapper_bottom{
     background: var(--slateBlue);
     padding: 16px 24px;
     color: white;
 }
-.persona_card .card_wrapper p{
+.card_wrapper p{
     margin: 0;
     padding: 0;
 }
-.persona_card .card_wrapper p:first-child{
+.card_wrapper p:first-child{
     font-size: var(--secondary-head-text);
 }
-.persona_card .card_wrapper p:last-child{
+.card_wrapper p:last-child{
     font-size: var(--content-text);
     margin-top: 8px;
 }
-.persona_card .card_wrapper .card_image{
+.card_image{
     position: absolute;
     right: 17px;
-    top: 18px;
+    top: 17px;
 }
-.persona_card .card_wrapper .top .card_status{
+.card_status{
     background: white;
     padding: 8.5px 11px;
     border-radius: 4px 10px 10px 4px;
     margin-left: 4px;
 }
-.persona_card .card_wrapper .top .card_status .ellipse{
+.ellipse{
     margin-right: 8px;
 }
-.persona_card .card_wrapper .top .card_status .ellipse-text{
+.ellipse_text{
     font-size: var(--card-secondary-head-text);
+}
+.slide_card{
+    margin-top: 10px;
 }
