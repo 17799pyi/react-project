@@ -1,13 +1,13 @@
 import React from "react";
 import Table from "react-bootstrap/Table";
-import './AgencyList.css'
+import styles from './styles.module.css'
 import ellipse from '../../../assets/icons/ellipse.png';
 
 function AgencyList() {
   return (
     <div>
-      <div className="container">
-      <Table className="agency-list">
+      <div className={`${styles.container}`}>
+      <Table className={`${styles.agency_list} ${styles.table}`}>
         <thead>
           <tr>
             <th>Trainee</th>
@@ -19,11 +19,11 @@ function AgencyList() {
         </thead>
         <tbody>
           <tr>
-            <td className="border-top-non">120078</td>
-            <td className="border-top-non">Jiro Suzuki</td>
-            <td className="border-top-non">Letter problem</td>
-            <td className="border-top-non">2020/10/5 9:30</td>
-            <td className="border-top-non"><img className="card_image" src={ellipse} /> 95% <a href="#" className="scenariolink" >Scenario selection</a> <a className="historylink" href="#">Scenario History</a></td>
+            <td className={`${styles.border_top_non}`}>120078</td>
+            <td className={`${styles.border_top_non}`}>Jiro Suzuki</td>
+            <td className={`${styles.border_top_non}`}>Letter problem</td>
+            <td className={`${styles.border_top_non}`}>2020/10/5 9:30</td>
+            <td className={`${styles.border_top_non}`}><img className="card_image" src={ellipse} /> 95% <a href="#" className="scenariolink" >Scenario selection</a> <a className="historylink" href="#">Scenario History</a></td>
           </tr>
           <tr>
             <td>120078</td>

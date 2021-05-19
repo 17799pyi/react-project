@@ -1,5 +1,4 @@
 import React from "react";
-// import Card from '../../components/Training/Agency.js'
 import Card from "react-bootstrap/Card";
 import classes from "./Agency.css";
 

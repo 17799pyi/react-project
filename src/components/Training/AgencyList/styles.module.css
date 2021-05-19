@@ -1,4 +1,4 @@
-.agency-list {
+.agency_list {
   margin-top: 25px;
 }
 
@@ -14,7 +14,7 @@
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
 }
-.agency-list .table td,
+.agency_list .table td,
 .table th {
   border: none !important;
 }
@@ -47,7 +47,7 @@ a{
     border-top: 0 !important;
 } */
 
-.border-top-non{
+.border_top_non{
     border-top: 0 !important;
 
 }
