@@ -2,7 +2,7 @@ import React from 'react'
 import SlideToggle from "react-slide-toggle"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
-import './index.css';
+import classes from './styles.module.css'
 
 function SlideCard({show}) {
     return (
@@ -11,14 +11,14 @@ function SlideCard({show}) {
                 collapsed={show?'':'collapsed'}
                 interpolateOnReverse
                 render={({ onToggle, setCollapsibleElement, progress }) => (
-                <div className="my-collapsible slide-card-wrapper">
-                    <div className="show-wrapper">
-                        <p className="slide-card-title">Product Details</p>
-                        <button className="my-collapsible__toggle slide-card-button" onClick={onToggle}>
+                <div className={`${classes.slide_card_wrapper} my-collapsible`}>
+                    <div className={classes.show_wrapper}>
+                        <p className={classes.slide_card_title}>Product Details</p>
+                        <button className={`${classes.slide_card_button} my-collapsible__toggle`} onClick={onToggle}>
                             View Detail <FontAwesomeIcon icon={faAngleDown} />
                         </button>
                     </div>
-                    <div className="my-collapsible__content" ref={setCollapsibleElement}>
+                    <div className={`my-collapsible__content ${classes.collapsible_content}`} ref={setCollapsibleElement}>
                         <div
                             className="my-collapsible__content-inner"
                             style={{
