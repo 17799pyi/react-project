@@ -3,8 +3,12 @@ import elderly_man from '../../../assets/icons/elderly_man.png';
 import ellipse from '../../../assets/icons/ellipse.png';
 import SlideCard from '../SlideCard/SlideCard';
 import classes from './styles.module.css'
+import { useTranslation } from 'react-i18next';
 
 function PersonCard() {
+
+    const { t } = useTranslation();
+
     return (
         <div className={classes.persona_card}>
             <div className={classes.card_wrapper}>
@@ -21,7 +25,7 @@ function PersonCard() {
                 </div>
                 <div className={classes.card_wrapper_bottom}>
                     <p>Taro Sato</p>
-                    <p>75 Years Old / Male</p>
+                    <p>75 Years Old / {t('lesson.male')}</p>
                 </div>
             </div>
             <div className={classes.slide_card}>
