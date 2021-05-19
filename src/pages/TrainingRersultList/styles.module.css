@@ -3,3 +3,7 @@
     grid-template-columns: 20% 80%;
     margin: 2px;
 }
+
+.li_agency_card:first-child div .card {
+    border-radius: 20px 20px 8px 8px;
+  }

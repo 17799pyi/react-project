@@ -10,22 +10,22 @@ function Index() {
       <div className="container-wrapper">
       <div className={`${classes.agency_page}`}>
         <ul>
-          <li>
+          <li className={`${classes.li_agency_card}`}>
             <Agency />
           </li>
-          <li>
+          <li className={`${classes.li_agency_card}`}>
             <Agency />
           </li>
-          <li>
+          <li className={`${classes.li_agency_card}`}>
             <Agency />
           </li>
-          <li>
+          <li className={`${classes.li_agency_card}`}>
             <Agency disable={true} />
           </li>
-          <li>
+          <li  className={`${classes.li_agency_card}`}>
             <Agency disable={true} />
           </li>
-          <li>
+          <li className={`${classes.li_agency_card}`}>
             <SearchButton />
           </li>
         </ul>
