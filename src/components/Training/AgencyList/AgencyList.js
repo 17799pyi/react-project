@@ -6,7 +6,7 @@ import ellipse from '../../../assets/icons/ellipse.png';
 function AgencyList() {
   return (
     <div>
-      <div className={`${classes.container}`}>
+      <div className={`table-responsive ${classes.container}`}>
       <Table className={`${classes.agency_list} ${classes.table}`}>
         <thead>
           <tr>
@@ -14,30 +14,36 @@ function AgencyList() {
             <th>Persona</th>
             <th>Scenario</th>
             <th>Last Date and time</th>
-            <th>Final response rate</th>
+            <th colspan="3">Final response rate</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td className={`${classes.border_top_non}`}>120078</td>
-            <td className={`${classes.border_top_non}`}>Jiro Suzuki</td>
-            <td className={`${classes.border_top_non}`}>Letter problem</td>
-            <td className={`${classes.border_top_non}`}>2020/10/5 9:30</td>
-            <td className={`${classes.border_top_non}`}><img className="card_image" src={ellipse} /> 95% <a href="#" className="scenariolink" >Scenario selection</a> <a className="historylink" href="#">Scenario History</a></td>
+            <td>120078</td>
+            <td>Jiro Suzuki</td>
+            <td>Letter problem</td>
+            <td>2020/10/5 9:30</td>
+            <td><img className="card_image" src={ellipse} /> 95% </td>
+            <td><a href="#" className="scenariolink" >Scenario selection</a></td>
+            <td><a className="historylink" href="#">Scenario History</a></td>
           </tr>
           <tr>
             <td>120078</td>
             <td>Jiro Suzuki</td>
             <td>Conservation Proposal Intro</td>
             <td>2020/10/5 9:30</td>
-            <td><img className="card_image" src={ellipse} />75% <a href="#" className="scenariolink" >Scenario selection</a> <a className="historylink" href="#">Scenario History</a></td>
+            <td><img className="card_image" src={ellipse} /> 75% </td>
+            <td><a href="#" className="scenariolink" >Scenario selection</a></td>
+            <td><a className="historylink" href="#">Scenario History</a></td>
           </tr>
           <tr>
             <td>120078</td>
             <td>Jiro Suzuki</td>
             <td>Recipient confirmation intro</td>
             <td>2020/10/5 9:30</td>
-            <td><img className="card_image" src={ellipse} />55% <a href="#" className="scenariolink" >Scenario selection</a> <a className="historylink" href="#">Scenario History</a></td>
+            <td><img className="card_image" src={ellipse} /> 55% </td>
+            <td><a href="#" className="scenariolink" >Scenario selection</a></td>
+            <td><a className="historylink" href="#">Scenario History</a></td>
           </tr>
         </tbody>
       </Table>

@@ -1,12 +1,14 @@
 import React, {useState} from 'react'
 import {Modal, Button} from 'react-bootstrap'
 import { Container, Row, Col } from 'reactstrap';
-import './style.css';
-import {Link} from 'react-router-dom'
 import { faHome } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import GeneralButton from "../../Button/GeneralButton"
 import PersonalInfoPopUp from './PersonalInfoPopUp'
+
+import classes from './styles.module.css';
+
 const HeaderBar = () => {
     const [show, setShow] = useState(false);
   
@@ -14,9 +16,8 @@ const HeaderBar = () => {
     const handleShow = () => setShow(true);
     return (
         <header>
-            <div className="container">
-                <div className="container-wrapper">                    
-                    <div className="nav-bar mb-0">
+            <div className="cmn-inner-width">    
+                    <div className={`${classes.nav_bar} mb-0`}>
                         <div className=""> 
                             <GeneralButton title="Suspension" className="font-16 px-32"/>                   
                         </div>
@@ -30,7 +31,6 @@ const HeaderBar = () => {
                     </div>
             
                 </div>
-            </div>
         </header>
     );
 }
