@@ -36,6 +36,16 @@
         "explanatory_material" : "Explantery Material"
     },
     "scenario" : {
-        "text_unsave_change" : "There are unsaved changes"
+        "text_unsave_change" : "There are unsaved changes",
+        "scenario_name" : "Scenario name",
+        "private" : "Private",
+        "folder1" : "Folder 1",
+        "hide_details" : "Hide Details",
+        "add_scenario" : "Add scenario",
+        "scenario2" : "Scenario 2",
+        "release" : "Release",
+        "explanatory_material" : "Explanatory Material",
+        "add_explanatory_material" : "Added explanatory material",
+        "" : ""
     }
 }

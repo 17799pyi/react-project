@@ -26,7 +26,6 @@ import UpArrow from '../../assets/images/scenarios/up_arrow.png'
 import DownArrow from '../../assets/images/scenarios/down_arrow.png'
 import { useTranslation } from 'react-i18next';
 
-
 function ScenariosPage() {  
     const {t} = useTranslation();
     const [show, setShow] = useState(false);
@@ -78,15 +77,15 @@ function ScenariosPage() {
                         <div className="scenarios-btn-box mb-2">
                             <Row className="align-items-center">
                                 <Col lg="4">
-                                    <h5 className="font-weight-normal d-inline-block align-middle mr-3 mb-0">シナリオ 2</h5>
-                                    <MandatoryTitle title="公開" className="bg-green mb-0 py-0"/>
+                                    <h5 className="font-weight-normal d-inline-block align-middle mr-3 mb-0">{t('scenario.scenario2')}</h5>
+                                    <MandatoryTitle title={t('scenario.release')} className="bg-green mb-0 py-0"/>
                                 </Col>
                                 <Col lg="8" className="d-flex align-items-center justify-content-end">
                                     <p className="mb-0 mr-4"><img src={WarningIcon} alt="Warning Icon" className="mr-1 d-inline-block align-middle"/><span className=" d-inline-block align-middle">{t('scenario.text_unsave_change')}</span></p>
                                     <div>
-                                        <button className="cmn-btn btn save-btn" onClick={handleShow}>保存</button>
-                                        <button className="cmn-btn btn private-btn ml-2 mr-4">非公開</button>
-                                        <button className="cmn-btn btn delete-btn">削除</button>
+                                        <button className="cmn-btn btn save-btn" onClick={handleShow}>{t('general.save')}</button>
+                                        <button className="cmn-btn btn private-btn ml-2 mr-4">{t('scenario.private')}</button>
+                                        <button className="cmn-btn btn delete-btn">{t()}</button>
                                         <Modal
                                             show={show}
                                             onHide={handleClose}
@@ -101,7 +100,6 @@ function ScenariosPage() {
                                                     <div className="modal-msg">
                                                         <h3 className="mb-4 font-weight-normal">このシナリオを削除してもよろしいですか？</h3>
                                                         <p>このアクションは元に戻せません。</p>
-
                                                     </div>
                                                     <div className="modal-btn-gp">                                                    
                                                         <button onClick={handleClose} className="btn modal-msg-ok mr-2"> 削除 </button>
@@ -139,23 +137,23 @@ function ScenariosPage() {
                                 </div>  
                                 <div className="scenarios-action-box bg-transparent shadow-none">
                                     <div>
-                                        <MandatoryTitle title="説明資料" className="mb-3"/>
+                                        <MandatoryTitle title={t('scenario.explanatory_material')} className="mb-3"/>
                                         <Row className="smallest-padding-box">
                                             <Col xs="3" className="text-center add-img-box">
                                                 <img src={DescriptionImage} alt="Description Image"/>
-                                                <button className="no-btn btn font-10 font-red"><span>X</span> 削除</button>
+                                                <button className="no-btn btn font-10 font-red"><span>X</span> {t('general.del')}</button>
                                             </Col>
                                             <Col xs="3" className="text-center add-img-box">
                                                 <img src={DescriptionImage} alt="Description Image"/>
-                                                <button className="no-btn btn font-10 font-red"><span>X</span> 削除</button>
+                                                <button className="no-btn btn font-10 font-red"><span>X</span> {t('general.del')}</button>
                                             </Col>
                                             <Col xs="3" className="text-center add-img-box">
                                                 <img src={DescriptionImage} alt="Description Image"/>
-                                                <button className="no-btn btn font-10 font-red"><span>X</span> 削除</button>
+                                                <button className="no-btn btn font-10 font-red"><span>X</span> {t('general.del')}</button>
                                             </Col>
                                             <Col xs="3" className="text-center add-img-box">
                                                 <img src={AddImage} alt="Add Image" className="no-border"/>
-                                                <button className="no-btn btn font-10 font-purple">説明資料を追加</button>                                                
+                                                <button className="no-btn btn font-10 font-purple">{t('scenario.add_explanatory_material')}</button>                                                
                                             </Col>
                                         </Row>
                                     </div>

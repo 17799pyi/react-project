@@ -8,8 +8,10 @@ import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
 import NumberStyleRec from '../../Number/NumberStyleRec'
 import classes from './styles.module.css';
+import {useTranslation} from 'react-i18next'
 
 function SlideCard({show}) {
+    const {t} = useTranslation();
     return (
         <SlideToggle
                 duration={200}
@@ -18,9 +20,9 @@ function SlideCard({show}) {
                 render={({ onToggle, setCollapsibleElement, progress }) => (
                 <div className={`my-collapsible ${classes.slide_card_wrapper}`}>
                     <div  className={`${classes.show_wrapper}`}>
-                        <p className="mb-0">フォルダ1</p>
+                        <p className="mb-0">{t('scenario.folder1')}</p>
                         <button className={`my-collapsible__toggle ${classes.slide_card_button}`} onClick={onToggle}>
-                        詳細を非表示 <FontAwesomeIcon icon={faAngleDown} className="ml-2"/>
+                        {t('scenario.hide_details')} <FontAwesomeIcon icon={faAngleDown} className="ml-2"/>
                         </button>
                     </div>
                     <div className="mt-2" ref={setCollapsibleElement}>
@@ -28,7 +30,7 @@ function SlideCard({show}) {
                             <li>
                                 <div>
                                     <NumberStyleRec title="1" className="mr-2"/>
-                                    <span>シナリオ名</span>
+                                    <span>{t('scenario.scenario_name')}</span>
                                 </div>
                                 <div className="d-flex align-items-center font-gray">
                                     <span className="mr-2">260</span>
@@ -38,7 +40,7 @@ function SlideCard({show}) {
                             <li>
                                 <div>
                                     <NumberStyleRec title="2" className="mr-2"/>
-                                    <span>シナリオ名</span>
+                                    <span>{t('scenario.scenario_name')}</span>
                                 </div>
                                 <div className="d-flex align-items-center font-gray">
                                     <span className="mr-2">261</span>
@@ -48,7 +50,7 @@ function SlideCard({show}) {
                             <li>
                                 <div>
                                     <NumberStyleRec title="3" className="mr-2"/>
-                                    <span>シナリオ名</span>
+                                    <span>{t('scenario.scenario_name')}</span>
                                 </div>
                                 <div className="d-flex align-items-center font-gray">
                                     <span className="mr-2">262</span>
@@ -56,7 +58,7 @@ function SlideCard({show}) {
                                 </div>
                             </li>
                             <li className={`${classes.add}`}>
-                                <button className="font-gray btn w-100 p-0"><FontAwesomeIcon icon={faPlus}/> シナリオを追加</button>
+                                <button className="font-gray btn w-100 p-0"><FontAwesomeIcon icon={faPlus}/> {t('scenario.add_scenario')}</button>
                             </li>
                         </ul>
                         

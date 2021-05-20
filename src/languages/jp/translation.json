@@ -36,6 +36,15 @@
         "explanatory_material" : "説明資料"
     },
     "scenario" : {
-        "text_unsave_change" : "保存されていない変更があります"
+        "text_unsave_change" : "保存されていない変更があります",
+        "scenario_name" : "シナリオ名",
+        "private" : "非公開",
+        "folder1" : "フォルダ1",
+        "hide_details" : "詳細を非表示",
+        "add_scenario" : " シナリオを追加",
+        "scenario2" : "シナリオ 2",
+        "release" : "公開",
+        "explanatory_material" : "説明資料",
+        "add_explanatory_material" : "説明資料を追加"
     }
 }
