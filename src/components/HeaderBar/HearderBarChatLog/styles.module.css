@@ -1,28 +1,29 @@
-.nav-bar{
+.nav_bar{
     background: #3F414E;
     display: flex;
     padding: 8px 16px;
     color: #A0A3B1;
     align-items: center;
     justify-content: space-between;
+    border-radius: 20px;   
 }
 @media (max-width: 767.98px){
-    .nav-bar {
+    .nav_bar {
         display: block;
         text-align: center;
     }
-    .nav-bar>div {
+    .nav_bar>div {
         display: inline-block;
     }
-    .nav-bar>div:first-child {
+    .nav_bar>div:first-child {
         margin-right: 8px;
     }
-    .nav-bar>div:nth-child(3) {
+    .nav_bar>div:nth-child(3) {
         width: 100%;
         text-align: center;
         display: block !important;
     }
-    .nav-bar>div button {
+    .nav_bar>div button {
         margin-bottom: 8px;
     }
 }

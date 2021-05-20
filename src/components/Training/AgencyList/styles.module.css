@@ -1,25 +1,26 @@
 .agency_list {
-  margin-top: 25px;
+  /* margin-top: 25px; */
 }
 
 .container {
-  border-radius: 8px;
-  padding: 7px 16px;
+  /* border-radius: 8px;
+  padding: 7px 16px; */
 }
-.table {
+.agency_list.table {
   border-radius: 20px 20px 20px 20px;
   border-collapse: inherit;
   background-color: #faf7f2;
   text-align: left;
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
+  white-space: nowrap;
 }
-.agency_list .table td,
-.table th {
+.agency_list td,
+.agency_list th {
   border: none !important;
 }
 
-th {
+.agency_list th {
   border: none !important;
   border-bottom: none;
   font-family: Hiragino Maru Gothic ProN;
@@ -30,17 +31,18 @@ th {
   color: #8e97fd;
 }
 
-tr {
+.agency_list tr {
   font-family: Hiragino Maru Gothic ProN;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 22px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);;
 }
 
-a{
+.agency_list a {
     color: #8E97FD;
-    margin-left: 20px;
+    /* margin-left: 20px; */
 }
 
 /* table tr:nth-child(1) td{

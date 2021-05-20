@@ -1,4 +1,5 @@
 import React from "react";
+import { Container, Row, Col } from 'reactstrap';
 import Agency from "../../components/Training/Agency/Agency";
 import AgencyList from "../../components/Training/AgencyList/AgencyList";
 import SearchButton from "../../components/Training/SearchButton/SearchButton";
@@ -6,9 +7,20 @@ import classes from "./styles.module.css";
 
 function Index() {
   return (
-    <div className="container">
-      <div className="container-wrapper">
-      <div className={`${classes.agency_page}`}>
+    <div className="cmn-inner-width">
+      <Row className={`${classes.agency_page}`}>
+        <Col xs="3">
+          <Agency className="mb-2"/>     
+          <Agency className="mb-2"/>
+          <Agency className="mb-2"/>
+          <Agency className="mb-2"/>     
+          <SearchButton />
+        </Col>
+        <Col xs="9">
+          <AgencyList />
+        </Col>
+      </Row>
+      {/* <div className={`${classes.agency_page}`}>
         <ul>
           <li className={`${classes.li_agency_card}`}>
             <Agency />
@@ -30,8 +42,7 @@ function Index() {
           </li>
         </ul>
         <AgencyList />
-      </div>
-    </div>
+      </div> */}
     </div>
   );
 }

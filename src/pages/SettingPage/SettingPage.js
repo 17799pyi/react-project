@@ -9,36 +9,34 @@ import Keywords from '../../components/Keywords/Keywords';
 
 function SettingPage() {
     return (
-        <div className="container">
-            <div className="container-wrapper">
-                <div className="setting-wrapper mt-5">
-                    <div class="row">
-                        <div class="col-2">
-                            <button type="button" className={`btn ${classes.synonym_btn}`}>
-                            Synonym
-                            <FontAwesomeIcon icon={faAngleRight} />
+        <div className="cmn-inner-width">
+            <div className="setting-wrapper mt-5">
+                <div class="row">
+                    <div class="col-2">
+                        <button type="button" className={`btn ${classes.synonym_btn}`}>
+                        Synonym
+                        <FontAwesomeIcon icon={faAngleRight} />
+                        </button>
+                    </div>
+                    <div class="col-10">
+                        <div className={`${classes.action_wrapper}`}>
+                            <div className={classes.search_box}>
+                                <div className={`row ${classes.search_box_container}`}>
+                                    <FontAwesomeIcon icon={faSearch} />
+                                    <input type="text" value="Search for keywords and synonyms" />
+                                </div>
+                            </div>
+                            <button type="button" className={`btn ${classes.add_keyword_btn}`}>
+                                <FontAwesomeIcon icon={faPlus} />
+                                Add keywords
+                            </button>
+                            <button type="button" className={`btn ${classes.export_btn}`}>
+                                <FontAwesomeIcon icon={faFileExport} />
+                                Export
                             </button>
                         </div>
-                        <div class="col-10">
-                            <div className={`${classes.action_wrapper}`}>
-                                <div className={classes.search_box}>
-                                    <div className={`row ${classes.search_box_container}`}>
-                                        <FontAwesomeIcon icon={faSearch} />
-                                        <input type="text" value="Search for keywords and synonyms" />
-                                    </div>
-                                </div>
-                                <button type="button" className={`btn ${classes.add_keyword_btn}`}>
-                                    <FontAwesomeIcon icon={faPlus} />
-                                    Add keywords
-                                </button>
-                                <button type="button" className={`btn ${classes.export_btn}`}>
-                                    <FontAwesomeIcon icon={faFileExport} />
-                                    Export
-                                </button>
-                            </div>
-                            <div className="mt-3">
-                                <Keywords />
-                            </div>
+                        <div className="mt-3">
+                            <Keywords />
                         </div>
                     </div>
                 </div>
