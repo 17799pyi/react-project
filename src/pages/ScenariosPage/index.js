@@ -85,7 +85,7 @@ function ScenariosPage() {
                                     <div>
                                         <button className="cmn-btn btn save-btn" onClick={handleShow}>{t('general.save')}</button>
                                         <button className="cmn-btn btn private-btn ml-2 mr-4">{t('scenario.private')}</button>
-                                        <button className="cmn-btn btn delete-btn">{t()}</button>
+                                        <button className="cmn-btn btn delete-btn">{t('general.del')}</button>
                                         <Modal
                                             show={show}
                                             onHide={handleClose}
@@ -115,7 +115,7 @@ function ScenariosPage() {
                             <Col lg="5">
                                 <div className="scenarios-action-box d-flex align-items-end justify-content-between">
                                     <div>
-                                        <MandatoryTitle title="シナリオ№" className="mb-3"/>
+                                        <MandatoryTitle title={t('scenario.mandatory_title.scenario_no')} className="mb-3"/>
                                         <h3 className="font-weight-normal mb-0">2</h3>
                                     </div>
                                     <div>
@@ -125,19 +125,19 @@ function ScenariosPage() {
                                 </div>
                                 <div className="scenarios-action-box d-flex align-items-end justify-content-between">
                                     <div>
-                                        <MandatoryTitle title="シナリオ名" className="mb-3"/>
+                                        <MandatoryTitle title={t('scenario.mandatory_title.scenario_name')} className="mb-3"/>
                                         <h3 className="font-weight-normal mb-0">シナリオ名</h3>
                                     </div>
                                 </div>
                                 <div className="scenarios-action-box d-flex align-items-end justify-content-between">
                                     <div>
-                                        <MandatoryTitle title="メモ" className="mb-3"/>
+                                        <MandatoryTitle title={t('scenario.mandatory_title.note')} className="mb-3"/>
                                         <p className="font-16 mb-0">ユーザーが会話の理由、クライアントなどを理解するのに役立つシナリオに関するいくつかの情報。</p>
                                     </div>
                                 </div>  
                                 <div className="scenarios-action-box bg-transparent shadow-none">
                                     <div>
-                                        <MandatoryTitle title={t('scenario.explanatory_material')} className="mb-3"/>
+                                        <MandatoryTitle title={t('scenario.mandatory_title.explanatory_material')} className="mb-3"/>
                                         <Row className="smallest-padding-box">
                                             <Col xs="3" className="text-center add-img-box">
                                                 <img src={DescriptionImage} alt="Description Image"/>
@@ -161,7 +161,7 @@ function ScenariosPage() {
                                 
                                 <div className="scenarios-action-box bg-transparent shadow-none">
                                     <div className=" d-flex align-items-center justify-content-between">
-                                        <MandatoryTitle title="ヒント" className="mb-3"/>
+                                        <MandatoryTitle title={t('scenario.mandatory_title.tips')} className="mb-3"/>
                                         <AddButtonPurple className="mb-3"/>
                                     </div>
                                     <Row className="smallest-padding-box mb-3">
@@ -185,7 +185,7 @@ function ScenariosPage() {
                                         <Col xs="10">
                                             <div className="sent-box">
                                                 <p className="font-gold font-10">ヒント 2</p>
-                                                <input type="text" placeholder="ヒントを入力してください" className="form-control no-border rounded-0 p-0"/>
+                                                <input type="text" placeholder={t('scenario.please_enter_hint')} className="form-control no-border rounded-0 p-0"/>
                                             </div>
                                         </Col>
                                         <Col xs="1" className="text-center">
@@ -195,7 +195,7 @@ function ScenariosPage() {
                                 </div>
                                 <div className="scenarios-action-box d-flex align-items-end justify-content-between">
                                     <div>
-                                        <MandatoryTitle title="管理番号" className="mb-3"/>
+                                        <MandatoryTitle title={t('scenario.mandatory_title.control_number')} className="mb-3"/>
                                         <h3 className="font-weight-normal mb-0">261</h3>
                                     </div>
                                 </div>
@@ -210,16 +210,16 @@ function ScenariosPage() {
                                             </Col>
                                             <Col xs="10">
                                                 <div className="sent-box p-3 mb-2">                                                
-                                                    <MandatoryTitle title="ペルソナ" className="mb-2 persona-sub-title"/>
+                                                    <MandatoryTitle title={t('scenario.persona')} className="mb-2 persona-sub-title"/>
                                                     <p className="mb-0">あなたは先日山田様にお手紙を送っています。</p>
                                                 </div>
                                                 <div className="sent-box p-3">
-                                                    <MandatoryTitle title="研修者" className="mb-2 trainee-sub-title"/>
+                                                    <MandatoryTitle title={t('scenario.trainee')} className="mb-2 trainee-sub-title"/>
                                                     <p className="mb-2">このお手紙を送りしたのですが、ご覧いただけましたでしょうか？</p>
                                                     <div className="d-flex">
-                                                        <DeleteKeywordButton title="Letter" className="mr-1"/>
-                                                        <DeleteKeywordButton title="Feed" className="mr-1"/>
-                                                        <AddKeywordButton title="Keyword"/>
+                                                        <DeleteKeywordButton title={t('scenario.letter')} className="mr-1"/>
+                                                        <DeleteKeywordButton title={t('scenario.feed')} className="mr-1"/>
+                                                        <AddKeywordButton title={t('scenario.keyword')}/>
                                                     </div>
                                                 </div>
                                             </Col>
@@ -237,12 +237,12 @@ function ScenariosPage() {
                                             <Col xs="10">
                                                 <div className="sent-box p-3 mb-2">  
                                                     <div className="mb-2">
-                                                        <MandatoryTitle title="研修者" className="mb-2 trainee-sub-title"/>
+                                                        <MandatoryTitle title={t('scenario.trainee')} className="mb-2 trainee-sub-title"/>
                                                         <p className="mb-2">このお手紙を送りしたのですが、ご覧いただけましたでしょうか？</p>
                                                         <div className="d-flex">
-                                                            <DeleteKeywordButton title="Letter" className="mr-1"/>
-                                                            <DeleteKeywordButton title="Feed" className="mr-1"/>
-                                                            <AddKeywordButton title="Keyword"/>
+                                                            <DeleteKeywordButton title={t('scenario.letter')} className="mr-1"/>
+                                                            <DeleteKeywordButton title={t('scenario.feed')} className="mr-1"/>
+                                                            <AddKeywordButton title={t('scenario.keyword')}/>
                                                         </div>       
                                                     </div> 
                                                     <div>
@@ -251,9 +251,9 @@ function ScenariosPage() {
                                                     </div>                                      
                                                 </div>
                                                 <div className="sent-box p-3">
-                                                    <MandatoryTitle title="研修者" className="mb-2 trainee-sub-title"/>
-                                                    <input type="text" placeholder="ヒントを入力してください" className="form-control no-border rounded-0 p-0 mb-2"/>
-                                                    <AddKeywordButton title="Keyword"/>
+                                                    <MandatoryTitle title={t('scenario.trainee')} className="mb-2 trainee-sub-title"/>
+                                                    <input type="text" placeholder={t('scenario.please_enter_message')} className="form-control no-border rounded-0 p-0 mb-2"/>
+                                                    <AddKeywordButton title={t('scenario.keyword')}/>
                                                 </div>
                                             </Col>
                                             <Col xs="1" className="text-center">
@@ -268,13 +268,13 @@ function ScenariosPage() {
                                             </Col>
                                             <Col xs="10">
                                                 <div className="sent-box p-3 mb-2">  
-                                                    <MandatoryTitle title="研修者" className="mb-2 trainee-sub-title"/>
-                                                    <input type="text" placeholder="ヒントを入力してください" className="form-control no-border rounded-0 p-0 mb-2"/>
+                                                    <MandatoryTitle title={t('scenario.trainee')} className="mb-2 trainee-sub-title"/>
+                                                    <input type="text" placeholder={t('scenario.please_enter_message')} className="form-control no-border rounded-0 p-0 mb-2"/>
                                                 </div>
                                                 <div className="sent-box p-3">
-                                                    <MandatoryTitle title="研修者" className="mb-2 trainee-sub-title"/>
-                                                    <input type="text" placeholder="ヒントを入力してください" className="form-control no-border rounded-0 p-0 mb-2"/>
-                                                    <AddKeywordButton title="Keyword"/>
+                                                    <MandatoryTitle title={t('scenario.trainee')} className="mb-2 trainee-sub-title"/>
+                                                    <input type="text" placeholder={t('scenario.please_enter_message')} className="form-control no-border rounded-0 p-0 mb-2"/>
+                                                    <AddKeywordButton title={t('scenario.keyword')}/>
                                                 </div>
                                             </Col>
                                             <Col xs="1" className="text-center">
@@ -284,7 +284,7 @@ function ScenariosPage() {
                                     </div>
                                     <div className="scenarios-trainee-row">
                                         <Row>
-                                            <Col xs="10" className="mx-auto"><button className="font-gray btn w-100 add-btn"><FontAwesomeIcon icon={faPlus}/> シナリオを追加</button></Col>
+                                            <Col xs="10" className="mx-auto"><button className="font-gray btn w-100 add-btn"><FontAwesomeIcon icon={faPlus}/> {t('scenario.add_message')}</button></Col>
                                         </Row>
                                     </div>
                                 </div>
