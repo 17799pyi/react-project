@@ -24,10 +24,11 @@ import AddIcon from '../../assets/images/scenarios/add_icon.png'
 import CloseIcon from '../../assets/images/scenarios/close_icon.png'
 import UpArrow from '../../assets/images/scenarios/up_arrow.png'
 import DownArrow from '../../assets/images/scenarios/down_arrow.png'
-
+import { useTranslation } from 'react-i18next';
 
 
 function ScenariosPage() {  
+    const {t} = useTranslation();
     const [show, setShow] = useState(false);
   
     const handleClose = () => setShow(false);
@@ -81,7 +82,7 @@ function ScenariosPage() {
                                     <MandatoryTitle title="公開" className="bg-green mb-0 py-0"/>
                                 </Col>
                                 <Col lg="8" className="d-flex align-items-center justify-content-end">
-                                    <p className="mb-0 mr-4"><img src={WarningIcon} alt="Warning Icon" className="mr-1 d-inline-block align-middle"/><span className=" d-inline-block align-middle">保存されていない変更があります</span></p>
+                                    <p className="mb-0 mr-4"><img src={WarningIcon} alt="Warning Icon" className="mr-1 d-inline-block align-middle"/><span className=" d-inline-block align-middle">{t('scenario.text_unsave_change')}</span></p>
                                     <div>
                                         <button className="cmn-btn btn save-btn" onClick={handleShow}>保存</button>
                                         <button className="cmn-btn btn private-btn ml-2 mr-4">非公開</button>

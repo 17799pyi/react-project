@@ -4,8 +4,11 @@ import { Container, Row, Col } from 'reactstrap';
 import GeneralButton from "../../../Button/GeneralButton"
 import SlideCard from '../../../Lesson/SlideCard/SlideCard'
 import SamplePhotoFull from '../../../../assets/images/chatlog/sample_profile_full.png'
+import { useTranslation } from 'react-i18next';
 
 const PersonalInfoPopUp = () => {
+    const {t} = useTranslation();
+
     const [show, setShow] = useState(false);  
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -23,7 +26,7 @@ const PersonalInfoPopUp = () => {
                 className={`cmn-model`}
                 >
                 <Modal.Header closeButton className="px-3 pt-3">
-                    <Modal.Title className="text-center"><h3 className="mb-0 font-weight-normal">Persona information</h3></Modal.Title>
+                    <Modal.Title className="text-center"><h3 className="mb-0 font-weight-normal">{t('chat.head_text_persona_info')}</h3></Modal.Title>
                 </Modal.Header>
                 <Modal.Body className="px-3 pt-0 pb-3 pb-sm-0 ">
                     <Row>

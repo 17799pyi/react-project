@@ -25,6 +25,17 @@
         "training_select_box_text" : "Select"
     },
     "chat" : {
-        "" : ""
+        "text_reply" : "Reply",
+        "button_check_result" : "Finish and check the result",
+        "head_text_persona_info" : "Persona information",
+        "product_detail" : "Product Details",
+        "basic_information" : "Basic Information",
+        "registered_content" : "Register Content",
+        "contractor" : "Contractor",
+        "remarks_information" : "Remarks Information",
+        "explanatory_material" : "Explantery Material"
+    },
+    "scenario" : {
+        "text_unsave_change" : "There are unsaved changes"
     }
 }
