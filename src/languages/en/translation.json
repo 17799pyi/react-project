@@ -46,13 +46,14 @@
         "add_scenario" : "Add scenario",
         "scenario2" : "Scenario 2",
         "release" : "Release",
-        "add_explanatory_material" : "Added explanatory material",
+        
         "mandatory_title" : {
             "scenario_no" : "Scenario No",
             "scenario_name" : "Scenario Name",
             "folder" : "Folder",
             "note" : "Note",
             "explanatory_material" : "Explanatory Material",
+            "add_explanatory_material" : "Added explanatory material",
             "tips" : "Tips",
             "control_number" : "Control number"
         },

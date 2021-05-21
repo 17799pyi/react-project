@@ -46,13 +46,13 @@
         "add_scenario" : " シナリオを追加",
         "scenario2" : "シナリオ 2",
         "release" : "公開",
-        "add_explanatory_material" : "説明資料を追加",
         "mandatory_title" : {
             "scenario_no" : "シナリオ№",
             "scenario_name" : "シナリオ名",
             "folder" : "Folder",
             "note" : "メモ",
             "explanatory_material" : "説明資料",
+            "add_explanatory_material" : "説明資料を追加",
             "tips" : "ヒント",
             "control_number" : "管理番号"
         },
