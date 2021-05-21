@@ -85,7 +85,7 @@ function ScenariosPage() {
                                 <div>
                                     <button className="cmn-btn btn save-btn" onClick={handleShow}>{t('general.save')}</button>
                                     <button className="cmn-btn btn private-btn ml-2 mr-4">{t('scenario.private')}</button>
-                                    <button className="cmn-btn btn delete-btn">{t('general.save')}</button>
+                                    <button className="cmn-btn btn delete-btn">{t('general.del')}</button>
                                     <Modal
                                         show={show}
                                         onHide={handleClose}

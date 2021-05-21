@@ -1,9 +1,9 @@
 {
     "general": {
         "cancel": "JP Cancel",
-        "del": "JP Delete",
+        "del": "削除",
         "edit": "JP Edit",
-        "save": "JP Save",
+        "save": "保存",
         "update": "JP Update"
     },
     "lesson": {
