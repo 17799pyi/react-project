@@ -7,6 +7,9 @@ import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import PersonaFolder from '../../../components/Lesson/PersonaFolder/PersonaFolder';
 import classes from './styles.module.css'
 
+import NumberStyleCircle from '../../../components/Number/NumberStyleCircle'
+import NumberStyleRec from '../../../components/Number/NumberStyleRec'
+
 function PersonaSelected() {
     return (
         <div className="cmn-inner-width">
@@ -25,14 +28,16 @@ function PersonaSelected() {
                             <span className={classes.selected_persona_count}>3 / 10</span>
                         </div> */}
                          
-                        <div className={classes.selected_persona_info}>
-                            <span className={classes.selected_persona_number}>2</span>
+                        <div className={classes.selected_persona_info}>                            
+                            <NumberStyleCircle title="1" className="mr-2"/>
+                            {/* <span className={classes.selected_persona_number}>2</span> */}
                             <div>
-                            <span className={classes.selected_persona_name}>List of scenarios by Jiro Suzuki</span>
-                            <img src={elderly_man} className={classes.selected_persona_img}/>
-                            <span className={classes.selected_persona_type}>57 Years Old / Male</span>
+                                <span className={classes.selected_persona_name}>List of scenarios by Jiro Suzuki</span>
+                                <img src={elderly_man} className={classes.selected_persona_img}/>
+                                <span className={classes.selected_persona_type}>57 Years Old / Male</span>
                             </div>
-                            <span className={classes.selected_persona_count}>3 / 10</span>
+                            {/* <span className={classes.selected_persona_count}>3 / 10</span> */}                            
+                            <NumberStyleRec title="1/10" className="px-3 mr-2 py-1"/>
                         </div>
                     </div>
                     {/* <div className={classes.selected_persona_content}>

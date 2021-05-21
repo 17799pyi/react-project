@@ -19,11 +19,11 @@ const HeaderBar = () => {
             <div className="cmn-inner-width">    
                     <div className={`${classes.nav_bar} mb-0`}>
                         <div className=""> 
-                            <GeneralButton title="Suspension" className="font-16 px-32"/>                   
+                            <GeneralButton title="Suspension" className="font-16 px-32 py-3"/>                   
                         </div>
                         <div className="order-3">       
                             <PersonalInfoPopUp/>
-                            <GeneralButton title="Start over" className="font-16 ml-2"/>                        
+                            <GeneralButton title="Start over" className="font-16 ml-2 py-3"/>                        
                         </div>
                         <div className="d-flex algin-items-center">
                             <h3 className="mb-0 font-weight-normal">Scenario 4</h3>                         

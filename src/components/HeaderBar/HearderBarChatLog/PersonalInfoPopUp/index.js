@@ -11,7 +11,7 @@ const PersonalInfoPopUp = () => {
     const handleShow = () => setShow(true);
     return (
         <>
-            <GeneralButton title="Persona information" onClick={handleShow} className="font-16 px-3"/>     
+            <GeneralButton title="Persona information" onClick={handleShow} className="font-16 p-3"/>     
             <Modal
                 show={show}
                 onHide={handleClose}

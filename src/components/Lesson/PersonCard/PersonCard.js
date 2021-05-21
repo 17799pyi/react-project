@@ -5,6 +5,10 @@ import SlideCard from '../SlideCard/SlideCard';
 import classes from './styles.module.css'
 import { useTranslation } from 'react-i18next';
 
+import NumberStyleCircle from '../../Number/NumberStyleCircle'
+import NumberStyleRec from '../../Number/NumberStyleRec'
+
+
 function PersonCard() {
 
     const { t } = useTranslation();
@@ -14,10 +18,12 @@ function PersonCard() {
             <div className={classes.card_wrapper}>
                 <img className={classes.card_image} src={elderly_man} />
                 <div className={classes.card_wrapper_top}>
-                    <span className={classes.card_number}>1</span>
+                    <NumberStyleCircle title="1" className="mr-2"/>
+                    <NumberStyleRec title="1/10" className="px-3 mr-2 py-1"/>
+                    {/* <span className={classes.card_number}>1</span>
                     <span className={classes.card_count}>
                         1/10
-                    </span>
+                    </span> */}
                     <span className={classes.card_status}>
                         <img className={classes.ellipse} src={ellipse} />
                         <span className={classes.ellipse_text}>Perfect</span>
