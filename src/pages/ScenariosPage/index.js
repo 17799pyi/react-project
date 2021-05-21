@@ -36,7 +36,7 @@ function ScenariosPage() {
     return (
         <div className="cmn-inner-width py-4">            
             <Row className="smallest-padding-box scenario_person_box_row py-4">
-                <Col lg="4">
+                <Col xs="4">
                     <div className="scenario_person_box">
                         <NumberStyleCircle title="1"/>
                         <img src={SamplePhoto} alt="Sample Photo"/>
@@ -46,7 +46,7 @@ function ScenariosPage() {
                         </div>
                     </div>
                 </Col>
-                <Col lg="4">
+                <Col xs="4">
                     <div className="scenario_person_box active">
                         <NumberStyleCircle title="2"/>
                         <img src={SamplePhoto2} alt="Sample Photo"/>
@@ -56,7 +56,7 @@ function ScenariosPage() {
                         </div>
                     </div>
                 </Col>
-                <Col lg="4">
+                <Col xs="4">
                     <div className="scenario_person_box">
                         <NumberStyleCircle title="3"/>
                         <img src={SamplePhoto3} alt="Sample Photo"/>
@@ -68,19 +68,19 @@ function ScenariosPage() {
                 </Col>
             </Row>
             <Row>
-                <Col lg="3">
+                <Col xs="3">
                     <SidebarAccordian show="true"/>
                     <SidebarAccordian/>
                 </Col>
-                <Col lg="9">
+                <Col xs="9">
                     <div className="scenarios-btn-box mb-2">
                         <Row className="align-items-center">
-                            <Col lg="4">
-                                <h5 className="font-weight-normal d-inline-block align-middle mr-3 mb-0">シナリオ 2</h5>
+                            <Col xl="3" lg="4" md="4" sm="12" >
+                            <h5 className="font-weight-normal d-inline-block align-middle mr-3 mb-0">シナリオ 2</h5>
                                 <MandatoryTitle title="公開" className="bg-green mb-0 py-0"/>
                             </Col>
-                            <Col lg="8" className="d-flex align-items-center justify-content-end">
-                                <p className="mb-0 mr-4"><img src={WarningIcon} alt="Warning Icon" className="mr-1 d-inline-block align-middle"/><span className=" d-inline-block align-middle">保存されていない変更があります</span></p>
+                            <Col xl="9" lg="8" md="8" sm="12" className="align-items-center justify-content-end d-xl-flex d-block">
+                                <p className="mb-2 mb-xl-0 mr-4 d-lg-inline-block d-block"><img src={WarningIcon} alt="Warning Icon" className="mr-1 d-inline-block align-middle"/><span className=" d-inline-block align-middle">保存されていない変更があります</span></p>
                                 <div>
                                     <button className="cmn-btn btn save-btn" onClick={handleShow}>保存</button>
                                     <button className="cmn-btn btn private-btn ml-2 mr-4">非公開</button>

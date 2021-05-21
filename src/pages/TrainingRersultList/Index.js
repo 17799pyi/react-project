@@ -8,7 +8,7 @@ import classes from "./styles.module.css";
 function Index() {
   return (
     <div className="cmn-inner-width">
-      <Row className={`${classes.agency_page}`}>
+      <Row className={`${classes.agency_page} mt-5`}>
         <Col xs="3">
           <Agency className="mb-2"/>     
           <Agency className="mb-2"/>

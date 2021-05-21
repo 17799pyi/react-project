@@ -5,9 +5,9 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
 function SearchButton() {
     return (
-        <div>
+        <>
             <button className={`${classes.search_button}`}><FontAwesomeIcon icon={faSearch} /> Search</button>
-        </div>
+        </>
     )
 }
 

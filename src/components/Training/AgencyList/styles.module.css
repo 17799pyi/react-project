@@ -1,54 +1,21 @@
 .agency_list {
-  /* margin-top: 25px; */
-}
-
-.container {
-  /* border-radius: 8px;
-  padding: 7px 16px; */
-}
-.agency_list.table {
   border-radius: 20px 20px 20px 20px;
-  border-collapse: inherit;
-  background-color: #faf7f2;
-  text-align: left;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  box-sizing: border-box;
-  white-space: nowrap;
+  border-collapse: separate;
+  border-spacing: 0;
 }
-.agency_list td,
-.agency_list th {
-  border: none !important;
-}
-
-.agency_list th {
-  border: none !important;
-  border-bottom: none;
-  font-family: Hiragino Maru Gothic ProN;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 18px;
+.agency_list tr:first-child th {
+  border: 0;
   color: #8e97fd;
-}
-
-.agency_list tr {
-  font-family: Hiragino Maru Gothic ProN;
-  font-style: normal;
+  font-size: 12px;
   font-weight: normal;
-  font-size: 14px;
-  line-height: 22px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);;
 }
-
+.agency_list tr:nth-child(1) td {
+  border-top: 0;
+}
 .agency_list a {
     color: #8E97FD;
-    /* margin-left: 20px; */
 }
-
-/* table tr:nth-child(1) td{
-    border-top: 0 !important;
-} */
-
 .border_top_non{
     border-top: 0 !important;
 

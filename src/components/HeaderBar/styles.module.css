@@ -1,3 +1,11 @@
+header {
+    background: #FAF7F2;
+    padding: 24px 0;
+    position: sticky;
+    top: 0;
+    z-index: 9;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15), inset 0px -1px 0px rgba(0, 0, 0, 0.15);
+}
 .nav_bar{
     background: var(--darkGray); 
     display: flex;
@@ -14,7 +22,7 @@
     display: flex;
     padding: 0;
     margin: 0;
-    float: right;
+    /* float: right; */
 }
 .nav_bar .right ul li {
     margin: 0;
@@ -22,12 +30,14 @@
 .nav_bar .right ul li a {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     text-align: center;
     padding: 12px 24px;
     background: transparent;
     cursor: pointer;
     margin: 0;
     color: var(--disable-low);
+    height: 100%;
 }
 
 .nav_bar .right ul li a.current,
@@ -40,4 +50,33 @@
 .nav_bar .right ul li:last-child a:hover {
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
+}
+
+.nav_bar .right ul li a img {
+    max-width: 100%;
+    width: 20px;
+    margin: 0 auto 8px;
+}
+.nav_bar .right ul li a img.active {
+    display: none;
+}
+.nav_bar .right ul li a.current img,
+.nav_bar .right ul li a:hover img {
+    display: none;
+}
+.nav_bar .right ul li a.current img.active,
+.nav_bar .right ul li a:hover img.active {
+    display: block;
+}
+
+@media (max-width: 767.98px){
+    header {
+        padding: 0;
+    }
+    header>div {
+        width: 100% !important;
+    }
+    .nav_bar {
+        border-radius: 0;
+    }
 }

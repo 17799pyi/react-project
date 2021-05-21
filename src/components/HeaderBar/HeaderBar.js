@@ -4,6 +4,19 @@ import { BrowserRouter as Router, Switch, Route, Link, NavLink } from "react-rou
 import { faHome } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+import LessonIcon from '../../assets/images/menubar_icon/lesson_icn.png'
+import LessonIconActive from '../../assets/images/menubar_icon/lesson_active_icn.png'
+
+import ResultIcon from '../../assets/images/menubar_icon/training_result_icn.png'
+import ResultIconActive from '../../assets/images/menubar_icon/training_result_active_icn.png'
+
+import ScenarioIcon from '../../assets/images/menubar_icon/scenario_creation_icn.png'
+import ScenarioIconActive from '../../assets/images/menubar_icon/scenario_creation_active_icn.png'
+
+import SettingIcon from '../../assets/images/menubar_icon/setting_icn.png'
+import SettingIconActive from '../../assets/images/menubar_icon/setting_active_icn.png'
+
+
 import classes from './styles.module.css';
 
 const HeaderBar = () => {
@@ -18,25 +31,30 @@ const HeaderBar = () => {
                         <ul>
                             <li>
                                 <NavLink to="lessons" activeClassName={`${classes.current}`}>
-                                    <span><FontAwesomeIcon icon={faHome} /></span>
+                                    {/* <span><FontAwesomeIcon icon={faHome} /></span> */}
+                                    <img src={LessonIconActive} alt="Lesson Active Icon" className={classes.active}/>
+                                    <img src={LessonIcon} alt="Lesson Icon"/>
                                     <span>Lesson</span>
                                 </NavLink>
                             </li>
                             <li>
                                 <NavLink to="agency" activeClassName={`${classes.current}`}>
-                                    <span><FontAwesomeIcon icon={faHome} /></span>
+                                    <img src={ResultIconActive} alt="Result Active Icon" className={classes.active}/>
+                                    <img src={ResultIcon} alt="Result Icon"/>                                    
                                     <span>Traning Result</span>
                                 </NavLink>
                             </li>
                             <li>
                                 <NavLink to="ScenariosPage" activeClassName={`${classes.current}`}>
-                                    <span><FontAwesomeIcon icon={faHome} /></span>
+                                    <img src={ScenarioIconActive} alt="Scenario Active Icon" className={classes.active}/>
+                                    <img src={ScenarioIcon} alt="Scenario Icon"/>                                    
                                     <span>Scenario Creation</span>
                                 </NavLink>
                             </li>
                             <li>
                                 <NavLink to="setting" activeClassName={`${classes.current}`}>
-                                    <span><FontAwesomeIcon icon={faHome} /></span>
+                                    <img src={SettingIconActive} alt="Setting Active Icon" className={classes.active}/>
+                                    <img src={SettingIcon} alt="Setting Icon"/>                                    
                                     <span>setting</span>
                                 </NavLink>
                             </li>

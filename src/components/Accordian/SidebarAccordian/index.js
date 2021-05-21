@@ -24,7 +24,7 @@ function SlideCard({show}) {
                         </button>
                     </div>
                     <div className="mt-2" ref={setCollapsibleElement}>
-                        <ul className={`${classes.side_scenarios_list} m-0`}>
+                        <ul className={`${classes.side_scenarios_list} p-0 m-0`}>
                             <li>
                                 <div>
                                     <NumberStyleRec title="1" className="mr-2"/>

@@ -2,19 +2,20 @@ import React from "react";
 import Table from "react-bootstrap/Table";
 import classes from './styles.module.css'
 import ellipse from '../../../assets/icons/ellipse.png';
+import MandatoryTitle from '../../../components/MandatoryTitle'
 
 function AgencyList() {
   return (
-    <div>
+    <>
       <div className={`table-responsive ${classes.container}`}>
-      <Table className={`${classes.agency_list} ${classes.table}`}>
+      <Table className={`table ${classes.agency_list}`}>
         <thead>
           <tr>
             <th>Trainee</th>
             <th>Persona</th>
             <th>Scenario</th>
             <th>Last Date and time</th>
-            <th colspan="3">Final response rate</th>
+            <th colspan="3"><MandatoryTitle title="Final response rate" className="mb-0"/></th>
           </tr>
         </thead>
         <tbody>
@@ -48,7 +49,7 @@ function AgencyList() {
         </tbody>
       </Table>
       </div>
-    </div>
+    </>
   );
 }
 
