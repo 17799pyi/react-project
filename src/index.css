@@ -5,7 +5,6 @@
     box-sizing: border-box;
     outline: none;
 }
-
 body {
   margin: 0;
   min-width: 320px;
@@ -18,7 +17,6 @@ body {
   font-size: 14px;
   line-height: 1.5;
 }
-
 p {
   margin: 0 0 8px 0;
 }
@@ -64,7 +62,7 @@ h6 {
 
 :root{
   --white: white;
-  --black: black;
+  --black: rgb(2, 2, 2);
   --red: #FA6E5A;
 
   --heading-text: 32px;
@@ -108,14 +106,14 @@ code {
   margin: 0 auto;
   padding: 0 80px;
 } */
-header {
+/* header {
   background: #FAF7F2;
   padding: 24px 0;
   position: sticky;
   top: 0;
   z-index: 9;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15), inset 0px -1px 0px rgba(0, 0, 0, 0.15);
-}
+} */
 .cmn-inner-width {
   margin: 0 auto;
   width: calc(100vw - 160px);
@@ -242,6 +240,31 @@ a.font-purple:hover {
 .d-grid {
   display: grid;
 }
+.cmn-bg-white-box {
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0px 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+}
+.border-radius-8 {
+  border-radius: 8px;
+}
+.cmn-bg-transparent-box {
+  background-color: transparent;
+  padding: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 15px 15px 8px 8px;
+}
+
+
+pre{
+  white-space:pre-wrap;
+  white-space:-moz-pre-wrap;
+  white-space:-pre-wrap;
+  white-space:-o-pre-wrap;
+  word-wrap:break-word;
+}
+
 @media (max-width: 1399.98px){
   .cmn-inner-width {
     width: calc(100vw - 64px);
@@ -293,26 +316,6 @@ a.font-purple:hover {
     min-height: calc(100vh - 95px);
   } */
 }
-@media (max-width: 370px){
-  h1 {
-    font-size: 26px;
-  }
-  h2 {
-    font-size: 24px;
-  }
-  h3 {
-    font-size: 20px;
-  }
-  h4 {
-    font-size: 18px;
-  }
-  h5 {
-    font-size: 16px;
-  }
-  h6 {
-    font-size: 14px;
-  }
-}
 @media screen and (min-width: 576px) {
   .smallest-padding-box {
     margin-left: -4px;
@@ -322,13 +325,12 @@ a.font-purple:hover {
     padding-right: 4px;
     padding-left: 4px;
   }
-}
-
-
-pre{
-  white-space:pre-wrap;
-  white-space:-moz-pre-wrap;
-  white-space:-pre-wrap;
-  white-space:-o-pre-wrap;
-  word-wrap:break-word;
+  .small-padding-box {
+    margin-left: -12px;
+    margin-right: -12px;
+  }
+  .small-padding-box > div {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
 }
