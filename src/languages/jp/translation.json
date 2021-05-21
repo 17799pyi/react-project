@@ -12,5 +12,57 @@
         "female" : "JP Female",
         "product_detail" : "JP Product Detail",
         "view_detail" : "JP View Detail"
+    },
+    "training":{
+        "table_head_text_trainee" : "研修者",
+        "table_head_text_persona" : "ペルソナ",
+        "table_head_text_scenario" : "シナリオ",
+        "table_head_text_date" : "最終実施日時",
+        "table_head_text_rate" : "最終回答率",
+        "scenario_selection" : "シナリオ選択",
+        "scenario_history" : "シナリオ実施履歴",    
+        "training_search_button" : "検索",
+        "training_select_box_text" : "選択する"
+    },
+    "chat" : {
+        "text_reply" : "返信",
+        "button_check_result" : "終了して結果を確認する",
+        "head_text_persona_info" : "ペルソナ情報",
+        "product_detail" : "Product Details",
+        "basic_information" : "Basic Information",
+        "registered_content" : "Register Content",
+        "contractor" : "Contractor",
+        "remarks_information" : "Remarks Information",
+        "explanatory_material" : "説明資料",
+        "tips" : "ヒント",
+        "typing_message_alert" : "このお手紙を送りしたのですが、ご覧いただけましたでしょうか？"
+    },
+    "scenario" : {
+        "text_unsave_change" : "保存されていない変更があります",
+        "scenario_name" : "シナリオ名",
+        "private" : "非公開",
+        "folder1" : "フォルダ1",
+        "hide_details" : "詳細を非表示",
+        "add_scenario" : " シナリオを追加",
+        "scenario2" : "シナリオ 2",
+        "release" : "公開",
+        "add_explanatory_material" : "説明資料を追加",
+        "mandatory_title" : {
+            "scenario_no" : "シナリオ№",
+            "scenario_name" : "シナリオ名",
+            "folder" : "Folder",
+            "note" : "メモ",
+            "explanatory_material" : "説明資料",
+            "tips" : "ヒント",
+            "control_number" : "管理番号"
+        },
+        "please_enter_hint" : "ヒントを入力してください",
+        "persona" : "ペルソナ",
+        "trainee" : "研修者",
+        "letter" : "手紙",
+        "feed" : "送り",
+        "keyword" : "キーワード",
+        "please_enter_message" : "メッセージを入力してください",
+        "add_message" : "メッセージを追加"
     }
 }

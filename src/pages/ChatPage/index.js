@@ -18,9 +18,10 @@ import SendIcon from '../../assets/images/chatlog/send_icon.png'
 import CancelIcon from '../../assets/images/chatlog/cancel_icon.png'
 import DoneIcon from '../../assets/images/chatlog/done_icon.png'
 import WaveformImg from '../../assets/images/chatlog/waveform_img.png'
-
+import {useTranslation} from 'react-i18next'
 
 function ChatPage() {    
+    const {t} = useTranslation();
     const [show, setShow] = useState(false);  
     const [finish, setFinish] = useState(true);  
 
@@ -42,21 +43,21 @@ function ChatPage() {
                         </div>
                         {show &&
                             <div className={`mb-3 px-3 py-2 ${classes.chat_tip_msg}`}>
-                                <span className="font-10">Tips</span>
-                                <p className="mb-0 font-16">I sent you this letter, did you see it?</p>
+                                <span className="font-10">{t('chat.tips')}</span>
+                                <p className="mb-0 font-16">{t('chat.typing_message_alert')}</p>
                             </div>
                         }
                         <div className={`p-3 ${classes.sample_chat_img}`}>
-                            <MandatoryTitle title="Explanatory material"/>
+                            <MandatoryTitle title={t('chat.explanatory_material')}/>
                             <Row className="smallest-padding-box">
                                 <Col xs="4"> 
-                                    <ImagePopup title="Explanatory material" data={DescriptionImage} alt="Description Image" classes={`img-fluid ${classes.chat_descr_img}`}/>
+                                    <ImagePopup title={t('chat.explanatory_material')} data={DescriptionImage} alt="Description Image" classes={`img-fluid ${classes.chat_descr_img}`}/>
                                 </Col>
                                 <Col xs="4">
-                                    <ImagePopup title="Explanatory material" data={DescriptionImage} alt="Description Image" classes={`img-fluid ${classes.chat_descr_img}`}/>
+                                    <ImagePopup title={t('chat.explanatory_material')} data={DescriptionImage} alt="Description Image" classes={`img-fluid ${classes.chat_descr_img}`}/>
                                 </Col>
                                 <Col xs="4">
-                                    <ImagePopup title="Explanatory material" data={DescriptionImage} alt="Description Image" classes={`img-fluid ${classes.chat_descr_img}`}/>
+                                    <ImagePopup title={t('chat.explanatory_material')} data={DescriptionImage} alt="Description Image" classes={`img-fluid ${classes.chat_descr_img}`}/>
                                 </Col>
                             </Row>
                         </div>
@@ -76,7 +77,7 @@ function ChatPage() {
                     </Col>
                     <Col xs="10">
                         <div className={classes.chatlog_text_box}>
-                            <input type="text" placeholder="Reply" onKeyPress={handleKeyDown}/>
+                            <input type="text" placeholder={t('chat.text_reply')} onKeyPress={handleKeyDown}/>
                             <div className={classes.chatlog_text_box_icon}>
                                 {!show? 
                                     <button className="btn btn-link"><img src={ListenIcon} alt="Listen Icon" className="img-fluid"/></button>
@@ -93,7 +94,7 @@ function ChatPage() {
                 :
                 <Row>
                     <Col className="text-center my-3">
-                        <FinishButton title="Finish and check the result"/>
+                        <FinishButton title={t('chat.button_check_result')}/>
                     </Col>
                 </Row>
                 }

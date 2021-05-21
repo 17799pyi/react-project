@@ -12,5 +12,57 @@
         "female" : "Female",
         "product_detail" : "Product Detail",
         "view_detail" : "View Detail"
+    },
+    "training":{
+        "table_head_text_trainee" : "Trainee",
+        "table_head_text_persona" : "Persona",
+        "table_head_text_scenario" : "Scenario",
+        "table_head_text_date" : "Last Date and Time",
+        "table_head_text_rate" : "Final response rate",
+        "scenario_selection" : "Scenario selection",
+        "scenario_history" : "Scenario History",
+        "training_search_button" : "Search",
+        "training_select_box_text" : "Select"
+    },
+    "chat" : {
+        "text_reply" : "Reply",
+        "button_check_result" : "Finish and check the result",
+        "head_text_persona_info" : "Persona information",
+        "product_detail" : "Product Details",
+        "basic_information" : "Basic Information",
+        "registered_content" : "Register Content",
+        "contractor" : "Contractor",
+        "remarks_information" : "Remarks Information",
+        "explanatory_material" : "Explantery Material",
+        "tips" : "Tips",
+        "typing_message_alert" : "I sent you this letter, did you see it?"
+    },
+    "scenario" : {
+        "text_unsave_change" : "There are unsaved changes",
+        "scenario_name" : "Scenario name",
+        "private" : "Private",
+        "folder1" : "Folder 1",
+        "hide_details" : "Hide Details",
+        "add_scenario" : "Add scenario",
+        "scenario2" : "Scenario 2",
+        "release" : "Release",
+        "add_explanatory_material" : "Added explanatory material",
+        "mandatory_title" : {
+            "scenario_no" : "Scenario No",
+            "scenario_name" : "Scenario Name",
+            "folder" : "Folder",
+            "note" : "Note",
+            "explanatory_material" : "Explanatory Material",
+            "tips" : "Tips",
+            "control_number" : "Control number"
+        },
+        "please_enter_hint" : "Please enter a hint",
+        "persona" : "Persona",
+        "trainee" : "Trainee",
+        "letter" : "Letter",
+        "feed" : "Feed",
+        "keyword" : "Keyword",
+        "please_enter_message" : "Please enter a message",
+        "add_message" : "Add message"
     }
 }
