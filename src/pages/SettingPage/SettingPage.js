@@ -7,6 +7,7 @@ import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { faFileExport } from "@fortawesome/free-solid-svg-icons";
 import classes from './styles.module.css'
 import Keywords from '../../components/Keywords/Keywords';
+import AddButtonPurple from '../../components/Button/AddButtonPurple';
 
 function SettingPage() {
     return (

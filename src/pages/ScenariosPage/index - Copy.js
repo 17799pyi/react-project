@@ -16,7 +16,6 @@ import GeneralPopupMsg from '../../components/PopupBox/GeneralPopupMsg'
 import ScenariosNoCard from '../../components/Card/ScenariosNoCard'
 import ScenariosGeneralCard from '../../components/Card/ScenariosGeneralCard'
 import ScenariosNoteCard from '../../components/Card/ScenariosNoteCard'
-import ScenariosSelectCard from '../../components/Card/ScenariosSelectCard'
 
 import SamplePhoto from '../../assets/images/scenarios/sample_man1.png'
 import SamplePhoto2 from '../../assets/images/scenarios/sample_man2.png'
@@ -81,7 +80,7 @@ function ScenariosPage() {
                         <Row className="align-items-center">
                             <Col xl="3" lg="4" md="4" sm="12" >
                             <h5 className="font-weight-normal d-inline-block align-middle mr-3 mb-0">シナリオ 2</h5>
-                                <MandatoryTitle title="公開" className="bg-green mb-0"/>
+                                <MandatoryTitle title="公開" className="bg-green mb-0 py-0"/>
                             </Col>
                             <Col xl="9" lg="8" md="8" sm="12" className="align-items-center justify-content-end d-xl-flex d-block">
                                 <p className="mb-2 mb-xl-0 mr-4 d-lg-inline-block d-block"><img src={WarningIcon} alt="Warning Icon" className="mr-1 d-inline-block align-middle"/><span className=" d-inline-block align-middle">保存されていない変更があります</span></p>
@@ -117,9 +116,30 @@ function ScenariosPage() {
                     </div>
                     <Row className="smallest-padding-box">
                         <Col lg="5">
+                            {/* <div className="scenarios-action-box d-flex align-items-end justify-content-between">
+                                <div>
+                                    <MandatoryTitle title="シナリオ№" className="mb-3"/>
+                                    <h3 className="font-weight-normal mb-0">2</h3>
+                                </div>
+                                <div>
+                                    <button className="btn font-gray2"><FontAwesomeIcon icon={faMinus}/></button>
+                                    <button className="btn font-gray2"><FontAwesomeIcon icon={faPlus}/></button>
+                                </div>
+                            </div> */}
                             <ScenariosNoCard data="2" card_title="シナリオ№" className="mb-2"/>
+                            {/* <div className="scenarios-action-box d-flex align-items-end justify-content-between">
+                                <div>
+                                    <MandatoryTitle title="シナリオ名" className="mb-3"/>
+                                    <h3 className="font-weight-normal mb-0">シナリオ名</h3>
+                                </div>
+                            </div> */}
                             <ScenariosGeneralCard card_title="シナリオ名" data="シナリオ名" className="mb-2"/>
-                            <ScenariosSelectCard card_title="シナリオ名" data="シナリオ名" className="mb-2" />
+                            {/* <div className="scenarios-action-box d-flex align-items-end justify-content-between">
+                                <div>
+                                    <MandatoryTitle title="メモ" className="mb-3"/>
+                                    <p className="font-16 mb-0">ユーザーが会話の理由、クライアントなどを理解するのに役立つシナリオに関するいくつかの情報。</p>
+                                </div>
+                            </div>   */}
                             <ScenariosNoteCard card_title="メモ" data="ユーザーが会話の理由、クライアントなどを理解するのに役立つシナリオに関するいくつかの情報。" className="mb-2"/>
                             <div className="scenarios-action-box bg-transparent shadow-none">
                                 <div>
@@ -155,7 +175,7 @@ function ScenariosPage() {
                                         <button className="btn no-btn pb-2"><img src={DownArrow} className="btn-img"/></button>
                                     </Col>
                                     <Col xs="10">
-                                        <div className="cmn-bg-white-box px-3 pt-3">
+                                        <div className="sent-box">
                                         <p className="font-gold font-10">ヒント 1</p>
                                         <p className="mb-0">このお手紙を送りしたのですが、ご覧いただけましたでしょうか？</p>
                                         </div>
@@ -169,7 +189,7 @@ function ScenariosPage() {
                                         <button className="btn no-btn pt-2"><img src={UpArrow} className="btn-img"/></button>
                                     </Col>
                                     <Col xs="10">
-                                        <div className="cmn-bg-white-box px-3 pt-3">
+                                        <div className="sent-box">
                                             <p className="font-gold font-10">ヒント 2</p>
                                             <input type="text" placeholder="ヒントを入力してください" className="form-control no-border rounded-0 p-0"/>
                                         </div>
@@ -195,11 +215,11 @@ function ScenariosPage() {
                                             <button className="btn no-btn pb-2"><img src={DownArrow} className="btn-img"/></button>
                                         </Col>
                                         <Col xs="10">
-                                            <div className="cmn-bg-white-box p-3 mb-2">                                                
+                                            <div className="sent-box p-3 mb-2">                                                
                                                 <MandatoryTitle title="ペルソナ" className="mb-2 persona-sub-title"/>
                                                 <p className="mb-0">あなたは先日山田様にお手紙を送っています。</p>
                                             </div>
-                                            <div className="cmn-bg-white-box p-3">
+                                            <div className="sent-box p-3">
                                                 <MandatoryTitle title="研修者" className="mb-2 trainee-sub-title"/>
                                                 <p className="mb-2">このお手紙を送りしたのですが、ご覧いただけましたでしょうか？</p>
                                                 <div className="d-flex">
@@ -221,7 +241,7 @@ function ScenariosPage() {
                                             <button className="btn no-btn pb-2 d-flex align-items-end justify-content-center"><img src={DownArrow} className="btn-img"/></button>
                                         </Col>
                                         <Col xs="10">
-                                            <div className="cmn-bg-white-box p-3 mb-2">  
+                                            <div className="sent-box p-3 mb-2">  
                                                 <div className="mb-2">
                                                     <MandatoryTitle title="研修者" className="mb-2 trainee-sub-title"/>
                                                     <p className="mb-2">このお手紙を送りしたのですが、ご覧いただけましたでしょうか？</p>
@@ -236,7 +256,7 @@ function ScenariosPage() {
                                                     <p className="mb-0">いいえ、まだ見ていません。 重要なことはありますか？ ちょっと忙しいです...</p>
                                                 </div>                                      
                                             </div>
-                                            <div className="cmn-bg-white-box p-3">
+                                            <div className="sent-box p-3">
                                                 <MandatoryTitle title="研修者" className="mb-2 trainee-sub-title"/>
                                                 <input type="text" placeholder="ヒントを入力してください" className="form-control no-border rounded-0 p-0 mb-2"/>
                                                 <AddKeywordButton title="Keyword"/>
@@ -253,11 +273,11 @@ function ScenariosPage() {
                                             <button className="btn no-btn pt-2"><img src={UpArrow} className="btn-img"/></button>
                                         </Col>
                                         <Col xs="10">
-                                            <div className="cmn-bg-white-box p-3 mb-2">  
+                                            <div className="sent-box p-3 mb-2">  
                                                 <MandatoryTitle title="研修者" className="mb-2 trainee-sub-title"/>
                                                 <input type="text" placeholder="ヒントを入力してください" className="form-control no-border rounded-0 p-0 mb-2"/>
                                             </div>
-                                            <div className="cmn-bg-white-box p-3">
+                                            <div className="sent-box p-3">
                                                 <MandatoryTitle title="研修者" className="mb-2 trainee-sub-title"/>
                                                 <input type="text" placeholder="ヒントを入力してください" className="form-control no-border rounded-0 p-0 mb-2"/>
                                                 <AddKeywordButton title="Keyword"/>

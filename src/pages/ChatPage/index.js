@@ -94,7 +94,7 @@ function ChatPage() {
                 :
                 <Row>
                     <Col className="text-center my-3">
-                        <FinishButton title={t('chat.button_check_result')}/>
+                        <FinishButton title={t('chat.button_check_result')} className="font-22 px-5 py-3"/>
                     </Col>
                 </Row>
                 }

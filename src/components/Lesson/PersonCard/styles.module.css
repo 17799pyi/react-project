@@ -1,6 +1,9 @@
 .persona_card{
     position: relative;
 }
+.card_wrapper {
+    position: relative;
+}
 .card_wrapper_top{
     background: var(--mediumSlateBlue);
     border-top-left-radius: 20px;
@@ -43,11 +46,12 @@
 .card_image{
     position: absolute;
     right: 17px;
-    top: 17px;
+    bottom: 0;
 }
 .card_status{
     background: white;
-    padding: 8.5px 11px;
+    /* padding: 8.5px 11px; */
+    padding: 4px 16px;
     border-radius: 4px 10px 10px 4px;
     margin-left: 4px;
 }

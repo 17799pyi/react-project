@@ -13,6 +13,7 @@ header {
     align-items: center;
     color: #A0A3B1;
     border-radius: 20px;   
+    min-height: 72px;
 }
 .nav_bar .left .person_selection {
     padding-left: 32px;
@@ -78,5 +79,13 @@ header {
     }
     .nav_bar {
         border-radius: 0;
+        display: block;
+    }
+    .nav_bar .right ul li {
+        width: 25%;
+    }
+    .nav_bar .left .person_selection {
+        padding: 8px;
+        border-bottom: 1px solid var(--disable-low);
     }
 }

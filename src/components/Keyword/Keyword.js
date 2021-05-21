@@ -17,9 +17,9 @@ function Keyword() {
         <div className={classes.keyword_wrapper}>
             <Row>
                 <Col lg="4" md="11" sm="11" xs="11" className="order-0 order-lg-0">
-                    <input type="text" value="Word 1" className={`cmn-bg-white-box px-3 py-2 w-100`} />
+                    <input type="text" value="Word 1" className={`cmn-bg-white-box px-3 py-2 w-100 rounded-lg`} />
                 </Col> 
-                <Col lg="7" md="12" className="order-2 order-lg-1 mt-lg-0 mt-3">
+                <Col lg="7" md="12" className="order-2 order-lg-1 mt-lg-0 mt-3 cmn-border-radius-style">
                     <DeleteKeywordButton title="Sync 1" className="px-3 py-2 mr-1 mb-1 bg-transparent"/>
                     <DeleteKeywordButton title="Sync 1" className="px-3 py-2 mr-1 mb-1 bg-transparent"/>
                     <DeleteKeywordButton title="Sync 1" className="px-3 py-2 mr-1 mb-1 bg-transparent"/>

@@ -134,6 +134,12 @@ h3 {
 .font-16 {
   font-size: 16px;
 }
+.font-22 {
+  font-size: 22px;
+}
+.p-32 {
+  padding: 32px;
+}
 .px-32 {
   padding-left: 32px;
   padding-right: 32px;
@@ -245,6 +251,7 @@ a.font-purple:hover {
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: inset 0px 2px 8px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
+  padding: 8px;
 }
 .border-radius-8 {
   border-radius: 8px;
@@ -255,8 +262,18 @@ a.font-purple:hover {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 15px 15px 8px 8px;
 }
-
-
+.cmn-border-radius-style-sm>*:first-child {
+  border-radius: 10px 4px 4px 10px;
+}
+.cmn-border-radius-style-sm>*:last-child {
+  border-radius: 4px 10px 10px 4px;
+}
+.cmn-border-radius-style-md>*:first-child {
+  border-radius: 15px 8px 8px 15px;
+}
+.cmn-border-radius-style-md>*:last-child {
+  border-radius: 8px 15px 15px 8px;
+}
 pre{
   white-space:pre-wrap;
   white-space:-moz-pre-wrap;
