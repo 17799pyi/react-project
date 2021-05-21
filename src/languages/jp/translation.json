@@ -60,6 +60,7 @@
         "letter" : "手紙",
         "feed" : "送り",
         "keyword" : "キーワード",
-        "please_enter_message" : "メッセージを入力してください"
+        "please_enter_message" : "メッセージを入力してください",
+        "add_message" : "メッセージを追加"
     }
 }
