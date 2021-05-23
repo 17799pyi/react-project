@@ -9,13 +9,15 @@ import classes from './styles.module.css'
 
 import NumberStyleCircle from '../../../components/Number/NumberStyleCircle'
 import NumberStyleRec from '../../../components/Number/NumberStyleRec'
+import {useTranslation} from 'react-i18next'
 
 function PersonaSelected() {
+    const {t} = useTranslation();
     return (
         <div className="cmn-inner-width">
             <div className="persona_selection">
                 <div className="text">
-                    <p className={classes.head_text}>Please select a persona.</p>
+                    <p className={classes.head_text}>{t('lesson.head_text')}</p>
                 </div>
                 <div className="persona_selection_content">
                     <div className={`mb-4 ${classes.selected_persona}`}>
@@ -67,15 +69,15 @@ function PersonaSelected() {
                     <Row>
                         <Col xs="3">
                             <div className={`${classes.selected_persona_content_folder_btn_wrapper} ${classes.selected_persona_content_folder_btn_wrapper_active}`}>
-                                <span>Any Folder</span>
+                                <span>{t('lesson.any_folder')}</span>
                                 <span> <FontAwesomeIcon icon={faAngleRight} /> </span>
                             </div>
                             <div className={classes.selected_persona_content_folder_btn_wrapper}>
-                                <span>Any Folder</span>
+                                <span>{t('lesson.any_folder')}</span>
                                 <span> <FontAwesomeIcon icon={faAngleRight} /> </span>
                             </div>
                             <div className={classes.selected_persona_content_folder_btn_wrapper}>
-                                <span>Any Folder</span>
+                                <span>{t('lesson.any_folder')}</span>
                                 <span> <FontAwesomeIcon icon={faAngleRight} /> </span>
                             </div>
                         </Col>

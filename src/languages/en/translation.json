@@ -7,11 +7,19 @@
         "update": "Update"
     },
     "lesson": {
-        "head_text" : "Please select a persona",
+        "head_text" : "Please select a persona.",
         "male" : "Male",
         "female" : "Female",
         "product_detail" : "Product Detail",
-        "view_detail" : "View Detail"
+        "view_detail" : "View Detail",
+        "any_folder" : "Any Folder",
+        "scenario_name" : "Scenario Name",
+        "head_text_check_content" : "Check the content of scenario and start training.",
+        "letter_problem" : "Letter Problem",
+        "time_required" : "Time required",
+        "context" : "Context",
+        "context_text" : "A description of the context. Some information about scenarios that help users understand the reason for the conversation, the client, and so on.",
+        "start_the_scenario" : "Start the scenario"
     },
     "training":{
         "table_head_text_trainee" : "Trainee",
@@ -46,7 +54,6 @@
         "add_scenario" : "Add scenario",
         "scenario2" : "Scenario 2",
         "release" : "Release",
-        
         "mandatory_title" : {
             "scenario_no" : "Scenario No",
             "scenario_name" : "Scenario Name",
