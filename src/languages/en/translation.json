@@ -7,7 +7,7 @@
         "update": "Update"
     },
     "lesson": {
-        "head_text" : "Please select a persona.",
+        "head_text" : "Please select a persona",
         "male" : "Male",
         "female" : "Female",
         "product_detail" : "Product Detail",
@@ -72,5 +72,13 @@
         "keyword" : "Keyword",
         "please_enter_message" : "Please enter a message",
         "add_message" : "Add message"
+    },
+    "setting" : {
+        "synonym" : "Synonym",
+        "search_keywords_synonym" : "Search for keywords and synonyms",
+        "add_keyword" : "Add keywords",
+        "export" : "Export",
+        "keyword" : "Keyword",
+        "add_synonym" : "Add Synonyms"
     }
 }

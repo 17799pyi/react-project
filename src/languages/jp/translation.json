@@ -1,17 +1,25 @@
 {
     "general": {
-        "cancel": "JP Cancel",
+        "cancel": "キャンセル",
         "del": "削除",
         "edit": "JP Edit",
         "save": "保存",
         "update": "JP Update"
     },
     "lesson": {
-        "head_text" : "JP Please select a persona",
-        "male" : "JP Male",
-        "female" : "JP Female",
-        "product_detail" : "JP Product Detail",
-        "view_detail" : "JP View Detail"
+        "head_text" : "ペルソナを選択してください。",
+        "male" : "男性",
+        "female" : "Female",
+        "product_detail" : "商品内容",
+        "view_detail" : "詳細の表示",
+        "any_folder" : "任意のフォルダ",
+        "scenario_name" : "シナリオ名",
+        "head_text_check_content" : "シナリオの内容確認し、トレーニングを開始してください。",
+        "letter_problem" : "手紙の問題",
+        "time_required" : "所用時間",
+        "context" : "コンテキスト",
+        "context_text" : "コンテキストの説明。 ユーザーが会話の理由、クライアントなどを理解するのに役立つシナリオに関するいくつかの情報。",
+        "start_the_scenario" : "シナリオを開始"
     },
     "training":{
         "table_head_text_trainee" : "研修者",
@@ -64,5 +72,13 @@
         "keyword" : "キーワード",
         "please_enter_message" : "メッセージを入力してください",
         "add_message" : "メッセージを追加"
+    },
+    "setting" : {
+        "synonym" : "同義語",
+        "search_keywords_synonym" : "キーワードや同義語を探す",
+        "add_keyword" : "キーワードを追加",
+        "export" : "エクスポート",
+        "keyword" : "キーワード",
+        "add_synonym" : "同義語を追加"
     }
 }

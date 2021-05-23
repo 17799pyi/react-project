@@ -11,8 +11,10 @@ import CloseIcon from '../../assets/images/scenarios/close_icon.png'
 
 import DeleteKeywordButton from '../../components/Button/DeleteKeywordButton'
 import AddKeywordButton from '../../components/Button/AddKeywordButton'
+import {useTranslation} from 'react-i18next'
 
 function Keyword() {
+    const {t} = useTranslation();
     return (
         <div className={classes.keyword_wrapper}>
             <Row>
@@ -24,7 +26,7 @@ function Keyword() {
                     <DeleteKeywordButton title="Sync 1" className="px-3 py-2 mr-1 mb-1 bg-transparent"/>
                     <DeleteKeywordButton title="Sync 1" className="px-3 py-2 mr-1 mb-1 bg-transparent"/>
                     <DeleteKeywordButton title="Sync 1" className="px-3 py-2 mr-1 mb-1 bg-transparent"/> 
-                    <AddKeywordButton title="Add Synonyms" className="px-3 py-2 mb-1 bg-transparent"/>
+                    <AddKeywordButton title={t('setting.add_synonym')} className="px-3 py-2 mb-1 bg-transparent"/>
                 </Col>            
                 <Col lg="1" md="1" sm="1" xs="1" className="order-1 order-lg-2 text-center">
                     <button className="btn no-btn pt-2"><img src={CloseIcon} className="btn-img"/></button>

@@ -8,15 +8,17 @@ import { faFileExport } from "@fortawesome/free-solid-svg-icons";
 import classes from './styles.module.css'
 import Keywords from '../../components/Keywords/Keywords';
 import AddButtonPurple from '../../components/Button/AddButtonPurple';
+import {useTranslation} from 'react-i18next'
 
 function SettingPage() {
+    const {t} = useTranslation();
     return (
         <div className="cmn-inner-width">
             <div className="setting-wrapper mt-5">
                 <Row>
                     <Col xs="3">
                         <button type="button" className={`btn ${classes.synonym_btn}`}>
-                        Synonym
+                        {t('setting.synonym')}
                         <FontAwesomeIcon icon={faAngleRight} />
                         </button>
                     </Col>
@@ -32,19 +34,19 @@ function SettingPage() {
                                 <Col lg="7" className="mb-2 mb-lg-0">
                                     <div className={`cmn-bg-white-box d-flex align-items-center ${classes.search_box_container}`}>
                                         <FontAwesomeIcon icon={faSearch} className="font-gray2"/>
-                                        <input type="text" className="ml-2 no-border w-100" placeholder="Search for keywords and synonyms" />
+                                        <input type="text" className="ml-2 no-border w-100" placeholder={t('setting.search_keywords_synonym')} />
                                     </div>
                                 </Col>
                                 <Col lg="3" md="6" sm="6" xs="6" className="">
                                     <button type="button" className={`btn ${classes.add_keyword_btn}`}>
                                         <FontAwesomeIcon icon={faPlus} />
-                                        Add keywords
+                                        {t('setting.add_keyword')}
                                     </button>
                                 </Col>
                                 <Col lg="2" md="6" sm="6" xs="6">
                                     <button type="button" className={`btn ${classes.export_btn}`}>
                                         <FontAwesomeIcon icon={faFileExport} />
-                                        Export
+                                        {t('setting.export')}
                                     </button>
                                 </Col>
                             </Row>
