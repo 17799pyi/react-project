@@ -13,6 +13,7 @@ import ChatPage from '../pages/ChatPage'
 import ScenariosPage from '../pages/ScenariosPage'
 import SettingPage from '../pages/SettingPage/SettingPage';
 import PageNotFound from '../pages/PageNotFound';
+import Recruiter from '../pages/RecruiterPage'
 
 import '../pages/index.css'
 
@@ -29,6 +30,7 @@ const Routes = () => {
                 <Route exact path="/lessons/1" component={PersonaSelected} />
                 <Route exact path="/lessons/1/scenario" component={PersonaScenaio} />
                 <Route exact path="/setting" component={SettingPage} />
+                <Route exact path="/recruiter" component={Recruiter} />
                 <Route path="*" component={PageNotFound} />
               </Switch>
       </Router>
