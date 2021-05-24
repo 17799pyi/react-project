@@ -12,15 +12,17 @@ import Index from '../pages/TrainingRersultList/Index';
 import ChatPage from '../pages/ChatPage'
 import ScenariosPage from '../pages/ScenariosPage'
 import SettingPage from '../pages/SettingPage/SettingPage';
+import RateOfRisk from '../pages/RateOfRisk/index'
 import PageNotFound from '../pages/PageNotFound';
 
 import '../pages/index.css'
+import ScenarioSelection from '../pages/ScenarioSelection/ScenarioSelection';
 
 const Routes = () => {
   return (
     <React.Fragment>
       <Router>
-            <HeaderBar/>
+            {/* <HeaderBar/> */}
               <Switch>
                 <Route exact path="/agency" component={Index} />
                 <Route exact path="/ChatPage" component={ChatPage} />
@@ -29,6 +31,8 @@ const Routes = () => {
                 <Route exact path="/lessons/1" component={PersonaSelected} />
                 <Route exact path="/lessons/1/scenario" component={PersonaScenaio} />
                 <Route exact path="/setting" component={SettingPage} />
+                <Route exact path="/scenario-selection" component={ScenarioSelection} />
+                <Route exact path="/scenario-selection/1" component={RateOfRisk} />
                 <Route path="*" component={PageNotFound} />
               </Switch>
       </Router>
