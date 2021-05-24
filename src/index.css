@@ -91,6 +91,12 @@ h6 {
 
   --icon-btn: #517b9e;
 
+  --blue-card: #00A5D9;
+  --deep-blue-card: #0095c4;
+
+  --border-soft: #FAFAFA;
+  --border-deep-soft: #E6E6E6;
+
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
