@@ -5,7 +5,7 @@ import Checkbox from '@material-ui/core/Checkbox';
 import Image from '../../assets/images/checkbox_mark.png'; // Import using relative path
 
 
-import colors from '../../../themes/colors';
+import colors from '../../themes/colors';
 
 const useStyles = makeStyles({
   root: {
@@ -18,7 +18,7 @@ const useStyles = makeStyles({
     borderRadius: 5,
     width: 25,
     height: 25,
-    border: '1px solid #D9D9D9',
+    border: '1.5px solid #D9D9D9',
     backgroundColor: '#fff',
     backgroundImage: 'initial',
     '$root.Mui-focusVisible &': {
@@ -43,7 +43,8 @@ const useStyles = makeStyles({
       backgroundImage: `url(${Image})`,
       backgroundRepeat: 'no-repeat',
       backgroundPositionX: 'center',
-      backgroundPositionY: 3,
+      backgroundPositionY: 'center',
+      backgroundSize: '12px 10px',
       content: '""',
     },
     'input:hover ~ &': {

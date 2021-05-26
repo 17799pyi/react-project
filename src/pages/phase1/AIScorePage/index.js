@@ -43,7 +43,7 @@ const AIScorePage = ({ }) => {
                         <BackgroundBlueLabel label="ポイント" />
                     </Col>
                 </Row>
-                <Row className="smallest-padding-box02 mb-3">
+                <Row className="smallest-padding-box02 mb-2">
                     <Col xs="2" className="d-flex">
                         <div  className="cmn-bg-box-inr">
                             <p className="font-16 font-weight-bold">介護の発生頻度</p>
@@ -77,7 +77,7 @@ const AIScorePage = ({ }) => {
                         </div>
                     </Col>
                 </Row>
-                <Row className="smallest-padding-box02 mb-3">
+                <Row className="smallest-padding-box02 mb-2">
                     <Col xs="2" className="d-flex">
                         <div  className="cmn-bg-box-inr">
                             <p className="font-16 font-weight-bold">寿命と健康的な寿命</p>
@@ -111,7 +111,7 @@ const AIScorePage = ({ }) => {
                         </div>
                     </Col>
                 </Row>
-                <Row className="smallest-padding-box02 mb-3">
+                <Row className="smallest-padding-box02 mb-2">
                     <Col xs="2" className="d-flex">
                         <div  className="cmn-bg-box-inr">
                             <p className="font-16 font-weight-bold">介護の原因</p>
@@ -145,7 +145,7 @@ const AIScorePage = ({ }) => {
                         </div>
                     </Col>
                 </Row>
-                <Row className="smallest-padding-box02 mb-3">
+                <Row className="smallest-padding-box02 mb-4">
                     <Col xs="2" className="d-flex">
                         <div  className="cmn-bg-box-inr">
                             <p className="font-16 font-weight-bold">介護期間</p>
@@ -187,7 +187,7 @@ const AIScorePage = ({ }) => {
                 </Row>
                 <Row>
                     <Col>
-                        <p className="font-16 font-weight-bold">発話箇所</p>
+                        <p className="font-16 font-weight-bold mb-3">発話箇所</p>
                         <ChatLog/>
                     </Col>
                 </Row>

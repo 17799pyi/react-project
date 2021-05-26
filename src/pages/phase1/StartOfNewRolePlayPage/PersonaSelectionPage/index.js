@@ -25,7 +25,7 @@ const PersonaSelectionPage = ({ className, style, onEditScenerio }) => {
             <GeneralButton title="次へ"  onClick={onEditScenerio} />
           </Col>
         </Row>
-        <div className={`cmn-bg-box-inr`}>
+        <div className={`cmn-bg-box-inr pb-2`}>
             <div className="mb-3">
               <h6 className={`mb-3 ${classes.recruiter_select}`}>募集人の選択</h6>
               <Row>
@@ -46,7 +46,7 @@ const PersonaSelectionPage = ({ className, style, onEditScenerio }) => {
                 } 
                 label={<span style={styles.label} className="">保険プログラム</span>} />
             </div>
-            <div className="mb-4">
+            <div className="mb-3">
               <h6 className={`font-14 mb-3 ${classes.learning_theme}`}>シナリオ</h6>
               <FormControlLabel className={classes.root} key="" style={styles.root} id="adfasd" control={
                     <Radio
@@ -67,14 +67,14 @@ const PersonaSelectionPage = ({ className, style, onEditScenerio }) => {
                   } 
                   label={<span style={styles.label} className="">医療保険の見直し</span>} />
             </div>
-            <Row className={`${classes.card_wrapper}`}>
-              <Col xs="4">
+            <Row className={`smallest-padding-box01`}>
+              <Col lg="4" md="6" className="mb-3">
                 <CancerInsuranceCard />
               </Col>
-              <Col xs="4">
+              <Col lg="4" md="6" className="mb-3">
                 <CancerInsuranceCard />
               </Col>
-              <Col xs="4">
+              <Col lg="4" md="6" className="mb-3">
                 <CancerInsuranceCard />
               </Col>
             </Row>
@@ -96,7 +96,7 @@ const styles = {
       marginButtom: '0',
       fontSize: '16px',
       fontWeight: 'normal',
-      marginRight : '48px',
+      marginRight : '16px',
       marginLeft : '8px',
   }
 };

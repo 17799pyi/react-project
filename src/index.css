@@ -12,7 +12,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 14px;
-  background-color: #FAF7F2;
+  /* background-color: #FAF7F2; */
+  background-color: var(--pure-white);
   color: var(--darkGray);
   font-size: 14px;
   line-height: 1.5;
@@ -335,7 +336,7 @@ input:focus {
 }
 
 .main-content-inr {
-  padding: 48px;
+  padding: 48px 40px;
 }
 /* .active {
   background-color: #027EC3;

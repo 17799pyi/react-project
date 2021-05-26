@@ -16,7 +16,7 @@ const RateOfRiskPage = ({ }) => {
     const { t } = useTranslation();
     return (
         <>
-        <Row className="align-items-center mb-32">  
+        <Row className="align-items-center mb-32 pb-2">  
             <Col>
                 <h3 className="mb-3">介護リスク率発生</h3>          
                 <h3 className="mb-0 font-weight-normal d-block">-このセクションの目的-</h3>

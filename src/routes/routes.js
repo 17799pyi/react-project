@@ -35,7 +35,7 @@ const Routes = () => {
               <div id="main-content" className='content-large'>
               <Switch>
               <Route exact path="/AIScore" component={AIScore} />
-                <Route exact path="/RateOfRisk" component={RateOfRisk} />
+                <Route exact path="/RateOfRisk" component={RateOfRisk1} />
                 <Route exact path="/VideoChat" component={VideoChat} />
                 <Route exact path="/" component={StartOfNewRolePlay} />
 

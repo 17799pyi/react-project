@@ -31,12 +31,12 @@ const ScenariosSelectionPage = ({ className, style, onBack }) => {
                 </Row>
                 <div className="cmn-bg-box-inr pb-2">
                     <Row>
-                        <Col lg="10">                            
+                        <Col xl="10">                            
                             <Row className="mb-32 align-items-end">
-                                <Col lg="2">
+                                <Col md="2" sm="4" xs="4">
                                     <img src={humanImg} className={`mw-100 ${classes.human_img}`} />
                                 </Col>
-                                <Col lg="6" className="position-relative">
+                                <Col lg="6" className="position-relative my-3 my-lg-0">
                                     <span className={`${classes.progress_bar_text} ${(prog_per >= 20) ? '' : classes.right_0}`}>進捗</span>
                                     { prog_per ?
                                         <img src={ProgressImg} alt="ProgressImg" className={classes.progress_bar_img} style={{left: prog_per + '%'}}/>
@@ -50,7 +50,7 @@ const ScenariosSelectionPage = ({ className, style, onBack }) => {
                                     </div>
                                 </Col>
                                 <Col lg="4">
-                                    <div className={classes.percent_content}>
+                                    {/* <div className={classes.percent_content}>
                                         <div className={classes.percent_content_left}>
                                             <img src={smileImg} className={classes.w_6} />
                                             <span className={classes.percent_content_text}>8</span>
@@ -62,26 +62,41 @@ const ScenariosSelectionPage = ({ className, style, onBack }) => {
                                                 <span className={classes.percent_content_text}>(3/1)</span>
                                             </p>
                                         </div>
-                                    </div>
+                                    </div> */}
+                                    <table className={`table ${classes.roleplay_step2_tb}`}>
+                                        <tr>
+                                            <td rowspan="2">
+                                                <img src={smileImg} alt="Smile Image"/>
+                                                <span className="ml-2 font-weight-bold font-16">8</span>
+                                            </td>
+                                            <td className="font-weight-bold font-16">30%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>                                                
+                                                <img src={starImg} alt="Star Image"/>
+                                                <span className="ml-2 font-weight-bold font-16">(3/1)</span>
+                                            </td>
+                                        </tr>
+                                    </table>
                                 </Col>
                             </Row>
                             <Row className="smallest-padding-box pt-2">
-                                <Col xs="4" className="mb-3">
+                                <Col lg="4" md="6" className="mb-3">
                                     <ScenarioSelectionCard/>
                                 </Col>
-                                <Col xs="4" className="mb-3">
+                                <Col lg="4" md="6" className="mb-3">
                                     <ScenarioSelectionCard/>
                                 </Col>
-                                <Col xs="4" className="mb-3">
+                                <Col lg="4" md="6" className="mb-3">
                                     <ScenarioSelectionCard/>
                                 </Col>
-                                <Col xs="4" className="mb-3">
+                                <Col lg="4" md="6" className="mb-3">
                                     <ScenarioSelectionCard/>
                                 </Col>
-                                <Col xs="4" className="mb-3">
+                                <Col lg="4" md="6" className="mb-3">
                                     <ScenarioSelectionCard/>
                                 </Col>
-                                <Col xs="4" className="mb-3">
+                                <Col lg="4" md="6" className="mb-3">
                                     <ScenarioSelectionCard/>
                                 </Col>
                             </Row>
