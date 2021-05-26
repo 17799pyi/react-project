@@ -25,6 +25,7 @@ import StartOfNewRolePlay from '../pages/phase1/StartOfNewRolePlayPage';
 
 import '../pages/index.css'
 import ScenarioSelection from '../pages/ScenarioSelection/ScenarioSelection';
+import ScenariosSelectionPage from '../pages/phase1/StartOfNewRolePlayPage/ScenariosSelectionPage/index.js';
 
 const Routes = () => {
   return (
@@ -35,9 +36,10 @@ const Routes = () => {
               <div id="main-content" className='content-large'>
               <Switch>
               <Route exact path="/AIScore" component={AIScore} />
-                <Route exact path="/RateOfRisk" component={RateOfRisk} />
+                <Route exact path="/RateOfRisk" component={RateOfRisk1} />
                 <Route exact path="/VideoChat" component={VideoChat} />
                 <Route exact path="/" component={StartOfNewRolePlay} />
+                <Route exact path="/scenario-selection" component={ScenariosSelectionPage} />
 
                 
                 <Route exact path="/agency" component={Index} />
@@ -48,7 +50,6 @@ const Routes = () => {
                 <Route exact path="/lessons/1/scenario" component={PersonaScenaio} />
                 <Route exact path="/setting" component={SettingPage} />
                 <Route exact path="/recruiter" component={Recruiter} />
-                <Route exact path="/scenario-selection" component={ScenarioSelection} />
                 <Route exact path="/scenario-selection/1" component={RateOfRisk} />
 
                 

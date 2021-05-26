@@ -71,7 +71,30 @@
         "feed" : "送り",
         "keyword" : "キーワード",
         "please_enter_message" : "メッセージを入力してください",
-        "add_message" : "メッセージを追加"
+        "add_message" : "メッセージを追加",
+        "start_of_new_role_playing" : "新規ロープレの開始",
+        "recruiter_selection" : "募集人の選択",
+        "section_selection" : "セクションの選択",
+        "return" : "戻る",
+        "role_play_started" : "ロールプレイ開始",
+        "progress" : "進捗",
+        "appointment_acquisition_call": "アポイント取得コール",
+        "number_of_implementations": "実施回数",
+        "times" : "回",
+        "maximum_achievement_rate": "最大達成率"
+    },
+    "rateOfRisk" : {
+        "header_1" : "介護リスク率発生",
+        "header_2" : "-このセクションの目的-",
+        "s_header_1" : "処理する",
+        "s_header_2" : "ポイント",
+        "s_header_3" : "使用する材料・ツール",
+        "frequency_of_long_term_care" : "介護の発生頻度",
+        "lifespan_and_healthy_lifespan" : "寿命と健康的な寿命",
+        "proceed_to_the_next" : "次へ進む",
+        "time": "月 .日",
+        "correct_answer_rate" : "正解率",
+        "accepting" : "受け入れ中"
     },
     "setting" : {
         "synonym" : "同義語",

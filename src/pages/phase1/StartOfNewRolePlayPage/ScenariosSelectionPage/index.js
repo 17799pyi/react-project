@@ -25,8 +25,8 @@ const ScenariosSelectionPage = ({ className, style, onBack }) => {
             <div className='cmn-bg-box'>
                 <Row className="mb-32">
                     <Col>
-                        <BackButton title="戻る" className="mr-3" onClick={onBack}/>
-                        <GeneralButton title="ロールプレイ開始" className="w-auto px-3"/>
+                        <BackButton title={t('scenario.return')} className="mr-3" onClick={onBack}/>
+                        <GeneralButton title={t('scenario.role_play_started')} className="w-auto px-3"/>
                     </Col>
                 </Row>
                 <div className="cmn-bg-box-inr pb-2">
@@ -37,7 +37,7 @@ const ScenariosSelectionPage = ({ className, style, onBack }) => {
                                     <img src={humanImg} className={`mw-100 ${classes.human_img}`} />
                                 </Col>
                                 <Col lg="6" className="position-relative">
-                                    <span className={`${classes.progress_bar_text} ${(prog_per >= 20) ? '' : classes.right_0}`}>進捗</span>
+                                    <span className={`${classes.progress_bar_text} ${(prog_per >= 20) ? '' : classes.right_0}`}>{t('scenario.progress')}</span>
                                     { prog_per ?
                                         <img src={ProgressImg} alt="ProgressImg" className={classes.progress_bar_img} style={{left: prog_per + '%'}}/>
                                         : ''
