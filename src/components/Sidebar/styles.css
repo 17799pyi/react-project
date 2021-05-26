@@ -1,0 +1,205 @@
+
+.content-large { 
+  width: calc(100% - 176px); 
+  margin-left: 176px;
+  padding: 48px;
+}
+.content-small {  
+  width: calc(100% - 65px); 
+  margin-left: 65px;
+}
+#sidebar {
+    background-color: var(--cerulean);
+    color: var(--pure-white); 
+    z-index: 2;      
+    position: fixed; 
+    height: 100vh;
+    display: grid;
+    top: 0;
+    font-size: 12px;
+    font-family: "MeiryoBold";
+}
+.light_grey_4 { 
+  color: var(--light-grey-4);
+}
+#sidebar.sidebar-large {
+  width: 176px;
+}
+#sidebar.sidebar-small {
+  width: 65px;  
+  /* position: absolute !important; */
+}
+.sidebar-wrap {
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: var(--cerulean);
+}
+.sidebar-wrap.sidebar-wrap-large{
+  width: 176px;  
+}
+.sidebar-wrap.sidebar-wrap-small{
+  width: 65px;  
+}
+#sidebar .logo-sec a { 
+  color: var(--pure-white);
+}
+#sidebar .sidebar-menu>li>a ,
+#sidebar .logo-sec a:hover { 
+  text-decoration: none;
+}
+.logo_link {
+  display: flex;
+  justify-content:center;
+  align-items:center;
+}
+.logo_link>img {
+  padding-right: 8px;
+}
+.logo_link>span {
+line-height: 24px;
+}
+#sidebar.sidebar-small ul li span {
+  display: none;
+}
+#sidebar.sidebar-small .logo-sec {
+  height: 45px;
+  margin: 20px 10px 15px;
+}
+#sidebar.sidebar-small .logo-sec>* {
+  display: none !important;
+}
+#sidebar.sidebar-large.over-height {
+  overflow-y: auto;
+}
+#sidebar .sidebar-menu {
+  list-style: none;
+  padding-left: 0;
+}
+#sidebar .sidebar-menu>li {
+  position: relative;
+  /* margin-bottom: 8px; */
+}
+#sidebar .sidebar-menu>li>a {
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  padding: 16px 2px;
+  /* border-bottom: 0.5px solid #FFFFFF; */
+  position: relative;
+}
+#sidebar .sidebar-menu>li span::after {
+  content: "";
+  width: 90%;
+  height: 1px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+}
+#sidebar .sidebar-menu>li:first-child span:after,
+#sidebar .sidebar-menu>li:last-child span:after {
+  content: initial;
+}
+#sidebar .sidebar-menu>li:first-child>a {
+  padding: 0 2px;
+}
+#sidebar .sidebar-menu li a.is-active {
+  text-decoration: underline;
+}
+#sidebar .sidebar-menu>li a.current,
+#sidebar .sidebar-menu>li.active>a,
+#sidebar .sidebar-collapse:hover,
+#sidebar .sidebar-menu>li>a.is-active,
+#sidebar .sidebar-menu>li>a:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+#sidebar .sidebar-menu li a {
+  color: var(--pure-white);
+  cursor: pointer;
+}
+.sidebar-collapse img,
+#sidebar .sidebar-menu>li img {
+  width: 25px;
+  display: block;
+  margin: 0 auto;
+  padding-top: 8px;
+}
+#sidebar .sidebar-menu>li span {
+  display: block;
+  padding: 8px 2px;
+}
+#sidebar.sidebar-small .sidebar-collapse img,
+#sidebar.sidebar-small .sidebar-menu>li img {
+  margin: 0 auto;
+  display: block;
+}
+#sidebar.sidebar-small .sidebar-menu>li:first-child img {
+  height:20px;
+}
+#sidebar .logo-sec {
+  margin: 48px 8px 32px;
+  text-align: center;
+}
+#sidebar .logo-sec img {
+ display: block;
+ margin: 0 auto 16px;
+}
+#sidebar .sidebar-submenu {
+  padding: 0 10px 10px 38px;
+}
+#sidebar .sidebar-submenu p {
+  margin-bottom: 8px;
+}
+#sidebar .sidebar-submenu p:first-child {
+  margin-top: 8px;
+}
+#sidebar .sidebar-submenu>ul {
+  list-style: none;
+  padding-left: 10px;
+  margin-bottom: 16px;
+}
+#sidebar .sidebar-submenu>ul:last-child {
+  margin-bottom: 0;
+}
+#sidebar .sidebar-submenu>ul li {
+  padding-bottom: 4px;
+}
+#sidebar .sidebar-submenu>ul li:last-child {
+  padding-bottom: 0;
+}
+#sidebar .sidebar-collapse {
+  align-self: flex-end;
+  cursor: pointer;
+}
+#sidebar .sidebar-collapse>div {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+}
+#sidebar .show {
+  display: block;
+}
+#sidebar .hide {
+  display: none;
+}
+.sidebar-small .sidebar-menu>li>a {
+  padding: 15px 0 !important;
+  text-align: center;
+}
+#sidebar .submenu-small {
+  display: none;
+  padding: 10px 10px 10px 15px;
+  position: absolute;
+  width: 250px;
+  top: 0;
+  left: 65px;
+  background: #0292E3;
+  text-align: left;
+}
+#sidebar.sidebar-small .sidebar-menu>li:hover .submenu-small {
+  display: block !important;
+}

@@ -1,6 +1,6 @@
 .scenario_selection_card{
-    margin-top: 1rem;
-    margin-right: 1rem;
+    /* margin-top: 1rem;
+    margin-right: 1rem; */
 }
 .top_wrapper{
     background: var(--blue-card);
@@ -19,7 +19,7 @@
     border-radius: 0 0 20px 20px;
 }
 .top_img{
-    width: 10%;
+    /* width: 10%; */
 }
 .top_head_text{
     color: var(--white);
@@ -31,8 +31,8 @@
     justify-content: space-between;
 }
 .bottom_img{
-    width: 45%;
-    float: right;
+    /* width: 45%;
+    float: right; */
 }
 .bottom_text{
     font-size: var(--content-text);
