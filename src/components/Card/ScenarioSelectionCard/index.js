@@ -1,8 +1,8 @@
 import classes from './styles.module.css'
 import { Row, Col } from 'reactstrap';
 import React from 'react'
-import smileImg from '../../../assets/icons/smile.png'
-import starImg from '../../../assets/icons/star.png'
+import smileImg from '../../../assets/images/icons/smile.png'
+import starImg from '../../../assets/images/icons/star.png'
 
 function ScenarioSelectionCard() {
     return (
