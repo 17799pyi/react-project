@@ -22,7 +22,7 @@ const AIScorePage = ({ }) => {
         <>
         <Row className="align-items-center pb-3">
             <Col xs="5">
-                <h3 className="mb-0">AI採点結果</h3>
+                <h3 className="mb-0">{t('aiscore.ai_scoring_result')}</h3>
             </Col>
             <Col xs="7" className="text-right">
                 <BackButton title="リトライ" className="mr-3"/>
@@ -31,22 +31,22 @@ const AIScorePage = ({ }) => {
         </Row>
         <div className="cmn-bg-box mt-3">
             <div className="cmn-bg-box-inr">
-                <p className="font-16 font-weight-bold mb-3">スコア(プロセス別)</p>
+                <p className="font-16 font-weight-bold mb-3">{t('aiscore.score_by_process')}</p>
                 <Row className="smallest-padding-box02 mb-2">
                     <Col xs="2">
-                        <BackgroundBlueLabel label="プロセス" />
+                        <BackgroundBlueLabel label={t('aiscore.process')} />
                     </Col>
                     <Col xs="8">
-                        <BackgroundBlueLabel label="評価" />
+                        <BackgroundBlueLabel label={t('aiscore.evaluation')} />
                     </Col>
                     <Col xs="2">
-                        <BackgroundBlueLabel label="ポイント" />
+                        <BackgroundBlueLabel label={t('aiscore.point')} />
                     </Col>
                 </Row>
                 <Row className="smallest-padding-box02 mb-3">
                     <Col xs="2" className="d-flex">
                         <div  className="cmn-bg-box-inr">
-                            <p className="font-16 font-weight-bold">介護の発生頻度</p>
+                            <p className="font-16 font-weight-bold">{t('aiscore.card_title.long_term_care_frequency')}</p>
                         </div>
                     </Col>
                     <Col xs="2" className="d-flex">
@@ -57,14 +57,14 @@ const AIScorePage = ({ }) => {
                     <Col xs="6" className="d-flex">
                         <div  className="cmn-bg-box-inr pb-3">
                             <div>
-                                <BackgroundBlueChip label="がんという病気" className="mr-2"/>
-                                <BackgroundWhiteChip label="2人に1人" className="mr-2"/>
-                                <BackgroundBlueChip label="がんの発生率" className="mr-2"/>
+                                <BackgroundBlueChip label={t('aiscore.disease_called_cancer')} className="mr-2"/>
+                                <BackgroundWhiteChip label={t('aiscore.two_in_one')} className="mr-2"/>
+                                <BackgroundBlueChip label={t('aiscore.cancer_incidence')} className="mr-2"/>
                             </div>
                             <div>
-                                <BackgroundBlueChip label="年齢とともに高く" className="mr-2"/>
-                                <BackgroundWhiteChip label="平均在院日数" className="mr-2"/>
-                                <BackgroundBlueChip label="高齢" className="mr-2"/>
+                                <BackgroundBlueChip label={t('aiscore.higher_with_age')} className="mr-2"/>
+                                <BackgroundWhiteChip label={t('aiscore.average_no_of_days_hospital')} className="mr-2"/>
+                                <BackgroundBlueChip label={t('aiscore.elderly')} className="mr-2"/>
                             </div>
                         </div>
                     </Col>
@@ -80,7 +80,7 @@ const AIScorePage = ({ }) => {
                 <Row className="smallest-padding-box02 mb-3">
                     <Col xs="2" className="d-flex">
                         <div  className="cmn-bg-box-inr">
-                            <p className="font-16 font-weight-bold">寿命と健康的な寿命</p>
+                            <p className="font-16 font-weight-bold">{t('aiscore.card_title.lifespan_and_healthy_lifespan')}</p>
                         </div>
                     </Col>
                     <Col xs="2" className="d-flex">
@@ -91,14 +91,14 @@ const AIScorePage = ({ }) => {
                     <Col xs="6" className="d-flex">
                         <div  className="cmn-bg-box-inr pb-3">
                             <div>
-                                <BackgroundBlueChip label="がんという病気" className="mr-2"/>
-                                <BackgroundWhiteChip label="2人に1人" className="mr-2"/>
-                                <BackgroundBlueChip label="がんの発生率" className="mr-2"/>
+                                <BackgroundBlueChip label={t('aiscore.disease_called_cancer')} className="mr-2"/>
+                                <BackgroundWhiteChip label={t('aiscore.two_in_one')} className="mr-2"/>
+                                <BackgroundBlueChip label={t('aiscore.cancer_incidence')} className="mr-2"/>
                             </div>
                             <div>
-                                <BackgroundBlueChip label="年齢とともに高く" className="mr-2"/>
-                                <BackgroundWhiteChip label="平均在院日数" className="mr-2"/>
-                                <BackgroundBlueChip label="高齢" className="mr-2"/>
+                                <BackgroundBlueChip label={t('aiscore.higher_with_age')} className="mr-2"/>
+                                <BackgroundWhiteChip label={t('aiscore.average_no_of_days_hospital')} className="mr-2"/>
+                                <BackgroundBlueChip label={t('aiscore.elderly')} className="mr-2"/>
                             </div>
                         </div>
                     </Col>
@@ -114,7 +114,7 @@ const AIScorePage = ({ }) => {
                 <Row className="smallest-padding-box02 mb-3">
                     <Col xs="2" className="d-flex">
                         <div  className="cmn-bg-box-inr">
-                            <p className="font-16 font-weight-bold">介護の原因</p>
+                            <p className="font-16 font-weight-bold">{t('aiscore.card_title.long_term_care_causes')}</p>
                         </div>
                     </Col>
                     <Col xs="2" className="d-flex">
@@ -125,14 +125,14 @@ const AIScorePage = ({ }) => {
                     <Col xs="6" className="d-flex">
                         <div  className="cmn-bg-box-inr pb-3">
                             <div>
-                                <BackgroundBlueChip label="がんという病気" className="mr-2"/>
-                                <BackgroundWhiteChip label="2人に1人" className="mr-2"/>
-                                <BackgroundBlueChip label="がんの発生率" className="mr-2"/>
+                                <BackgroundBlueChip label={t('aiscore.disease_called_cancer')} className="mr-2"/>
+                                <BackgroundWhiteChip label={t('aiscore.two_in_one')} className="mr-2"/>
+                                <BackgroundBlueChip label={t('aiscore.cancer_incidence')} className="mr-2"/>
                             </div>
                             <div>
-                                <BackgroundBlueChip label="年齢とともに高く" className="mr-2"/>
-                                <BackgroundWhiteChip label="平均在院日数" className="mr-2"/>
-                                <BackgroundBlueChip label="高齢" className="mr-2"/>
+                                <BackgroundBlueChip label={t('aiscore.higher_with_age')}className="mr-2"/>
+                                <BackgroundWhiteChip label={t('aiscore.average_no_of_days_hospital')} className="mr-2"/>
+                                <BackgroundBlueChip label={t('aiscore.elderly')} className="mr-2"/>
                             </div>
                         </div>
                     </Col>
@@ -148,7 +148,7 @@ const AIScorePage = ({ }) => {
                 <Row className="smallest-padding-box02 mb-3">
                     <Col xs="2" className="d-flex">
                         <div  className="cmn-bg-box-inr">
-                            <p className="font-16 font-weight-bold">介護期間</p>
+                            <p className="font-16 font-weight-bold">{t('aiscore.card_title.long_term_care_period')}</p>
                         </div>
                     </Col>
                     <Col xs="2" className="d-flex">
@@ -159,14 +159,14 @@ const AIScorePage = ({ }) => {
                     <Col xs="6" className="d-flex">
                         <div  className="cmn-bg-box-inr pb-3">
                             <div>
-                                <BackgroundBlueChip label="がんという病気" className="mr-2"/>
-                                <BackgroundWhiteChip label="2人に1人" className="mr-2"/>
-                                <BackgroundBlueChip label="がんの発生率" className="mr-2"/>
+                                <BackgroundBlueChip label={t('aiscore.disease_called_cancer')} className="mr-2"/>
+                                <BackgroundWhiteChip label={t('aiscore.two_in_one')} className="mr-2"/>
+                                <BackgroundBlueChip label={t('aiscore.cancer_incidence')} className="mr-2"/>
                             </div>
                             <div>
-                                <BackgroundBlueChip label="年齢とともに高く" className="mr-2"/>
-                                <BackgroundWhiteChip label="平均在院日数" className="mr-2"/>
-                                <BackgroundBlueChip label="高齢" className="mr-2"/>
+                                <BackgroundBlueChip label={t('aiscore.higher_with_age')} className="mr-2"/>
+                                <BackgroundWhiteChip label={t('aiscore.average_no_of_days_hospital')} className="mr-2"/>
+                                <BackgroundBlueChip label={t('aiscore.elderly')} className="mr-2"/>
                             </div>
                         </div>
                     </Col>
@@ -187,7 +187,7 @@ const AIScorePage = ({ }) => {
                 </Row>
                 <Row>
                     <Col>
-                        <p className="font-16 font-weight-bold">発話箇所</p>
+                        <p className="font-16 font-weight-bold">{t('aiscore.utterance')}</p>
                         <ChatLog/>
                     </Col>
                 </Row>

@@ -1,12 +1,14 @@
 import styles from './styles.module.css'
 import chat_icon from '../../../../assets/images/chat_icon.png'
 import bot_person from '../../../../assets/images/bot_person.png'
+import {useTranslation} from 'react-i18next'
 const ChatLog = () =>{
+    const {t} = useTranslation();
     return(
         <div className={`${styles.main_div}`}>
             <div className={`${styles.title_div}`}>
                 <img src={chat_icon} className={styles.chat_icon}/>
-                <span className="ml-3"><b>チャット履歴</b></span>
+                <span className="ml-3"><b>{t('aiscore.chat_history')}</b></span>
             </div>
             <div className={`${styles.body_div} ${styles.msger}`}>
                 <main className={styles.msger_chat}>

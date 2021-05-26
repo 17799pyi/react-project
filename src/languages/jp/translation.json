@@ -114,5 +114,27 @@
         "role_playing_test" : "ロールプレイングテスト",
         "review_of_cancer_insurance" : "がん保険の見直し",
         "indicate" : "表示する"
+    },
+    "aiscore" : {
+        "ai_scoring_result" : "AI採点結果",
+        "score_by_process" : "スコア(プロセス別)",
+        "process" : "プロセス",
+        "evaluation" : "評価",
+        "point" : "ポイント",
+        "card_title" : {
+            "long_term_care_frequency" : "介護の発生頻度",
+            "lifespan_and_healthy_lifespan" : "寿命と健康的な寿命",
+            "long_term_care_causes" : "介護の原因",
+            "long_term_care_period" : "介護期間"
+        },
+        "disease_called_cancer" : "がんという病気",
+        "two_in_one" : "2人に1人",
+        "cancer_incidence" : "がんの発生率",
+        "higher_with_age" : "年齢とともに高く",
+        "average_no_of_days_hospital" : "平均在院日数",
+        "elderly" : "高齢",
+        "utterance" : "発話箇所",
+        "chat_history" : "チャット履歴"
     }
+
 }
