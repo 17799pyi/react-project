@@ -16,6 +16,13 @@ import RateOfRisk from '../pages/RateOfRisk/index'
 import PageNotFound from '../pages/PageNotFound';
 import Recruiter from '../pages/RecruiterPage'
 
+
+import Sidebar from '../components/Sidebar';
+import AIScore from '../pages/phase1/AIScorePage';
+import RateOfRisk1 from '../pages/phase1/RateOfRiskPage';
+import VideoChat from '../pages/phase1/VideoChatPage';
+import StartOfNewRolePlay from '../pages/phase1/StartOfNewRolePlayPage';
+
 import '../pages/index.css'
 import ScenarioSelection from '../pages/ScenarioSelection/ScenarioSelection';
 
@@ -24,7 +31,15 @@ const Routes = () => {
     <React.Fragment>
       <Router>
             {/* <HeaderBar/> */}
+            <Sidebar/>          
+              <div id="main-content" className='content-large'>
               <Switch>
+              <Route exact path="/AIScore" component={AIScore} />
+                <Route exact path="/RateOfRisk" component={RateOfRisk} />
+                <Route exact path="/VideoChat" component={VideoChat} />
+                <Route exact path="/" component={StartOfNewRolePlay} />
+
+                
                 <Route exact path="/agency" component={Index} />
                 <Route exact path="/ChatPage" component={ChatPage} />
                 <Route exact path="/ScenariosPage" component={ScenariosPage} />
@@ -35,8 +50,12 @@ const Routes = () => {
                 <Route exact path="/recruiter" component={Recruiter} />
                 <Route exact path="/scenario-selection" component={ScenarioSelection} />
                 <Route exact path="/scenario-selection/1" component={RateOfRisk} />
+
+                
+              
                 <Route path="*" component={PageNotFound} />
               </Switch>
+        </div>
       </Router>
     </React.Fragment>
   )

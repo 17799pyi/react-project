@@ -1,0 +1,9 @@
+
+.bg_blue {    
+    background: var(--alice-blue);
+    display: inline-block;
+    padding: 4px 16px;
+    color: var(--dune);
+    border-radius: 5px;
+    text-align: center;
+}

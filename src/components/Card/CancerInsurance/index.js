@@ -5,17 +5,17 @@ import classes from "./styles.module.css";
 
 function index() {
   return (
-    <>
-          <Row className={`${classes.card_box}`}>
-          <Col xs="3" className={`${classes.image_box}`}>
-            <img src={SamplePhoto} alt="Sample Photo" className={`${classes.person}`} />
-          </Col>
-          <Col xs="9" className={`${classes.image_box}`}>
-            <h5 className={`${classes.insurance_title} mb-1 font-weight-normal`}>がん保険の見直し</h5>
-            <span className={`${classes.indicate} font-12`}>表示する</span>
-          </Col>
+    <div className={`${classes.card_box}`}>
+          <Row className="align-items-center">
+            <Col xs="3" className={`${classes.image_box}`}>
+              <img src={SamplePhoto} alt="Sample Photo" className={`mw-100 ${classes.person}`} />
+            </Col>
+            <Col xs="9" className={`${classes.image_box}`}>
+              <h5 className={`${classes.insurance_title} font-14 mb-1 font-weight-normal`}>がん保険の見直し</h5>
+              <span className={`${classes.indicate} font-12 font-weight-bold`}>表示する</span>
+            </Col>
           </Row>
-    </>
+    </div>
   );
 }
 

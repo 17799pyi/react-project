@@ -1,13 +1,13 @@
 
-.cmn_btn {
-    width: 90px;
+.history_btn {
+    width: 118px;
     min-height: 36px;
-    background-color: var(--cerulean);
+    background-color: #E98300;
     padding: 5px;
     color: var(--pure-white);
     text-transform: uppercase;
     border-radius: 4px;
-    border: 1px solid var(--cerulean);
+    text-align: center;
 }
 .btn-white {
     background-color: var(--pure-white);
