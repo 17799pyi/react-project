@@ -71,7 +71,30 @@
         "feed" : "Feed",
         "keyword" : "Keyword",
         "please_enter_message" : "Please enter a message",
-        "add_message" : "Add message"
+        "add_message" : "Add message",
+        "start_of_new_role_playing" : "Start of new role-playing",
+        "recruiter_selection" : "Recruiter selection",
+        "section_selection" : "Section selection",
+        "return" : "Return",
+        "role_play_started" : "Role Play Started",
+        "progress" : "Progress",
+        "appointment_acquisition_call": "Appointment acquisition call",
+        "number_of_implementations": "Number of implementations",
+        "times" : "Times",
+        "maximum_achievement_rate": "Maximum achievement rate"
+    },
+    "rateOfRisk" : {
+        "header_1" : "Long-term care risk rate occurrence",
+        "header_2" : "-Purpose of this section-",
+        "s_header_1" : "To process",
+        "s_header_2" : "Point",
+        "s_header_3" : "Materials / tools used",
+        "frequency_of_long_term_care" : "Frequency of long-term care",
+        "lifespan_and_healthy_lifespan" : "Lifespan and healthy lifespan",
+        "proceed_to_the_next" : "Proceed to the next",
+        "time": "Time",
+        "correct_answer_rate" : "Correct answer rate",
+        "accepting" : "Accepting"
     },
     "setting" : {
         "synonym" : "Synonym",
