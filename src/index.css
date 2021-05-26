@@ -13,7 +13,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-size: 14px;
   background-color: #FAF7F2;
-  color: var(--darkGray);
+  color: var(--dune);
   font-size: 14px;
   line-height: 1.5;
 }
