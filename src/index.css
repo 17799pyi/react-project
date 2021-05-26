@@ -12,10 +12,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 14px;
-  /* background-color: #FAF7F2; */
   background-color: var(--pure-white);
-  color: var(--darkGray);
-  font-size: 14px;
+  color: var(--dune);
   line-height: 1.5;
 }
 

@@ -8,6 +8,9 @@
 .step_head2{
     margin-left: 32px;
 }
+.spet_head2_color_change{
+    background-color: #D1D1D1;
+}
 .step_text{
     margin: 8px auto 0 0;
     font-size: 16px;

@@ -50,7 +50,7 @@ const ScenariosSelectionPage = ({ }) => {
                         </Col>
                         <Col xs="6" className={`${classes.step_lists}`}>
                             <span className={classes.step_list}>
-                                <span className={`${classes.step_head} ${classes.step_head2}`}>2</span>
+                                <span className={step1 ? `${classes.spet_head2_color_change} ${classes.step_head} ${classes.step_head2}` : `${classes.step_head} ${classes.step_head2} `}>2</span>
                                 <span className={classes.step_text}>セクションの選択</span>
                             </span>
                         </Col>

@@ -18,25 +18,25 @@ const RateOfRiskPage = ({ }) => {
         <>
         <Row className="align-items-center mb-32 pb-2">  
             <Col>
-                <h3 className="mb-3">介護リスク率発生</h3>          
-                <h3 className="mb-0 font-weight-normal d-block">-このセクションの目的-</h3>
+                <h3 className="mb-3">{t('rateOfRisk.header_1')}</h3>          
+                <h3 className="mb-0 font-weight-normal d-block">{t('rateOfRisk.header_2')}</h3>
             </Col>          
         </Row>
         <div className="cmn-bg-box p-4">
             <Row className="">
                 <Col xs="3">                    
-                    <BackgroundBlueLabel label="処理する" className="font-18"/>
+                    <BackgroundBlueLabel label={t('rateOfRisk.s_header_1')} className="font-18"/>
                 </Col>
                 <Col xs="3">
-                    <BackgroundBlueLabel label="ポイント" className="font-18"/>
+                    <BackgroundBlueLabel label={t('rateOfRisk.s_header_2')} className="font-18"/>
                 </Col>
                 <Col xs="6">
-                    <BackgroundBlueLabel label="使用する材料・ツール" className="font-18"/>
+                    <BackgroundBlueLabel label={t('rateOfRisk.s_header_3')} className="font-18"/>
                 </Col>
             </Row>
             <Row className="mt-2">
                 <Col xs="3">
-                    <div className={`${classes.top_btn}`}>介護の発生頻度</div>
+                    <div className={`${classes.top_btn}`}>{t('rateOfRisk.frequency_of_long_term_care')}</div>
                 </Col>
                 <Col xs="3">
                     <div className={classes.content_outline}>
@@ -71,7 +71,7 @@ const RateOfRiskPage = ({ }) => {
             </Row>
             <Row className="mt-2">
                 <Col xs="3">
-                    <div className={`${classes.top_btn}`}>寿命と健康的な寿命</div>
+                    <div className={`${classes.top_btn}`}>{t('rateOfRisk.lifespan_and_healthy_lifespan')}</div>
                 </Col>
                 <Col xs="3">
                     <div className={classes.content_outline}>
@@ -106,7 +106,7 @@ const RateOfRiskPage = ({ }) => {
             </Row>
             <Row className="mt-2">
                 <Col xs="3">
-                    <div className={`${classes.top_btn}`}>寿命と健康的な寿命</div>
+                    <div className={`${classes.top_btn}`}>{t('rateOfRisk.lifespan_and_healthy_lifespan')}</div>
                 </Col>
                 <Col xs="3">
                     <div className={classes.content_outline}>
@@ -124,7 +124,7 @@ const RateOfRiskPage = ({ }) => {
             </Row>
             <Row className="mt-2">
                 <Col xs="3">
-                    <div className={`${classes.top_btn} ${classes.content_bottom_extra} ${classes.top_btn_no_triagle}`}>寿命と健康的な寿命</div>
+                    <div className={`${classes.top_btn} ${classes.content_bottom_extra} ${classes.top_btn_no_triagle}`}>{t('rateOfRisk.lifespan_and_healthy_lifespan')}</div>
                 </Col>
                 <Col xs="3">
                     <div className={classes.content_outline}>
@@ -185,7 +185,7 @@ const RateOfRiskPage = ({ }) => {
             
             <Row>
                 <Col className="text-center pt-2">
-                    <button className={classes.bottom_btn_submit}>次へ進む</button>
+                    <button className={classes.bottom_btn_submit}>{t('rateOfRisk.proceed_to_the_next')}</button>
                 </Col>
             </Row>
         </div>
