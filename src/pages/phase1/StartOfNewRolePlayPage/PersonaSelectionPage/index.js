@@ -30,8 +30,8 @@ const PersonaSelectionPage = ({ className, style, onEditScenerio }) => {
             <BackButton title="戻る" className="mr-3" />
             <GeneralButton title="次へ" onClick={onEditScenerio} />
           </Col>
-        </Row>
-        <div className={`cmn-bg-box-inr`}>
+        </Row>   
+        <div className={`cmn-bg-box-inr pb-2`}>
           <div className="mb-3">
             <h6 className={`mb-3 ${classes.recruiter_select}`}>
               {t("recruiter.recruiter_slection")}
@@ -66,7 +66,7 @@ const PersonaSelectionPage = ({ className, style, onEditScenerio }) => {
               }
             />
           </div>
-          <div className="mb-4">
+          <div className="mb-3">
             <h6 className={`font-14 mb-3 ${classes.learning_theme}`}>
               {t("recruiter.course")}
             </h6>
@@ -117,14 +117,14 @@ const PersonaSelectionPage = ({ className, style, onEditScenerio }) => {
               />
             </RadioGroup>
           </div>
-          <Row className={`${classes.card_wrapper}`}>
-            <Col xs="4">
+          <Row  className={`smallest-padding-box01`}>
+            <Col lg="4" md="6" className="mb-3">
               <CancerInsuranceCard />
             </Col>
-            <Col xs="4">
+            <Col lg="4" md="6" className="mb-3">
               <CancerInsuranceCard />
             </Col>
-            <Col xs="4">
+            <Col lg="4" md="6" className="mb-3">
               <CancerInsuranceCard />
             </Col>
           </Row>
@@ -143,12 +143,12 @@ const styles = {
     marginLeft: "0",
   },
   label: {
-    marginButtom: "0",
-    fontSize: "16px",
-    fontWeight: "normal",
-    marginRight: "48px",
-    marginLeft: "8px",
-  },
+      marginButtom: '0',
+      fontSize: '16px',
+      fontWeight: 'normal',
+      marginRight : '16px',
+      marginLeft : '8px',
+  }
 };
 
 export default PersonaSelectionPage;

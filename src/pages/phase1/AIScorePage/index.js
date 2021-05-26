@@ -43,7 +43,7 @@ const AIScorePage = ({ }) => {
                         <BackgroundBlueLabel label={t('aiscore.point')} />
                     </Col>
                 </Row>
-                <Row className="smallest-padding-box02 mb-3">
+                <Row className="smallest-padding-box02 mb-2">
                     <Col xs="2" className="d-flex">
                         <div  className="cmn-bg-box-inr">
                             <p className="font-16 font-weight-bold">{t('aiscore.card_title.long_term_care_frequency')}</p>
@@ -77,7 +77,7 @@ const AIScorePage = ({ }) => {
                         </div>
                     </Col>
                 </Row>
-                <Row className="smallest-padding-box02 mb-3">
+                <Row className="smallest-padding-box02 mb-2">
                     <Col xs="2" className="d-flex">
                         <div  className="cmn-bg-box-inr">
                             <p className="font-16 font-weight-bold">{t('aiscore.card_title.lifespan_and_healthy_lifespan')}</p>
@@ -111,7 +111,7 @@ const AIScorePage = ({ }) => {
                         </div>
                     </Col>
                 </Row>
-                <Row className="smallest-padding-box02 mb-3">
+                <Row className="smallest-padding-box02 mb-2">
                     <Col xs="2" className="d-flex">
                         <div  className="cmn-bg-box-inr">
                             <p className="font-16 font-weight-bold">{t('aiscore.card_title.long_term_care_causes')}</p>
@@ -145,7 +145,7 @@ const AIScorePage = ({ }) => {
                         </div>
                     </Col>
                 </Row>
-                <Row className="smallest-padding-box02 mb-3">
+                <Row className="smallest-padding-box02 mb-4">
                     <Col xs="2" className="d-flex">
                         <div  className="cmn-bg-box-inr">
                             <p className="font-16 font-weight-bold">{t('aiscore.card_title.long_term_care_period')}</p>
@@ -187,7 +187,7 @@ const AIScorePage = ({ }) => {
                 </Row>
                 <Row>
                     <Col>
-                        <p className="font-16 font-weight-bold">{t('aiscore.utterance')}</p>
+                        <p className="font-16 font-weight-bold mb-3">{t('aiscore.utterance')}</p>
                         <ChatLog/>
                     </Col>
                 </Row>

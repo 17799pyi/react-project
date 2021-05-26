@@ -73,9 +73,9 @@
     display: flex;
     border: 2px solid #00A5D9;
     border-radius: 10px;
-    width: 92%;
+    /* width: 92%;
     bottom: 0;
-    position: absolute;
+    position: absolute; */
 }
 .percent_content_left{
     text-align: center;
@@ -107,7 +107,7 @@
     left: 9px;
 }
 .progress_bar {
-    background: #3F414E;
+    background: #e6e6e6;
     opacity: 0.1;
     width: 100%;
     height: 10px;
@@ -141,4 +141,29 @@
 }
 .right_0 {
     right: 15px;
+}
+
+.roleplay_step2_tb {
+    border: 1px solid #00A5D9;
+    border-collapse: unset;
+    border-spacing: 0;
+    border-radius: 11px;
+}
+.roleplay_step2_tb td {
+    border: 1px solid #00A5D9;
+    vertical-align: middle;
+    padding: 8px;
+    text-align: center;
+}
+.roleplay_step2_tb tr:first-child td:first-child {
+    border-top-left-radius: 10px;
+}
+.roleplay_step2_tb tr:first-child td:last-child {
+    border-top-right-radius: 10px;
+}
+.roleplay_step2_tb tr:first-child td:first-child {
+    border-bottom-left-radius: 10px;
+}
+.roleplay_step2_tb tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
 }

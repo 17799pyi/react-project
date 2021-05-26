@@ -74,6 +74,18 @@ line-height: 24px;
 #sidebar.sidebar-large.over-height {
   overflow-y: auto;
 }
+
+#sidebar.sidebar-large.over-height::-webkit-scrollbar {
+  width: 6px;
+}
+#sidebar.sidebar-large.over-height::-webkit-scrollbar-track {
+  background: #ddd;
+}
+#sidebar.sidebar-large.over-height::-webkit-scrollbar-thumb {
+  background: #bdbdbd;
+  border-radius: 10px;
+}
+
 #sidebar .sidebar-menu {
   list-style: none;
   padding-left: 0;
