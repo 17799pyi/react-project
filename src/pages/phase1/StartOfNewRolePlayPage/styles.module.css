@@ -1,0 +1,28 @@
+.step_head{
+    background: #00A5D9;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 25px;
+    margin: 0 auto 0 24px;
+}
+.step_head2{
+    margin-left: 32px;
+}
+.step_text{
+    margin: 8px auto 0 0;
+    font-size: 16px;
+    line-height: 16px;
+}
+.step_list{
+    display: flex;
+    flex-direction: column;
+}
+.step_lists:first-child span.step_head:after {
+    display: inline-block;
+    content: "";
+    border-top: .3rem solid #00a5d9;
+    width: 100%;
+    margin: 0 1rem;
+    transform: translateY(0.5rem);
+    position: absolute;
+}

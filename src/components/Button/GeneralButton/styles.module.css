@@ -1,0 +1,16 @@
+
+.cmn_btn {
+    width: 90px;
+    min-height: 36px;
+    background-color: var(--cerulean);
+    padding: 5px;
+    color: var(--pure-white);
+    text-transform: uppercase;
+    border-radius: 4px;
+    border: 1px solid var(--cerulean);
+}
+.btn-white {
+    background-color: var(--pure-white);
+    color: var(--cerulean);
+    border: 1px solid #979797;
+}
