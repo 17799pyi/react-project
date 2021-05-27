@@ -24,18 +24,18 @@ const VideoChatPage = ({ }) => {
         <>
             <Row>
                 <Col lg="4" className="mb-3 m-lg-0">
-                    <h3 className="mb-32">ロープレ実施中</h3>
+                    <h3 className="mb-32">{t('videochat.under_low_pre')}</h3>
                     <div className="cmn-bg-box mb-3 px-4 pt-4 pb-2">
                         <Row>
                             <Col>
                                 <div className="mb-4">
-                                    <p className="font-16 font-weight-bold mb-3">実施中のシナリオ</p>
+                                    <p className="font-16 font-weight-bold mb-3">{t('videochat.ongoing_scenario')}</p>
                                     <InsuranceTypeLabel label="実施中のシナリオ" className="mb-0"/>
                                 </div>
                                 <div>
-                                    <p className="font-16 font-weight-bold mb-3">処理する</p>
+                                    <p className="font-16 font-weight-bold mb-3">{t('videochat.to_process')}</p>
                                     <div className="cmn-bg-box-inr p-3 mb-3">
-                                        <FormControlLabel style={styles.root}  label={<span style={styles.label} className="font-weight-bold">介護の発生頻度</span>}  control={
+                                        <FormControlLabel style={styles.root}  label={<span style={styles.label} className="font-weight-bold">{t('videochat.frequency_long_term_care')}</span>}  control={
                                             <Checkbox
                                                 value="1"
                                                 name="checkbox-button"
@@ -45,7 +45,7 @@ const VideoChatPage = ({ }) => {
                                         }/>  
                                     </div>
                                     <div className="cmn-bg-box-inr p-3 mb-3">
-                                        <FormControlLabel style={styles.root}  label={<span style={styles.label} className="font-weight-bold">寿命と健康的な寿命</span>}  control={
+                                        <FormControlLabel style={styles.root}  label={<span style={styles.label} className="font-weight-bold">{t('videochat.lifespan_and_helthy_lifespan')}</span>}  control={
                                             <Checkbox
                                                 value="1"
                                                 name="checkbox-button"
@@ -55,7 +55,7 @@ const VideoChatPage = ({ }) => {
                                         }/>  
                                     </div>
                                     <div className="cmn-bg-box-inr p-3 mb-3">
-                                        <FormControlLabel style={styles.root}  label={<span style={styles.label} className="font-weight-bold">介護の原因</span>}  control={
+                                        <FormControlLabel style={styles.root}  label={<span style={styles.label} className="font-weight-bold">{t('videochat.causes_long_term_care')}</span>}  control={
                                             <Checkbox
                                                 value="1"
                                                 name="checkbox-button"
@@ -65,7 +65,7 @@ const VideoChatPage = ({ }) => {
                                         }/>  
                                     </div>
                                     <div className="cmn-bg-box-inr p-3 mb-3">
-                                        <FormControlLabel style={styles.root}  label={<span style={styles.label} className="font-weight-bold">介護期間</span>}  control={
+                                        <FormControlLabel style={styles.root}  label={<span style={styles.label} className="font-weight-bold">{t('videochat.period_long_term_care')}</span>}  control={
                                             <Checkbox
                                                 value="1"
                                                 name="checkbox-button"
@@ -79,7 +79,7 @@ const VideoChatPage = ({ }) => {
                         </Row>                    
                     </div>
                     <div className="cmn-bg-box p-4">
-                        <p className="font-16 font-weight-bold mb-3">採用資料</p>
+                        <p className="font-16 font-weight-bold mb-3">{t('videochat.recruiment_material')}</p>
                         <Row className="smallest-padding-box01">
                             <Col md="3" sm="4">
                                 <a><img src={PdfIcon} alt="Pdf Icon"/></a>
@@ -109,9 +109,9 @@ const VideoChatPage = ({ }) => {
                         {/* <GeneralTextbox value="00 : 32" className="w-auto"/> */}
                         <input type="text" value="00 : 32" className="time_text_box ml-2"/>
                         <div className="d-block d-lg-inline-block mt-3 mt-lg-0">
-                            <BackButton title="ブレーク" className="ml-4"/>     
-                            <GeneralButton title="履歴書" className="mx-2"/>                   
-                            <HistoryButton title="採点する"/>
+                            <BackButton title={t('videochat.break')} className="ml-4"/>     
+                            <GeneralButton title={t('videochat.resume')} className="mx-2"/>                   
+                            <HistoryButton title={t('videochat.to_grade')}/>
                         </div>
                     </div>
                 </Col>
