@@ -135,6 +135,20 @@
         "elderly" : "高齢",
         "utterance" : "発話箇所",
         "chat_history" : "チャット履歴"
+    },
+    "videochat" : {
+        "under_low_pre" : "ロープレ実施中",
+        "ongoing_scenario" : "実施中のシナリオ",
+        "current_long_term_care_insurance" : "介護保険の現状",
+        "to_process" : "処理する",
+        "frequency_long_term_care" : "介護の発生頻度",
+        "lifespan_and_helthy_lifespan" : "寿命と健康的な寿命",
+        "causes_long_term_care" : "介護の原因",
+        "period_long_term_care" : "介護期間",
+        "recruiment_material" : "採用資料",
+        "break" : "ブレーク",
+        "resume" : "履歴書",
+        "to_grade" : "採点する"
     }
 
 }

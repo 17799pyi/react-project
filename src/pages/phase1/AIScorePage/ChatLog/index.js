@@ -71,7 +71,6 @@ const ChatLog = () =>{
                             <div className={styles.msg_info}>
                             <div className={styles.msg_info_name}>AIボット</div>
                             </div>
-
                             <div className={styles.msg_text}>
                             それでは始めましょう それでは始めましょう それでは始めましょう
                             </div>
