@@ -353,7 +353,7 @@ input:focus {
 
 /*---------Common Box ------------*/
 .cmn-bg-box {
-  background-color: #fafafa;
+  background-color: var(--light-grey);
   padding: 32px;
   border-radius: 10px;
   border: 1px solid #e6e6e6;

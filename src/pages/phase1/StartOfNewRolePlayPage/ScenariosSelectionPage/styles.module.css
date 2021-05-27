@@ -2,7 +2,7 @@
     padding: 48px 40px;
 } */
 /* .step_head{
-    background: #00A5D9;
+    background: var(--blue-card);
     color: white;
     padding: 10px 16px;
     border-radius: 25px;
@@ -23,7 +23,7 @@
 .step_lists:first-child span.step_head:after {
     display: inline-block;
     content: "";
-    border-top: .3rem solid #00a5d9;
+    border-top: .3rem solid var(--blue-card);
     width: 100%;
     margin: 0 1rem;
     transform: translateY(0.5rem);
@@ -42,17 +42,17 @@
     width: 23%;
 }
 /* .out_line_btn{
-    border: 1px solid #00A5D9;
+    border: 1px solid var(--blue-card);
     box-sizing: border-box;
     border-radius: 4px;
     font-size: 14px;
     text-align: center;
-    color: #00A5D9;
+    color: var(--blue-card);
     width: 90px;
     height: 36px;
 }
 .out_fill_btn{
-    background: #00A5D9;
+    background: var(--blue-card);
     border-radius: 4px;
     color: #FFFFFF;
     font-size: 14px;
@@ -61,7 +61,7 @@
     height: 36px;
 } */
 .human_img{
-    /* width: 35%; */
+    max-width: 60px;
 }
 .w_6{
     width: 22%;
@@ -71,7 +71,7 @@
 }
 .percent_content{
     display: flex;
-    border: 2px solid #00A5D9;
+    border: 2px solid var(--blue-card);
     border-radius: 10px;
     /* width: 92%;
     bottom: 0;
@@ -79,7 +79,7 @@
 }
 .percent_content_left{
     text-align: center;
-    border-right: 2px solid #00A5D9;
+    border-right: 2px solid var(--blue-card);
     padding-top: 1.4rem;
     width: 100%;
 }
@@ -91,7 +91,7 @@
     width: 100%;
 }
 .right_top{
-    border-bottom: 2px solid #00A5D9;
+    border-bottom: 2px solid var(--blue-card);
     text-align: center;
     padding: 9px 0;
     font-size: 16px;
@@ -115,7 +115,7 @@
     opacity: 1;
 }
 .progress_bar_per {
-    background: #00A5D9;
+    background: var(--blue-card);
     border-radius: 20px;
     height: 10px;
     width: 50%;
@@ -126,7 +126,7 @@
     content: "";
     width: 2px;
     height: 30px;
-    background-color: #00A5D9;
+    background-color: var(--blue-card);
     position: absolute;
     right: 0;
     bottom: 0;
@@ -144,16 +144,18 @@
 }
 
 .roleplay_step2_tb {
-    border: 1px solid #00A5D9;
+    border: 1px solid var(--blue-card);
     border-collapse: unset;
     border-spacing: 0;
     border-radius: 11px;
 }
 .roleplay_step2_tb td {
-    border: 1px solid #00A5D9;
+    border: 1px solid var(--blue-card);
     vertical-align: middle;
     padding: 8px;
     text-align: center;
+    background-color: var(--alice-blue);
+    color: var(--blue-card);
 }
 .roleplay_step2_tb tr:first-child td:first-child {
     border-top-left-radius: 10px;
@@ -163,6 +165,8 @@
 }
 .roleplay_step2_tb tr:first-child td:first-child {
     border-bottom-left-radius: 10px;
+    background-color: #FCD9CC;
+    color: var(--dune);
 }
 .roleplay_step2_tb tr:last-child td:last-child {
     border-bottom-right-radius: 10px;

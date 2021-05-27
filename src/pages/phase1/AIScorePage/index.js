@@ -10,9 +10,8 @@ import BackgroundWhiteChip from "../../../components/Label/BackgroundWhiteChip"
 import ScoreBar from "../../../components/ScoreBar"
 import ChatLog from "./ChatLog"
 
-import EvaluationIcon1 from "../../../assets/images/evaluation_icon1.png"
-import EvaluationIcon2 from "../../../assets/images/evaluation_icon2.png"
-import EvaluationIcon3 from "../../../assets/images/evaluation_icon3.png"
+import EvaluationIcon1 from "../../../assets/images/evaluation_icon3.svg"
+import SampleChart from "../../../assets/images/sample_chart.png"
 import './styles.css';
 
 const AIScorePage = ({ }) => {
@@ -25,11 +24,33 @@ const AIScorePage = ({ }) => {
                 <h3 className="mb-0">{t('aiscore.ai_scoring_result')}</h3>
             </Col>
             <Col xs="7" className="text-right">
-                <BackButton title="リトライ" className="mr-3"/>
-                <HistoryButton title="履歴一覧" />
+                {/* <BackButton title="リトライ" className="mr-3"/> */}
+                <HistoryButton title="リトライ" />
             </Col>
         </Row>
         <div className="cmn-bg-box mt-3">
+            <Row>
+                <Col lg="6" className="mb-4 d-flex">
+                    <div className="cmn-bg-box-inr">
+                        <div className="percentage_circle">
+                            <div>
+                                <div>
+                                    <p>正答率</p>
+                                    <p className="percent_txt mb-3">80%</p>
+                                    <p>自己ベスト</p>
+                                    <p className="percent_txt">85%</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </Col>
+                <Col lg="6" className="mb-4 d-flex">
+                    <div className="cmn-bg-box-inr">
+                        <p className="font-16 font-weight-bold text-center">実施履歴</p>
+                        <img src={SampleChart} alt="Sample Chart"/>
+                    </div>
+                </Col>
+            </Row>
             <div className="cmn-bg-box-inr">
                 <p className="font-16 font-weight-bold mb-3">{t('aiscore.score_by_process')}</p>
                 <Row className="smallest-padding-box02 mb-2">
@@ -51,7 +72,8 @@ const AIScorePage = ({ }) => {
                     </Col>
                     <Col xs="2" className="d-flex">
                         <div  className="cmn-bg-box-inr text-center">
-                            <img src={EvaluationIcon1} alt="Evaluation Icon1" className="mw-100"/>
+                            {/* <img src={EvaluationIcon1} alt="Evaluation Icon1" className="mw-100"/> */}
+                            <p className="font-16 font-weight-bold">〇</p>
                         </div>
                     </Col>
                     <Col xs="6" className="d-flex">
@@ -85,7 +107,7 @@ const AIScorePage = ({ }) => {
                     </Col>
                     <Col xs="2" className="d-flex">
                         <div  className="cmn-bg-box-inr text-center">
-                            <img src={EvaluationIcon2} alt="Evaluation Icon2" className="mw-100"/>
+                            <img src={EvaluationIcon1} alt="Evaluation Icon3" className="mw-100"/>
                         </div>
                     </Col>
                     <Col xs="6" className="d-flex">
@@ -119,7 +141,8 @@ const AIScorePage = ({ }) => {
                     </Col>
                     <Col xs="2" className="d-flex">
                         <div  className="cmn-bg-box-inr text-center">
-                            <img src={EvaluationIcon3} alt="Evaluation Icon3" className="mw-100"/>
+                            {/* <img src={EvaluationIcon3} alt="Evaluation Icon3" className="mw-100"/> */}
+                            <p className="font-16 font-weight-bold">×</p>
                         </div>
                     </Col>
                     <Col xs="6" className="d-flex">
@@ -145,7 +168,7 @@ const AIScorePage = ({ }) => {
                         </div>
                     </Col>
                 </Row>
-                <Row className="smallest-padding-box02 mb-4">
+                <Row className="smallest-padding-box02 mb-32">
                     <Col xs="2" className="d-flex">
                         <div  className="cmn-bg-box-inr">
                             <p className="font-16 font-weight-bold">{t('aiscore.card_title.long_term_care_period')}</p>
@@ -179,8 +202,8 @@ const AIScorePage = ({ }) => {
                         </div>
                     </Col>
                 </Row>
-                <Row className="mb-4">
-                    <Col>
+                <Row className="mb-32">
+                    <Col lg="11" className="mx-auto">
                         <ScoreBar className="mb-3" />
                         <ScoreBar/>
                     </Col>

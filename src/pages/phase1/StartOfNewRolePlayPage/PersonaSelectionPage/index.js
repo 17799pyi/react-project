@@ -25,12 +25,12 @@ const PersonaSelectionPage = ({ className, style, onEditScenerio }) => {
   return (
     <>
       <div className={`cmn-bg-box `}>
-        <Row className="mb-32">
+        {/* <Row className="mb-32">
           <Col>
             <BackButton title="戻る" className="mr-3" />
             <GeneralButton title="次へ" onClick={onEditScenerio} />
           </Col>
-        </Row>   
+        </Row>    */}
         <div className={`cmn-bg-box-inr pb-2`}>
           <div className="mb-3">
             <h6 className={`mb-3 ${classes.recruiter_select}`}>
@@ -119,13 +119,19 @@ const PersonaSelectionPage = ({ className, style, onEditScenerio }) => {
           </div>
           <Row  className={`smallest-padding-box01`}>
             <Col lg="4" md="6" className="mb-3">
-              <CancerInsuranceCard />
+              <CancerInsuranceCard onEditScenerio={onEditScenerio}/>
             </Col>
             <Col lg="4" md="6" className="mb-3">
-              <CancerInsuranceCard />
+              <CancerInsuranceCard onEditScenerio={onEditScenerio}/>
             </Col>
             <Col lg="4" md="6" className="mb-3">
-              <CancerInsuranceCard />
+              <CancerInsuranceCard onEditScenerio={onEditScenerio}/>
+            </Col>
+            <Col lg="4" md="6" className="mb-3">
+              <CancerInsuranceCard onEditScenerio={onEditScenerio}/>
+            </Col>
+            <Col lg="4" md="6" className="mb-3">
+              <CancerInsuranceCard onEditScenerio={onEditScenerio}/>
             </Col>
           </Row>
         </div>
