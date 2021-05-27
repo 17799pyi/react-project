@@ -3,7 +3,7 @@ import { isIE } from 'react-device-detect';
 // import Bowser from 'bowser';
 
 
-import IESupportedPage from './pages/IESupportedPage/index.js';
+import IESupportedPage from './pages/IESupportedPage';
 import Routes from './routes/routes.js';
 import SnackBar from './components/Snackbar';
 

@@ -3,16 +3,8 @@ import { useTranslation } from 'react-i18next';
 import { Container, Row, Col } from 'reactstrap';
 import { useHistory } from "react-router-dom";
 
-import ScenarioSelectionCard from '../../../components/Card/ScenarioSelectionCard'
-import BackButton from "../../../components/Button/BackButton"
-import GeneralButton from "../../../components/Button/GeneralButton"
 import Step2 from "./ScenariosSelectionPage"
 import Step1 from "./PersonaSelectionPage"
-
-import humanImg from '../../../assets/images/icons/scenario_selection_img.png'
-import smileImg from '../../../assets/images/icons/smile.png'
-import starImg from '../../../assets/images/icons/star.png'
-
 import classes from './styles.module.css';
 
 const ScenariosSelectionPage = ({ }) => {
