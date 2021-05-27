@@ -22,6 +22,7 @@ import AIScore from '../pages/phase1/AIScorePage';
 import RateOfRisk1 from '../pages/phase1/RateOfRiskPage';
 import VideoChat from '../pages/phase1/VideoChatPage';
 import StartOfNewRolePlay from '../pages/phase1/StartOfNewRolePlayPage';
+import HistoryCheck from '../pages/phase1/HistoryCheckPage/index'
 
 import '../pages/index.css'
 import ScenarioSelection from '../pages/ScenarioSelection/ScenarioSelection';
@@ -40,6 +41,7 @@ const Routes = () => {
                 <Route exact path="/VideoChat" component={VideoChat} />
                 <Route exact path="/" component={StartOfNewRolePlay} />
                 <Route exact path="/scenario-selection" component={ScenariosSelectionPage} />
+                <Route exact path="/historycheck" component={HistoryCheck} />
 
                 
                 <Route exact path="/agency" component={Index} />
