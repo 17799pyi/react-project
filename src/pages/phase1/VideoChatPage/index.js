@@ -16,6 +16,7 @@ import ChatPeople2 from "../../../assets/images/chat_people02.png"
 import MicIcon from "../../../assets/images/icons/mic_icon.png"
 import TimeIcon from "../../../assets/images/icons/time_icon.png"
 import './styles.css';
+import WebCam from '../../../components/WebCam/Index';
 
 const VideoChatPage = ({ }) => {
 
@@ -97,6 +98,7 @@ const VideoChatPage = ({ }) => {
                     <div className="chat_img_sec mb-3">
                         <img src={ChatPeople1} alt="Chat People" className="main_chat_people"/>
                         <div className="chat_people_box">
+                            {/* <WebCam /> */}
                             <img src={ChatPeople2} alt="Chat People" className=""/>
                         </div>
                     </div>
