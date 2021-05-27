@@ -58,7 +58,6 @@ const UseStyles = makeStyles({
       lineHeight: "21px",
       alignItems : "center",
       textAlign : "center",
-      color : "#333333;"
     }
   },
   firstHeaderRadius : {
@@ -66,7 +65,19 @@ const UseStyles = makeStyles({
   },
   secondHeaderRadius : {
     borderTopRightRadius : "5px"
+  },
+  firstColor : {
+    background: "#E9FAFF"
+  },
+  secondColor : {
+    background: "#FCD9CC",
+    color:"#E98300"
+  },
+  thirdColor : {
+    color: "red",
+    background : "#E2242C5E",
   }
+
 });
 function index() {
   
@@ -113,34 +124,34 @@ function index() {
                         <TableRow>
                           <TableCell align="center">2 </TableCell>
                           <TableCell align="center">アポイント取得コール</TableCell>
-                          <TableCell align="center">5回/3回(100%)</TableCell>
-                          <TableCell align="center">3回/3回(80%)</TableCell>
-                          <TableCell align="center">2回/3回(80%)</TableCell>
-                          <TableCell align="center">1回/1回(75%)</TableCell>
+                          <TableCell align="center" classes={{root : classes.firstColor}}>5回/3回(100%)</TableCell>
+                          <TableCell align="center" classes={{root : classes.firstColor}}>3回/3回(80%)</TableCell>
+                          <TableCell align="center" classes={{root : classes.secondColor}}>2回/3回(80%)</TableCell>
+                          <TableCell align="center" classes={{root : classes.thirdColor}}>1回/1回(0%)</TableCell>
                         </TableRow>
                         <TableRow>
                           <TableCell align="center">3 </TableCell>
                           <TableCell align="center">アポイント取得コール</TableCell>
-                          <TableCell align="center">5回/3回(100%)</TableCell>
-                          <TableCell align="center">3回/3回(80%)</TableCell>
-                          <TableCell align="center">2回/3回(80%)</TableCell>
-                          <TableCell align="center">1回/1回(75%)</TableCell>
+                          <TableCell align="center" classes={{root : classes.firstColor}}>5回/3回(100%)</TableCell>
+                          <TableCell align="center" classes={{root : classes.firstColor}}>3回/3回(80%)</TableCell>
+                          <TableCell align="center" classes={{root : classes.secondColor}}>2回/3回(80%)</TableCell>
+                          <TableCell align="center" classes={{root : classes.firstColor}}>1回/1回(75%)</TableCell>
                         </TableRow>
                         <TableRow>
                           <TableCell align="center">4 </TableCell>
                           <TableCell align="center">アポイント取得コール</TableCell>
-                          <TableCell align="center">5回/3回(100%)</TableCell>
-                          <TableCell align="center">3回/3回(80%)</TableCell>
-                          <TableCell align="center">2回/3回(80%)</TableCell>
-                          <TableCell align="center">1回/1回(75%)</TableCell>
+                          <TableCell align="center" classes={{root : classes.firstColor}}>5回/3回(100%)</TableCell>
+                          <TableCell align="center" classes={{root : classes.firstColor}}>3回/3回(80%)</TableCell>
+                          <TableCell align="center" classes={{root : classes.secondColor}}>2回/3回(80%)</TableCell>
+                          <TableCell align="center" classes={{root : classes.thirdColor}}>1回/1回(0%)</TableCell>
                         </TableRow>
                         <TableRow>
                           <TableCell align="center">5a </TableCell>
                           <TableCell align="center">アポイント取得コール</TableCell>
-                          <TableCell align="center">5回/3回(100%)</TableCell>
-                          <TableCell align="center">3回/3回(80%)</TableCell>
-                          <TableCell align="center">2回/3回(80%)</TableCell>
-                          <TableCell align="center">1回/1回(75%)</TableCell>
+                          <TableCell align="center"classes={{root : classes.firstColor}}>3回/3回(80%)</TableCell>
+                          <TableCell align="center">-</TableCell>
+                          <TableCell align="center" classes={{root : classes.secondColor}}>2回/3回(80%)</TableCell>
+                          <TableCell align="center" classes={{root : classes.thirdColor}}>1回/1回(0%)</TableCell>
                         </TableRow>
                         <TableRow>
                           <TableCell align="center">5b </TableCell>
@@ -184,8 +195,8 @@ function index() {
                         </TableRow>
                         <TableRow>
                           <TableCell align="center" colSpan={2}>ステータス</TableCell>
-                          <TableCell align="center" colSpan={3}>受講中(16セクション/24セクション)</TableCell>
-                          <TableCell align="center">受講中(4セクション/8セクション)</TableCell>
+                          <TableCell align="center" colSpan={3} classes={{root : classes.secondColor}}>受講中(16セクション/24セクション)</TableCell>
+                          <TableCell align="center" classes={{root : classes.secondColor}}>受講中(4セクション/8セクション)</TableCell>
                         </TableRow>
                       </TableBody>
                     </Table>
