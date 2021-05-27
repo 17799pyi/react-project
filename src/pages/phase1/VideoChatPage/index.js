@@ -2,6 +2,7 @@ import React, { createRef, useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Container, Row, Col } from 'reactstrap';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
+import { BrowserRouter as Router, Switch, Route, Link, NavLink } from "react-router-dom";
 
 import Checkbox from "../../../components/Checkbox"
 import InsuranceTypeLabel from "../../../components/Label/InsuranceTypeLabel"
@@ -30,7 +31,7 @@ const VideoChatPage = ({ }) => {
                             <Col>
                                 <div className="mb-4">
                                     <p className="font-16 font-weight-bold mb-3">{t('videochat.ongoing_scenario')}</p>
-                                    <InsuranceTypeLabel label="実施中のシナリオ" className="mb-0"/>
+                                    <InsuranceTypeLabel label="介護保険の現状" className="mb-0 font-weight-bold"/>
                                 </div>
                                 <div>
                                     <p className="font-16 font-weight-bold mb-3">{t('videochat.to_process')}</p>
@@ -96,6 +97,7 @@ const VideoChatPage = ({ }) => {
                 <Col lg="8">
                     <div className="chat_img_sec mb-3">
                         <img src={ChatPeople1} alt="Chat People" className="main_chat_people"/>
+                        <p className="start_text">お客様役 : それでは始めましょう。</p>
                         <div className="chat_people_box">
                             <img src={ChatPeople2} alt="Chat People" className=""/>
                         </div>
@@ -111,7 +113,7 @@ const VideoChatPage = ({ }) => {
                         <div className="d-block d-lg-inline-block mt-3 mt-lg-0">
                             <BackButton title={t('videochat.break')} className="ml-4"/>     
                             <GeneralButton title={t('videochat.resume')} className="mx-2"/>                   
-                            <HistoryButton title={t('videochat.to_grade')}/>
+                            <Link to="/RateOfRisk"><HistoryButton title={t('videochat.to_grade')}/></Link>
                         </div>
                     </div>
                 </Col>

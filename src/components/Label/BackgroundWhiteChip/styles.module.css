@@ -1,10 +1,11 @@
 
 .bg_blue {    
-    background: var(--pure-white);
+    background: var(--light-grey-6);
     display: inline-block;
-    padding: 4px 16px;
-    color: var(--cerulean);
-    border-radius: 5px;
+    padding: 0 8px;
+    color: var(--pure-white);
+    border-radius: 8px;
     text-align: center;
-    border: 1px solid var(--cerulean);
+    line-height: 1.7;
+    /* border: 1px solid var(--cerulean); */
 }

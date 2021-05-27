@@ -1,6 +1,7 @@
 import React, { createRef, useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Container, Row, Col } from 'reactstrap';
+import { BrowserRouter as Router, Switch, Route, Link, NavLink } from "react-router-dom";
 
 import BackgroundBlueLabel from "../../../components/Label/BackgroundBlueLabel"
 import ScoreBar from "../../../components/ScoreBar"
@@ -16,11 +17,16 @@ const RateOfRiskPage = ({ }) => {
     const { t } = useTranslation();
     return (
         <>
-        <Row className="align-items-center mb-32 pb-2">  
+        <Row className="align-items-start mb-32 pb-2">  
             <Col>
-                <h3 className="mb-3">{t('rateOfRisk.header_1')}</h3>          
-                <h3 className="mb-0 font-weight-normal d-block">{t('rateOfRisk.header_2')}</h3>
-            </Col>          
+                <h3 className="">{t('rateOfRisk.header_1')}</h3>    
+            </Col>    
+            <Col>
+                <div className={classes.purpose_sec}>
+                    <span>{t('rateOfRisk.header_2')}</span>
+                    <span>x x x</span>
+                </div>
+            </Col>                
         </Row>
         <div className="cmn-bg-box p-4">
             <Row className="">
@@ -176,16 +182,16 @@ const RateOfRiskPage = ({ }) => {
                 </Col>
             </Row> */}
             
-            <Row className="mt-4 mb-32">
-                <Col>
-                    <ScoreBar className="mb-3" />
-                    <ScoreBar/>
+            <Row className="mt-4 mb-32 pb-4">
+                <Col lg="11" className="mx-auto">
+                    <Link to="/AIScore"><ScoreBar className="mb-3" /></Link>
+                    <Link to="/AIScore"> <ScoreBar/></Link>
                 </Col>
             </Row>
             
             <Row>
-                <Col className="text-center pt-2">
-                    <button className={classes.bottom_btn_submit}>{t('rateOfRisk.proceed_to_the_next')}</button>
+                <Col className="text-center pt-2">        
+                    <button className={classes.bottom_btn_submit}><Link to="/VideoChat">{t('rateOfRisk.proceed_to_the_next')}</Link></button>
                 </Col>
             </Row>
         </div>

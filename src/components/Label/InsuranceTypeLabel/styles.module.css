@@ -1,9 +1,9 @@
 
 .bg_blue {    
-    background: var(--alice-blue);
+    background: rgba(0, 165, 217, 0.2);
     display: inline-block;
-    padding: 4px 16px;
-    color: var(--dune);
+    padding: 8px 16px;
+    color: var(--blue-card);
     border-radius: 5px;
     text-align: center;
 }

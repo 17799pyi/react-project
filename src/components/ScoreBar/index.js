@@ -14,9 +14,9 @@ const BackgroundBlueLabel = ({ label, className, style}) => {
     return (
        <div className={`${classes.scroll_bar} ${className}`}>
            <div className={classes.scroll_per_sec}>
-                <span>{t('rateOfRisk.time')}</span>
-                <span>11：00 - 11：12</span>
-                <span>{t('rateOfRisk.correct_answer_rate')}：80%</span>
+                <span>2021年2月26日 (金)</span>
+                <span className="ml-3 mr-4">11：00 - 11：12</span>
+                <span className="pl-4 mr-3"><span className="font-weight-normal">{t('rateOfRisk.correct_answer_rate')}</span>：80%</span>
                 <img src={smileImg} className={classes.w_19}/>
            </div>
            <div className={classes.scroll_btn_sec}>
@@ -25,7 +25,7 @@ const BackgroundBlueLabel = ({ label, className, style}) => {
                     <img src={starImg} className={classes.w_17} />
                     <img src={starImg} className={classes.w_17} />
                </span>
-               <AcceptButton title={t('rateOfRisk.accepting')}/>
+               {/* <AcceptButton title={t('rateOfRisk.accepting')}/> */}
            </div>
        </div>
     )
