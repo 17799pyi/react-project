@@ -26,16 +26,16 @@ const VideoChatPage = ({ }) => {
         <>
             <Row>
                 <Col lg="4" className="mb-3 m-lg-0">
-                    <h3 className="mb-32">{t('videochat.under_low_pre')}</h3>
+                    <h3 className="mb-32">{t('videochat.role_play_implmenting')}</h3>
                     <div className="cmn-bg-box mb-3 px-4 pt-4 pb-2">
                         <Row>
                             <Col>
                                 <div className="mb-4">
-                                    <p className="font-16 font-weight-bold mb-3">{t('videochat.ongoing_scenario')}</p>
-                                    <InsuranceTypeLabel label="介護保険の現状" className="mb-0 font-weight-bold"/>
+                                    <p className="font-16 font-weight-bold mb-3">{t('videochat.ongoing_section')}</p>
+                                    <InsuranceTypeLabel label={t('videochat.current_long_term_care_insurance')} className="mb-0 font-weight-bold"/>
                                 </div>
                                 <div>
-                                    <p className="font-16 font-weight-bold mb-3">{t('videochat.to_process')}</p>
+                                    <p className="font-16 font-weight-bold mb-3">{t('videochat.process')}</p>
                                     <div className="cmn-bg-box-inr p-3 mb-3">
                                         <FormControlLabel style={styles.root}  label={<span style={styles.label} className="font-weight-bold">{t('videochat.frequency_long_term_care')}</span>}  control={
                                             <Checkbox
@@ -81,7 +81,7 @@ const VideoChatPage = ({ }) => {
                         </Row>                    
                     </div>
                     <div className="cmn-bg-box p-4">
-                        <p className="font-16 font-weight-bold mb-3">{t('videochat.recruiment_material')}</p>
+                        <p className="font-16 font-weight-bold mb-3">{t('videochat.sale_tools')}</p>
                         <Row className="smallest-padding-box01">
                             <Col md="3" sm="4">
                                 <a><img src={PdfIcon} alt="Pdf Icon"/></a>

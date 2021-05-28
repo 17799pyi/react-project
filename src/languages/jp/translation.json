@@ -137,23 +137,23 @@
         "chat_history" : "チャット履歴"
     },
     "videochat" : {
-        "under_low_pre" : "ロープレ実施中",
-        "ongoing_scenario" : "実施中のセクション",
+        "role_play_implmenting" : "ロープレ実施中",
+        "ongoing_section" : "実施中のセクション",
         "current_long_term_care_insurance" : "介護保険の現状",
-        "to_process" : "プロセス",
+        "process" : "プロセス",
         "frequency_long_term_care" : "介護の発生頻度",
         "lifespan_and_helthy_lifespan" : "寿命と健康的な寿命",
         "causes_long_term_care" : "介護の原因",
         "period_long_term_care" : "介護期間",
-        "recruiment_material" : "セールスツール",
+        "sale_tools" : "セールスツール",
         "break" : "ブレーク",
         "resume" : "履歴書",
-        "to_grade" : "採点する"
+        "score" : "採点する"
     },
     "historycheck" : {
         "history_confirmation" : "履歴確認",
         "output" : "アウトプット編」",
-        "low_pretest_edition" : "ロープレテスト編",
+        "role_play_test" : "ロープレテスト編",
         "section_name" : "セクション名",
         "progress" : "進捗(正答率)",
         "status" : "ステータス",
