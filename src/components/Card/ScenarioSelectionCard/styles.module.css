@@ -30,6 +30,9 @@
     display: flex;
     justify-content: space-between;
 }
+.bottom_flex p img {
+    margin-top: 3px;
+}
 .bottom_img{
     /* width: 45%;
     float: right; */
