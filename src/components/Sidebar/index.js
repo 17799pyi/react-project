@@ -25,12 +25,12 @@ const Sidebar = ({isOpen,setIsOpen, className, style}) => {
             <div id="sidebar" className='sidebar-large over-height'>
                 <div>
                     <div className="logo-sec">
-                        <img src={logo} className="mw-100" alt="logo" /> <h6 className="">{t('募集人育成AI')}</h6>
+                    <NavLink to="/" activeClassName={`current`}><img src={logo} className="mw-100" alt="logo" /></NavLink> <h6 className="">{t('募集人育成AI')}</h6>
                     </div>
                     <ul className="sidebar-menu" ref={elementRef}>
                         <li><NavLink to="/" activeClassName={`current`}><span>{t('e-Learning')}</span></NavLink></li>
                         <li><NavLink to="/a"  activeClassName={`current`}><img src={icon01} alt="sidebar icon"/><span>{t('AIとロープレする')}</span></NavLink></li>
-                        <li><NavLink to="/b"  activeClassName={`current`}><img src={icon02} alt="sidebar icon"/><span> {t('履歴を確認する')}</span></NavLink></li>
+                        <li><NavLink to="/historycheck"  activeClassName={`current`}><img src={icon02} alt="sidebar icon"/><span> {t('履歴を確認する')}</span></NavLink></li>
                     </ul>
                 </div>
             </div>
