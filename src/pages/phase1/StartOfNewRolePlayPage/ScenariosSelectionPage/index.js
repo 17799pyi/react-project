@@ -68,22 +68,22 @@ const ScenariosSelectionPage = ({ className, style, onBack }) => {
                                 </Col>
                             </Row>
                             <Row className="smallest-padding-box pt-2">
-                                <Col lg="4" md="6" className="mb-3">
+                                <Col xl="4" lg="6" className="mb-3">
                                     <ScenarioSelectionCard/>
                                 </Col>
-                                <Col lg="4" md="6" className="mb-3">
+                                <Col xl="4" lg="6" className="mb-3">
                                     <ScenarioSelectionCard/>
                                 </Col>
-                                <Col lg="4" md="6" className="mb-3">
+                                <Col xl="4" lg="6" className="mb-3">
                                     <ScenarioSelectionCard/>
                                 </Col>
-                                <Col lg="4" md="6" className="mb-3">
+                                <Col xl="4" lg="6" className="mb-3">
                                     <ScenarioSelectionCard/>
                                 </Col>
-                                <Col lg="4" md="6" className="mb-3">
+                                <Col xl="4" lg="6" className="mb-3">
                                     <ScenarioSelectionCard/>
                                 </Col>
-                                <Col lg="4" md="6" className="mb-3">
+                                <Col xl="4" lg="6" className="mb-3">
                                     <ScenarioSelectionCard/>
                                 </Col>
                             </Row>
