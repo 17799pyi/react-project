@@ -7,6 +7,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import BackButton from "../../../../components/Button/BackButton";
 import GeneralButton from "../../../../components/Button/GeneralButton";
 import { GeneralDropdown } from "../../../../components/Dropdowns/GeneralDropdown";
+import InsuranceTypeLabel from "../../../../components/Label/InsuranceTypeLabel"
 import Radio from "../../../../components/RadioButtons";
 import CancerInsuranceCard from "../../../../components/Card/CancerInsurance/index";
 
@@ -32,13 +33,15 @@ const PersonaSelectionPage = ({ className, style, onEditScenerio }) => {
           </Col>
         </Row>    */}
         <div className={`cmn-bg-box-inr pb-2`}>
-          <div className="mb-3">
+          <div className="mb-4">
             <h6 className={`mb-3 ${classes.recruiter_select}`}>
               {t("recruiter.recruiter_slection")}
             </h6>
             <Row>
               <Col lg="4">
-                <GeneralDropdown placeholder="選択してください" items={items} />
+                {/* <GeneralDropdown placeholder="選択してください" items={items} /> */}
+                
+                <InsuranceTypeLabel label="Jiro Suzuki" className="mb-0 font-weight-bold font-16 px-3"/>
               </Col>
             </Row>
           </div>
@@ -118,19 +121,19 @@ const PersonaSelectionPage = ({ className, style, onEditScenerio }) => {
             </RadioGroup>
           </div>
           <Row  className={`smallest-padding-box01`}>
-            <Col lg="4" md="6" className="mb-3">
+            <Col xl="4" lg="6" className="mb-3">
               <CancerInsuranceCard onEditScenerio={onEditScenerio}/>
             </Col>
-            <Col lg="4" md="6" className="mb-3">
+            <Col xl="4" lg="6" className="mb-3">
               <CancerInsuranceCard onEditScenerio={onEditScenerio}/>
             </Col>
-            <Col lg="4" md="6" className="mb-3">
+            <Col xl="4" lg="6" className="mb-3">
               <CancerInsuranceCard onEditScenerio={onEditScenerio}/>
             </Col>
-            <Col lg="4" md="6" className="mb-3">
+            <Col xl="4" lg="6" className="mb-3">
               <CancerInsuranceCard onEditScenerio={onEditScenerio}/>
             </Col>
-            <Col lg="4" md="6" className="mb-3">
+            <Col xl="4" lg="6" className="mb-3">
               <CancerInsuranceCard onEditScenerio={onEditScenerio}/>
             </Col>
           </Row>

@@ -8,6 +8,8 @@
 }
 .person{
     max-width: 60px;
+    display: block;
+    margin: 0 auto;
 }
 .indicate{
     color: #00A5D9;

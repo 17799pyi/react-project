@@ -66,18 +66,18 @@ const AIScorePage = ({ }) => {
                 </Row>
                 <Row className="smallest-padding-box02 mb-2">
                     <Col xs="2" className="d-flex">
-                        <div  className="cmn-bg-box-inr">
-                            <p className="font-16 font-weight-bold">{t('aiscore.card_title.long_term_care_frequency')}</p>
+                        <div  className="cmn-bg-box-inr d-flex align-items-center h-100 px-3">
+                            <p className="font-16 font-weight-bold mb-0">{t('aiscore.card_title.long_term_care_frequency')}</p>
                         </div>
                     </Col>
                     <Col xs="2" className="d-flex">
-                        <div  className="cmn-bg-box-inr text-center">
+                        <div  className="cmn-bg-box-inr d-flex align-items-center h-100 justify-content-center px-16">
                             {/* <img src={EvaluationIcon1} alt="Evaluation Icon1" className="mw-100"/> */}
-                            <p className="font-16 font-weight-bold">〇</p>
+                            <p className="font-weight-bold mb-0 font-24">〇</p>
                         </div>
                     </Col>
                     <Col xs="6" className="d-flex">
-                        <div  className="cmn-bg-box-inr pb-3">
+                        <div  className="cmn-bg-box-inr pb-3 px-32">
                             <div>
                                 <BackgroundBlueChip label={t('aiscore.disease_called_cancer')} className="mr-2"/>
                                 <BackgroundWhiteChip label={t('aiscore.two_in_one')} className="mr-2"/>
@@ -91,7 +91,7 @@ const AIScorePage = ({ }) => {
                         </div>
                     </Col>
                     <Col xs="2" className="d-flex">
-                        <div  className="cmn-bg-box-inr">
+                        <div  className="cmn-bg-box-inr d-flex align-items-center h-100">
                             <ul className="point-list">
                                 <li>**</li>
                                 <li>**</li>
@@ -101,17 +101,17 @@ const AIScorePage = ({ }) => {
                 </Row>
                 <Row className="smallest-padding-box02 mb-2">
                     <Col xs="2" className="d-flex">
-                        <div  className="cmn-bg-box-inr">
+                        <div  className="cmn-bg-box-inr d-flex align-items-center h-100 px-3">
                             <p className="font-16 font-weight-bold">{t('aiscore.card_title.lifespan_and_healthy_lifespan')}</p>
                         </div>
                     </Col>
                     <Col xs="2" className="d-flex">
-                        <div  className="cmn-bg-box-inr text-center">
+                        <div  className="cmn-bg-box-inr d-flex align-items-center h-100 justify-content-center px-16">
                             <img src={EvaluationIcon1} alt="Evaluation Icon3" className="mw-100"/>
                         </div>
                     </Col>
                     <Col xs="6" className="d-flex">
-                        <div  className="cmn-bg-box-inr pb-3">
+                        <div  className="cmn-bg-box-inr pb-3 px-32">
                             <div>
                                 <BackgroundBlueChip label={t('aiscore.disease_called_cancer')} className="mr-2"/>
                                 <BackgroundWhiteChip label={t('aiscore.two_in_one')} className="mr-2"/>
@@ -125,7 +125,7 @@ const AIScorePage = ({ }) => {
                         </div>
                     </Col>
                     <Col xs="2" className="d-flex">
-                        <div  className="cmn-bg-box-inr">
+                        <div  className="cmn-bg-box-inr d-flex align-items-center h-100">
                             <ul className="point-list">
                                 <li>**</li>
                                 <li>**</li>
@@ -135,18 +135,18 @@ const AIScorePage = ({ }) => {
                 </Row>
                 <Row className="smallest-padding-box02 mb-2">
                     <Col xs="2" className="d-flex">
-                        <div  className="cmn-bg-box-inr">
+                        <div  className="cmn-bg-box-inr d-flex align-items-center h-100 px-3">
                             <p className="font-16 font-weight-bold">{t('aiscore.card_title.long_term_care_causes')}</p>
                         </div>
                     </Col>
                     <Col xs="2" className="d-flex">
-                        <div  className="cmn-bg-box-inr text-center">
+                        <div  className="cmn-bg-box-inr d-flex align-items-center h-100 justify-content-center px-16">
                             {/* <img src={EvaluationIcon3} alt="Evaluation Icon3" className="mw-100"/> */}
-                            <p className="font-16 font-weight-bold">×</p>
+                            <p className="font-weight-bold mb-0 font-24">×</p>
                         </div>
                     </Col>
                     <Col xs="6" className="d-flex">
-                        <div  className="cmn-bg-box-inr pb-3">
+                        <div  className="cmn-bg-box-inr pb-3 px-32">
                             <div>
                                 <BackgroundBlueChip label={t('aiscore.disease_called_cancer')} className="mr-2"/>
                                 <BackgroundWhiteChip label={t('aiscore.two_in_one')} className="mr-2"/>
@@ -160,7 +160,7 @@ const AIScorePage = ({ }) => {
                         </div>
                     </Col>
                     <Col xs="2" className="d-flex">
-                        <div  className="cmn-bg-box-inr">
+                        <div  className="cmn-bg-box-inr d-flex align-items-center h-100">
                             <ul className="point-list">
                                 <li>**</li>
                                 <li>**</li>
@@ -170,17 +170,17 @@ const AIScorePage = ({ }) => {
                 </Row>
                 <Row className="smallest-padding-box02 mb-32">
                     <Col xs="2" className="d-flex">
-                        <div  className="cmn-bg-box-inr">
+                        <div  className="cmn-bg-box-inr d-flex align-items-center h-100 px-3">
                             <p className="font-16 font-weight-bold">{t('aiscore.card_title.long_term_care_period')}</p>
                         </div>
                     </Col>
                     <Col xs="2" className="d-flex">
-                        <div  className="cmn-bg-box-inr text-center">
+                        <div  className="cmn-bg-box-inr d-flex align-items-center h-100 justify-content-center px-16">
                             {/* <img src={EvaluationIcon3} alt="Evaluation Icon3" className="mw-100"/> */}
                         </div>
                     </Col>
                     <Col xs="6" className="d-flex">
-                        <div  className="cmn-bg-box-inr pb-3">
+                        <div  className="cmn-bg-box-inr pb-3 px-32">
                             <div>
                                 <BackgroundBlueChip label={t('aiscore.disease_called_cancer')} className="mr-2"/>
                                 <BackgroundWhiteChip label={t('aiscore.two_in_one')} className="mr-2"/>
@@ -194,7 +194,7 @@ const AIScorePage = ({ }) => {
                         </div>
                     </Col>
                     <Col xs="2" className="d-flex">
-                        <div  className="cmn-bg-box-inr">
+                        <div  className="cmn-bg-box-inr d-flex align-items-center h-100">
                             <ul className="point-list">
                                 <li>**</li>
                                 <li>**</li>
