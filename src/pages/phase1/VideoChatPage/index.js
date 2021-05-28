@@ -36,7 +36,7 @@ const VideoChatPage = () => {
                                 </div>
                                 <div>
                                     <p className="font-16 font-weight-bold mb-3">{t('videochat.process')}</p>
-                                    <div className="cmn-bg-box-inr p-3 mb-3">
+                                    <div className="cmn-bg-box-inr px-2 py-3 mb-3">
                                         <FormControlLabel style={styles.root}  label={<span style={styles.label} className="font-weight-bold">{t('videochat.frequency_long_term_care')}</span>}  control={
                                             <Checkbox
                                                 value="1"
@@ -46,7 +46,7 @@ const VideoChatPage = () => {
                                             />
                                         }/>  
                                     </div>
-                                    <div className="cmn-bg-box-inr p-3 mb-3">
+                                    <div className="cmn-bg-box-inr px-2 py-3 mb-3">
                                         <FormControlLabel style={styles.root}  label={<span style={styles.label} className="font-weight-bold">{t('videochat.lifespan_and_helthy_lifespan')}</span>}  control={
                                             <Checkbox
                                                 value="1"
@@ -56,7 +56,7 @@ const VideoChatPage = () => {
                                             />
                                         }/>  
                                     </div>
-                                    <div className="cmn-bg-box-inr p-3 mb-3">
+                                    <div className="cmn-bg-box-inr px-2 py-3 mb-3">
                                         <FormControlLabel style={styles.root}  label={<span style={styles.label} className="font-weight-bold">{t('videochat.causes_long_term_care')}</span>}  control={
                                             <Checkbox
                                                 value="1"
@@ -66,7 +66,7 @@ const VideoChatPage = () => {
                                             />
                                         }/>  
                                     </div>
-                                    <div className="cmn-bg-box-inr p-3 mb-3">
+                                    <div className="cmn-bg-box-inr px-2 py-3 mb-3">
                                         <FormControlLabel style={styles.root}  label={<span style={styles.label} className="font-weight-bold">{t('videochat.period_long_term_care')}</span>}  control={
                                             <Checkbox
                                                 value="1"
@@ -131,6 +131,7 @@ const styles = {
         display: 'flex',
         flexDirection: 'row-reverse',
         justifyContent: 'space-between',
+        alignItems: 'start',
     },
     container: {
         width: '100%',

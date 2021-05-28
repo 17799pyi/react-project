@@ -30,8 +30,8 @@ function ScenarioSelectionCard() {
             <div className={classes.bottom_wrapper}>
                 <div className={classes.bottom_flex}>
                     <div>
-                        <p className={classes.bottom_text}><img src={PlayIcon} alt="PlayIcon" className="mr-2"/>{t('scenario.number_of_implementations')}：7回</p>
-                        <p className={classes.bottom_text}><img src={MarkIcon} alt="MarkIcon" className="mr-2"/>{t('scenario.maximum_achievement_rate')}：80％</p>
+                        <p className={`d-flex align-items-start ${classes.bottom_text}`}><img src={PlayIcon} alt="PlayIcon" className="mr-2"/><span>{t('scenario.number_of_implementations')}：7回</span></p>
+                        <p className={`d-flex align-items-start ${classes.bottom_text}`}><img src={MarkIcon} alt="MarkIcon" className="mr-2"/><span>{t('scenario.maximum_achievement_rate')}：80％</span></p>
                     </div>
                     <div>
                         <img className={classes.bottom_img} src={smileImg} />
