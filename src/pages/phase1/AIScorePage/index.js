@@ -14,7 +14,7 @@ import EvaluationIcon1 from "../../../assets/images/evaluation_icon3.svg"
 import SampleChart from "../../../assets/images/sample_chart.png"
 import './styles.css';
 
-const AIScorePage = ({ }) => {
+const AIScorePage = () => {
 
     const { t } = useTranslation();
     return (
@@ -35,9 +35,9 @@ const AIScorePage = ({ }) => {
                         <div className="percentage_circle">
                             <div>
                                 <div>
-                                    <p>正答率</p>
+                                    <p>{t('aiscore.cicle_percentage.header_1')}</p>
                                     <p className="percent_txt mb-3">80%</p>
-                                    <p>自己ベスト</p>
+                                    <p>{t('aiscore.cicle_percentage.header_2')}</p>
                                     <p className="percent_txt">85%</p>
                                 </div>
                             </div>
@@ -46,7 +46,7 @@ const AIScorePage = ({ }) => {
                 </Col>
                 <Col lg="6" className="mb-4 d-flex">
                     <div className="cmn-bg-box-inr">
-                        <p className="font-16 font-weight-bold text-center">実施履歴</p>
+                        <p className="font-16 font-weight-bold text-center">{t('aiscore.chartbar.header')}</p>
                         <img src={SampleChart} alt="Sample Chart"/>
                     </div>
                 </Col>

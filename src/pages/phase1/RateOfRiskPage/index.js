@@ -12,7 +12,7 @@ import starImg from '../../../assets/images/icons/star.png'
 
 import classes from './styles.module.css'
 
-const RateOfRiskPage = ({ }) => {
+const RateOfRiskPage = () => {
 
     const { t } = useTranslation();
     return (
@@ -112,7 +112,7 @@ const RateOfRiskPage = ({ }) => {
             </Row>
             <Row className="smallest-padding-box02 mt-2">
                 <Col xs="3">
-                    <div className={`${classes.top_btn}`}>{t('rateOfRisk.lifespan_and_healthy_lifespan')}</div>
+                    <div className={`${classes.top_btn}`}>{t('rateOfRisk.causes_of_long_term_care')}</div>
                 </Col>
                 <Col xs="3">
                     <div className={classes.content_outline}>
@@ -130,7 +130,7 @@ const RateOfRiskPage = ({ }) => {
             </Row>
             <Row className="smallest-padding-box02 mt-2">
                 <Col xs="3">
-                    <div className={`${classes.top_btn} ${classes.content_bottom_extra} ${classes.top_btn_no_triagle}`}>{t('rateOfRisk.lifespan_and_healthy_lifespan')}</div>
+                    <div className={`${classes.top_btn} ${classes.content_bottom_extra} ${classes.top_btn_no_triagle}`}>{t('rateOfRisk.long_term_care_period')}</div>
                 </Col>
                 <Col xs="3">
                     <div className={classes.content_outline}>

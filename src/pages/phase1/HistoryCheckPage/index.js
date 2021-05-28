@@ -1,5 +1,5 @@
 import React from 'react'
-import { Row } from 'reactstrap'
+import { Row, Col } from 'reactstrap'
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
@@ -114,11 +114,14 @@ function Index() {
   
   const classes = UseStyles();
     return (
-        <div>
+        <>
             <Row>
+              <Col>
             <h3 className="mb-32">{t('historycheck.history_confirmation')}</h3>
+            </Col>
             </Row>
             <Row>
+              <Col>
             <TableContainer component={Paper} classes={{root : classes.tableContainer}}>
                   <Table aria-label="spanning table"  classes={{root : classes.tTable}}>
                       <TableHead>
@@ -232,8 +235,9 @@ function Index() {
                       </TableBody>
                     </Table>
                   </TableContainer>
+                  </Col>
             </Row>
-        </div>
+        </>
     )
 }
 

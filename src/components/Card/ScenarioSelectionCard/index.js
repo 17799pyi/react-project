@@ -30,7 +30,7 @@ function ScenarioSelectionCard() {
             <div className={classes.bottom_wrapper}>
                 <div className={classes.bottom_flex}>
                     <div>
-                        <p className={classes.bottom_text}><img src={PlayIcon} alt="PlayIcon" className="mr-2"/>{t('scenario.number_of_implementations')}：7{t('scenario.times')}</p>
+                        <p className={classes.bottom_text}><img src={PlayIcon} alt="PlayIcon" className="mr-2"/>{t('scenario.number_of_implementations')}：7回</p>
                         <p className={classes.bottom_text}><img src={MarkIcon} alt="MarkIcon" className="mr-2"/>{t('scenario.maximum_achievement_rate')}：80％</p>
                     </div>
                     <div>
