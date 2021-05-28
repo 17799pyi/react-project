@@ -43,7 +43,7 @@ const useStyles = makeStyles({
       backgroundImage: `url(${Image})`,
       backgroundRepeat: 'no-repeat',
       backgroundPositionX: 'center',
-      backgroundPositionY: 'center',
+      backgroundPositionY: '6px',
       backgroundSize: '12px 10px',
       content: '""',
     },
@@ -55,9 +55,15 @@ const useStyles = makeStyles({
 
 const StyledCheckbox = (props) => {
   const classes = useStyles();
+  const [checked, setChecked] = React.useState(true);
 
+  const handleChange = (event) => {
+    setChecked(event.target.checked);
+  };
   return (
     <Checkbox
+      checked={checked}
+      onChange={handleChange}
       className={classes.root}
       disableRipple
       color="default"
