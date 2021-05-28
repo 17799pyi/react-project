@@ -1,6 +1,4 @@
 .outer_container_box {
-  /* background-color: #FAFAFA; */
-  /* background-color: cadetblue; */
   padding: 10px 50px;
   padding-top: 32px;
   margin-top: 32px;
@@ -22,7 +20,6 @@
   border-radius: 4px;
   width: 90px;
   height: 36px;
-  font-family: Meiryo;
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
@@ -37,7 +34,6 @@
   border-radius: 4px;
   width: 90px;
   height: 36px;
-  font-family: Meiryo;
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
@@ -54,7 +50,6 @@
   border: 0.678715px solid #d6e4ec;
   box-sizing: border-box;
   border-radius: 5px;
-  font-family: Meiryo;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -66,7 +61,6 @@
   margin-top: 2rem;
 }
 .recruiter_select {
-  font-family: Meiryo;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
@@ -76,7 +70,6 @@
   color: #333333;
 }
 .learning_theme {
-  font-family: Meiryo;
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
@@ -89,7 +82,6 @@
   margin-left: 0px;
 }
 .radio_font {
-  font-family: Meiryo;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
