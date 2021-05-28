@@ -8,6 +8,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import {makeStyles} from '@material-ui/core/styles'
+import {useTranslation} from 'react-i18next'
 
 const UseStyles = makeStyles({
   tableContainer: {
@@ -79,13 +80,14 @@ const UseStyles = makeStyles({
   }
 
 });
-function index() {
+function Index() {
+  const {t} = useTranslation();
   
   const classes = UseStyles();
     return (
         <div>
             <Row>
-            <h3 className="mb-32">履歴確認</h3>
+            <h3 className="mb-32">{t('historycheck.history_confirmation')}</h3>
             </Row>
             <Row>
             <TableContainer component={Paper} classes={{root : classes.tableContainer}}>
@@ -93,8 +95,8 @@ function index() {
                       <TableHead>
                         <TableRow classes={{root : classes.tRow}}>
                           <TableCell  colSpan={2} classes={{root : classes.borderNone}}/>
-                          <TableCell align="center" colSpan={3} classes={{root : classes.firstHeaderRadius}} >アウトプット編」</TableCell>
-                          <TableCell align="center" classes={{root : classes.secondHeaderRadius}}>ロープレテスト編</TableCell> 
+                          <TableCell align="center" colSpan={3} classes={{root : classes.firstHeaderRadius}} >{t('historycheck.output')}</TableCell>
+                          <TableCell align="center" classes={{root : classes.secondHeaderRadius}}>{t('historycheck.role_play_test')}</TableCell> 
                         </TableRow>
                         <TableRow classes={{root : classes.tRowSecond}}>
                           <TableCell  colSpan={2} classes={{root : classes.borderNone}}/>
@@ -105,11 +107,11 @@ function index() {
                         </TableRow>
                         <TableRow classes={{root : classes.tRowThird}}>
                           <TableCell align="center">No.</TableCell>
-                          <TableCell align="center">セクション名</TableCell>
-                          <TableCell align="center">進捗(正答率)</TableCell>
-                          <TableCell align="center">進捗(正答率)</TableCell>
-                          <TableCell align="center">進捗(正答率)</TableCell>
-                          <TableCell align="center">進捗(正答率)</TableCell>
+                          <TableCell align="center">{t('historycheck.section_name')}</TableCell>
+                          <TableCell align="center">{t('historycheck.progress')}</TableCell>
+                          <TableCell align="center">{t('historycheck.progress')}</TableCell>
+                          <TableCell align="center">{t('historycheck.progress')}</TableCell>
+                          <TableCell align="center">{t('historycheck.progress')}</TableCell>
                         </TableRow>
                       </TableHead>
                       <TableBody classes={{root : classes.tBody}}>
@@ -194,7 +196,7 @@ function index() {
                           <TableCell align="center">1回/1回(75%)</TableCell>
                         </TableRow>
                         <TableRow>
-                          <TableCell align="center" colSpan={2}>ステータス</TableCell>
+                          <TableCell align="center" colSpan={2}>{t('historycheck.status')}</TableCell>
                           <TableCell align="center" colSpan={3} classes={{root : classes.secondColor}}>受講中(16セクション/24セクション)</TableCell>
                           <TableCell align="center" classes={{root : classes.secondColor}}>受講中(4セクション/8セクション)</TableCell>
                         </TableRow>
@@ -206,4 +208,4 @@ function index() {
     )
 }
 
-export default index
+export default Index

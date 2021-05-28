@@ -149,5 +149,14 @@
         "break" : "ブレーク",
         "resume" : "履歴書",
         "to_grade" : "採点する"
+    },
+    "historycheck" : {
+        "history_confirmation" : "History Confirmation",
+        "output" : "Output",
+        "role_play_test" : "Role-Play Test",
+        "section_name" : "Scetion Name",
+        "progress" : "Progress (Correct Answer Rate)",
+        "status" : "Status",
+        "attendance" : "受講中(16セクション/24セクション)"
     }
 }

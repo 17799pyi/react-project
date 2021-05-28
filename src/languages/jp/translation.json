@@ -149,6 +149,15 @@
         "break" : "ブレーク",
         "resume" : "履歴書",
         "to_grade" : "採点する"
+    },
+    "historycheck" : {
+        "history_confirmation" : "履歴確認",
+        "output" : "アウトプット編」",
+        "low_pretest_edition" : "ロープレテスト編",
+        "section_name" : "セクション名",
+        "progress" : "進捗(正答率)",
+        "status" : "ステータス",
+        "attendance" : "受講中(16セクション/24セクション)"
     }
 
 }
