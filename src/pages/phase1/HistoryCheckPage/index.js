@@ -11,8 +11,12 @@ import {makeStyles} from '@material-ui/core/styles'
 import {useTranslation} from 'react-i18next'
 
 const UseStyles = makeStyles({
+  tTable: {
+    borderCollapse: 'separate',
+  },
   tableContainer: {
-    boxShadow : "none"
+    boxShadow : "none",
+    borderRadius: 0,
   },
   borderNone: {
     border: "none",
@@ -23,8 +27,16 @@ const UseStyles = makeStyles({
     "& th" : {
       color: "white",
       border: "none",
-      borderRight: "1px solid white",
+      borderLeft: "1px solid white",
       background: "#00A5D9",
+      fontSize: 16,
+      fontWeight: 'bold',
+      "&:nth-child(2)": {
+        borderLeftColor: "#00A5D9",
+      },
+      "&:last-child" : {      
+        borderRight: "1px solid #00A5D9",
+      }
     }
   } ,
   tRowThird: {
@@ -32,10 +44,16 @@ const UseStyles = makeStyles({
     "& th" : {
       color: "white",
       border: "none",
-      borderRight: "1px solid white",
+      borderLeft: "1px solid white",
       background: "#00A5D9",
+      fontSize: 16,
+      fontWeight: 'bold',
       "&:first-child" : {
-        borderTopLeftRadius: "5px"
+        borderTopLeftRadius: "5px",        
+        borderLeftColor: "#00A5D9",
+      },
+      "&:last-child" : {      
+        borderRight: "1px solid #00A5D9",
       }
     }
   },
@@ -44,14 +62,22 @@ const UseStyles = makeStyles({
     "& th" : {
       color: "black",
       border: "none",
-      borderRight: "1px solid #D1D1D1"
+      borderLeft: "1px solid #D1D1D1",
+      fontSize: 16,
+      fontWeight: 'bold',
+      "&:first-child" : {
+        borderLeft: 0,
+      },
+      "&:last-child" : {      
+        borderRight: "1px solid #D1D1D1",
+      }
     }
   },
   tBody: {
     border: "none",
     borderRadius: "20px",
     "& td" : {
-      border: "1px solid #D1D1D1",
+      borderLeft: "1px solid #D1D1D1",
       fontFamily: "Meiryo",
       fontStyle: "normal",
       fontWeight: "normal",
@@ -59,6 +85,9 @@ const UseStyles = makeStyles({
       lineHeight: "21px",
       alignItems : "center",
       textAlign : "center",
+      "&:last-child" : {      
+        borderRight: "1px solid #D1D1D1",
+      }
     }
   },
   firstHeaderRadius : {
@@ -91,7 +120,7 @@ function Index() {
             </Row>
             <Row>
             <TableContainer component={Paper} classes={{root : classes.tableContainer}}>
-                  <Table aria-label="spanning table">
+                  <Table aria-label="spanning table"  classes={{root : classes.tTable}}>
                       <TableHead>
                         <TableRow classes={{root : classes.tRow}}>
                           <TableCell  colSpan={2} classes={{root : classes.borderNone}}/>
