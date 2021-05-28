@@ -18,10 +18,16 @@ const PersonaSelectionPage = ({ className, style, onEditScenerio }) => {
   const items = [{ name: "test1" }, { name: "test2" }];
 
   const { t } = useTranslation();
+  const [rdoPractice , setPractice] = useState();
+  const [rdoValue , setRdoValue] = useState();
+
+  const handleChange = (event) => {
+    setPractice(event.target.value);
+    console.log(event.target.value)
+ };
   const handleRadioChange = (event) => {
-    // setValue(event.target.value);
-    // setHelperText(' ');
-    // setError(false);
+     setRdoValue(event.target.value);
+     console.log(event.target.value)
   };
   return (
     <>
@@ -56,14 +62,15 @@ const PersonaSelectionPage = ({ className, style, onEditScenerio }) => {
               id="adfasd"
               control={
                 <Radio
-                  value="adsfa"
+                  value="practice"
                   name="radio-button"
+                  onChange = {handleChange}
                   color="default"
                   id={`aaaasdf`}
                 />
               }
               label={
-                <span style={styles.label} className="font-weight-bold">
+                <span style={styles.label} className={rdoPractice == "practice" ? 'font-weight-bold' : ''}>
                   {t("recruiter.long_term_insurance_practice")}
                 </span>
               }
@@ -87,14 +94,14 @@ const PersonaSelectionPage = ({ className, style, onEditScenerio }) => {
                 id="adfasd"
                 control={
                   <Radio
-                    value="adsf"
+                    value="training"
                     name="radio-button"
                     color="default"
                     id={`aaaasdf`}
                   />
                 }
                 label={
-                  <span style={styles.label} className="font-weight-bold">
+                  <span style={styles.label} className={rdoValue == "training" ? 'font-weight-bold' : ''}>
                     {t("recruiter.role_playing_training")}
                   </span>
                 }
@@ -106,14 +113,14 @@ const PersonaSelectionPage = ({ className, style, onEditScenerio }) => {
                 id="adfasd"
                 control={
                   <Radio
-                    value="adsfa"
+                    value="test"
                     name="radio-button"
                     color="default"
                     id={`aaaasdf`}
                   />
                 }
                 label={
-                  <span style={styles.label} className="font-weight-bold">
+                  <span style={styles.label} className={rdoValue == "test" ? 'font-weight-bold' : ''}>
                     {t("recruiter.role_playing_test")}
                   </span>
                 }
