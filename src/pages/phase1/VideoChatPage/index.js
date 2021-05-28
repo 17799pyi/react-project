@@ -115,7 +115,7 @@ const VideoChatPage = ({ }) => {
                         <div className="d-block d-lg-inline-block mt-3 mt-lg-0">
                             <BackButton title={t('videochat.break')} className="ml-4"/>     
                             <GeneralButton title={t('videochat.resume')} className="mx-2"/>                   
-                            <Link to="/RateOfRisk"><HistoryButton title={t('videochat.to_grade')}/></Link>
+                            <Link to="/RateOfRisk"><HistoryButton title={t('videochat.score')}/></Link>
                         </div>
                     </div>
                 </Col>
