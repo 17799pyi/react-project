@@ -59,16 +59,6 @@ h6 {
   font-size: 18px;
 }
 
-.font-16 {
-  font-size: 16px;
-}
-.font-14 {
-  font-size: 14px;
-}
-.font-12 {
-  font-size: 12px;
-}
-
 :root{
   --white: white;
   --black: rgb(2, 2, 2);
@@ -153,12 +143,19 @@ h3 {
 .font-12 {
   font-size: 12px;
 }
+.font-14 {
+  font-size: 14px;
+}
 .font-16 {
   font-size: 16px;
 }
 .font-22 {
   font-size: 22px;
 }
+.font-24 {
+  font-size: 24px;
+}
+
 .p-32 {
   padding: 32px;
 }
@@ -405,12 +402,16 @@ end of Edit Keywords and Keyword Selection Pages
   padding: 0;
 }
 .point-list li {
-  font-family: 'Hiragino Maru Gothic ProN';
-    padding-left: 16px;
-    position: relative;
-    margin-bottom: 16px;
-    font-size: 30px;
-    line-height: 0.6;
+  /* font-family: 'Hiragino Maru Gothic ProN'; */
+  padding-left: 16px;
+  position: relative;
+  margin-bottom: 8px;
+  font-size: 16px;
+  line-height: 0.9;
+  font-weight: bold;
+}
+.point-list li:last-child {
+  margin-bottom: 0;
 }
 .point-list li:before {
   content: "";

@@ -29,7 +29,7 @@ const RateOfRiskPage = ({ }) => {
             </Col>                
         </Row>
         <div className="cmn-bg-box p-4">
-            <Row className="">
+            <Row className="smallest-padding-box02">
                 <Col xs="3">                    
                     <BackgroundBlueLabel label={t('rateOfRisk.s_header_1')} className="font-18"/>
                 </Col>
@@ -40,7 +40,7 @@ const RateOfRiskPage = ({ }) => {
                     <BackgroundBlueLabel label={t('rateOfRisk.s_header_3')} className="font-18"/>
                 </Col>
             </Row>
-            <Row className="mt-2">
+            <Row className="smallest-padding-box02 mt-2">
                 <Col xs="3">
                     <div className={`${classes.top_btn}`}>{t('rateOfRisk.frequency_of_long_term_care')}</div>
                 </Col>
@@ -54,7 +54,7 @@ const RateOfRiskPage = ({ }) => {
                 </Col>
                 <Col xs="6">
                     <div className={classes.content_outline}>
-                        <Row>
+                        <Row className="w-100">
                             <Col md="2" className="d-flex align-items-center">
                                 <ul className="point-list">
                                     <li>**</li>
@@ -75,7 +75,7 @@ const RateOfRiskPage = ({ }) => {
                     </div> */}
                 </Col>
             </Row>
-            <Row className="mt-2">
+            <Row className="smallest-padding-box02 mt-2">
                 <Col xs="3">
                     <div className={`${classes.top_btn}`}>{t('rateOfRisk.lifespan_and_healthy_lifespan')}</div>
                 </Col>
@@ -96,7 +96,7 @@ const RateOfRiskPage = ({ }) => {
                                 <img src={sample1_img} className="ml-2"/>
                             </li>
                         </ul> */}                        
-                        <Row>
+                        <Row className="w-100">
                             <Col md="2" className="d-flex align-items-center">
                                 <ul className="point-list">
                                     <li>**</li>
@@ -110,7 +110,7 @@ const RateOfRiskPage = ({ }) => {
                     </div>
                 </Col>
             </Row>
-            <Row className="mt-2">
+            <Row className="smallest-padding-box02 mt-2">
                 <Col xs="3">
                     <div className={`${classes.top_btn}`}>{t('rateOfRisk.lifespan_and_healthy_lifespan')}</div>
                 </Col>
@@ -128,7 +128,7 @@ const RateOfRiskPage = ({ }) => {
                     </div>
                 </Col>
             </Row>
-            <Row className="mt-2">
+            <Row className="smallest-padding-box02 mt-2">
                 <Col xs="3">
                     <div className={`${classes.top_btn} ${classes.content_bottom_extra} ${classes.top_btn_no_triagle}`}>{t('rateOfRisk.lifespan_and_healthy_lifespan')}</div>
                 </Col>
