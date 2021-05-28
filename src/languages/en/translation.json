@@ -148,7 +148,9 @@
         "sale_tools" : "Sale Tools",
         "break" : "Break",
         "resume" : "Resume",
-        "score" : "Score"
+        "score" : "Score",
+        "reply" : "Reply",
+        "let_get_started" : "Customer role : Let’s get stated."
     },
     "historycheck" : {
         "history_confirmation" : "History Confirmation",

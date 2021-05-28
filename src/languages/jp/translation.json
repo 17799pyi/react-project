@@ -146,9 +146,11 @@
         "causes_long_term_care" : "介護の原因",
         "period_long_term_care" : "介護期間",
         "sale_tools" : "セールスツール",
-        "break" : "ブレーク",
-        "resume" : "履歴書",
-        "score" : "採点する"
+        "break" : "中断する",
+        "resume" : "やり直す",
+        "score" : "採点する",
+        "reply" : "応答",
+        "let_get_started" : "お客様役 : それでは始めましょう。"
     },
     "historycheck" : {
         "history_confirmation" : "履歴確認",

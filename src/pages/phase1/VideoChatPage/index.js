@@ -98,14 +98,14 @@ const VideoChatPage = ({ }) => {
                 <Col lg="8">
                     <div className="chat_img_sec mb-3">
                         <img src={ChatPeople1} alt="Chat People" className="main_chat_people"/>
-                        <p className="start_text">お客様役 : それでは始めましょう。</p>
+                        <p className="start_text">{t('videochat.let_get_started')}</p>
                         <div className="chat_people_box">
                             {/* <WebCam /> */}
                             <img src={ChatPeople2} alt="Chat People" className=""/>
                         </div>
                     </div>
                     <div className="mb-32 chat_text_box">
-                        <input type="text" placeholder="応答" className=""/>
+                        <input type="text" placeholder={t('videochat.reply')} className=""/>
                         <img src={MicIcon} alt="Mic Icon" />
                     </div>
                     <div className="text-right">
