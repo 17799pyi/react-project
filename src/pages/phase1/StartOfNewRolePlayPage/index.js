@@ -15,7 +15,7 @@ import starImg from '../../../assets/images/icons/star.png'
 
 import classes from './styles.module.css';
 
-const ScenariosSelectionPage = ({ }) => {
+const ScenariosSelectionPage = () => {
 
     const { t } = useTranslation();
     const history = useHistory();    

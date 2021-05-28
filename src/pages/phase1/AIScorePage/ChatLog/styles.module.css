@@ -24,7 +24,7 @@
   background: rgba(230, 230, 230, 0.5);
 }
 .msger::-webkit-scrollbar-thumb {
-  background: #C4C4C4;
+  background: var(--light-grey-7);
   border-radius: 10px; /* roundness of the scroll thumb */
 }
 
@@ -68,7 +68,7 @@
   max-width: 450px;
   padding: 16px;
   background: #fff;
-  border: 1px solid #C4C4C4;
+  border: 1px solid var(--light-grey-7);
   border-radius: 15px 15px 15px 0px;
 }
 .msg_text {

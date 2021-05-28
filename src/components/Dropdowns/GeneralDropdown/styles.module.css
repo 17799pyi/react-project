@@ -15,7 +15,7 @@
 }
 
 .select_box ul {
-    background: var(--pure-white);
+    background: var(--white);
     width: 100%;
     list-style: none;
     padding: 0;

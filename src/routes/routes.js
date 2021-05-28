@@ -38,7 +38,7 @@ const Routes = () => {
             <Sidebar/>          
               <div id="main-content" className='content-large'>
               <LanguageBar/>
-              <div className="px-5 pt-4 pb-5">
+              <div className="main-content-inr">
               <Switch>
               <Route exact path="/AIScore" component={AIScore} />
                 <Route exact path="/RateOfRisk" component={RateOfRisk1} />
@@ -56,9 +56,7 @@ const Routes = () => {
                 <Route exact path="/lessons/1/scenario" component={PersonaScenaio} />
                 <Route exact path="/setting" component={SettingPage} />
                 <Route exact path="/recruiter" component={Recruiter} />
-                <Route exact path="/scenario-selection/1" component={RateOfRisk} />
-
-                
+                <Route exact path="/scenario-selection/1" component={RateOfRisk} />               
               
                 <Route path="*" component={PageNotFound} />
               </Switch>

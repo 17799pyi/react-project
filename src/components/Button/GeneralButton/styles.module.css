@@ -4,14 +4,14 @@
     min-height: 36px;
     background-color: var(--cerulean);
     padding: 5px;
-    color: var(--pure-white);
+    color: var(--white);
     text-transform: uppercase;
     border-radius: 4px;
     border: 1px solid var(--cerulean);
     font-weight: bold;
 }
 .btn-white {
-    background-color: var(--pure-white);
+    background-color: var(--white);
     color: var(--cerulean);
     border: 1px solid #979797;
 }

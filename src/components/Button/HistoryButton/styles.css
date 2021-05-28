@@ -2,16 +2,11 @@
 .history_btn {
     width: 118px;
     min-height: 36px;
-    background-color: #E98300;
+    background-color: var(--yellow-dark);
     padding: 5px;
-    color: var(--pure-white);
+    color: var(--white);
     text-transform: uppercase;
     border-radius: 4px;
     text-align: center;
     font-weight: bold;
-}
-.btn-white {
-    background-color: var(--pure-white);
-    color: var(--cerulean);
-    border: 1px solid #979797;
 }
