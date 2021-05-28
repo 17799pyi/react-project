@@ -106,14 +106,16 @@
     },
     "recruiter" :
     {
-        "recruiter_slection" : "募集人の選択",
-        "curriculum" : "カリキュラム",
-        "long_term_insurance_practice" : "しっかり頼れる介護保険_実践",
-        "course" : "コース",
-        "role_playing_training" : "ロープレ_トレーニング",
-        "role_playing_test" : "ロールプレイングテスト",
-        "review_of_cancer_insurance" : "がん保険の見直し",
-        "indicate" : "表示する"
+        "recruiter_slection" : "Recruiter’s Name",
+        "curriculum" : "Curriculum",
+        "long_term_insurance_practice" : "Reliable Long-term Care Insurance_Practice",
+        "course" : "Course",
+        "role_playing_training" : "Role-Playing Training",
+        "role_playing_test" : "Role-Playing Test",
+        "progress_rate" : "Progress Rate",
+        "decision" : "Decision",
+        "view_details" : "View Details",
+        "indicate" : "表示する;;;;"
     },
     "aiscore" : {
         "ai_scoring_result" : "AI採点結果",

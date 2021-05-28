@@ -106,14 +106,15 @@
     },
     "recruiter" :
     {
-        "recruiter_slection" : "募集人の選択",
+        "recruiter_slection" : "募集人名",
         "curriculum" : "カリキュラム",
         "long_term_insurance_practice" : "しっかり頼れる介護保険_実践",
         "course" : "コース",
         "role_playing_training" : "ロープレ_トレーニング",
         "role_playing_test" : "ロールプレイングテスト",
-        "review_of_cancer_insurance" : "がん保険の見直し",
-        "indicate" : "詳細の表示"
+        "progress_rate" : "進捗率",
+        "decision" : "決定",
+        "view_details" : "詳細の表示"
     },
     "aiscore" : {
         "ai_scoring_result" : "AI採点結果",

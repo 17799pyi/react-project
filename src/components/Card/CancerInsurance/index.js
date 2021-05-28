@@ -21,12 +21,12 @@ function CancerInsuranceCard({onEditScenerio}) {
           <p>スーパーがん保険 本人型</p>
           {/* <p>{t('recruiter.review_of_cancer_insurance')}</p> */}
           <div className="w-100 d-flex mb-3">
-            <PercentageLabelBox label="進捗率" percentage="33%" className="mr-2"/>            
-            <GeneralButton title="決定" onClick={onEditScenerio}/>          
+            <PercentageLabelBox label={t('recruiter.progress_rate')} percentage="33%" className="mr-2"/>            
+            <GeneralButton title={t('recruiter.decision')} onClick={onEditScenerio}/>          
           </div>  
         </Col>
       </Row>
-      <CardDropdown title={t('recruiter.indicate')} className="offset-3"/>
+      <CardDropdown title={t('recruiter.view_details')} className="offset-3"/>
     </div>
   );
 }
