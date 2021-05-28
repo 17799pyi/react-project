@@ -1,4 +1,15 @@
 {
+    "selectionPageHeader" : {
+        "start_of_new_role_playing" : "Start of New Role-Playing",
+        "recruiter_selection" : "Recruiter Selection",
+        "section_selection" : "Section Selection"
+    },
+    "sidebar" : {
+        "recruiter_training_ai" : "Recruiter Training AI",
+        "e_learning" : "e-Learning",
+        "role_playing_with_ai" : "Role-Playing with AI",
+        "check_history" : "Check History"
+    },
     "general": {
         "cancel": "Cancel",
         "del": "Delete",

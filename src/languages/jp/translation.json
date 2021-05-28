@@ -1,4 +1,15 @@
 {
+    "selectionPageHeader" : {
+        "start_of_new_role_playing" : "新規ロープレの開始",
+        "recruiter_selection" : "募集人の選択",
+        "section_selection" : "セクションの選択"
+    },
+    "sidebar" : {
+        "recruiter_training_ai" : "募集人育成AI",
+        "e_learning" : "e-Learning",
+        "role_playing_with_ai" : "AIとロープレする",
+        "check_history" : "履歴を確認する"
+    },
     "general": {
         "cancel": "キャンセル",
         "del": "削除",
