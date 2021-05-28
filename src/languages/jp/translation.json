@@ -91,10 +91,13 @@
         "s_header_3" : "使用する材料・ツール",
         "frequency_of_long_term_care" : "介護の発生頻度",
         "lifespan_and_healthy_lifespan" : "寿命と健康的な寿命",
+        "causes_of_long_term_care" : "介護の原因",
+        "long_term_care_period" : "介護期間",
         "proceed_to_the_next" : "ロープレ実施画面へ",
         "time": "月 .日",
         "correct_answer_rate" : "正解率",
-        "accepting" : "受け入れ中"
+        "accepting" : "受け入れ中",
+        "wednesday" : "金"
     },
     "setting" : {
         "synonym" : "同義語",
@@ -118,6 +121,13 @@
     },
     "aiscore" : {
         "ai_scoring_result" : "AI採点結果",
+        "cicle_percentage" : {
+            "header_1": "正答率",
+            "header_2": "自己ベスト"
+        },
+        "chartbar" : {
+            "header" : "実施履歴"
+        },
         "score_by_process" : "スコア(プロセス別)",
         "process" : "プロセス",
         "evaluation" : "評価",

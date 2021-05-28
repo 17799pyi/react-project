@@ -75,26 +75,29 @@
         "start_of_new_role_playing" : "Start of new role-playing",
         "recruiter_selection" : "Recruiter selection",
         "section_selection" : "Section selection",
-        "return" : "Return",
+        "return" : "Back",
         "role_play_started" : "Role Play Started",
         "progress" : "Progress",
-        "appointment_acquisition_call": "Appointment acquisition call",
-        "number_of_implementations": "Number of implementations",
+        "appointment_acquisition_call": "Call to get appointment",
+        "number_of_implementations": "No.Of Implementation",
         "times" : "Times",
-        "maximum_achievement_rate": "Maximum achievement rate"
+        "maximum_achievement_rate": "Correct Answer Rate"
     },
     "rateOfRisk" : {
-        "header_1" : "Long-term care risk rate occurrence",
-        "header_2" : "-Purpose of this section-",
-        "s_header_1" : "To process",
+        "header_1" : "Long-term Care Risk Rate Occurrence",
+        "header_2" : "-Purpose of This Section-",
+        "s_header_1" : "Process",
         "s_header_2" : "Point",
-        "s_header_3" : "Materials / tools used",
-        "frequency_of_long_term_care" : "Frequency of long-term care",
-        "lifespan_and_healthy_lifespan" : "Lifespan and healthy lifespan",
-        "proceed_to_the_next" : "Proceed to the next",
+        "s_header_3" : "Sale Tools",
+        "frequency_of_long_term_care" : "Frequency of Long-term Care",
+        "lifespan_and_healthy_lifespan" : "Lifespan and Healthy Lifespan",
+        "causes_of_long_term_care" : "Causes of Long-term Care",
+        "long_term_care_period" : "Long-term Care Period",
+        "proceed_to_the_next" : "Role-Play Implementation Screen",
         "time": "Time",
         "correct_answer_rate" : "Correct answer rate",
-        "accepting" : "Accepting"
+        "accepting" : "Accepting",
+        "wednesday" : "Wednesday"
     },
     "setting" : {
         "synonym" : "Synonym",
@@ -118,24 +121,31 @@
         "indicate" : "表示する;;;;"
     },
     "aiscore" : {
-        "ai_scoring_result" : "AI採点結果",
-        "score_by_process" : "スコア(プロセス別)",
-        "process" : "プロセス",
-        "evaluation" : "評価",
-        "point" : "ポイント",
-        "card_title" : {
-            "long_term_care_frequency" : "介護の発生頻度",
-            "lifespan_and_healthy_lifespan" : "寿命と健康的な寿命",
-            "long_term_care_causes" : "介護の原因",
-            "long_term_care_period" : "介護期間"
+        "ai_scoring_result" : "AI Scoring Result",
+        "cicle_percentage" : {
+            "header_1": "Correct Answer Rate",
+            "header_2": "Personal Best of Time"
         },
-        "disease_called_cancer" : "がんという病気",
-        "two_in_one" : "2人に1人",
-        "cancer_incidence" : "がんの発生率",
-        "higher_with_age" : "年齢とともに高く",
-        "average_no_of_days_hospital" : "平均在院日数",
-        "elderly" : "高齢",
-        "utterance" : "発話箇所",
+        "chartbar" : {
+            "header" : "Implementation History"
+        },
+        "score_by_process" : "Score (By Process)",
+        "process" : "Process",
+        "evaluation" : "Evaluation",
+        "point" : "Point",
+        "card_title" : {
+            "long_term_care_frequency" : "Frequency of Long-term Care",
+            "lifespan_and_healthy_lifespan" : "Lifespan and Healthy Lifespan",
+            "long_term_care_causes" : "Causes of Long-term Care",
+            "long_term_care_period" : "Long-term Care Period"
+        },
+        "disease_called_cancer" : "Cancer Disease",
+        "two_in_one" : "1 in 2 person",
+        "cancer_incidence" : "Cancer Occurance Rate",
+        "higher_with_age" : "Higher with age",
+        "average_no_of_days_hospital" : "Average number of days in hospital",
+        "elderly" : "Elder",
+        "utterance" : "Conversation History",
         "chat_history" : "チャット履歴"
     },
     "videochat" : {
