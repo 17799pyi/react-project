@@ -5,6 +5,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import HeaderBarChatPage from '../components/HeaderBar/HearderBarChatLog';
 import HeaderBar from '../components/HeaderBar/HeaderBar';
 
+import LanguageBar from '../components/LanguageBar';
+
 import PersonaSelection from '../pages/Lesson/PersonaSelection/PersonaSelection';
 import PersonaSelected from '../pages/Lesson/PersonaSelected/PersonaSelected';
 import PersonaScenaio from '../pages/Lesson/PersonaScenario/PersonaScenaio';
@@ -35,6 +37,8 @@ const Routes = () => {
             {/* <HeaderBar/> */}
             <Sidebar/>          
               <div id="main-content" className='content-large'>
+              <LanguageBar/>
+              <div className="px-5 pt-4 pb-5">
               <Switch>
               <Route exact path="/AIScore" component={AIScore} />
                 <Route exact path="/RateOfRisk" component={RateOfRisk1} />
@@ -58,6 +62,7 @@ const Routes = () => {
               
                 <Route path="*" component={PageNotFound} />
               </Switch>
+              </div>
         </div>
       </Router>
     </React.Fragment>

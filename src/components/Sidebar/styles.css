@@ -2,7 +2,7 @@
 .content-large { 
   width: calc(100% - 176px); 
   margin-left: 176px;
-  padding: 48px;
+  /* padding: 48px; */
 }
 .content-small {  
   width: calc(100% - 65px); 
