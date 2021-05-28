@@ -19,7 +19,7 @@ import TimeIcon from "../../../assets/images/icons/time_icon.png"
 import './styles.css';
 import WebCam from '../../../components/WebCam/Index';
 
-const VideoChatPage = ({ }) => {
+const VideoChatPage = () => {
 
     const { t } = useTranslation();
     return (

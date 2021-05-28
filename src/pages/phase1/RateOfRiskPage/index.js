@@ -12,7 +12,7 @@ import starImg from '../../../assets/images/icons/star.png'
 
 import classes from './styles.module.css'
 
-const RateOfRiskPage = ({ }) => {
+const RateOfRiskPage = () => {
 
     const { t } = useTranslation();
     return (

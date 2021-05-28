@@ -14,7 +14,7 @@ import EvaluationIcon1 from "../../../assets/images/evaluation_icon3.svg"
 import SampleChart from "../../../assets/images/sample_chart.png"
 import './styles.css';
 
-const AIScorePage = ({ }) => {
+const AIScorePage = () => {
 
     const { t } = useTranslation();
     return (
