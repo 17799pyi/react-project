@@ -12,5 +12,5 @@
 .general_textbox:focus {
     border-bottom: 1px solid var(--disable-low) !important;
     box-shadow: initial !important;
-    border-color: #fff;
+    border-color: var(--white);
 }

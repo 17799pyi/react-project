@@ -1,6 +1,6 @@
 
 .card {
-  background-color: #ffffff;
+  background-color: var(--white);
   display: flex;
   flex-direction: column;
   min-height: 108px;
@@ -19,7 +19,7 @@
   justify-content: center;
   width: 56px;
   height: 26px;
-  background: #3f414e;
+  background: var(--darkGray);
   border-radius: 6px;
   padding: 10px;
   font-size: 12px;
@@ -49,9 +49,9 @@
   pointer-events: none;
 }
 .grid_4 {
-  background-color: #ffffff;
+  background-color: var(--white);
   font-size: 12px;
-  color: #8E97FD;
+  color: var(--mediumSlateBlue);
   position: relative;
 }
 .grid_4 select {
@@ -63,6 +63,6 @@
   display: block;
   width: 100%;
   padding: 4px 24px 4px 4px;
-  color: #8E97FD;
+  color: var(--mediumSlateBlue);
 }
 

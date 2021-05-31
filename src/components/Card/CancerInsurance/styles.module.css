@@ -7,10 +7,10 @@
   padding: 16px 8px;
 }
 .person{
-    max-width: 60px;
-    display: block;
-    margin: 0 auto;
+  max-width: 60px;
+  display: block;
+  margin: 0 auto;
 }
 .indicate{
-    color: #00A5D9;
+  color: var(--blue-card);
 }

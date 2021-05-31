@@ -1,5 +1,5 @@
 .scenario_person_box {
-    background-color: #8E97FD;
+    background-color: var(--mediumSlateBlue);
     padding: 8px 16px 0;
     color: var(--white);
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15), inset 0px -1px 0px rgba(0, 0, 0, 0.15);
@@ -51,7 +51,7 @@
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15), inset 0px -1px 0px rgba(0, 0, 0, 0.15);
 }
 .save-btn {
-    background: #8E97FD;
+    background: var(--mediumSlateBlue);
     border-radius: 15px 8px 8px 15px;
     color: var(--white);
 }
@@ -69,11 +69,11 @@
     min-height: 123px;
     padding: 32px;
     margin-bottom: 8px;
-    background: #FFFFFF;
+    background: var(--white);
     border: 1px solid rgba(0, 0, 0, 0.1);
     box-shadow: inset 0px 2px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    color: #3F414E;
+    color: var(--darkGray);
 }
 .add-img-box>img {
     max-height: 90px;
@@ -83,7 +83,7 @@
     margin: 0 auto 4px;
 }
 .sent-box {
-    background: #FFFFFF;
+    background: var(--white);
     border: 1px solid rgba(0, 0, 0, 0.1);
     box-shadow: inset 0px 2px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;

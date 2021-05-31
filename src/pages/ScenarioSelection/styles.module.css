@@ -2,8 +2,8 @@
     padding: 48px 40px;
 }
 .step_head{
-    background: #00A5D9;
-    color: white;
+    background: var(--blue-card);
+    color: var(--white);
     padding: 10px 16px;
     border-radius: 25px;
     margin: 0 auto;
@@ -23,15 +23,15 @@
 .step_lists:first-child span.step_head:after {
     display: inline-block;
     content: "";
-    border-top: .3rem solid #00a5d9;
+    border-top: .3rem solid var(--blue-card);
     width: 15rem;
     margin: 0 1rem;
     transform: translateY(0.5rem);
     position: absolute;
 }
 .content{
-    background: #FAFAFA;
-    border: 1px solid #E6E6E6;
+    background: var(--border-soft);
+    border: 1px solid var(--border-deep-soft);
     box-sizing: border-box;
     border-radius: 8px;
     padding: 2rem 16rem 2rem 2rem;
@@ -42,19 +42,19 @@
     width: 23%;
 }
 .out_line_btn{
-    border: 1px solid #00A5D9;
+    border: 1px solid var(--blue-card);
     box-sizing: border-box;
     border-radius: 4px;
     font-size: 14px;
     text-align: center;
-    color: #00A5D9;
+    color: var(--blue-card);
     width: 90px;
     height: 36px;
 }
 .out_fill_btn{
-    background: #00A5D9;
+    background: var(--blue-card);
     border-radius: 4px;
-    color: #FFFFFF;
+    color: var(--white);
     font-size: 14px;
     border: none;
     width: 159px;
@@ -71,7 +71,7 @@
 }
 .percent_content{
     display: flex;
-    border: 2px solid #00A5D9;
+    border: 2px solid var(--blue-card);
     border-radius: 10px;
     width: 92%;
     bottom: 0;
@@ -79,7 +79,7 @@
 }
 .percent_content_left{
     text-align: center;
-    border-right: 2px solid #00A5D9;
+    border-right: 2px solid var(--blue-card);
     padding-top: 1.4rem;
     width: 100%;
 }
@@ -91,7 +91,7 @@
     width: 100%;
 }
 .right_top{
-    border-bottom: 2px solid #00A5D9;
+    border-bottom: 2px solid var(--blue-card);
     text-align: center;
     padding: 9px 0;
     font-size: 16px;

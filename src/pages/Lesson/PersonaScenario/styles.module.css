@@ -16,7 +16,7 @@
     background: var(--slateBlue);
     padding: 5px 12px;
     border-radius: 25px;
-    color: white;
+    color: var(--white);
     width: 32px;
     height: 32px;
 }

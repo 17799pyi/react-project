@@ -2,7 +2,7 @@
 .percent_box { 
     min-height: 36px;
     display: table;
-    border: 1px solid #00A5D9;
+    border: 1px solid var(--blue-card);
     border-radius: 4px;
     align-items: center;
 }
@@ -14,7 +14,7 @@
     vertical-align: middle;
 }
 .percent_box>p:first-child {
-    border-right: 1px solid #00A5D9;
+    border-right: 1px solid var(--blue-card);
     background: #E9FAFF;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;

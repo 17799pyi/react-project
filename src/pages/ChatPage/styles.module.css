@@ -10,12 +10,12 @@
     border-radius: 20px;
 }
 .chat_tip_msg {
-    background-color: #FFCF86;
+    background-color: var(--sandyBrown);
     border: 0.5px solid #E6BA79;
     border-radius: 20px;
 }
 .chat_tip_msg p {
-    color: #A66E19;
+    color: var(--goldenrod);
 }
 .chat_descr_img {
     border-radius: 8px;
@@ -30,7 +30,7 @@
 }
 .chatlog_text_box>input{
     width: 100%;
-    background: #FFFFFF;
+    background: var(--white);
     border: 1px solid rgba(0, 0, 0, 0.1);
     box-shadow: inset 0px 2px 8px rgba(0, 0, 0, 0.1);
     border-radius: 20px;

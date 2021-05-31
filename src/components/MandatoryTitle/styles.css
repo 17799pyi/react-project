@@ -1,6 +1,6 @@
 
 .cmn-sub-title {
-    background: #3F414E;
+    background: var(--darkGray);
     display: inline-block;
     border-radius: 6px;
     padding: 4px 6px 2px;
@@ -13,5 +13,5 @@
 .persona-sub-title {
     background: #FAF7F2;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    color: #3F414E;
+    color: var(--darkGray);
 }

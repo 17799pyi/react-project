@@ -47,6 +47,8 @@ body {
   --granite: #808080;
   --grey-goose: #d1d1d1; 
   --border-deep-soft: #E6E6E6;
+  --light-grey-2: #f2f2f2;
+  --light-grey-3: #d9d9d9; 
   --light-grey-4: #d1c7c7;
   --light-grey-6: #b2b2b2;
   --alice-blue: #e9faff;
@@ -56,6 +58,9 @@ body {
   --pink-light: #FCD9CC;
   --light-grey: #fafafa;
   --light-grey-7: #C4C4C4;
+  --dodgerBlue: #1ca8df;
+  --sandyBrown: #ffcf86;
+  --goldenrod: #A66E19;
 
   /* --dimGray: #2f313a; 
   --cadetBlue: #4a7ca5; 

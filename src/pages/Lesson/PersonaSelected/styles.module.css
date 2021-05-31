@@ -4,24 +4,14 @@
     margin-bottom: 32px;
 }
 .selected_persona{
-    /* background: var(--mediumSlateBlue);
-    position: relative;
-    padding: 16px 16px;
-    border-radius: 20px;
-    min-height: 64px; */
+    /* // */
 }
 
 .selected_persona_img{
-    /* position: absolute;
-    bottom: 0;
-    left: 45rem;
-    width: 160px; */
     margin: -64px 16px 0;
 }
 
 .selected_persona_info{
-    /* display: grid;
-    grid-template-columns: 19% 23% 28% 25% 5%; */
     display: flex;
     justify-content: space-between;
     background: var(--mediumSlateBlue);

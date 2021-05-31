@@ -3,20 +3,20 @@
   padding-top: 32px;
   margin-top: 32px;
 
-  background: #fafafa;
-  border: 1px solid #e6e6e6;
+  background: var(--light-grey);
+  border: 1px solid var(--border-deep-soft);
   box-sizing: border-box;
   border-radius: 8px;
 }
 
 .inner_container_box {
-  background-color: white;
+  background-color: var(--white);
   padding: 32px 45px;
   border-radius: 8px;
 }
 
 .return_button {
-  background-color: #e9faff;
+  background-color: var(--alice-blue);
   border-radius: 4px;
   width: 90px;
   height: 36px;
@@ -24,13 +24,13 @@
   font-weight: bold;
   font-size: 14px;
   line-height: 100%;
-  color: #00a5d9;
+  color: var(--cerulean);
   text-align: center;
   border: 0;
 }
 
 .next_button {
-  background-color: #00a5d9;
+  background-color: var(--cerulean);
   border-radius: 4px;
   width: 90px;
   height: 36px;
@@ -39,7 +39,7 @@
   font-size: 14px;
   line-height: 100%;
   text-align: center;
-  color: #ffffff;
+  color: var(--white);
   margin-left: 20px;
   border: 0;
 }
@@ -67,7 +67,7 @@
   line-height: 22px;
   display: flex;
   align-items: center;
-  color: #333333;
+  color: var(--dune);
 }
 .learning_theme {
   font-style: normal;
@@ -76,7 +76,7 @@
   line-height: 100%;
   display: flex;
   align-items: center;
-  color: #333333;
+  color: var(--dune);
 }
 .card_wrapper{
   margin-left: 0px;
@@ -86,7 +86,7 @@
   font-weight: bold;
   font-size: 16px;
   line-height: 100%;
-  color: #333333;
+  color: var(--dune);
 }
 .radio_container {
   display: block;
@@ -118,11 +118,11 @@
   background-color: #ccc;
 }
 .radio_container input:checked ~ .checkmark {
-  background-color: white;
+  background-color: var(--white);
   border: 1px solid #2196f3;
 }
 .radio_container input:checked ~ .checkmark.disable {
-  background-color: white;
+  background-color: var(--white);
   border: 1px solid #818181;
 }
 .checkmark:after {
