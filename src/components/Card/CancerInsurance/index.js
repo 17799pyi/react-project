@@ -12,6 +12,10 @@ function CancerInsuranceCard({onEditScenerio}) {
   const {t} = useTranslation();
   return (
     <div className={`${classes.card_box}`}>
+      <div className={`${classes.story_name}`}>
+        <p className="mb-0">配偶者ストーリー</p>
+      </div>
+      <div className={`${classes.card_box_content}`}>
       <Row className="align-items-center">
         <Col xs="3" className={`${classes.image_box}`}>
           <img src={SamplePhoto} alt="Sample Photo" className={`${classes.person}`} />
@@ -27,6 +31,7 @@ function CancerInsuranceCard({onEditScenerio}) {
         </Col>
       </Row>
       <CardDropdown title={t('recruiter.view_details')} className="offset-3"/>
+      </div>
     </div>
   );
 }

@@ -123,24 +123,53 @@
 .progress_bar_per:after {
     content: "";
     width: 2px;
-    height: 30px;
+    height: 14px;
     background-color: var(--blue-card);
     position: absolute;
-    right: 0;
-    bottom: 0;
+    right: -3px;
+    bottom: -2px;
 }
 .progress_bar_img {
     position: relative;
-    margin: 0 0 8px -32px;
+    margin: 0 0 0 -52px;
 }
 .progress_bar_text {
     position: absolute;
     bottom: 10px;
 }
-.right_0 {
-    right: 15px;
+.progress_bar_challenge {    
+    position: absolute;
+    bottom: 12px;
+    right: 0;
 }
-
+.right_0 {
+    right: 50%;
+}
+.progress_bar_msg {
+    background-color: var(--blue-card);
+    color: var(--white);
+    display: inline-block;
+    padding: 16px 8px;
+    border-radius: 20px;
+    position: absolute;
+    left: 85px;
+    top: -14px;
+    background-image: url(../../../../assets/images/progress_msg_bg.png);
+}
+.progress_bar_msg:after {
+    content: url(../../../../assets/images/progress_msg_bg.png);
+    position: absolute;
+    bottom: -20px;
+    left: 12px;
+}
+.progress_bar_msg.msg_left {
+    left: -122px;
+}
+.progress_bar_msg.msg_left:after {
+    left: initial;
+    transform: rotateY(180deg);
+    right: 12px;
+}
 .roleplay_step2_tb {
     border: 1px solid var(--blue-card);
     border-collapse: unset;

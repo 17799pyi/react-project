@@ -61,6 +61,8 @@ body {
   --dodgerBlue: #1ca8df;
   --sandyBrown: #ffcf86;
   --goldenrod: #A66E19;
+  --green: #6CB28E;
+  --blue-light: #E9FAFF;
 
   /* --dimGray: #2f313a; 
   --cadetBlue: #4a7ca5; 
@@ -192,8 +194,21 @@ Custom font color and background
   color: var(--darkGray) !important;
 }
 .bg-green {
-  background: #6CB28E !important;
+  background: var(--green) !important;
 }
+.bg-red {
+  background: var(--red) !important;
+}
+.bg-yellow-dark {
+  background: var(--yellow-dark) !important;
+}
+.bg-red-light {
+  background: rgba(226, 36, 44, 0.4) !important;
+}
+.bg-blue-light {
+  background: var(--blue-light) !important;
+}
+
 .font-orange {
   color: var(--dirty-orange);
 }
