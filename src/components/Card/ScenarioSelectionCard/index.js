@@ -8,15 +8,17 @@ import smileImg from '../../../assets/images/icons/smile.png'
 import starImg from '../../../assets/images/icons/star.png'
 import MarkIcon from '../../../assets/images/mark_icon.svg'
 import PlayIcon from '../../../assets/images/play_icon.svg'
+import LockImage from '../../../assets/images/lock_icon.png'
 import classes from './styles.module.css'
 
-function ScenarioSelectionCard() {
+function ScenarioSelectionCard({status1}) {
 
     const { t } = useTranslation();
 
     return (
         <Link to="/RateOfRisk">
-        <div className={classes.scenario_selection_card}>
+        <div className={`${classes.scenario_selection_card} ${(status1 == 'lock') ? classes.disable : ''}`}>
+            <img src={LockImage} alt="Lock Img" className={`${classes.lock_img}`}/>
             <div className={classes.top_wrapper}>
                 <Row>
                     <span>

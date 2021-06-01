@@ -67,16 +67,17 @@ const PersonaSelectionPage = ({ className, style, onEditScenerio }) => {
                   onChange = {handleChange}
                   color="default"
                   id={`aaaasdf`}
+                  checked={true}
                 />
               }
               label={
-                <span style={styles.label} className={rdoPractice == "practice" ? 'font-weight-bold' : ''}>
+                <span style={styles.label} className={'font-weight-bold'}>
                   {t("recruiter.long_term_insurance_practice")}
                 </span>
               }
             />
           </div>
-          <div className="mb-3">
+          {/* <div className="mb-3">
             <h6 className={`font-14 mb-3 ${classes.learning_theme}`}>
               {t("recruiter.course")}
             </h6>
@@ -126,7 +127,7 @@ const PersonaSelectionPage = ({ className, style, onEditScenerio }) => {
                 }
               />
             </RadioGroup>
-          </div>
+          </div> */}
           <Row  className={`smallest-padding-box01`}>
             <Col xl="4" lg="6" className="mb-3">
               <CancerInsuranceCard onEditScenerio={onEditScenerio}/>

@@ -24,7 +24,7 @@ import AIScore from '../pages/phase1/AIScorePage';
 import RateOfRisk1 from '../pages/phase1/RateOfRiskPage';
 import VideoChat from '../pages/phase1/VideoChatPage';
 import StartOfNewRolePlay from '../pages/phase1/StartOfNewRolePlayPage';
-import HistoryCheck from '../pages/phase1/HistoryCheckPage/index'
+import HistoryCheck from '../pages/phase1/HistoryCheckPage/detail'
 import ApiTest from '../pages/ApiTest/apidemo'
 import HistoryCheckPage from '../pages/phase1/HistoryCheck/index'
 
