@@ -1,22 +1,22 @@
-let baseUrl = ''
+let baseUrl = 'https://jsonplaceholder.typicode.com/posts'
 const RUN_ENV = process.env.REACT_APP_RUN_ENV;
 switch (process.env.NODE_ENV) {
   case 'production':
     if (RUN_ENV === 'prod') {
-      baseUrl = '/apigw/va2roleplay'
+      baseUrl = 'https://jsonplaceholder.typicode.com/posts'
     }
     if (RUN_ENV === 'stage') {
-      baseUrl = '/apigw/va2roleplay'
+      baseUrl = 'https://jsonplaceholder.typicode.com/posts'
     }
     if (RUN_ENV === 'dev') {
-      baseUrl = '/'
+      baseUrl = 'https://jsonplaceholder.typicode.com/posts'
     }
     break
   case 'development':
-    baseUrl = '/'
+    baseUrl = 'https://jsonplaceholder.typicode.com/posts'
     break
   default:
     break
 }
-console.log("process.env", process.env)
+// console.log("process.env", process.env)
 export default baseUrl
