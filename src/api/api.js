@@ -332,3 +332,10 @@ export function updateCheckCriteriaList(data) {
     data: JSON.stringify(data)
   })
 }
+
+export function getRecruiterList() {
+    return service({
+      url: '/',
+      method: 'get'
+    })
+  }
