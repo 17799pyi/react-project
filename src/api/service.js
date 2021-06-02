@@ -12,10 +12,12 @@ const service = axios.create({
 })
 
 service.interceptors.request.use(config => {
+  config.headers['x-aanet-user'] = 'user-test-id';
+  config.headers['x-aanet-group'] = 'G1test-agent,G5ARPevaluater';
   config.headers['Cache-Control'] = 'no-store, no-cache';
   config.headers['Accept'] = 'application/json';
-  config.headers['x-aanet-user'] = 'test-user-id';
-  config.headers['x-aanet-group'] = '"G1test-agent","G5ARPevaluater"';
+  // config.headers['x-aanet-user'] = 'test-user-id';
+  // config.headers['x-aanet-group'] = '"G1test-agent","G5ARPevaluater"';
   // config.headers["Authorization"] = "bearer " + store.getState().vAgent.access_token;
   // config.params = config.params || {};
   // config.params['timestamp'] = timestamp;

@@ -1,9 +1,10 @@
 import service from './service'
 
 export function getUserList(url) {
+  console.log(url)
   return service({
     url: url,
-    method: 'get'
+    method: 'GET'
   })
 }
 

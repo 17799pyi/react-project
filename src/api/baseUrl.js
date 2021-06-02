@@ -1,19 +1,20 @@
-let baseUrl = 'http://va2-mvp2-dev.japaneast.cloudapp.azure.com/backend/aflac-trainer'
+let baseUrl = 'http://va2-mvp2-dev.japaneast.cloudapp.azure.com'
+
 const RUN_ENV = process.env.REACT_APP_RUN_ENV;
 switch (process.env.NODE_ENV) {
   case 'production':
     if (RUN_ENV === 'prod') {
-      baseUrl = '/'
+      baseUrl = 'http://va2-mvp2-dev.japaneast.cloudapp.azure.com'
     }
     if (RUN_ENV === 'stage') {
-      baseUrl = '/'
+      baseUrl = 'http://va2-mvp2-dev.japaneast.cloudapp.azure.com'
     }
     if (RUN_ENV === 'dev') {
-      baseUrl = '/'
+      baseUrl = 'http://va2-mvp2-dev.japaneast.cloudapp.azure.com'
     }
     break
   case 'development':
-    baseUrl = 'http://va2-mvp2-dev.japaneast.cloudapp.azure.com/backend/aflac-trainer'
+    baseUrl = 'http://va2-mvp2-dev.japaneast.cloudapp.azure.com'
     break
   default:
     break
