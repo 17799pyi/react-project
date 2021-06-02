@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './styles.module.css';
 
-const AcceptButton = ({ onClick, title, className, style,id}) => {
+const AcceptButton = ({ onClick, title, className, style, id}) => {
 
     return (
         <button className={`${styles.back_btn} ${className}`} style={style} onClick={onClick} id={id}>

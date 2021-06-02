@@ -16,14 +16,16 @@
 }
 .top_wrapper {
     background: var(--blue-card);
-    padding: 15px 16px;
+    padding: 16px 16px 8px;
     text-align: center;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15), inset 0px -1px 0px rgba(0, 0, 0, 0.15);
     border-radius: 20px 20px 0 0;
 }
-.disable .top_wrapper,
+.disable .top_wrapper {
+    background: rgba(128, 128, 128, 0.4);
+}
 .disable .bottom_wrapper {
-    background: #08080847;
+    background: rgba(128, 128, 128, 0.2);
 }
 .scenario_selection_card .lock_img {
     display: none;
@@ -67,4 +69,7 @@
 .bottom_text{
     font-size: var(--content-text);
     color: var(--white);
+}
+.star_img img {
+    max-width: 17px;
 }
