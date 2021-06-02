@@ -18,12 +18,12 @@ const RateOfRiskPage = () => {
     return (
         <>
         <Row className="align-items-start mb-32 pb-2">  
-            <Col>
+            {/* <Col>
                 <h3 className="">{t('rateOfRisk.header_1')}</h3>    
-            </Col>    
+            </Col>     */}
             <Col>
                 <div className={classes.purpose_sec}>
-                    <span>{t('rateOfRisk.header_2')}</span>
+                    <span>{t('rateOfRisk.header_1')} <br/><span className="font-weight-normal font-white">{t('rateOfRisk.header_2')}</span></span>
                     <span>x x x</span>
                 </div>
             </Col>                
@@ -65,14 +65,6 @@ const RateOfRiskPage = () => {
                             </Col>
                         </Row>
                     </div>
-                    {/* <div className={classes.content_outline}>
-                        <ul className={classes.content_list}>
-                            <li className="mt-1">
-                                <span>xxx</span>
-                                <img src={sample1_img} className="ml-2"/>
-                            </li>
-                        </ul>
-                    </div> */}
                 </Col>
             </Row>
             <Row className="smallest-padding-box02 mt-2">
@@ -89,13 +81,6 @@ const RateOfRiskPage = () => {
                 </Col>
                 <Col xs="6">
                     <div className={classes.content_outline}>
-                        {/* <ul className={classes.content_list}>
-                            <li className="mt-1">
-                                <span>xxx</span>
-                                <img src={sample1_img} className="ml-2"/>
-                                <img src={sample1_img} className="ml-2"/>
-                            </li>
-                        </ul> */}                        
                         <Row className="w-100">
                             <Col md="2" className="d-flex align-items-center">
                                 <ul className="point-list">
@@ -146,46 +131,11 @@ const RateOfRiskPage = () => {
                     </div>
                 </Col>
             </Row>
-
-            {/* <Row className={`${classes.bottom_line} m-0 mt-3`}>
-                <Col xs="1"><span>月 .日</span></Col>
-                <Col xs="2"><span>11：00 - 11：12</span></Col>
-                <Col xs="2"><span>正解率：80%</span></Col>
-                <Col xs="2">
-                    <img src={smileImg} className={classes.w_19}/>
-                </Col>
-                <Col></Col>
-                <Col xs="2" className="text-center">
-                    <img src={starImg} className={classes.w_17} />
-                    <img src={starImg} className={classes.w_17} />
-                    <img src={starImg} className={classes.w_17} />
-                </Col>
-                <Col xs="2">
-                    <button className={classes.bottom_line_btn}>受け入れ中</button>
-                </Col>
-            </Row>
-            <Row className={`${classes.bottom_line} m-0 mt-3`}>
-                <Col xs="1"><span>月 .日</span></Col>
-                <Col xs="2"><span>11：00 - 11：12</span></Col>
-                <Col xs="2"><span>正解率：80%</span></Col>
-                <Col xs="2">
-                    <img src={smileImg} className={classes.w_19}/>
-                </Col>
-                <Col></Col>
-                <Col xs="2" className="text-center">
-                    <img src={starImg} className={classes.w_17} />
-                    <img src={starImg} className={classes.w_17} />
-                    <img src={starImg} className={classes.w_17} />
-                </Col>
-                <Col xs="2">
-                    <button className={classes.bottom_line_btn}>受け入れ中</button>
-                </Col>
-            </Row> */}
             
             <Row className="mt-4 mb-32 pb-4">
-                <Col lg="11" className="mx-auto">
-                    <Link to="/AIScore"><ScoreBar className="mb-3" /></Link>
-                    <Link to="/AIScore"> <ScoreBar/></Link>
+                <Col lg="10" className="mx-auto">
+                    <Link to="/AIScore"><ScoreBar className="mb-3" percentage="75"/></Link>
+                    <Link to="/AIScore"> <ScoreBar percentage="65"/></Link>
                 </Col>
             </Row>
             

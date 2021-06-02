@@ -17,7 +17,7 @@ function Agency({disable, className}) {
         </div>
         <div className="d-flex justify-content-between flex-wrap"> 
           <label className={`mb-0 ${classes.grid_3}`}>007</label>
-          <div class={`${classes.grid_4}`}>
+          <div className={`${classes.grid_4}`}>
               <select className="select-box-border-non">
                 <option selected>{t('training.training_select_box_text')}</option>
                 <option>Option 1</option>

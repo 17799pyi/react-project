@@ -98,16 +98,18 @@
     display: block;
     padding: 8px;
     text-align: center;
-    color: var(--white);
+    color: var(--dune);
     font-size: 16px;
     font-weight: bold;
     background: var(--blue-card);
 }
 .purpose_sec>span:first-child {
     border-radius: 4px 4px 0px 0px;
+    font-size: 28px;
 }
 .purpose_sec>span:last-child {
     background-color: var(--alice-blue);
-    color: var(--dune);
+    /* color: var(--dune); */
     border-radius: 0px 0px 4px 4px;
+    font-size: 18px;
 }

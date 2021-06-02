@@ -4,7 +4,7 @@ import {useTranslation} from 'react-i18next'
 
 import SamplePeople1 from '../../../assets/images/recruiters/sample_people1.png'
 import StarIcon from '../../../assets/images/icons/star.png'
-
+import StarIconWhite from '../../../assets/images/icons/star_white.png'
 import classes from './styles.module.css'
 
 function Index() {
@@ -52,7 +52,7 @@ function Index() {
                     <span className={classes.star_icon}>
                       <img src={StarIcon} alt="StarIcon" />
                       <img src={StarIcon} alt="StarIcon" />
-                      <img src={StarIcon} alt="StarIcon" />
+                      <img src={StarIconWhite} alt="StarIcon" />
                     </span>
                   </td>
                   <td style={{width: '23%'}} className="bg-blue-light">
@@ -60,7 +60,7 @@ function Index() {
                     <span className={classes.star_icon}>
                       <img src={StarIcon} alt="StarIcon" />
                       <img src={StarIcon} alt="StarIcon" />
-                      <img src={StarIcon} alt="StarIcon" />
+                      <img src={StarIconWhite} alt="StarIcon" />
                     </span>
                   </td>
                   <td style={{width: '23%'}} className="bg-red-light">未実施</td>

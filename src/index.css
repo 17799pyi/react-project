@@ -487,12 +487,12 @@ PHASE 1 CODE
     padding-left: 20px;
   }
   .large-padding-box {
-    margin-left: -20px;
-    margin-right: -20px;
+    margin-left: -24px;
+    margin-right: -24px;
   }
   .large-padding-box > div {
-    padding-right: 20px;
-    padding-left: 20px;
+    padding-right: 24px;
+    padding-left: 24px;
   }
 }
 

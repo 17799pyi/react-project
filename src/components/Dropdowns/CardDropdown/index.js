@@ -42,6 +42,8 @@ const CardDropdown = ({title, className, detail}) => {
             }
 
                {/* <div class={classes.list_box}>
+            <div className={readMore ? `` : `d-none`} >   
+               <div className={classes.list_box}>
                     <p className="font-16">商品内容</p>
                     <p>スーパーがん保険<br/>
                         （1口）<br/>
@@ -63,7 +65,7 @@ const CardDropdown = ({title, className, detail}) => {
                         　手術給付金：5・10・20万円
                     </p>
                 </div>
-                <div class={classes.list_box}>
+                <div className={classes.list_box}>
                     <p className="font-16">商品内容</p>
                     <p>スーパーがん保険<br/>
                         （1口）<br/>
@@ -74,7 +76,7 @@ const CardDropdown = ({title, className, detail}) => {
                         　手術給付金：5・10・20万円
                     </p>
                 </div>
-                <div class={classes.list_box}>
+                <div className={classes.list_box}>
                     <p className="font-16">商品内容</p>
                     <p>スーパーがん保険<br/>
                         （1口）<br/>

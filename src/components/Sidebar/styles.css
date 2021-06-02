@@ -16,7 +16,6 @@
   height: 100vh;
   display: grid;
   top: 0;
-  font-size: 12px;
 }
 .light_grey_4 { 
   color: var(--light-grey-4);

@@ -58,7 +58,7 @@ const ScenariosSelectionPage = () => {
                 </Col>
             </Row>
             {
-                step1 ?  <Step1 onEditScenerio={onEditStep2} /> : <Step2 onBack={onBack}  /> 
+                step1 ?  <Step1 onEditScenerio={onEditStep2} /> : <Step2 onBack={onBack} showStep2={setEditStep2} /> 
             }
         </>
     )
