@@ -13,10 +13,12 @@ import smileImg from '../../../../assets/images/icons/smile.png'
 import starImg from '../../../../assets/images/icons/star.png'
 import ProgressImg from '../../../../assets/images/progress_img.png'
 import ChallengeIcon from '../../../../assets/images/challenge_icon.png'
+import { getLessonTask } from '../../../../api/api'
+import eventBus from '../../../../EventBus'
 
 import classes from './styles.module.css';
 
-const ScenariosSelectionPage = ({ className, style, onBack }) => {
+const ScenariosSelectionPage = ({ className, style, onBack, showStep2 }) => {
 
     const { t } = useTranslation();
 
@@ -25,7 +27,23 @@ const ScenariosSelectionPage = ({ className, style, onBack }) => {
         lastId++;
         return `${prefix}${lastId}`;
     }
-    const prog_per = 30
+    const prog_per = 95
+
+    const [tasks, setTasks] = useState([])
+
+    useEffect(() => {
+        const setData = async () => {
+            try {
+                const data = getLessonTask('lessons/7/tasks').then(res => {
+                    setTasks(res.data)
+                })
+            } catch (error) {
+                eventBus.dispatch("something_went_wrong");
+            }
+        };
+        setData()
+    }, [showStep2])
+
     return (
        
         <>
@@ -79,6 +97,15 @@ const ScenariosSelectionPage = ({ className, style, onBack }) => {
                                 <Col xl="4" lg="6" className="mb-3">
                                     <ScenarioSelectionCard status="active" id={autoId()}/>
                                 </Col>
+                                {/* {
+                                    tasks.length ?
+                                    tasks.map((task) => {
+                                        return <Col xl="4" lg="6" className="mb-3">
+                                                    <ScenarioSelectionCard status1="test"/>
+                                                </Col>
+                                    })
+                                    : 'loading...'
+                                } */}
                                 <Col xl="4" lg="6" className="mb-3">
                                     <ScenarioSelectionCard status="active" id={autoId()}/>
                                 </Col>
