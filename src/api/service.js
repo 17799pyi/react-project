@@ -2,18 +2,18 @@ import axios from 'axios' // import axios
 import baseUrl from './baseUrl'
 // import EventBus from './../components/EventBus'
 import store from '../store'
-let timestamp = `${new Date().getTime()}`;
+// let timestamp = `${new Date().getTime()}`;
 
 
 const service = axios.create({
   baseURL: baseUrl,
   // timeout: 5000,
-  // headers: { 'Content-Type': 'application/json' },
+  headers: { 'Content-Type': 'application/json' },
 })
 
 service.interceptors.request.use(config => {
   config.headers['x-aanet-user'] = 'user-test-id';
-  config.headers['x-aanet-group'] = '"G1test-agent","G5ARPevaluater"';
+  config.headers['x-aanet-group'] = 'G1test-agent,G5ARPevaluater';
   config.headers['Cache-Control'] = 'no-store, no-cache';
   config.headers['Accept'] = 'application/json';
 //   config.headers["Authorization"] = "bearer " + store.getState().vAgent.access_token;

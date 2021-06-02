@@ -7,7 +7,7 @@ const BackgroundBlueLabel = ({ label, percentage, className, style}) => {
     return (
         <div className={`${classes.percent_box} ${className}`} style={style}>
             <p>{label}</p>
-            <p className="font-weight-bold">{percentage}</p>
+            <p className="font-weight-bold">{percentage}%</p>
         </div>
     )
 }

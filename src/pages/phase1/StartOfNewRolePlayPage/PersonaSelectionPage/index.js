@@ -7,28 +7,47 @@ import { makeStyles } from "@material-ui/core/styles";
 import BackButton from "../../../../components/Button/BackButton";
 import GeneralButton from "../../../../components/Button/GeneralButton";
 import { GeneralDropdown } from "../../../../components/Dropdowns/GeneralDropdown";
-import InsuranceTypeLabel from "../../../../components/Label/InsuranceTypeLabel"
+import InsuranceTypeLabel from "../../../../components/Label/InsuranceTypeLabel";
 import Radio from "../../../../components/RadioButtons";
 import CancerInsuranceCard from "../../../../components/Card/CancerInsurance/index";
 
 import classes from "./styles.module.css";
 import RadioGroup from "@material-ui/core/RadioGroup";
+import { getUserList } from "../../../../api/api";
 
 const PersonaSelectionPage = ({ className, style, onEditScenerio }) => {
   const items = [{ name: "test1" }, { name: "test2" }];
 
   const { t } = useTranslation();
-  const [rdoPractice , setPractice] = useState();
-  const [rdoValue , setRdoValue] = useState();
+  const [rdoPractice, setPractice] = useState();
+  const [rdoValue, setRdoValue] = useState();
 
   const handleChange = (event) => {
     setPractice(event.target.value);
-    console.log(event.target.value)
- };
-  const handleRadioChange = (event) => {
-     setRdoValue(event.target.value);
-     console.log(event.target.value)
+    console.log(event.target.value);
   };
+  const handleRadioChange = (event) => {
+    setRdoValue(event.target.value);
+    console.log(event.target.value);
+  };
+
+  const [apiData, setApiData] = useState();
+
+  useEffect(() => {
+    const setData = async () => {
+      // try {
+      const data = await getUserList("backend/aflac-trainer/lessons");
+      // console.log("test", data);
+
+      setApiData(data.data);
+      // } catch (error) {
+      //     // eventBus.dispatch("something_went_wrong");
+      // }
+    };
+    setData();
+    console.log(apiData, "apiData");
+  }, []); //empty dependency array so
+
   return (
     <>
       <div className={`cmn-bg-box `}>
@@ -46,8 +65,11 @@ const PersonaSelectionPage = ({ className, style, onEditScenerio }) => {
             <Row>
               <Col lg="4">
                 {/* <GeneralDropdown placeholder="選択してください" items={items} /> */}
-                
-                <InsuranceTypeLabel label="Jiro Suzuki" className="mb-0 font-weight-bold font-16 px-3"/>
+
+                <InsuranceTypeLabel
+                  label="Jiro Suzuki"
+                  className="mb-0 font-weight-bold font-16 px-3"
+                />
               </Col>
             </Row>
           </div>
@@ -64,14 +86,14 @@ const PersonaSelectionPage = ({ className, style, onEditScenerio }) => {
                 <Radio
                   value="practice"
                   name="radio-button"
-                  onChange = {handleChange}
+                  onChange={handleChange}
                   color="default"
                   id={`aaaasdf`}
                   checked={true}
                 />
               }
               label={
-                <span style={styles.label} className={'font-weight-bold'}>
+                <span style={styles.label} className={"font-weight-bold"}>
                   {t("recruiter.long_term_insurance_practice")}
                 </span>
               }
@@ -128,22 +150,30 @@ const PersonaSelectionPage = ({ className, style, onEditScenerio }) => {
               />
             </RadioGroup>
           </div> */}
-          <Row  className={`smallest-padding-box01`}>
-            <Col xl="4" lg="6" className="mb-3">
-              <CancerInsuranceCard onEditScenerio={onEditScenerio}/>
+          <Row className={`smallest-padding-box01`}>
+            {
+              apiData &&
+              apiData.map((item, index) => (
+                <Col key={index} xl="4" lg="6" className="mb-3">
+                  <CancerInsuranceCard
+                    onEditScenerio={onEditScenerio}
+                    customerData={item}
+                  />
+                </Col>
+              ))
+            }
+            {/* <Col xl="4" lg="6" className="mb-3">
+              <CancerInsuranceCard onEditScenerio={onEditScenerio} />
             </Col>
             <Col xl="4" lg="6" className="mb-3">
-              <CancerInsuranceCard onEditScenerio={onEditScenerio}/>
+              <CancerInsuranceCard onEditScenerio={onEditScenerio} />
             </Col>
             <Col xl="4" lg="6" className="mb-3">
-              <CancerInsuranceCard onEditScenerio={onEditScenerio}/>
+              <CancerInsuranceCard onEditScenerio={onEditScenerio} />
             </Col>
             <Col xl="4" lg="6" className="mb-3">
-              <CancerInsuranceCard onEditScenerio={onEditScenerio}/>
-            </Col>
-            <Col xl="4" lg="6" className="mb-3">
-              <CancerInsuranceCard onEditScenerio={onEditScenerio}/>
-            </Col>
+              <CancerInsuranceCard onEditScenerio={onEditScenerio} />
+            </Col> */}
           </Row>
         </div>
       </div>
@@ -160,12 +190,12 @@ const styles = {
     marginLeft: "0",
   },
   label: {
-      marginButtom: '0',
-      fontSize: '16px',
-      fontWeight: 'normal',
-      marginRight : '16px',
-      marginLeft : '8px',
-  }
+    marginButtom: "0",
+    fontSize: "16px",
+    fontWeight: "normal",
+    marginRight: "16px",
+    marginLeft: "8px",
+  },
 };
 
 export default PersonaSelectionPage;
