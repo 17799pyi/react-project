@@ -1,28 +1,28 @@
-
-.scroll_bar{
+.scroll_bar {
     background: var(--blue-card);
     border-radius: 10px;
     color: var(--white);
-    padding: 16px 48px;
+    padding: 16px 80px;
     display: flex;
     justify-content: space-between;
     font-size: 16px;
     font-weight: bold;
     border: 2px solid var(--light-purple);
+    align-items: center;
+}
+.scroll_bar.pass {
+    background-color: var(--blue-light);
+    color: var(--dune);
 }
 .scroll_bar img {
     max-width: 100%;
 }
 .score_star img {
-    margin-right: 4px;
+    margin-right: 8px;
 } 
-/* .scroll_btn_sec>*,
-.scroll_per_sec>* {
-    display: inline-block;
-    margin-right: 32px;
+
+@media screen and (max-width: 1399.98px) {
+    .scroll_bar{
+        padding: 16px 24px;
+    }
 }
-.score_star img:last-child,
-.scroll_btn_sec>*:last-child,
-.scroll_per_sec>*:last-child {
-    margin-right: 0;
-}*/

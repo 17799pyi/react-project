@@ -1,5 +1,5 @@
 .chat_img_sec {
-    background: var(--purple);
+    background: var(--blue-light);
     height: 520px;
     display: flex;
     justify-content: center;
@@ -19,7 +19,7 @@
     align-items: flex-end;
     position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: 36px;
 }
 .chat_people_box>img {
     max-width: 95px;
@@ -52,15 +52,17 @@
     transform: translateY(-50%);
 }
 .start_text {
-    background: rgba(0, 165, 217, 0.4);
-    padding: 16px 24px;
+    background: var(--blue-card);
+    padding: 8px 32px;
     color: var(--white);
     text-align: left;
     position: absolute;
     left: 0;
-    width: calc(100% - 170px);
+    width: 100%;
     bottom: 0;
     margin: 0;
+    font-weight: bold;
+    z-index: 99;
 }
 @media (max-width: 1199.98px){
     .main_chat_people {
@@ -73,9 +75,6 @@
     }
     .chat_people_box>img {
         max-width: 85px;
-    }
-    .start_text {
-        width: calc(100% - 140px);
     }
 }
 @media (max-width: 767.98px){
