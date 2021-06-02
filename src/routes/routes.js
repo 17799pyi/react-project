@@ -26,6 +26,7 @@ import VideoChat from '../pages/phase1/VideoChatPage';
 import StartOfNewRolePlay from '../pages/phase1/StartOfNewRolePlayPage';
 import HistoryCheck from '../pages/phase1/HistoryCheckPage/detail'
 import ApiTest from '../pages/ApiTest/apidemo'
+import HistoryCheckPage from '../pages/phase1/HistoryCheck/index'
 
 import '../pages/index.css'
 import ScenarioSelection from '../pages/ScenarioSelection/ScenarioSelection';
@@ -48,6 +49,7 @@ const Routes = () => {
                 <Route exact path="/scenario-selection" component={ScenariosSelectionPage} />
                 <Route exact path="/historycheck" component={HistoryCheck} />
                 <Route exact path="/apitest" component={ApiTest} />
+                <Route exact path="/historycheckpage" component={HistoryCheckPage} />
 
                 
                 <Route exact path="/agency" component={Index} />
