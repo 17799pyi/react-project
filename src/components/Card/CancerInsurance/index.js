@@ -11,6 +11,17 @@ import {CardDropdown} from "../../Dropdowns/CardDropdown";
 function CancerInsuranceCard({onEditScenerio,customerData}) {
   const {t} = useTranslation();
   // console.log(customerData, "customer data");
+  function ParseFloat(str,val) {
+    str = str.toString();
+    str = str.slice(0, (str.indexOf(".")) + val + 1); 
+    return Number(str);   
+  }
+
+  // function capitalize(string) {
+  //   return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
+  // }
+  const capitalize = ([first,...rest]) => first.toUpperCase() + rest.join('').toLowerCase();
+
   return (
     <div className={`${classes.card_box}`}>
       <div className={`${classes.story_name}`}>
@@ -22,11 +33,11 @@ function CancerInsuranceCard({onEditScenerio,customerData}) {
           <img src={SamplePhoto} alt="Sample Photo" className={`${classes.person}`} />
         </Col>
         <Col xs="9" className={`${classes.image_box}`}>
-          <p className="mb-0">{customerData.name}　{customerData.age}歳　{customerData.gender}</p>
+          <p className="mb-0">{customerData.name}　{customerData.age}歳　{capitalize(customerData.gender)}</p>
           <p>{customerData.course}</p>
           {/* <p>{t('recruiter.review_of_cancer_insurance')}</p> */}
           <div className="w-100 d-flex flex-wrap mb-2">
-            <PercentageLabelBox label={t('recruiter.progress_rate')} percentage={parseInt(customerData.clearedTaskCount/customerData.taskCount)} className="mr-2 mb-2"/>            
+            <PercentageLabelBox label={t('recruiter.progress_rate')} percentage={ParseFloat((customerData.clearedTaskCount/customerData.taskCount),2)} className="mr-2 mb-2"/>            
             <GeneralButton title={t('recruiter.decision')} onClick={onEditScenerio} className="mb-2"/>          
           </div>  
         </Col>
