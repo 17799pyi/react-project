@@ -24,28 +24,22 @@ const PersonaSelectionPage = ({ className, style, onEditScenerio }) => {
 
   const handleChange = (event) => {
     setPractice(event.target.value);
-    console.log(event.target.value);
   };
   const handleRadioChange = (event) => {
     setRdoValue(event.target.value);
-    console.log(event.target.value);
   };
 
   const [apiData, setApiData] = useState();
 
   useEffect(() => {
     const setData = async () => {
-      // try {
-      // const data = await getUserList("backend/aflac-trainer/lessons");
-      // console.log("test", data);
-      const data = getUserList("backend/aflac-trainer/lessons").then(res =>{
+      try {
+        const data = getUserList("/lessons").then(res =>{
         setApiData(res.data)
       })
-
-      // setApiData(data.data);
-      // } catch (error) {
-      //     // eventBus.dispatch("something_went_wrong");
-      // }
+      } catch (error) {
+          // eventBus.dispatch("something_went_wrong");
+      }
     };
     setData();
     console.log(apiData, "apiData");
@@ -54,12 +48,6 @@ const PersonaSelectionPage = ({ className, style, onEditScenerio }) => {
   return (
     <>
       <div className={`cmn-bg-box `}>
-        {/* <Row className="mb-32">
-          <Col>
-            <BackButton title="戻る" className="mr-3" />
-            <GeneralButton title="次へ" onClick={onEditScenerio} />
-          </Col>
-        </Row>    */}
         <div className={`cmn-bg-box-inr pb-2`}>
           <div className="mb-4">
             <h6 className={`mb-3 ${classes.recruiter_select}`}>
@@ -67,8 +55,6 @@ const PersonaSelectionPage = ({ className, style, onEditScenerio }) => {
             </h6>
             <Row>
               <Col lg="4">
-                {/* <GeneralDropdown placeholder="選択してください" items={items} /> */}
-
                 <InsuranceTypeLabel
                   label="Jiro Suzuki"
                   className="mb-0 font-weight-bold font-16 px-3"
@@ -102,60 +88,9 @@ const PersonaSelectionPage = ({ className, style, onEditScenerio }) => {
               }
             />
           </div>
-          {/* <div className="mb-3">
-            <h6 className={`font-14 mb-3 ${classes.learning_theme}`}>
-              {t("recruiter.course")}
-            </h6>
-
-            <RadioGroup
-              aria-label="course"
-              name="course"
-              onChange={handleRadioChange}
-              row
-            >
-              <FormControlLabel
-                className={classes.root}
-                key=""
-                style={styles.root}
-                id="adfasd"
-                control={
-                  <Radio
-                    value="training"
-                    name="radio-button"
-                    color="default"
-                    id={`aaaasdf`}
-                  />
-                }
-                label={
-                  <span style={styles.label} className={rdoValue == "training" ? 'font-weight-bold' : ''}>
-                    {t("recruiter.role_playing_training")}
-                  </span>
-                }
-              />
-              <FormControlLabel
-                className={classes.root}
-                key=""
-                style={styles.root}
-                id="adfasd"
-                control={
-                  <Radio
-                    value="test"
-                    name="radio-button"
-                    color="default"
-                    id={`aaaasdf`}
-                  />
-                }
-                label={
-                  <span style={styles.label} className={rdoValue == "test" ? 'font-weight-bold' : ''}>
-                    {t("recruiter.role_playing_test")}
-                  </span>
-                }
-              />
-            </RadioGroup>
-          </div> */}
           <Row className={`smallest-padding-box01`}>
             {
-              apiData &&
+              apiData ?
               apiData.map((item, index) => (
                 <Col key={index} xl="4" lg="6" className="mb-3">
                   <CancerInsuranceCard
@@ -164,19 +99,9 @@ const PersonaSelectionPage = ({ className, style, onEditScenerio }) => {
                   />
                 </Col>
               ))
+              :
+              'Loading...'
             }
-            {/* <Col xl="4" lg="6" className="mb-3">
-              <CancerInsuranceCard onEditScenerio={onEditScenerio} />
-            </Col>
-            <Col xl="4" lg="6" className="mb-3">
-              <CancerInsuranceCard onEditScenerio={onEditScenerio} />
-            </Col>
-            <Col xl="4" lg="6" className="mb-3">
-              <CancerInsuranceCard onEditScenerio={onEditScenerio} />
-            </Col>
-            <Col xl="4" lg="6" className="mb-3">
-              <CancerInsuranceCard onEditScenerio={onEditScenerio} />
-            </Col> */}
           </Row>
         </div>
       </div>

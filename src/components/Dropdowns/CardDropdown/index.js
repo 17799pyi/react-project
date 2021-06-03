@@ -19,74 +19,18 @@ const CardDropdown = ({title, className, detail}) => {
                 </Col>
             </Row>
             <div className={readMore ? `` : `d-none`} > 
-
               {
-              detail &&
-              detail.map((item, index) => (
-                <div key={index} class={classes.list_box}>
-                    <p className="font-16">{item.title}</p>
-                    {console.log(item.info.split("\n"),"info")}
-                    {
-                        item.info.split("\n").map(val => <p className={`${classes.detail_info}`} key={val}> {val} </p>)
-                    }
-                    {/* <p>スーパーがん保険<br/>
-                        （1口）<br/>
-                        <p>■特約MAX（終身）</p>
-                        <p>・入院給付限度：184日型</p><br/>
-                        <p>・被保：契約者　のみ</p><br/>
-                        ・保障：疾病・災害入院5千円<br/>
-                    　手術給付金：5・10・20万円
-                    </p> */}
-                </div>
-              ))
-            }
-
-               {/* <div class={classes.list_box}>
-            <div className={readMore ? `` : `d-none`} >   
-               <div className={classes.list_box}>
-                    <p className="font-16">商品内容</p>
-                    <p>スーパーがん保険<br/>
-                        （1口）<br/>
-                        ■特約MAX（終身）<br/>
-                        ・入院給付限度：184日型<br/>
-                        ・被保：契約者　のみ<br/>
-                        ・保障：疾病・災害入院5千円<br/>
-                        　手術給付金：5・10・20万円
-                    </p>
-                </div> */}
-                {/* <div class={classes.list_box}>
-                    <p className="font-16">商品内容</p>
-                    <p>スーパーがん保険<br/>
-                        （1口）<br/>
-                        ■特約MAX（終身）<br/>
-                        ・入院給付限度：184日型<br/>
-                        ・被保：契約者　のみ<br/>
-                        ・保障：疾病・災害入院5千円<br/>
-                        　手術給付金：5・10・20万円
-                    </p>
-                </div>
-                <div className={classes.list_box}>
-                    <p className="font-16">商品内容</p>
-                    <p>スーパーがん保険<br/>
-                        （1口）<br/>
-                        ■特約MAX（終身）<br/>
-                        ・入院給付限度：184日型<br/>
-                        ・被保：契約者　のみ<br/>
-                        ・保障：疾病・災害入院5千円<br/>
-                        　手術給付金：5・10・20万円
-                    </p>
-                </div>
-                <div className={classes.list_box}>
-                    <p className="font-16">商品内容</p>
-                    <p>スーパーがん保険<br/>
-                        （1口）<br/>
-                        ■特約MAX（終身）<br/>
-                        ・入院給付限度：184日型<br/>
-                        ・被保：契約者　のみ<br/>
-                        ・保障：疾病・災害入院5千円<br/>
-                        　手術給付金：5・10・20万円
-                    </p>
-                </div> */}
+                detail &&
+                detail.map((item, index) => (
+                    <div key={index} className={classes.list_box}>
+                        <p className="font-16">{item.title}</p>
+                        {console.log(item.info.split("\n"),"info")}
+                        {
+                            item.info.split("\n").map(val => <p className={`${classes.detail_info}`} key={val}> {val} </p>)
+                        }
+                    </div>
+                ))
+               }
             </div>
         </>
     )
