@@ -36,10 +36,13 @@ const PersonaSelectionPage = ({ className, style, onEditScenerio }) => {
   useEffect(() => {
     const setData = async () => {
       // try {
-      const data = await getUserList("backend/aflac-trainer/lessons");
+      // const data = await getUserList("backend/aflac-trainer/lessons");
       // console.log("test", data);
+      const data = getUserList("backend/aflac-trainer/lessons").then(res =>{
+        setApiData(res.data)
+      })
 
-      setApiData(data.data);
+      // setApiData(data.data);
       // } catch (error) {
       //     // eventBus.dispatch("something_went_wrong");
       // }
