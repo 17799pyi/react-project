@@ -63,13 +63,13 @@ const AIScorePage = () => {
                 <p className="font-16 font-weight-bold mb-3" id={autoId()}>{t('aiscore.score_by_process')}</p>
                 <Row className="smallest-padding-box02 mb-2">
                     <Col xs="2">
-                        <BackgroundBlueLabel label={t('aiscore.process')}  id={autoId()}/>
+                        <BackgroundBlueLabel label={t('aiscore.process')} id={autoId()}/>
                     </Col>
                     <Col xs="8">
-                        <BackgroundBlueLabel label={t('aiscore.evaluation')}  id={autoId()}/>
+                        <BackgroundBlueLabel label={t('aiscore.evaluation')} id={autoId()}/>
                     </Col>
                     <Col xs="2">
-                        <BackgroundBlueLabel label={t('aiscore.point')}  id={autoId()}/>
+                        <BackgroundBlueLabel label={t('aiscore.point')} id={autoId()}/>
                     </Col>
                 </Row>
                 <Row className="smallest-padding-box02 mb-2">
@@ -86,22 +86,22 @@ const AIScorePage = () => {
                     <Col xs="6" className="d-flex">
                         <div  className="cmn-bg-box-inr pb-3 px-32">
                             <div>
-                                <BackgroundBlueChip label={t('aiscore.disease_called_cancer')} className="mr-2"/>
-                                <BackgroundWhiteChip label={t('aiscore.two_in_one')} className="mr-2"/>
-                                <BackgroundBlueChip label={t('aiscore.cancer_incidence')} className="mr-2"/>
+                                <BackgroundBlueChip label={t('aiscore.disease_called_cancer')} className="mr-2" id={autoId()}/>
+                                <BackgroundWhiteChip label={t('aiscore.two_in_one')} className="mr-2" id={autoId()}/>
+                                <BackgroundBlueChip label={t('aiscore.cancer_incidence')} className="mr-2" id={autoId()}/>
                             </div>
                             <div>
-                                <BackgroundBlueChip label={t('aiscore.higher_with_age')} className="mr-2"/>
-                                <BackgroundWhiteChip label={t('aiscore.average_no_of_days_hospital')} className="mr-2"/>
-                                <BackgroundBlueChip label={t('aiscore.elderly')} className="mr-2"/>
+                                <BackgroundBlueChip label={t('aiscore.higher_with_age')} className="mr-2" id={autoId()}/>
+                                <BackgroundWhiteChip label={t('aiscore.average_no_of_days_hospital')} className="mr-2" id={autoId()}/>
+                                <BackgroundBlueChip label={t('aiscore.elderly')} className="mr-2" id={autoId()}/>
                             </div>
                         </div>
                     </Col>
                     <Col xs="2" className="d-flex">
                         <div  className="cmn-bg-box-inr d-flex align-items-center h-100">
                             <ul className="point-list">
-                                <li>**</li>
-                                <li>**</li>
+                                <li id={autoId()}>**</li>
+                                <li id={autoId()}>**</li>
                             </ul>
                         </div>
                     </Col>
@@ -109,33 +109,33 @@ const AIScorePage = () => {
                 <Row className="smallest-padding-box02 mb-2">
                     <Col xs="2" className="d-flex">
                         <div  className="cmn-bg-box-inr d-flex align-items-center h-100 px-3">
-                            <p className="font-16 font-weight-bold">{t('aiscore.card_title.lifespan_and_healthy_lifespan')}</p>
+                            <p className="font-16 font-weight-bold" id={autoId()}>{t('aiscore.card_title.lifespan_and_healthy_lifespan')}</p>
                         </div>
                     </Col>
                     <Col xs="2" className="d-flex">
                         <div  className="cmn-bg-box-inr d-flex align-items-center h-100 justify-content-center px-16">
-                            <img src={EvaluationIcon1} alt="Evaluation Icon3" className="mw-100"/>
+                            <img src={EvaluationIcon1} alt="Evaluation Icon3" className="mw-100" id={autoId()}/>
                         </div>
                     </Col>
                     <Col xs="6" className="d-flex">
                         <div  className="cmn-bg-box-inr pb-3 px-32">
                             <div>
-                                <BackgroundBlueChip label={t('aiscore.disease_called_cancer')} className="mr-2"/>
-                                <BackgroundWhiteChip label={t('aiscore.two_in_one')} className="mr-2"/>
-                                <BackgroundBlueChip label={t('aiscore.cancer_incidence')} className="mr-2"/>
+                                <BackgroundBlueChip label={t('aiscore.disease_called_cancer')} className="mr-2" id={autoId()}/>
+                                <BackgroundWhiteChip label={t('aiscore.two_in_one')} className="mr-2" id={autoId()}/>
+                                <BackgroundBlueChip label={t('aiscore.cancer_incidence')} className="mr-2" id={autoId()}/>
                             </div>
                             <div>
-                                <BackgroundBlueChip label={t('aiscore.higher_with_age')} className="mr-2"/>
-                                <BackgroundWhiteChip label={t('aiscore.average_no_of_days_hospital')} className="mr-2"/>
-                                <BackgroundBlueChip label={t('aiscore.elderly')} className="mr-2"/>
+                                <BackgroundBlueChip label={t('aiscore.higher_with_age')} className="mr-2" id={autoId()}/>
+                                <BackgroundWhiteChip label={t('aiscore.average_no_of_days_hospital')} className="mr-2" id={autoId()}/>
+                                <BackgroundBlueChip label={t('aiscore.elderly')} className="mr-2" id={autoId()}/>
                             </div>
                         </div>
                     </Col>
                     <Col xs="2" className="d-flex">
                         <div  className="cmn-bg-box-inr d-flex align-items-center h-100">
                             <ul className="point-list">
-                                <li>**</li>
-                                <li>**</li>
+                                <li id={autoId()}>**</li>
+                                <li id={autoId()}>**</li>
                             </ul>
                         </div>
                     </Col>
@@ -143,33 +143,33 @@ const AIScorePage = () => {
                 <Row className="smallest-padding-box02 mb-2">
                     <Col xs="2" className="d-flex">
                         <div  className="cmn-bg-box-inr d-flex align-items-center h-100 px-3">
-                            <p className="font-16 font-weight-bold">{t('aiscore.card_title.long_term_care_causes')}</p>
+                            <p className="font-16 font-weight-bold" id={autoId()}>{t('aiscore.card_title.long_term_care_causes')}</p>
                         </div>
                     </Col>
                     <Col xs="2" className="d-flex">
                         <div  className="cmn-bg-box-inr d-flex align-items-center h-100 justify-content-center px-16">
-                            <p className="font-weight-bold mb-0 font-24">×</p>
+                            <p className="font-weight-bold mb-0 font-24" id={autoId()}>×</p>
                         </div>
                     </Col>
                     <Col xs="6" className="d-flex">
                         <div  className="cmn-bg-box-inr pb-3 px-32">
                             <div>
-                                <BackgroundBlueChip label={t('aiscore.disease_called_cancer')} className="mr-2"/>
-                                <BackgroundWhiteChip label={t('aiscore.two_in_one')} className="mr-2"/>
-                                <BackgroundBlueChip label={t('aiscore.cancer_incidence')} className="mr-2"/>
+                                <BackgroundBlueChip label={t('aiscore.disease_called_cancer')} className="mr-2" id={autoId()}/>
+                                <BackgroundWhiteChip label={t('aiscore.two_in_one')} className="mr-2" id={autoId()}/>
+                                <BackgroundBlueChip label={t('aiscore.cancer_incidence')} className="mr-2" id={autoId()}/>
                             </div>
                             <div>
-                                <BackgroundBlueChip label={t('aiscore.higher_with_age')}className="mr-2"/>
-                                <BackgroundWhiteChip label={t('aiscore.average_no_of_days_hospital')} className="mr-2"/>
-                                <BackgroundBlueChip label={t('aiscore.elderly')} className="mr-2"/>
+                                <BackgroundBlueChip label={t('aiscore.higher_with_age')}className="mr-2" id={autoId()}/>
+                                <BackgroundWhiteChip label={t('aiscore.average_no_of_days_hospital')} className="mr-2" id={autoId()}/>
+                                <BackgroundBlueChip label={t('aiscore.elderly')} className="mr-2" id={autoId()}/>
                             </div>
                         </div>
                     </Col>
                     <Col xs="2" className="d-flex">
                         <div  className="cmn-bg-box-inr d-flex align-items-center h-100">
                             <ul className="point-list">
-                                <li>**</li>
-                                <li>**</li>
+                                <li id={autoId()}>**</li>
+                                <li id={autoId()}>**</li>
                             </ul>
                         </div>
                     </Col>
@@ -177,46 +177,46 @@ const AIScorePage = () => {
                 <Row className="smallest-padding-box02 mb-32">
                     <Col xs="2" className="d-flex">
                         <div  className="cmn-bg-box-inr d-flex align-items-center h-100 px-3">
-                            <p className="font-16 font-weight-bold">{t('aiscore.card_title.long_term_care_period')}</p>
+                            <p className="font-16 font-weight-bold" id={autoId()}>{t('aiscore.card_title.long_term_care_period')}</p>
                         </div>
                     </Col>
                     <Col xs="2" className="d-flex">
-                        <div  className="cmn-bg-box-inr d-flex align-items-center h-100 justify-content-center px-16">
+                        <div  className="cmn-bg-box-inr d-flex align-items-center h-100 justify-content-center px-16" id={autoId()}>
                         </div>
                     </Col>
                     <Col xs="6" className="d-flex">
                         <div  className="cmn-bg-box-inr pb-3 px-32">
                             <div>
-                                <BackgroundBlueChip label={t('aiscore.disease_called_cancer')} className="mr-2"/>
-                                <BackgroundWhiteChip label={t('aiscore.two_in_one')} className="mr-2"/>
-                                <BackgroundBlueChip label={t('aiscore.cancer_incidence')} className="mr-2"/>
+                                <BackgroundBlueChip label={t('aiscore.disease_called_cancer')} className="mr-2" id={autoId()}/>
+                                <BackgroundWhiteChip label={t('aiscore.two_in_one')} className="mr-2" id={autoId()}/>
+                                <BackgroundBlueChip label={t('aiscore.cancer_incidence')} className="mr-2" id={autoId()}/>
                             </div>
                             <div>
-                                <BackgroundBlueChip label={t('aiscore.higher_with_age')} className="mr-2"/>
-                                <BackgroundWhiteChip label={t('aiscore.average_no_of_days_hospital')} className="mr-2"/>
-                                <BackgroundBlueChip label={t('aiscore.elderly')} className="mr-2"/>
+                                <BackgroundBlueChip label={t('aiscore.higher_with_age')} className="mr-2" id={autoId()}/>
+                                <BackgroundWhiteChip label={t('aiscore.average_no_of_days_hospital')} className="mr-2" id={autoId()}/>
+                                <BackgroundBlueChip label={t('aiscore.elderly')} className="mr-2" id={autoId()}/>
                             </div>
                         </div>
                     </Col>
                     <Col xs="2" className="d-flex">
                         <div  className="cmn-bg-box-inr d-flex align-items-center h-100">
                             <ul className="point-list">
-                                <li>**</li>
-                                <li>**</li>
+                                <li id={autoId()}>**</li>
+                                <li id={autoId()}>**</li>
                             </ul>
                         </div>
                     </Col>
                 </Row>
                 <Row className="mb-32">
                     <Col xl="10" className="mx-auto">
-                        <ScoreBar className="mb-3" percentage="80"/>
-                        <ScoreBar percentage="60"/>
+                        <ScoreBar className="mb-3" percentage="80" id={autoId()}/>
+                        <ScoreBar percentage="60" id={autoId()}/>
                     </Col>
                 </Row>
                 <Row>
                     <Col>
-                        <p className="font-16 font-weight-bold mb-3">{t('aiscore.utterance')}</p>
-                        <ChatLog/>
+                        <p className="font-16 font-weight-bold mb-3" id={autoId()}>{t('aiscore.utterance')}</p>
+                        <ChatLog id={autoId()}/>
                     </Col>
                 </Row>
             </div>

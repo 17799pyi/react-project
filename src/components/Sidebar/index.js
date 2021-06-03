@@ -18,6 +18,11 @@ const Sidebar = ({isOpen,setIsOpen, className, style}) => {
     const [isSubMenuIsOpen, setSubMenuIsOpen] = useState(false);
 
     const { t } = useTranslation();
+    let lastId = 0;
+    const autoId = (prefix = 'sidebar-') => {
+        lastId++;
+        return `${prefix}${lastId}`;
+    }
 
     return (
         <>
@@ -25,12 +30,12 @@ const Sidebar = ({isOpen,setIsOpen, className, style}) => {
             <div id="sidebar" className='sidebar-large over-height'>
                 <div>
                     <div className="logo-sec">
-                    <NavLink to="/" activeClassName={`current`}><img src={logo} className="mw-100" alt="logo" /></NavLink> <h6 className="">{t('sidebar.recruiter_training_ai')}</h6>
+                    <NavLink to="/" activeClassName={`current`} id={autoId()}><img src={logo} className="mw-100" alt="logo"  id={autoId()}/></NavLink> <h6 className="" id={autoId()}>{t('sidebar.recruiter_training_ai')}</h6>
                     </div>
                     <ul className="sidebar-menu" ref={elementRef}>
-                        <li><NavLink to="/" activeClassName={`current`}><span>{t('sidebar.e_learning')}</span></NavLink></li>
-                        <li><NavLink to="/a"  activeClassName={`current`}><img src={icon01} alt="sidebar icon"/><span>{t('sidebar.role_playing_with_ai')}</span></NavLink></li>
-                        <li><NavLink to="/historycheck"  activeClassName={`current`}><img src={icon02} alt="sidebar icon"/><span> {t('sidebar.check_history')}</span></NavLink></li>
+                        <li id={autoId()}><NavLink to="/" activeClassName={`current`}><span>{t('sidebar.e_learning')}</span></NavLink></li>
+                        <li id={autoId()}><NavLink to="/a"  activeClassName={`current`}><img src={icon01} alt="sidebar icon"/><span>{t('sidebar.role_playing_with_ai')}</span></NavLink></li>
+                        <li id={autoId()}><NavLink to="/historycheck"  activeClassName={`current`}><img src={icon02} alt="sidebar icon"/><span> {t('sidebar.check_history')}</span></NavLink></li>
                     </ul>
                 </div>
             </div>
