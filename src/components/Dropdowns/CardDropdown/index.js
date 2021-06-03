@@ -27,7 +27,7 @@ const CardDropdown = ({title, className, detail}) => {
                     <p className="font-16">{item.title}</p>
                     {console.log(item.info.split("\n"),"info")}
                     {
-                        item.info.split("\n").map(val => <p key={val}> {val} </p>)
+                        item.info.split("\n").map(val => <p className={`${classes.detail_info}`} key={val}> {val} </p>)
                     }
                     {/* <p>スーパーがん保険<br/>
                         （1口）<br/>

@@ -15,4 +15,7 @@
 .list_box:last-child {
     padding-bottom: 0;
 }
+.detail_info{
+    line-height: 16px;
+}
 
