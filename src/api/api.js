@@ -1,24 +1,53 @@
-import service from './service'
+import service from "./service";
 
 export function getUserList(url) {
-  console.log(url)
   return service({
     url: url,
-    method: 'GET'
-  })
+    method: "GET",
+  });
 }
 
-export function getLessonTask(url)
-{
+export function getLessonTask(url) {
   return service({
     url: url,
-    method: 'GET'
-  })
+    method: "GET",
+  });
 }
 
 export function getRecruiterList() {
-    return service({
-      url: '/',
-      method: 'get'
-    })
-  }
+  return service({
+    url: "/",
+    method: "get",
+  });
+}
+
+export function getHistoryList(inputText) {
+  return service({
+    url: `/history?agent=${inputText}`,
+    method: "get",
+  });
+}
+
+export function getPayOfNumber(url) {
+  return service({
+    url: url,
+
+    method: 'GET'
+  })
+}
+
+export function getRateOfRiskCirclePercent(taskID)
+{
+  return service({
+    url : `tasks/${taskID}/stats`,
+    method: 'GET'
+  })
+}
+
+export function getRateOfRiskScoreBar(taskID)
+{
+  return service({
+    url : `/tasks/${taskID}/chats/stats`,
+    method: 'GET'
+  })
+}

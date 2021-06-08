@@ -6,7 +6,6 @@ import down_arrow from '../../../assets/images/down_arrow_circle.svg';
 import classes from './styles.module.css';
 
 const CardDropdown = ({title, className, detail}) => {
-    console.log(detail, "detail in card")
     const [readMore, setReadMore] = useState(false);
     return ( 
         <>
@@ -24,7 +23,6 @@ const CardDropdown = ({title, className, detail}) => {
                 detail.map((item, index) => (
                     <div key={index} className={classes.list_box}>
                         <p className="font-16">{item.title}</p>
-                        {console.log(item.info.split("\n"),"info")}
                         {
                             item.info.split("\n").map(val => <p className={`${classes.detail_info}`} key={val}> {val} </p>)
                         }

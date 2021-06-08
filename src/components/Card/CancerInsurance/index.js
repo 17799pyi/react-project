@@ -10,6 +10,10 @@ import {CardDropdown} from "../../Dropdowns/CardDropdown";
 
 function CancerInsuranceCard({onEditScenerio,customerData}) {
   const {t} = useTranslation();
+
+  const chgScenerio = () => {
+    onEditScenerio(customerData.id)
+  }
   // console.log(customerData, "customer data");
   function ParseFloat(str,val) {
     str = str.toString();
@@ -17,9 +21,6 @@ function CancerInsuranceCard({onEditScenerio,customerData}) {
     return Number(str);   
   }
 
-  // function capitalize(string) {
-  //   return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
-  // }
   const capitalize = ([first,...rest]) => first.toUpperCase() + rest.join('').toLowerCase();
 
   return (
@@ -36,9 +37,9 @@ function CancerInsuranceCard({onEditScenerio,customerData}) {
           <p className="mb-0">{customerData.name}　{customerData.age}歳　{capitalize(customerData.gender)}</p>
           <p>{customerData.course}</p>
           {/* <p>{t('recruiter.review_of_cancer_insurance')}</p> */}
-          <div className="w-100 d-flex flex-wrap mb-2">
+          <div className="w-100 d-flex flex-wrap mb-2">   
             <PercentageLabelBox label={t('recruiter.progress_rate')} percentage={ParseFloat((customerData.clearedTaskCount/customerData.taskCount),2)} className="mr-2 mb-2"/>            
-            <GeneralButton title={t('recruiter.decision')} onClick={onEditScenerio} className="mb-2"/>          
+            <GeneralButton title={t('recruiter.decision')} onClick={chgScenerio} className="mb-2"/>   
           </div>  
         </Col>
       </Row>

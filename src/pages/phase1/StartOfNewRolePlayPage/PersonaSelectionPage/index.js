@@ -29,7 +29,7 @@ const PersonaSelectionPage = ({ className, style, onEditScenerio }) => {
     setRdoValue(event.target.value);
   };
 
-  const [apiData, setApiData] = useState();
+  const [recruiterApiData, setApiData] = useState();
 
   useEffect(() => {
     const setData = async () => {
@@ -42,7 +42,7 @@ const PersonaSelectionPage = ({ className, style, onEditScenerio }) => {
       }
     };
     setData();
-    console.log(apiData, "apiData");
+    console.log(recruiterApiData, "recruiterApiData");
   }, []); //empty dependency array so
 
   return (
@@ -90,8 +90,8 @@ const PersonaSelectionPage = ({ className, style, onEditScenerio }) => {
           </div>
           <Row className={`smallest-padding-box01`}>
             {
-              apiData ?
-              apiData.map((item, index) => (
+              recruiterApiData ?
+              recruiterApiData.map((item, index) => (
                 <Col key={index} xl="4" lg="6" className="mb-3">
                   <CancerInsuranceCard
                     onEditScenerio={onEditScenerio}

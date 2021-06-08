@@ -73,3 +73,6 @@
 .star_img img {
     max-width: 17px;
 }
+.cursor_not_allowed{
+    cursor: not-allowed;
+}

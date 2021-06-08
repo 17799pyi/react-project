@@ -13,7 +13,12 @@ import ChatLog from "./ChatLog"
 import EvaluationIcon1 from "../../../assets/images/evaluation_icon3.svg"
 import SampleChart from "../../../assets/images/sample_chart.png"
 import SampleChart2 from "../../../assets/images/sample_chart2.png"
-import './styles.css';
+import classes from './styles.module.css';
+import { BrowserRouter as Router, Link, useParams } from "react-router-dom";
+import { CircularProgressbar, CircularProgressbarWithChildren  } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
+import { getRateOfRiskCirclePercent, getRateOfRiskScoreBar } from '../../../api/api'
+import eventBus from '../../../EventBus'
 
 const AIScorePage = () => {
 
@@ -23,6 +28,40 @@ const AIScorePage = () => {
         lastId++;
         return `${prefix}${lastId}`;
     }
+    let { taskID } = useParams();
+    const [precisionPercent, setPrecisionPercent] = useState(0);
+    const [bestUserPrecision, setBestUserPrecision] = useState(0);
+    const [scores, setScores] = useState([]);
+    
+    useEffect(() => {
+        const setPercentData = async () => {
+            try {
+                const data = getRateOfRiskCirclePercent(taskID).then(res => {
+                    setPrecisionPercent(res.data.precision*100)
+                    setBestUserPrecision(res.data.bestUserPrecision*100)
+                })
+            } catch (error) {
+                eventBus.dispatch("something_went_wrong");
+            }
+        };
+        setPercentData()
+        const scoreBarData = async () => {
+            try {
+                const data = getRateOfRiskScoreBar(taskID).then(res => {
+                    console.log(res, 'score')
+                    setScores(res.data)
+                })
+            } catch (error) {
+                eventBus.dispatch("something_went_wrong");
+            }
+        };
+        scoreBarData()
+    }, [taskID])
+    
+    console.log(taskID, 'taskID')
+
+
+    
     return (
         <>
         <Row className="align-items-center mb-32 pb-2">
@@ -48,8 +87,33 @@ const AIScorePage = () => {
                                     <p className="percent_txt" id={autoId()}>85%</p>
                                 </div>
                             </div>
-                        </div> */}       
-                        <img src={SampleChart2} alt="Sample Chart" className="d-block mx-auto" id={autoId()} />
+                        </div> */}
+                        <div className={classes.inner_circle_wrapper}>
+                            <CircularProgressbarWithChildren value={precisionPercent} styles={{
+                                path: {
+                                    // Path color
+                                    stroke: '#00A5D9',
+                                    strokeLinecap: 'unset',
+                                },
+                                trail: {
+                                    stroke: '#E9FAFF',
+                                    strokeLinecap: 'unset',
+                                }
+                            }}>
+                                <div className={classes.inner_circle}>
+                                    <div className={classes.inner_circle_text_content}>
+                                        <span className={classes.inner_circle_text}>Correct Answer Rate</span>
+                                        <span className={classes.inner_circle_p_text}>{precisionPercent}%</span>
+                                    </div>
+                                    <div className={classes.inner_circle_text_content}>
+                                        <span className={classes.inner_circle_text}>Personal Best of Time</span>
+                                        <span className={classes.inner_circle_p_text}>{bestUserPrecision}%</span>
+                                    </div>
+                                </div>
+                            </CircularProgressbarWithChildren>
+                            {/* <CircularProgressbar value={circlePercentage} text={`${circlePercentage}%`} /> */}
+                        </div>
+                        {/* <img src={SampleChart2} alt="Sample Chart" className="d-block mx-auto" id={autoId()} /> */}
                     </div>           
                 </Col>
                 <Col lg="6" className="mb-4 d-flex">
@@ -209,8 +273,16 @@ const AIScorePage = () => {
                 </Row>
                 <Row className="mb-32">
                     <Col xl="10" className="mx-auto">
-                        <ScoreBar className="mb-3" percentage="80" id={autoId()}/>
-                        <ScoreBar percentage="60" id={autoId()}/>
+                        {
+                            scores.length ?
+                            scores.map((item, index) => {
+                                return <ScoreBar key={index} className="mb-3" item={item} id={autoId()}/>
+                            })
+                            :
+                            'Loading'
+                        }
+                        {/* <ScoreBar className="mb-3" percentage="80" id={autoId()}/>
+                        <ScoreBar percentage="60" id={autoId()}/> */}
                     </Col>
                 </Row>
                 <Row>

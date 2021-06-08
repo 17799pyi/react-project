@@ -1,4 +1,4 @@
-import React, { createRef, useState, useEffect, useRef } from 'react';
+import React, { createRef, useState, useEffect, useRef, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Container, Row, Col } from 'reactstrap';
 
@@ -17,8 +17,10 @@ import { getLessonTask } from '../../../../api/api'
 import eventBus from '../../../../EventBus'
 
 import classes from './styles.module.css';
+import { connect } from 'react-redux'
+import { lessonTaskAll } from '../../../../store/actions/index'
 
-const ScenariosSelectionPage = ({ className, style, onBack, showStep2 }) => {
+const ScenariosSelectionPage = ({ className, style, onBack, showStep2, lessonId, lessonTaskAll }) => {
 
     const { t } = useTranslation();
 
@@ -27,15 +29,20 @@ const ScenariosSelectionPage = ({ className, style, onBack, showStep2 }) => {
         lastId++;
         return `${prefix}${lastId}`;
     }
-    const prog_per = 95
+    const [progress, setProgress] = useState(0)
+    const [totalStar, setTotalStar] = useState(0)
+    const [receiveTotalStar, setReceiveTotalStar] = useState(0)
 
     const [tasks, setTasks] = useState([])
+    const [activeTasks, setActiveTasks] = useState([])
+    const [customCardOpen, setCustomCardOpen] = useState(null)
 
     useEffect(() => {
         const setData = async () => {
             try {
-                const data = getLessonTask('lessons/7/tasks').then(res => {
+                const data = getLessonTask(`lessons/${lessonId}/tasks`).then(res => {
                     setTasks(res.data)
+                    lessonTaskAll(res.data)
                 })
             } catch (error) {
                 eventBus.dispatch("something_went_wrong");
@@ -43,6 +50,81 @@ const ScenariosSelectionPage = ({ className, style, onBack, showStep2 }) => {
         };
         setData()
     }, [showStep2])
+
+    useEffect(() => {
+        if(tasks.length)
+        {
+            let activeTask = tasks.filter(function(task){
+                if(task.highestScore)
+                {
+                    return task
+                }
+            })
+            setActiveTasks(activeTask)
+        }
+    }, [tasks])
+
+    useEffect(() => {
+        //get total percentage
+        let totalStar = 0
+        tasks.map((task) => {
+            if(task.highestScore)
+            {
+                totalStar+=getStarCount(parseFloat(task.highestScore.precision*100))
+            }
+        })
+        if(tasks.length)
+        {
+            setProgress(((totalStar / (activeTasks.length*3))*100).toFixed(2)) //set progress
+        }else{
+            setProgress(0) //set progress
+        }
+        setReceiveTotalStar(totalStar)  //set fill star
+        setTotalStar((activeTasks.length)*3) //set total task star each of task has 3 star
+    }, [tasks, activeTasks])
+
+    const getStarCount = (percent) => {
+        //get fill star count
+        let starCount = 0
+        if(percent >= 0 && percent <= 69)
+        {
+            starCount = 1
+        }else if(percent >= 70 && percent <= 84)
+        {
+            starCount = 2
+        }else if(percent >= 85 && percent <= 100)
+        {
+            starCount = 3
+        }
+        return starCount
+    }
+
+    const cardStatus = (task, index) => {
+        if(customCardOpen == index)
+        {
+            return true;
+        }
+        if(task.highestScore){
+            return true;
+        }
+        return false;
+    }
+    
+    useEffect(() => {
+        if(tasks.length)
+        {
+            const unacitves = tasks.map((task, index) => {
+                if(!task.highestScore)
+                {
+                    return index;
+                }
+            })
+            const undefinedValue = unacitves.findIndex(function(e){
+                return e == undefined;
+            });
+            setCustomCardOpen(undefinedValue+1)
+        }  
+    }, [tasks])
 
     return (
        
@@ -59,54 +141,53 @@ const ScenariosSelectionPage = ({ className, style, onBack, showStep2 }) => {
                         <Col xl="10">                            
                             <Row className="mb-32 align-items-end mt-3">
                                 <Col lg="8" className="position-relative my-3 my-lg-0">
-                                    <span className={`${classes.progress_bar_text} ${(prog_per >= 7) ? '' : classes.right_0}`} id={autoId()}>{t('scenario.progress')}</span>
-                                    { prog_per ?
-                                        <div className={classes.progress_bar_img} style={{left: prog_per + '%'}}>
+                                    <span className={`${classes.progress_bar_text} ${(progress >= 7) ? '' : classes.right_0}`} id={autoId()}>{t('scenario.progress')}</span>
+                                    { progress ?
+                                        <div className={classes.progress_bar_img} style={{left: progress + '%'}}>
                                             <img src={ProgressImg} alt="ProgressImg" id={autoId()}/>
-                                            <p className={`${classes.progress_bar_msg} ${(prog_per == 100) ? 'd-none':(prog_per >= 95 && prog_per < 100)? classes.msg_left:'' }`} id={autoId()}>今日もがんばろう！</p>
+                                            <p className={`${classes.progress_bar_msg} ${(progress == 100) ? 'd-none':(progress >= 95 && progress < 100)? classes.msg_left:'' }`} id={autoId()}>今日もがんばろう！</p>
                                         </div>
                                         : ''
                                     }                                    
                                     <div className={classes.progress_bar}>
-                                    { prog_per ?
-                                        <span className={classes.progress_bar_per} style={{width: prog_per + '%'}} id={autoId()}></span>
+                                    { progress ?
+                                        <span className={classes.progress_bar_per} style={{width: progress + '%'}} id={autoId()}></span>
                                         : ''
                                     }
-                                    <img src={ChallengeIcon} alt="ChallengeIcon" className={`${classes.progress_bar_challenge} ${(prog_per >= 95) ? 'd-none' : ''}`}  id={autoId()}/>
+                                    <img src={ChallengeIcon} alt="ChallengeIcon" className={`${classes.progress_bar_challenge} ${(progress >= 95) ? 'd-none' : ''}`}  id={autoId()}/>
                                     </div>
                                 </Col>
                                 <Col lg="4">
                                     <table className={`table mb-0 ${classes.roleplay_step2_tb}`} id={autoId()}>
-                                        <tr id={autoId()}>
-                                            <td rowspan="2" id={autoId()}>
-                                                <img src={(prog_per>=70)? smileImg : NosmileImg} alt="Smile Image" id={autoId()}/>
-                                                <span className="ml-2 font-weight-bold font-16" id={autoId()}>8</span>
-                                            </td>
-                                            <td className="font-weight-bold font-16" id={autoId()}>{prog_per}%</td>
-                                        </tr>
-                                        <tr id={autoId()}>
-                                            <td id={autoId()}>                                                
-                                                <img src={starImg} alt="Star Image" className={classes.start_img} id={autoId()}/>
-                                                <span className="ml-2 font-weight-bold font-16" id={autoId()}>(3/1)</span>
-                                            </td>
-                                        </tr>
+                                        <tbody>
+                                            <tr id={autoId()}>
+                                                <td rowSpan="2" id={autoId()}>
+                                                    <img src={(progress>=70)? smileImg : NosmileImg} alt="Smile Image" id={autoId()}/>
+                                                    <span className="ml-2 font-weight-bold font-16" id={autoId()}>{activeTasks.length}</span>
+                                                </td>
+                                                <td className="font-weight-bold font-16" id={autoId()}>{progress}%</td>
+                                            </tr>
+                                            <tr id={autoId()}>
+                                                <td id={autoId()}>                                                
+                                                    <img src={starImg} alt="Star Image" className={classes.start_img} id={autoId()}/>
+                                                    <span className="ml-2 font-weight-bold font-16" id={autoId()}>({receiveTotalStar}/{totalStar})</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
                                     </table>
                                 </Col>
                             </Row>
                             <Row className="smallest-padding-box pt-2">
-                                <Col xl="4" lg="6" className="mb-3">
-                                    <ScenarioSelectionCard status="active" id={autoId()}/>
-                                </Col>
-                                {/* {
+                                {
                                     tasks.length ?
-                                    tasks.map((task) => {
-                                        return <Col xl="4" lg="6" className="mb-3">
-                                                    <ScenarioSelectionCard status1="test"/>
+                                    tasks.map((task, index) => {
+                                        return  <Col xl="4" lg="6" className="mb-3" key={task.id}>
+                                                    <ScenarioSelectionCard status={cardStatus(task, index)} f_starCount={getStarCount} task={task} id={autoId()}/>
                                                 </Col>
                                     })
                                     : 'loading...'
-                                } */}
-                                <Col xl="4" lg="6" className="mb-3">
+                                }
+                                {/* <Col xl="4" lg="6" className="mb-3">
                                     <ScenarioSelectionCard status="active" id={autoId()}/>
                                 </Col>
                                 <Col xl="4" lg="6" className="mb-3">
@@ -120,7 +201,7 @@ const ScenariosSelectionPage = ({ className, style, onBack, showStep2 }) => {
                                 </Col>
                                 <Col xl="4" lg="6" className="mb-3">
                                     <ScenarioSelectionCard status="lock" id={autoId()}/>
-                                </Col>
+                                </Col> */}
                             </Row>
                         </Col>
                     </Row>
@@ -129,5 +210,18 @@ const ScenariosSelectionPage = ({ className, style, onBack, showStep2 }) => {
         </>
     )
 }
+const stateToProps = state => {
+    return {
+        lesson_task_all: state.lesson_task_all,
+    }
+}
 
-export default ScenariosSelectionPage;
+const dispatchToProps = dispatch => {
+    return {
+        lessonTaskAll: (lesson_task_all) => {
+            dispatch(lessonTaskAll(lesson_task_all));
+        }
+    }
+}
+
+export default connect(stateToProps, dispatchToProps)(ScenariosSelectionPage)

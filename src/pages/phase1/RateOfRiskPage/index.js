@@ -1,7 +1,7 @@
 import React, { createRef, useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Container, Row, Col } from 'reactstrap';
-import { BrowserRouter as Router, Switch, Route, Link, NavLink } from "react-router-dom";
+import { BrowserRouter as Router, Link, useParams } from "react-router-dom";
 
 import BackgroundBlueLabel from "../../../components/Label/BackgroundBlueLabel"
 import ScoreBar from "../../../components/ScoreBar"
@@ -20,6 +20,7 @@ const RateOfRiskPage = () => {
         lastId++;
         return `${prefix}${lastId}`;
     }
+    let { taskID } = useParams();
 
     return (
         <>
@@ -140,8 +141,8 @@ const RateOfRiskPage = () => {
             
             <Row className="mt-4 mb-32 pb-4">
                 <Col lg="10" className="mx-auto">
-                    <Link to="/AIScore"><ScoreBar className="mb-3" percentage="75" id={autoId()}/></Link>
-                    <Link to="/AIScore"> <ScoreBar percentage="65" id={autoId()}/></Link>
+                    {/* <Link to={`/ai-score/${taskID}`}><ScoreBar className="mb-3" percentage="75" id={autoId()}/></Link>
+                    <Link to={`/ai-score/${taskID}`}> <ScoreBar percentage="65" id={autoId()}/></Link> */}
                 </Col>
             </Row>
             

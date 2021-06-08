@@ -4,7 +4,8 @@ import sessionStorage from 'redux-persist/lib/storage/session';
 import { createLogger } from 'redux-logger';
 
 import { environment } from '../configs/environments';
-import { customerFrontEnd } from './reducers';
+import { customerFrontEnd } from './reducers/index';
+import { composeWithDevTools } from 'redux-devtools-extension';
 
 const logger = createLogger({});
 
@@ -22,7 +23,7 @@ const persistConfig = {
 
 const persistreducer = persistReducer(persistConfig, customerFrontEnd);
 
-const store = createStore(persistreducer, applyMiddleware(...middleware));
+const store = createStore(persistreducer, composeWithDevTools(applyMiddleware(...middleware)));
 
 export const persistor = persistStore(store);
 

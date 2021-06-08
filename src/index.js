@@ -7,16 +7,19 @@ import i18n from './languages';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
-import store from './store';
+import store, { persistor } from './store';
 import { SnackbarProvider } from 'notistack';
+import { PersistGate } from 'redux-persist/integration/react';
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <I18nextProvider i18n={i18n}>
+        <PersistGate persistor={persistor}>
           <SnackbarProvider maxSnack={3}>
             <App />
-        </SnackbarProvider>
+          </SnackbarProvider>
+        </PersistGate>
       </I18nextProvider>
     </Provider>
   </React.StrictMode>,

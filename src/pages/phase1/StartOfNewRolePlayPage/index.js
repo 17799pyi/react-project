@@ -21,6 +21,7 @@ const ScenariosSelectionPage = () => {
     const history = useHistory();    
     const [step1, setStep1] = useState(true);
     const [editStep2, setEditStep2] = useState(false);
+    const [lessonId, setLessonId] = useState(null);
     
     useEffect(() => {
         history.push("/");
@@ -30,9 +31,10 @@ const ScenariosSelectionPage = () => {
         setStep1(true);
         setEditStep2(false);
     }
-    const onEditStep2 = () => {
+    const onEditStep2 = (val) => {
         setStep1(false);
         setEditStep2(true);
+        setLessonId(val)
     }
 
     return (
@@ -58,7 +60,7 @@ const ScenariosSelectionPage = () => {
                 </Col>
             </Row>
             {
-                step1 ?  <Step1 onEditScenerio={onEditStep2} /> : <Step2 onBack={onBack} showStep2={setEditStep2} /> 
+                step1 ?  <Step1 onEditScenerio={onEditStep2} /> : <Step2 onBack={onBack} lessonId={lessonId} showStep2={setEditStep2} /> 
             }
         </>
     )

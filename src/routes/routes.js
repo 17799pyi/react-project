@@ -26,8 +26,6 @@ import VideoChat from '../pages/phase1/VideoChatPage';
 import StartOfNewRolePlay from '../pages/phase1/StartOfNewRolePlayPage';
 import HistoryCheck from '../pages/phase1/HistoryCheckPage'
 import HistoryCheckDetail from '../pages/phase1/HistoryCheckPage/detail'
-import ApiTest from '../pages/ApiTest/apidemo'
-import HistoryCheckPage from '../pages/phase1/HistoryCheck/index'
 
 import '../pages/index.css'
 import ScenarioSelection from '../pages/ScenarioSelection/ScenarioSelection';
@@ -43,15 +41,13 @@ const Routes = () => {
               <LanguageBar/>
               <div className="main-content-inr">
               <Switch>
-              <Route exact path="/AIScore" component={AIScore} />
-                <Route exact path="/RateOfRisk" component={RateOfRisk1} />
+                <Route exact path="/ai-score/:taskID" component={AIScore} />
+                <Route exact path="/rate-of-risk/:taskID" component={RateOfRisk1} />
                 <Route exact path="/VideoChat" component={VideoChat} />
                 <Route exact path="/" component={StartOfNewRolePlay} />
                 <Route exact path="/scenario-selection" component={ScenariosSelectionPage} />
                 <Route exact path="/historycheck" component={HistoryCheck} />
-                <Route exact path="/historycheckdetail" component={HistoryCheckDetail} />
-                <Route exact path="/apitest" component={ApiTest} />
-                <Route exact path="/historycheckpage" component={HistoryCheckPage} />
+                <Route exact path="/history-check-detail" component={HistoryCheckDetail} />
 
                 
                 <Route exact path="/agency" component={Index} />
