@@ -26,6 +26,8 @@ import VideoChat from '../pages/phase1/VideoChatPage';
 import StartOfNewRolePlay from '../pages/phase1/StartOfNewRolePlayPage';
 import HistoryCheck from '../pages/phase1/HistoryCheckPage'
 import HistoryCheckDetail from '../pages/phase1/HistoryCheckPage/detail'
+import Evaluation from '../pages/phase1/Evaluation'
+import EvaluationDetail from '../pages/phase1/Evaluation/detail'
 
 import '../pages/index.css'
 import ScenarioSelection from '../pages/ScenarioSelection/ScenarioSelection';
@@ -48,6 +50,8 @@ const Routes = () => {
                 <Route exact path="/scenario-selection" component={ScenariosSelectionPage} />
                 <Route exact path="/historycheck" component={HistoryCheck} />
                 <Route exact path="/history-check-detail" component={HistoryCheckDetail} />
+                <Route exact path="/evaluation" component={Evaluation} />
+                <Route exact path="/evaluation_detail" component={EvaluationDetail} />
 
                 
                 <Route exact path="/agency" component={Index} />

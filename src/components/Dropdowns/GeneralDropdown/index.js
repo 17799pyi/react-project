@@ -28,8 +28,8 @@ const GeneralDropdown = ({items, placeholder, onSelect, className, selectedData}
     }
 
     return ( 
-        <div className={`${classes.select_box} ${className} ${open? classes.select_box_radius : '' }`}>
-                <div onClick={onOpen} className={'d-flex justify-content-between'}>
+        <div className={`${classes.select_box} ${className}`}>
+                <div onClick={onOpen} className={'d-flex justify-content-between align-items-center'}>
                     <span>{selectedText === '' ? placeholder : selectedText}</span>
                     <img src={`${open? up_arrow: down_arrow} ` } className={`${classes.arrows} `} />
                 </div>

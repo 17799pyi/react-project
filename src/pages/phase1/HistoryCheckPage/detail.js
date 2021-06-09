@@ -93,7 +93,7 @@ function Index() {
               </table>
             </div>
             <div className="table-responsive">
-              <table className={`table text-center ${classes.cmn_table}`} id={autoId()}>
+              <table className={`table text-center ${classes.cmn_table_detail} ${classes.cmn_table}`} id={autoId()}>
                 <tr id={autoId()}>
                   <td style={{width: '5%'}} id={autoId()}>1.</td>
                   <td style={{width: '25%'}} id={autoId()}>アポイント取得</td>
@@ -120,19 +120,9 @@ function Index() {
                   <td id={autoId()}>アポイント取得</td>
                   <td className="bg-blue-light" id={autoId()}>
                     <span className="d-block" id={autoId()}>2回</span>
-                    <span className={classes.star_icon} id={autoId()}>
-                      <img src={StarIcon} alt="StarIcon" />
-                      <img src={StarIcon} alt="StarIcon" />
-                      <img src={StarIcon} alt="StarIcon" />
-                    </span>
                   </td>
                   <td className="bg-blue-light" id={autoId()}>
                     <span className="d-block" id={autoId()}>1回</span>
-                    <span className={classes.star_icon} id={autoId()}>
-                      <img src={StarIcon} alt="StarIcon" />
-                      <img src={StarIcon} alt="StarIcon" />
-                      <img src={StarIcon} alt="StarIcon" />
-                    </span>
                   </td>
                   <td style={{width: '23%'}} className="bg-red-light" id={autoId()}>未実施</td>
                 </tr>
@@ -141,19 +131,9 @@ function Index() {
                   <td id={autoId()}>介護の実態①<br/>(データ訴求)</td>
                   <td className="bg-blue-light" id={autoId()}>
                     <span className="d-block">2回</span>
-                    <span className={classes.star_icon}>
-                      <img src={StarIcon} alt="StarIcon" />
-                      <img src={StarIcon} alt="StarIcon" />
-                      <img src={StarIcon} alt="StarIcon" />
-                    </span>
                   </td>
                   <td className="bg-blue-light" id={autoId()}>
                     <span className="d-block" id={autoId()}>1回</span>
-                    <span className={classes.star_icon} id={autoId()}>
-                      <img src={StarIcon} alt="StarIcon" />
-                      <img src={StarIcon} alt="StarIcon" />
-                      <img src={StarIcon} alt="StarIcon" />
-                    </span>
                   </td>
                   <td style={{width: '23%'}} className="bg-red-light" id={autoId()}>未実施</td>
                 </tr>

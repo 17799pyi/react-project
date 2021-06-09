@@ -89,47 +89,55 @@ function HistoryCheck(props) {
           <h3 className={`mb-32 pb-2`} id={autoId()}>履歴を確認する</h3>
         </Col>
       </Row>
-      <Row className="medium-padding-box">
-        <Col lg="4" md="8" >
-          <div className="mb-32">
-            <label className="font-16 font-weight-bold" id={autoId()}>代理店コード(7桁)</label>
-            <GeneralTextbox max="7" placeholder="代理店コードを入力してください" onChange={onInputChange} id={autoId()}/>
-            <p className={`mt-2 font-16 ${showTable?'d-block':'d-none'}`} id={autoId()}>遠州鉄道(株)</p>
-          </div>
-          <div className="mb-5">
-            <p className="font-16" id={autoId()}>出先単位で確認したい場合</p>
-            <label className="font-16 font-weight-bold" id={autoId()}>遠州鉄道</label>
-            <GeneralTextbox maxlength="3" placeholder="居場所コードを入力" id={autoId()}/>
-          </div>
-          <Row className={`${classes.row_margin}`}>
-            <Col className="text-center mb-3">
-              <HistoryButton title="検索" className="small-btn" onClick={onClickButton} disabled="disabled" id={autoId()}/>
-            </Col>
-          </Row>
+      <Row>
+        <Col lg="8" className={`${showTable?'d-none':'d-block'}`}>
+            <Row className="mb-32">
+              <Col xs="12"><label className="font-16 font-weight-bold" id={autoId()}>代理店コード(7桁)</label></Col>
+              <Col lg="8">
+                <GeneralTextbox max="7" placeholder="代理店コードを入力してください" onChange={onInputChange} id={autoId()}/>
+              </Col>
+              <Col lg="4" className="d-flex align-items-center">
+                <p className={`mt-2 font-16`} id={autoId()}>遠州鉄道(株)</p>
+              </Col>
+            </Row>
+            <Row className="mb-5">
+              <Col xs="12">              
+                <p className="font-16" id={autoId()}>出先単位で確認したい場合</p>
+                <label className="font-16 font-weight-bold" id={autoId()}>遠州鉄道</label>
+              </Col>
+              <Col lg="8">
+                <GeneralTextbox maxlength="3" placeholder="居場所コードを入力" id={autoId()}/>
+              </Col>
+            </Row>
+            <Row className={`${classes.row_margin}`}>
+              <Col lg="8" className="text-center mb-3">
+                <HistoryButton title="検索" className="small-btn" onClick={onClickButton} disabled="disabled" id={autoId()}/>
+              </Col>
+            </Row>
         </Col>        
         <Col lg="8" className={`${showTable?'d-block':'d-none'}`}>
           <p className="font-16 font-weight-bold" id={autoId()}>募集人一覧</p>
           <div className="table-responsive mb-4">
               <table className={`table text-center ${classes.cmn_table}`} id={autoId()}>
-                <tr id={autoId()}>
-                  <th rowspan="2" className="align-middle" style={{width: '25%'}} id={autoId()}>募集人名</th>
-                  <th colspan="3" id={autoId()}>コース名</th>
-                </tr>
-                {/* <tr id={autoId()}>
-                  <th style={{width: '25%'}} className="border-left-0" id={autoId()}>配偶者ストーリー</th>
-                  <th style={{width: '25%'}} className="border-left-0" id={autoId()}>お子様ストーリー</th>
-                  <th style={{width: '25%'}} className="border-left-0" id={autoId()}>おひとり様ストーリー</th>
-                </tr> */}
-                <tr id={autoId()}>
-                        {
-                          historyList.lesson ? 
-                          historyList.lesson.map((item, index) => {
-                            return <th key={index} style={{width: '25%'}} className="border-left-0" id={autoId()}>{item.lessonPersona}</th>
-                          }) :
-                          'Loading...'
-                        }
-                </tr>
-
+                { historyList.lesson ? 
+                  <>
+                    <tr id={autoId()}>
+                      <th rowspan="2" className="align-middle" style={{width: '25%'}} id={autoId()}>募集人名</th>
+                      <th colspan="3" id={autoId()}>コース名</th>
+                    </tr>
+                    <tr>
+                      {
+                        historyList.lesson.map((item, index) => {
+                          return <th key={index} style={{width: '25%'}} className="border-left-0" id={autoId()}>{item.lessonPersona}</th>
+                        })
+                      }
+                    </tr>
+                  </>
+                :
+                    <tr id={autoId()}>
+                          Loading...
+                    </tr> 
+                } 
                 {
                     lessonList ?
                     lessonList.map((item, index) => (
