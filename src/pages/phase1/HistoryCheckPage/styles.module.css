@@ -21,7 +21,9 @@
     border-top: 0;
     vertical-align: middle;
 }
-
+.cmn_table_detail tr td {
+    height: 75px;
+}
 .star_icon {    
     background: var(--cerulean);
     min-width: 90px;

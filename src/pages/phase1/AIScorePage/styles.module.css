@@ -33,28 +33,56 @@
     font-weight: bold;
 }
 .inner_circle_wrapper{
-    width: 61%;
+    width: 300px;
+    height: 300px;
     margin: 0 auto;
 }
 .inner_circle{
     background: #E9FAFF;
-    width: 70%;
-    height: 70%;
+    width: 75%;
+    height: 75%;
     border-radius: 50%;
     text-align: center;
-    padding: 23px 0;
+    /* padding: 23px 0; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.2;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15), inset 0px -1px 0px rgba(0, 0, 0, 0.15);
+}
+.inner_circle>div {
+    width: 50%;
+    margin: 0 auto;
 }
 .inner_circle_wrapper>div>div>svg.CircularProgressbar-path{
     stroke: #00A5D9 !important;
     stroke-linecap: unset !important;
 }
 .inner_circle_text{
-    font-size: 0.9rem;
+    font-size: 18px;
     display: inline-block;
 }
 .inner_circle_p_text{
-    color: orange;
+    color: var(--yellow-dark);
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 48px;
     display: block;
 }
+.inner_circle_personal_best {
+    color: var(--blue-card);
+
+}
+
+@media (max-width: 1199.98px){
+    .inner_circle_wrapper {
+        max-width: 280px;
+        height: 280px;
+    }
+    .inner_circle_text{
+        font-size: 16px;
+        display: inline-block;
+    }
+    .inner_circle_p_text{
+        font-size: 32px;
+    }
+  }
