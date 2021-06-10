@@ -26,7 +26,7 @@ import VideoChat from '../pages/phase1/VideoChatPage';
 import StartOfNewRolePlay from '../pages/phase1/StartOfNewRolePlayPage';
 import HistoryCheck from '../pages/phase1/HistoryCheckPage'
 import HistoryCheckDetail from '../pages/phase1/HistoryCheckPage/detail'
-import Evaluation from '../pages/phase1/Evaluation'
+import Evaluation from '../pages/phase1/Evaluation/index'
 import EvaluationDetail from '../pages/phase1/Evaluation/detail'
 
 import '../pages/index.css'

@@ -51,3 +51,17 @@ export function getRateOfRiskScoreBar(taskID)
     method: 'GET'
   })
 }
+
+export function getHistoryDetailList(userId) {
+  return service({
+    url: `/history/${userId}`,
+    method: "get",
+  });
+}
+
+export function getCompanyList(){
+  return service({
+    url: '/history/agent',
+    method : "get"
+  })
+}

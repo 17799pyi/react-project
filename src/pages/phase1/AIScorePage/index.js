@@ -94,26 +94,20 @@ const AIScorePage = () => {
                                     // Path color
                                     stroke: '#00A5D9',
                                     strokeLinecap: 'unset',
-                                    strokeWidth: 6,
                                 },
                                 trail: {
                                     stroke: '#E9FAFF',
                                     strokeLinecap: 'unset',
-                                    strokeWidth: 6,
                                 }
                             }}>
                                 <div className={classes.inner_circle}>
-                                    <div>
-                                        <div className={`${classes.inner_circle_text_content} mb-3`}>
-                                            {/* <span className={classes.inner_circle_text}>Correct Answer Rate </span> */}
-                                            <span className={classes.inner_circle_text}>正答率</span>
-                                            <span className={classes.inner_circle_p_text}>{precisionPercent}%</span>
-                                        </div>
-                                        <div className={classes.inner_circle_text_content}>
-                                            {/* <span className={classes.inner_circle_text}>Personal Best of Time </span> */}
-                                            <span className={classes.inner_circle_text}>自己ベスト</span>
-                                            <span className={`${classes.inner_circle_p_text} ${classes.inner_circle_personal_best}`}>{bestUserPrecision}%</span>
-                                        </div>
+                                    <div className={classes.inner_circle_text_content}>
+                                        <span className={classes.inner_circle_text}>Correct Answer Rate</span>
+                                        <span className={classes.inner_circle_p_text}>{precisionPercent}%</span>
+                                    </div>
+                                    <div className={classes.inner_circle_text_content}>
+                                        <span className={classes.inner_circle_text}>Personal Best of Time</span>
+                                        <span className={classes.inner_circle_p_text}>{bestUserPrecision}%</span>
                                     </div>
                                 </div>
                             </CircularProgressbarWithChildren>

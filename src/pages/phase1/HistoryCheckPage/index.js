@@ -7,7 +7,7 @@ import GeneralTextbox from '../../../components/Textboxes/GeneralTextbox02';
 import HistoryButton from '../../../components/Button/HistoryButton';
 
 import classes from "./styles.module.css";
-import { getHistoryList } from "../../../api/api";
+import { getHistoryList,getCompanyList } from "../../../api/api";
 import eventBus from '../../../EventBus'
 import { connect } from 'react-redux'
 import { historyTaskAll } from '../../../store/actions/index'
@@ -21,39 +21,77 @@ function HistoryCheck(props) {
   }
 
   const [showTable, setShowTable] = useState(false);
-  const [inputData, SetInputData] = useState(false);
-  const [inputText, SetInputText] = useState();
+  const [inputData, setInputData] = useState(false);
   const [historyList, setHistoryList] = useState([]); 
   const [lessonList, setLessonList] = useState([]);
+  const [companyList,setCompanyList] = useState([]);
+  const [companyCode, setCompanyCode] = useState('');
+  const [branchCode, setBranchCode] = useState('');
+  const [companyName, setCompanyName] = useState();
+
+  useEffect(() => {
+    const setData = async () => {
+      try {
+        const data = getCompanyList().then((res) => {
+          setCompanyList(res.data);
+        });
+      } catch (error) {
+        eventBus.dispatch("something_went_wrong");
+      }
+    };
+    setData();
+  },[]); //empty dependency array so
+
+  const handleKeyUp = (event) => {
+    const arrayFind = []
+    for (const [key, value] of Object.entries(companyList)) {
+      if(value.companyCode == event.target.value) {
+        arrayFind.push(value);
+      }
+    }
+   
+    if(arrayFind.length>0){
+      setCompanyCode(arrayFind[0].companyCode)
+      setCompanyName(arrayFind[0].companyName)
+    }
+  }
 
   const onClickButton = () => {
-    if(inputData) {
+    if(companyCode.length>0) {
 
       const setData = async () => {
         try {
-          const data = getHistoryList(inputText).then(res =>{
+          const data = getHistoryList(companyCode+branchCode).then(res =>{
             setHistoryList(res.data)
             setLessonList(res.data.lessonResult)
             props.historyTaskAll(res.data)
+            if(res.data.lessonResult.length >=1){
+              setShowTable(true);
+            }
         })
         } catch (error) {
             eventBus.dispatch("something_went_wrong");
         }
       };
-
       setData();
       // if(historyList!= null){
-        setShowTable(true);
+        // setShowTable(true);
       // }
-      
     }
   }
+
   const onInputChange = (event) => {
     if(event.target.value.length != 0) {      
-      SetInputData(true);
-      SetInputText(event.target.value)
+      setInputData(true);
+      if(event.target.value.length>0){
+        setBranchCode('-'+event.target.value)
+      }
+      else
+      {
+        setBranchCode('')
+      }
     }else {      
-      SetInputData(false);
+      setInputData(false);
     }
   }
 
@@ -94,10 +132,11 @@ function HistoryCheck(props) {
             <Row className="mb-32">
               <Col xs="12"><label className="font-16 font-weight-bold" id={autoId()}>代理店コード(7桁)</label></Col>
               <Col lg="8">
-                <GeneralTextbox max="7" placeholder="代理店コードを入力してください" onChange={onInputChange} id={autoId()}/>
+                <GeneralTextbox max="7" placeholder="代理店コードを入力してください" onChange={handleKeyUp} id={autoId()}/>
               </Col>
               <Col lg="4" className="d-flex align-items-center">
-                <p className={`mt-2 font-16`} id={autoId()}>遠州鉄道(株)</p>
+                <p className={`mt-2 font-16`} id={autoId()}>{companyName}</p>
+                {/* 遠州鉄道(株) */}
               </Col>
             </Row>
             <Row className="mb-5">
@@ -106,7 +145,7 @@ function HistoryCheck(props) {
                 <label className="font-16 font-weight-bold" id={autoId()}>遠州鉄道</label>
               </Col>
               <Col lg="8">
-                <GeneralTextbox maxlength="3" placeholder="居場所コードを入力" id={autoId()}/>
+                <GeneralTextbox maxlength="3" placeholder="居場所コードを入力" onChange={onInputChange} id={autoId()}/>
               </Col>
             </Row>
             <Row className={`${classes.row_margin}`}>
@@ -119,30 +158,30 @@ function HistoryCheck(props) {
           <p className="font-16 font-weight-bold" id={autoId()}>募集人一覧</p>
           <div className="table-responsive mb-4">
               <table className={`table text-center ${classes.cmn_table}`} id={autoId()}>
-                { historyList.lesson ? 
-                  <>
-                    <tr id={autoId()}>
-                      <th rowspan="2" className="align-middle" style={{width: '25%'}} id={autoId()}>募集人名</th>
-                      <th colspan="3" id={autoId()}>コース名</th>
-                    </tr>
-                    <tr>
-                      {
-                        historyList.lesson.map((item, index) => {
-                          return <th key={index} style={{width: '25%'}} className="border-left-0" id={autoId()}>{item.lessonPersona}</th>
-                        })
-                      }
-                    </tr>
-                  </>
-                :
-                    <tr id={autoId()}>
-                          Loading...
-                    </tr> 
-                } 
+                <tr id={autoId()}>
+                  <th rowspan="2" className="align-middle" style={{width: '25%'}} id={autoId()}>募集人名</th>
+                  <th colspan={historyList.lesson!= null ||historyList.lesson!= undefined?historyList.lesson.length:"3"} id={autoId()}>コース名</th>
+                </tr>
+                {/* <tr id={autoId()}>
+                  <th style={{width: '25%'}} className="border-left-0" id={autoId()}>配偶者ストーリー</th>
+                  <th style={{width: '25%'}} className="border-left-0" id={autoId()}>お子様ストーリー</th>
+                  <th style={{width: '25%'}} className="border-left-0" id={autoId()}>おひとり様ストーリー</th>
+                </tr> */}
+                <tr id={autoId()}>
+                        {
+                          historyList.lesson ? 
+                          historyList.lesson.map((item, index) => {
+                            return <th key={index} style={{width: '25%'}} className="border-left-0" id={autoId()}>{item.lessonPersona}</th>
+                          }) :
+                          'Loading...'
+                        }
+                </tr>
+
                 {
                     lessonList ?
                     lessonList.map((item, index) => (
                         <tr key={index}>
-                        <td id={autoId()}><Link to={{pathname:"/history-check-detail",state:{username:item.userName, lessonResult:item.lessonResult} }} className={classes.link_txt}>{item.userName}</Link></td>
+                        <td id={autoId()}><Link to={{pathname:"/history-check-detail",state:{userId:item.userId} }} className={classes.link_txt}>{item.userName}</Link></td>
                         {
                           item ? 
                           item.lessonResult.map((data, index) => {

@@ -21,9 +21,7 @@
     border-top: 0;
     vertical-align: middle;
 }
-.cmn_table_detail tr td {
-    height: 75px;
-}
+
 .star_icon {    
     background: var(--cerulean);
     min-width: 90px;
@@ -41,6 +39,10 @@
 .link_txt {
     color: var(--blue-card);
     text-decoration: underline;
+}
+
+.cmn_table_detail tr td {
+    height: 75px;
 }
 
 @media screen and (max-width: 991.98px) {
