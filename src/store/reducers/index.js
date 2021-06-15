@@ -1,7 +1,8 @@
 import {
     RESET_ALL_2_INITIAL_STATE,
     HISTORY_TASK_ALL,
-    LESSON_TASK_ALL
+    LESSON_TASK_ALL,
+    LOGIN_TASK_ALL
 }from '../constants';
 
 const initialState = {
@@ -23,6 +24,11 @@ export function customerFrontEnd(state = initialState, action) {
                 ...state,
                 lesson_task_all: action.payload
             }
+        case LOGIN_TASK_ALL:
+            return {
+                ...state,
+                login_task_all: action.payload
+            }    
         default:
             return state;
     }

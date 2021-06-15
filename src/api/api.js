@@ -1,4 +1,5 @@
 import service from "./service";
+import proxyService from './proxyService';
 
 export function getUserList(url) {
   return service({
@@ -52,6 +53,14 @@ export function getRateOfRiskScoreBar(taskID)
   })
 }
 
+export function getAiScoreHistoryChats(taskID)
+{
+  return service({
+    url : `/tasks/${taskID}/chats`,
+    method: 'GET'
+  })
+}
+
 export function getHistoryDetailList(userId) {
   return service({
     url: `/history/${userId}`,
@@ -63,5 +72,49 @@ export function getCompanyList(){
   return service({
     url: '/history/agent',
     method : "get"
+  })
+}
+
+export function startChat(taskId) {
+  return service({
+    url: '/tasks/' + taskId + '/start-chat',
+    method: 'POST'
+  })
+}
+
+export function postTexhToSpeech(data) {
+  return proxyService({
+    url: '/node-api/text-to-speech',
+    method: 'POST',
+    data: data,
+  })
+}
+
+export function upArrow(chatId, data) {
+  return service({
+    url: '/chats/' + chatId,
+    method: 'PUT',
+    data: data
+  })
+}
+
+export function postVoice(chatId) {
+  return proxyService({
+    url: '/socket.io',
+    method: 'POST'
+  })
+}
+
+export function finishScoring(chatId) {
+  return service({
+    url: '/finished',
+    method: 'GET'
+  })
+}
+
+export function getAuthorizeUserList(){
+  return service({
+    url: '/users/me',
+    method : "post"
   })
 }

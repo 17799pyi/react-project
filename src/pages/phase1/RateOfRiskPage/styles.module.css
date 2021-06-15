@@ -113,3 +113,7 @@
     border-radius: 0px 0px 4px 4px;
     font-size: 18px;
 }
+.score_wrapper>a:first-child>div{
+    background-color: var(--blue-light) !important;
+    color: var(--dune) !important;
+}

@@ -36,6 +36,7 @@ const ScenariosSelectionPage = ({ className, style, onBack, showStep2, lessonId,
     const [tasks, setTasks] = useState([])
     const [activeTasks, setActiveTasks] = useState([])
     const [customCardOpen, setCustomCardOpen] = useState(null)
+    const [loading, setLoading] = useState(true)
 
     useEffect(() => {
         const setData = async () => {
@@ -43,6 +44,7 @@ const ScenariosSelectionPage = ({ className, style, onBack, showStep2, lessonId,
                 const data = getLessonTask(`lessons/${lessonId}/tasks`).then(res => {
                     setTasks(res.data)
                     lessonTaskAll(res.data)
+                    setLoading(false)
                 })
             } catch (error) {
                 eventBus.dispatch("something_went_wrong");
@@ -67,19 +69,24 @@ const ScenariosSelectionPage = ({ className, style, onBack, showStep2, lessonId,
     useEffect(() => {
         //get total percentage
         let totalStar = 0
+        let passTask = 0
+        setProgress(0)
         tasks.map((task) => {
             if(task.highestScore)
             {
                 totalStar+=getStarCount(parseFloat(task.highestScore.precision*100))
             }
+            if(task.highestScore)
+            {
+                if(task.highestScore.precision*100 >= 70)
+                {
+                    passTask+=1
+                }
+            }
         })
-        if(tasks.length)
-        {
-            setProgress(((totalStar / (activeTasks.length*3))*100).toFixed(2)) //set progress
-        }else{
-            setProgress(0) //set progress
-        }
-        setReceiveTotalStar(totalStar)  //set fill star
+        setProgress((parseFloat(passTask/7).toFixed(2) * 100).toFixed(0))
+        setReceiveTotalStar((parseFloat(totalStar/21).toFixed(2) * 100).toFixed(0))  //set fill star
+        // setReceiveTotalStar(totalStar)  //set fill star
         setTotalStar((activeTasks.length)*3) //set total task star each of task has 3 star
     }, [tasks, activeTasks])
 
@@ -114,7 +121,7 @@ const ScenariosSelectionPage = ({ className, style, onBack, showStep2, lessonId,
         if(tasks.length)
         {
             const unacitves = tasks.map((task, index) => {
-                if(!task.highestScore)
+                if(task.highestScore)
                 {
                     return index;
                 }
@@ -122,9 +129,30 @@ const ScenariosSelectionPage = ({ className, style, onBack, showStep2, lessonId,
             const undefinedValue = unacitves.findIndex(function(e){
                 return e == undefined;
             });
-            setCustomCardOpen(undefinedValue+1)
+            setCustomCardOpen(undefinedValue)
         }  
     }, [tasks])
+
+    const getSmileAndSadCount = (activeTasks, progress) => {
+        let count = activeTasks.filter(function(task){
+            let percent = parseFloat(task.highestScore.precision).toFixed(2) * 100;
+            // if(progress>=70)
+            // {
+                if(percent >= 70)
+                {
+                    return task;
+                }
+            // }
+            // else{
+            //     if(percent <= 69)
+            //     {
+            //         console.log('sad count')
+            //         return task;
+            //     }
+            // }
+        })
+        return count;
+    }
 
     return (
        
@@ -162,15 +190,16 @@ const ScenariosSelectionPage = ({ className, style, onBack, showStep2, lessonId,
                                         <tbody>
                                             <tr id={autoId()}>
                                                 <td rowSpan="2" id={autoId()}>
-                                                    <img src={(progress>=70)? smileImg : NosmileImg} alt="Smile Image" id={autoId()}/>
-                                                    <span className="ml-2 font-weight-bold font-16" id={autoId()}>{activeTasks.length}</span>
+                                                    <img src={smileImg} alt="Smile Image" id={autoId()}/>
+                                                    {/* <img src={(progress>=70)? smileImg : NosmileImg} alt="Smile Image" id={autoId()}/> */}
+                                                    <span className="ml-2 font-weight-bold font-16" id={autoId()}>{getSmileAndSadCount(activeTasks, progress).length}</span>
                                                 </td>
                                                 <td className="font-weight-bold font-16" id={autoId()}>{progress}%</td>
                                             </tr>
                                             <tr id={autoId()}>
                                                 <td id={autoId()}>                                                
                                                     <img src={starImg} alt="Star Image" className={classes.start_img} id={autoId()}/>
-                                                    <span className="ml-2 font-weight-bold font-16" id={autoId()}>({receiveTotalStar}/{totalStar})</span>
+                                                    <span className="ml-2 font-weight-bold font-16" id={autoId()}>({receiveTotalStar}/<span className={classes.black_circle}></span>)</span>
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -179,7 +208,7 @@ const ScenariosSelectionPage = ({ className, style, onBack, showStep2, lessonId,
                             </Row>
                             <Row className="smallest-padding-box pt-2">
                                 {
-                                    tasks.length ?
+                                    !loading ?
                                     tasks.map((task, index) => {
                                         return  <Col xl="4" lg="6" className="mb-3" key={task.id}>
                                                     <ScenarioSelectionCard status={cardStatus(task, index)} f_starCount={getStarCount} task={task} id={autoId()}/>
@@ -187,21 +216,6 @@ const ScenariosSelectionPage = ({ className, style, onBack, showStep2, lessonId,
                                     })
                                     : 'loading...'
                                 }
-                                {/* <Col xl="4" lg="6" className="mb-3">
-                                    <ScenarioSelectionCard status="active" id={autoId()}/>
-                                </Col>
-                                <Col xl="4" lg="6" className="mb-3">
-                                    <ScenarioSelectionCard status="active" id={autoId()}/>
-                                </Col>
-                                <Col xl="4" lg="6" className="mb-3">
-                                    <ScenarioSelectionCard status="lock" id={autoId()}/>
-                                </Col>
-                                <Col xl="4" lg="6" className="mb-3">
-                                    <ScenarioSelectionCard status="lock" id={autoId()}/>
-                                </Col>
-                                <Col xl="4" lg="6" className="mb-3">
-                                    <ScenarioSelectionCard status="lock" id={autoId()}/>
-                                </Col> */}
                             </Row>
                         </Col>
                     </Row>

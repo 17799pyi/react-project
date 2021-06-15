@@ -13,9 +13,12 @@ import CancerInsuranceCard from "../../../../components/Card/CancerInsurance/ind
 
 import classes from "./styles.module.css";
 import RadioGroup from "@material-ui/core/RadioGroup";
-import { getUserList } from "../../../../api/api";
+import { getAuthorizeUserList, getUserList } from "../../../../api/api";
+import eventBus from '../../../../EventBus'
+import { connect } from 'react-redux'
+import { loginTaskAll } from '../../../../store/actions/index'
 
-const PersonaSelectionPage = ({ className, style, onEditScenerio }) => {
+const PersonaSelectionPage = ({ className, style, loginTaskAll, onEditScenerio }) => {
   const items = [{ name: "test1" }, { name: "test2" }];
 
   const { t } = useTranslation();
@@ -30,6 +33,8 @@ const PersonaSelectionPage = ({ className, style, onEditScenerio }) => {
   };
 
   const [recruiterApiData, setApiData] = useState();
+  const [recruiterName , setRecruiterName] = useState();
+  const [authorizeUserList, setAuthorizeUserList] = useState();
 
   useEffect(() => {
     const setData = async () => {
@@ -38,12 +43,37 @@ const PersonaSelectionPage = ({ className, style, onEditScenerio }) => {
         setApiData(res.data)
       })
       } catch (error) {
-          // eventBus.dispatch("something_went_wrong");
+          eventBus.dispatch("something_went_wrong");
       }
     };
     setData();
-    console.log(recruiterApiData, "recruiterApiData");
-  }, []); //empty dependency array so
+  }, []); 
+
+  useEffect(() => {
+    const arrayFind = []
+      if(recruiterApiData){
+        recruiterApiData.map((item) =>{
+          arrayFind.push(item);
+        })
+      }
+    if(arrayFind.length>0){
+      setRecruiterName(arrayFind[0].userName)
+    }
+  },[recruiterApiData])
+
+  useEffect(() => {
+    const setData = async () => {
+      try {
+        const data = getAuthorizeUserList().then(res =>{
+          setAuthorizeUserList(res.data)
+          loginTaskAll(res.data)
+      })
+      } catch (error) {
+          eventBus.dispatch("something_went_wrong");
+      }
+    };
+    setData();
+  },[])
 
   return (
     <>
@@ -56,7 +86,7 @@ const PersonaSelectionPage = ({ className, style, onEditScenerio }) => {
             <Row>
               <Col lg="4">
                 <InsuranceTypeLabel
-                  label="Jiro Suzuki"
+                  label={recruiterName}
                   className="mb-0 font-weight-bold font-16 px-3"
                 />
               </Col>
@@ -126,4 +156,18 @@ const styles = {
   },
 };
 
-export default PersonaSelectionPage;
+const stateToProps = state => {
+  return {
+    login_task_all: state.login_task_all,
+  }
+}
+
+const dispatchToProps = dispatch => {
+  return {
+      loginTaskAll: (login_task_all) => {
+          dispatch(loginTaskAll(login_task_all));
+      }
+  }
+}
+
+export default connect(stateToProps, dispatchToProps)(PersonaSelectionPage)

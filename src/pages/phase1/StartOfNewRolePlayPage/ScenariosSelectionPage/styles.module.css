@@ -99,3 +99,12 @@
 .start_img {
     max-width: 15px;
 }
+.black_circle{
+    background: black;
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 25px;
+    position: relative;
+    bottom: 0.5px;
+}

@@ -32,11 +32,11 @@ import EvaluationDetail from '../pages/phase1/Evaluation/detail'
 import '../pages/index.css'
 import ScenarioSelection from '../pages/ScenarioSelection/ScenarioSelection';
 import ScenariosSelectionPage from '../pages/phase1/StartOfNewRolePlayPage/ScenariosSelectionPage/index.js';
-
+import { base_url } from '../configs/config'
 const Routes = () => {
   return (
     <React.Fragment>
-      <Router>
+      <Router basename={base_url}>
             {/* <HeaderBar/> */}
             <Sidebar/>          
               <div id="main-content" className='content-large'>
@@ -45,13 +45,13 @@ const Routes = () => {
               <Switch>
                 <Route exact path="/ai-score/:taskID" component={AIScore} />
                 <Route exact path="/rate-of-risk/:taskID" component={RateOfRisk1} />
-                <Route exact path="/VideoChat" component={VideoChat} />
+                <Route exact path="/VideoChat/:taskID" component={VideoChat} />
                 <Route exact path="/" component={StartOfNewRolePlay} />
                 <Route exact path="/scenario-selection" component={ScenariosSelectionPage} />
                 <Route exact path="/historycheck" component={HistoryCheck} />
                 <Route exact path="/history-check-detail" component={HistoryCheckDetail} />
                 <Route exact path="/evaluation" component={Evaluation} />
-                <Route exact path="/evaluation_detail" component={EvaluationDetail} />
+                <Route exact path="/evaluation-detail" component={EvaluationDetail} />
 
                 
                 <Route exact path="/agency" component={Index} />

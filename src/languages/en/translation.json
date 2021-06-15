@@ -8,14 +8,30 @@
         "recruiter_training_ai" : "Recruiter Training AI",
         "e_learning" : "e-Learning",
         "role_playing_with_ai" : "Role-Playing with AI",
-        "check_history" : "Check History"
+        "check_history" : "Check History",
+        "admin_screen" : "Admin Screen"
     },
     "general": {
         "cancel": "Cancel",
         "del": "Delete",
         "edit": "Edit",
         "save": "Save",
-        "update": "Update"
+        "update": "Update",
+        "date" : {
+            "days": {
+                "mon" : "Monday",
+                "tue" : "Tueday",
+                "wed" : "Wednesday",
+                "thurs" : "Thursday",
+                "fri" : "Friday",
+                "sat" : "Saturday",
+                "sun" : "Sunday"
+            },
+            "year" : "Year",
+            "month" : "Month",
+            "day" : "Day"
+        },
+        "return" : "Back"
     },
     "lesson": {
         "head_text" : "Please select a persona",
@@ -138,7 +154,8 @@
             "header_2": "Personal Best of Time"
         },
         "chartbar" : {
-            "header" : "Implementation History"
+            "header" : "Implementation History",
+            "line_header" : "Success Criteria"
         },
         "score_by_process" : "Score (By Process)",
         "process" : "Process",
@@ -182,6 +199,14 @@
         "section_name" : "Scetion Name",
         "progress" : "Progress (Correct Answer Rate)",
         "status" : "Status",
-        "attendance" : "受講中(16セクション/24セクション)"
+        "attendance" : "受講中(16セクション/24セクション)",
+        "agency_code": "Agency Code(7 Digits)",
+        "please_enter_agency_code": "Please enter agency code",
+        "check_on": "If you want to check on a go-by basis",
+        "destination_code": "Destination Code(3 Digits)",
+        "please_enter_destination_code": "Please enter destination code",
+        "search": "Search",
+        "recruiter_list": "Recruiters List",
+        "recruiter_name": "Recruiter's Name"
     }
 }

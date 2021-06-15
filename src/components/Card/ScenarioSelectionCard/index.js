@@ -69,10 +69,9 @@ function ScenarioSelectionCard({id, task, f_starCount, status}) {
         }
         return starHtml
     }
-
     return (       
-        <Link to={ (status && (precisionPercentage(task) >= 70)) ? `/rate-of-risk/${task.id}` : ''}>
-        <div className={`${classes.scenario_selection_card} ${(!status) ? classes.disable : ''} ${(precisionPercentage(task) < 70) ? classes.cursor_not_allowed : ''}`} id={autoId()}>
+        <Link to={ (status) ? `/rate-of-risk/${task.id}` : ''}>
+        <div className={`${classes.scenario_selection_card} ${(!status) ? classes.disable : ''} ${!status ? classes.cursor_not_allowed : ''}`} id={autoId()}>
             <img src={LockImage} alt="Lock Img" className={`${classes.lock_img}`} id={autoId()}/>
             <div className={classes.top_wrapper}>
                 <Row>

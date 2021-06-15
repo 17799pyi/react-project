@@ -10,7 +10,7 @@ import { useTranslation } from 'react-i18next';
 
 import classes from './styles.module.css'
 
-const BackgroundBlueLabel = ({ label, className, style, id, item = null}) => {
+const ScoreBar = ({ label, className, style, id, item = null}) => {
 
     const { t } = useTranslation();
     let lastId = 0;
@@ -38,7 +38,7 @@ const BackgroundBlueLabel = ({ label, className, style, id, item = null}) => {
     const precisionPercentage = (item) => {
         if(item.score)
         {
-            return parseFloat(item.score.precision).toFixed(2) * 100;
+            return item.score.uniqueScoringKeywordCount
         }
         return 0;
     }
@@ -48,7 +48,7 @@ const BackgroundBlueLabel = ({ label, className, style, id, item = null}) => {
         let starHtml = []
         for (let index = 0; index < starCount; index++) {
             //push full start count
-            starHtml.push(<img src={starImg} alt="Star Image Black" className={classes.w_17} id={autoId()}/>)
+            starHtml.push(<img src={starImg} key={index} alt="Star Image Black" className={classes.w_17} id={autoId()}/>)
         }
         if(starCount < 3)
         {
@@ -56,7 +56,7 @@ const BackgroundBlueLabel = ({ label, className, style, id, item = null}) => {
             
             for (let index = 0; index < starWhiteCount; index++) {
                 //push white star count
-                starHtml.push(<img src={starImgBlack} alt="Star Image Black" className={classes.w_17} id={autoId()}/>)
+                starHtml.push(<img src={starImgBlack} key={index+starCount} alt="Star Image Black" className={classes.w_17} id={autoId()}/>)
             }
         }
         return starHtml
@@ -64,8 +64,9 @@ const BackgroundBlueLabel = ({ label, className, style, id, item = null}) => {
 
     const date = (item) => {
         let date = new Date(item.start);
-        var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-        return `${date.getFullYear()}年${date.getMonth()+1}月${date.getDate()}日 (${days[date.getDay()]})`
+        var days = ['sun', 'mon', 'tue', 'wed', 'thurs', 'fri', 'sat'];
+        return `${date.getFullYear()}${t('general.date.year')}${date.getMonth()+1}${t('general.date.month')}${date.getDate()}${t('general.date.day')} (${t(`general.date.days.${days[date.getDay()]}`)})`
+        
     }
 
     const getTwoTime = (item) => {
@@ -74,29 +75,35 @@ const BackgroundBlueLabel = ({ label, className, style, id, item = null}) => {
         return `${dt1.getHours()}:${dt1.getMinutes()} - ${dt2.getHours()}:${dt2.getMinutes()}`
     }
 
+    const checkSmileFace = (item) => {
+        if(item.score)
+        {
+            return item.score.grade
+        }
+        return "BAD";
+    }
+
     return (
-       <div className={`${classes.scroll_bar} ${className} ${ (precisionPercentage(item)>=70)&& classes.pass}`} id={autoId()}>
+       <div className={`${classes.scroll_bar} ${className}`} id={autoId()}>
            <div className={classes.scroll_per_sec}>
-                {/* ({t('rateOfRisk.wednesday')}) */}
-                <span id={autoId()}>{date(item)} </span>
+                {/* date */}
+                <span id={autoId()}>{date(item)}</span>
                 <span className="ml-2 ml-xl-4" id={autoId()}>{getTwoTime(item)}</span>
            </div>
            <div className={classes.scroll_btn_sec}>
                 <span className="mr-4 pr-0  pr-xl-2" id={autoId()}>{t('rateOfRisk.correct_answer_rate')}</span>
                <span className={classes.score_star}>
+                   {/* star */}
                    {cardStar(precisionPercentage(item), item)}
-
-                    {/* <img src={starImg} alt="Star Image" className={classes.w_17} id={autoId()}/>
-                    <img src={starImg} alt="Star Image" className={classes.w_17} id={autoId()}/>
-                    <img src={(percentage>=70)?starImgBlack:starImgWhite} alt="Star Image Black" className={classes.w_17} id={autoId()}/> */}
                </span>
            </div>
            <div className={classes.scroll_btn_sec}>
                 <span className="mr-2 mr-xl-4" id={autoId()}>({precisionPercentage(item)}%)</span>
-                <img src={precisionPercentage(item)>=70? smileImg : NoSmileImg} alt="Smile Image" className={classes.w_19} id={autoId()}/>
+                {/* <img src={precisionPercentage(item)>=70? smileImg : NoSmileImg} alt="Smile Image" className={classes.w_19} id={autoId()}/> */}
+                <img src={checkSmileFace(item) != 'BAD'? smileImg : NoSmileImg} alt="Smile Image" className={classes.w_19} id={autoId()}/>
            </div>
        </div>
     )
 }
 
-export default BackgroundBlueLabel;
+export default ScoreBar;

@@ -1,0 +1,32 @@
+ [
+        {
+            "url": "/",
+            "icon": "icon01",
+            "text": "sidebar.role_playing_with_ai",
+            "name" : "Lesson"
+        },
+        {
+            "url": "/history-check-detail",
+            "icon": "icon02",
+            "text": "sidebar.check_history",
+            "name": "HistoryCheckDetail"
+        },
+        {
+            "url": "/historycheck",
+            "icon": "HistorycheckDetailIcon",
+            "text": "sidebar.admin_screen",
+            "name": "HistoryCheck"
+        },
+        {
+            "url": "/evaluation",
+            "icon": "EditScoringIcon",
+            "text": "採点基準を編集する",
+            "name": "Evalutaion"
+        },
+        {
+            "url": "/aa",
+            "icon": "RegisterSynonymsIcon",
+            "text": "類義語を登録する",
+            "name": "aa"
+        }
+    ]

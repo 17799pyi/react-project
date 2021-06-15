@@ -11,6 +11,8 @@ import smileImg from '../../../assets/images/icons/smile.png'
 import starImg from '../../../assets/images/icons/star.png'
 
 import classes from './styles.module.css'
+import eventBus from '../../../EventBus'
+import { getRateOfRiskScoreBar } from '../../../api/api'
 
 const RateOfRiskPage = () => {
 
@@ -21,6 +23,22 @@ const RateOfRiskPage = () => {
         return `${prefix}${lastId}`;
     }
     let { taskID } = useParams();
+    const [aiScore, setaiScore] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const scoreBarData = async () => {
+            try {
+                const data = getRateOfRiskScoreBar(taskID).then(res => {
+                    setaiScore(res.data)
+                    setLoading(false)
+                })
+            } catch (error) {
+                eventBus.dispatch("something_went_wrong");
+            }
+        };
+        scoreBarData()
+    }, [taskID])
 
     return (
         <>
@@ -38,13 +56,13 @@ const RateOfRiskPage = () => {
         <div className="cmn-bg-box p-4">
             <Row className="smallest-padding-box02">
                 <Col xs="3">                    
-                    <BackgroundBlueLabel label={t('rateOfRisk.s_header_1')} className="font-18" id={autoId()}/>
+                    <BackgroundBlueLabel key={1} label={t('rateOfRisk.s_header_1')} className="font-18" id={autoId()}/>
                 </Col>
                 <Col xs="3">
-                    <BackgroundBlueLabel label={t('rateOfRisk.s_header_2')} className="font-18" id={autoId()}/>
+                    <BackgroundBlueLabel key={2} label={t('rateOfRisk.s_header_2')} className="font-18" id={autoId()}/>
                 </Col>
                 <Col xs="6">
-                    <BackgroundBlueLabel label={t('rateOfRisk.s_header_3')} className="font-18" id={autoId()}/>
+                    <BackgroundBlueLabel key={3} label={t('rateOfRisk.s_header_3')} className="font-18" id={autoId()}/>
                 </Col>
             </Row>
             <Row className="smallest-padding-box02 mt-2">
@@ -140,15 +158,21 @@ const RateOfRiskPage = () => {
             </Row>
             
             <Row className="mt-4 mb-32 pb-4">
-                <Col lg="10" className="mx-auto">
-                    {/* <Link to={`/ai-score/${taskID}`}><ScoreBar className="mb-3" percentage="75" id={autoId()}/></Link>
-                    <Link to={`/ai-score/${taskID}`}> <ScoreBar percentage="65" id={autoId()}/></Link> */}
+                <Col lg="10" className={`mx-auto ${classes.score_wrapper}`}>
+                    {
+                        !loading ?
+                        aiScore.map((item, index) => {
+                            return <Link to={{pathname:`/ai-score/${taskID}`,state:{item} }} key={index}><ScoreBar key={index} className="mb-3" item={item} id={autoId()}/></Link>
+                        })
+                        :
+                        'Loading'
+                    }
                 </Col>
             </Row>
             
             <Row>
                 <Col className="text-center pt-2">        
-                    <button className={classes.bottom_btn_submit} id={autoId()}><Link to="/VideoChat">{t('rateOfRisk.proceed_to_the_next')}</Link></button>
+                    <button className={classes.bottom_btn_submit} id={autoId()}><Link to={`/VideoChat/${taskID}`}>{t('rateOfRisk.proceed_to_the_next')}</Link></button>
                 </Col>
             </Row>
         </div>

@@ -45,6 +45,10 @@
     height: 75px;
 }
 
+.cmn_table_detail_wrap {
+    max-height: 526px;
+}
+
 @media screen and (max-width: 991.98px) {
     .cmn_table td,
     .cmn_table th {

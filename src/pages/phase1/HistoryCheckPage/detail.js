@@ -12,10 +12,9 @@ import classes from "./styles.module.css";
 import { userHistory, useLocation } from "react-router-dom";
 import { getHistoryDetailList } from "../../../api/api";
 import eventBus from '../../../EventBus'
+import { connect } from 'react-redux'
 
-// import testData from '../../../staticData/test.json';
-
-function Index() {
+function Index(login_task_all) {
   const { t } = useTranslation();
   const { state } = useLocation();
   let lastId = 0;
@@ -25,9 +24,11 @@ function Index() {
   };
 
   const [lessonId, setLessonId] = useState([]);
+  const [userName ,setUserName] = useState();
   const [lessonList, setLessonList] = useState();
   const [lessonResult, setLessonResult] = useState();
   const [personalTaskHistory, setPersonalTaskHistory] = useState();
+  const [showTable, setShowTable] = useState(false);
 
   const changeColor = (status) => {
     if (status == "FINISH") {
@@ -52,23 +53,30 @@ function Index() {
       return "未実装";
     }
   };
+
   useEffect(() => {
     const setData = async () => {
       try {
-        const data = getHistoryDetailList(state.userId).then((res) => {
-          console.log(res.data.lesson, "HistoryDetail")
+        let loginUserId = login_task_all.login_task_all.aanetUserId.value
+        let userId = (state != undefined) ? state.userId : loginUserId?loginUserId:'';
+
+        const data = getHistoryDetailList(userId).then((res) => {
+          setUserName(res.data.userName)
           setLessonList(res.data.lesson);
           setLessonResult(res.data.lessonResult);
           setPersonalTaskHistory(res.data.personalTaskHistory);
+          if((res.data.lesson!= null && res.data.lesson != undefined && res.data.personalTaskHistory != null && res.data.personalTaskHistory != undefined)){
+            if(res.data.lesson.length>0){
+              setShowTable(true)
+            }
+          }
         });
       } catch (error) {
         eventBus.dispatch("something_went_wrong");
       }
     };
     setData();
-    // setLessonList(testData.lesson);
-    // setPersonalTaskHistory(testData.personalTaskHistory);
-  }, [state.userId]); //empty dependency array so
+  }, [state,userName]); //empty dependency array so
 
   useEffect(() => {
     let temp = [];
@@ -81,8 +89,6 @@ function Index() {
   }, [lessonList]);
 
   const changeStar = (taskRate) => {
-    // taskRate?
-    // taskRate >= 0.0 && taskRate <= 0.6
     let starCount = 0; //get full star count
     let taskRatePercent = taskRate * 100;
     if (taskRatePercent >= 0 && taskRatePercent <= 60) {
@@ -95,14 +101,14 @@ function Index() {
     let starHtml = [];
     for (let index = 0; index < starCount; index++) {
       //push full start count
-      starHtml.push(<img src={StarIcon} alt="StarIcon" />);
+      starHtml.push(<img src={StarIcon} key={index} alt="StarIcon" />);
     }
     if (starCount < 3) {
       let starWhiteCount = 3 - starCount; //get white star count
 
       for (let index = 0; index < starWhiteCount; index++) {
         //push white star count
-        starHtml.push(<img src={StarIconWhite} alt="StarIcon" />);
+        starHtml.push(<img src={StarIconWhite} key={index+starCount} alt="StarIcon" />);
       }
     }
     return starHtml;
@@ -133,19 +139,20 @@ function Index() {
             履歴を確認する
           </h3>
           <p className="font-18 mb-4" id={autoId()}>
-            採用者名 :{" "}
+          {t("historycheck.recruiter_name")} :{" "}
             <span className="font-weight-bold" id={autoId()}>
-              {state.userId}
+              {userName}
             </span>
           </p>
-          <div className="table-responsive mb-4">
+          <div className={`${showTable?'d-block table-responsive mb-4':'d-none table-responsive mb-4'}`}>
             <table
               className={`table text-center ${classes.cmn_table}`}
               id={autoId()}
             >
+              <tbody>
               <tr id={autoId()}>
                 <th
-                  rowspan="2"
+                  rowSpan="2"
                   className="align-middle"
                   style={{ width: "30%" }}
                   id={autoId()}
@@ -158,7 +165,7 @@ function Index() {
                         {item.lessonName}
                       </th>
                     ))
-                  : "Loading..."}
+                  : <th>Loading...</th>}
               </tr>
               <tr id={autoId()}>
                 <td className="border-left-0" id={autoId()}>
@@ -176,9 +183,9 @@ function Index() {
                 <th id={autoId()}>コース</th>
                 {lessonList
                   ? lessonList.map((item, index) => (
-                      <td id={autoId()}>{item.lessonPersona}</td>
+                      <td key={index} id={autoId()}>{item.lessonPersona}</td>
                     ))
-                  : "Loading..."}
+                  : <td>Loading...</td>}
               </tr>
 
               <tr id={autoId()}>
@@ -186,24 +193,27 @@ function Index() {
                 {lessonResult
                   ? lessonResult.map((item, index) => (
                       <td
+                        key={index}
                         className={changeColor(item.lessonStatus)}
                         id={autoId()}
                       >
                         {changeText(item.lessonStatus)}
                       </td>
                     ))
-                  : "Loading..."}
+                  : <td>Loading...</td>}
               </tr>
+              </tbody>
             </table>
           </div>
-          <div className="table-responsive">
+          <div className={`${classes.cmn_table_detail_wrap} ${showTable?'d-block table-responsive cmn-scroll-bar':'d-none table-responsive cmn-scroll-bar'}`}>
             <table
               className={`table text-center ${classes.cmn_table} ${classes.cmn_table_detail}`}
               id={autoId()}
             >
+              <tbody>
               {personalTaskHistory
                 ? personalTaskHistory.map((item, index) => (
-                    <tr id={autoId()}>
+                    <tr key={index} id={autoId()}>
                       <td style={{ width: "5%" }} id={autoId()}>
                         {index + 1}.
                       </td>
@@ -213,6 +223,7 @@ function Index() {
                       {lessonId.map((lesId, index1) =>
                         item.lessonId === lesId && item.taskExecutionTimes === 0 ? (
                           <td
+                            key = {index1}
                             style={{ width: "23%", height:"60px" }}
                             className="bg-red-light"
                             id={autoId()}
@@ -231,9 +242,6 @@ function Index() {
                             </span>
                             <span className={classes.star_icon} id={autoId()}>
                               {changeStar(item.taskRate)}
-                              {/* <img src={StarIcon} alt="StarIcon" />
-                              <img src={StarIcon} alt="StarIcon" />
-                              <img src={StarIconWhite} alt="StarIcon" /> */}
                             </span>
                           </td>
                         ) : (
@@ -247,30 +255,10 @@ function Index() {
                           </td>
                         )
                       )}
-                      {/* <td
-                        style={{ width: "23%" }}
-                        className="bg-blue-light"
-                        id={autoId()}
-                      >
-                        <span className="d-block" id={autoId()}>
-                          1回
-                        </span>
-                        <span className={classes.star_icon} id={autoId()}>
-                          <img src={StarIcon} alt="StarIcon" />
-                          <img src={StarIcon} alt="StarIcon" />
-                          <img src={StarIconWhite} alt="StarIcon" />
-                        </span>
-                      </td>
-                      <td
-                        style={{ width: "23%" }}
-                        className="bg-red-light"
-                        id={autoId()}
-                      >
-                        未実施
-                      </td> */}
                     </tr>
                   ))
-                : "Loading..."}
+                : <tr><td>LOADING...</td></tr>}
+                </tbody>
             </table>
           </div>
         </Col>
@@ -279,4 +267,10 @@ function Index() {
   );
 }
 
-export default Index;
+const stateToProps = state => {
+  return {
+    login_task_all: state.login_task_all,
+  }
+}
+
+export default connect(stateToProps, null)(Index)

@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Switch, Route, Link, NavLink } from "react-rou
 import GeneralTextbox from '../../../components/Textboxes/GeneralTextbox02';
 import HistoryButton from '../../../components/Button/HistoryButton';
 
+import { useTranslation } from "react-i18next";
 import classes from "./styles.module.css";
 import { getHistoryList,getCompanyList } from "../../../api/api";
 import eventBus from '../../../EventBus'
@@ -14,6 +15,7 @@ import { historyTaskAll } from '../../../store/actions/index'
 
 
 function HistoryCheck(props) {
+  const { t } = useTranslation();
   let lastId = 0;
   const autoId = (prefix = 'history-check-') => {
       lastId++;
@@ -74,9 +76,6 @@ function HistoryCheck(props) {
         }
       };
       setData();
-      // if(historyList!= null){
-        // setShowTable(true);
-      // }
     }
   }
 
@@ -130,50 +129,45 @@ function HistoryCheck(props) {
       <Row>
         <Col lg="8" className={`${showTable?'d-none':'d-block'}`}>
             <Row className="mb-32">
-              <Col xs="12"><label className="font-16 font-weight-bold" id={autoId()}>代理店コード(7桁)</label></Col>
+              <Col xs="12"><label className="font-16 font-weight-bold" id={autoId()}>{t("historycheck.agency_code")}</label></Col>
               <Col lg="8">
-                <GeneralTextbox max="7" placeholder="代理店コードを入力してください" onChange={handleKeyUp} id={autoId()}/>
+                <GeneralTextbox maxLength="7" placeholder={t("historycheck.please_enter_agency_code")} onChange={handleKeyUp} id={autoId()}/>
               </Col>
               <Col lg="4" className="d-flex align-items-center">
                 <p className={`mt-2 font-16`} id={autoId()}>{companyName}</p>
-                {/* 遠州鉄道(株) */}
               </Col>
             </Row>
             <Row className="mb-5">
               <Col xs="12">              
-                <p className="font-16" id={autoId()}>出先単位で確認したい場合</p>
-                <label className="font-16 font-weight-bold" id={autoId()}>遠州鉄道</label>
+                <p className="font-16" id={autoId()}>{t("historycheck.check_on")}</p>
+                <label className="font-16 font-weight-bold" id={autoId()}>{t("historycheck.destination_code")}</label>
               </Col>
               <Col lg="8">
-                <GeneralTextbox maxlength="3" placeholder="居場所コードを入力" onChange={onInputChange} id={autoId()}/>
+                <GeneralTextbox maxLength="3" placeholder={t("historycheck.please_enter_destination_code")} onChange={onInputChange} id={autoId()}/>
               </Col>
             </Row>
             <Row className={`${classes.row_margin}`}>
               <Col lg="8" className="text-center mb-3">
-                <HistoryButton title="検索" className="small-btn" onClick={onClickButton} disabled="disabled" id={autoId()}/>
+                <HistoryButton title={t("historycheck.search")} className="small-btn" onClick={onClickButton} disabled="disabled" id={autoId()}/>
               </Col>
             </Row>
         </Col>        
         <Col lg="8" className={`${showTable?'d-block':'d-none'}`}>
-          <p className="font-16 font-weight-bold" id={autoId()}>募集人一覧</p>
+          <p className="font-16 font-weight-bold" id={autoId()}>{t("historycheck.recruiter_list")}</p>
           <div className="table-responsive mb-4">
               <table className={`table text-center ${classes.cmn_table}`} id={autoId()}>
+                <tbody>
                 <tr id={autoId()}>
-                  <th rowspan="2" className="align-middle" style={{width: '25%'}} id={autoId()}>募集人名</th>
-                  <th colspan={historyList.lesson!= null ||historyList.lesson!= undefined?historyList.lesson.length:"3"} id={autoId()}>コース名</th>
+                  <th rowSpan="2" className="align-middle" style={{width: '25%'}} id={autoId()}>募集人名</th>
+                  <th colSpan={historyList.lesson!= null && historyList.lesson!= undefined?historyList.lesson.length:"3"} id={autoId()}>コース名</th>
                 </tr>
-                {/* <tr id={autoId()}>
-                  <th style={{width: '25%'}} className="border-left-0" id={autoId()}>配偶者ストーリー</th>
-                  <th style={{width: '25%'}} className="border-left-0" id={autoId()}>お子様ストーリー</th>
-                  <th style={{width: '25%'}} className="border-left-0" id={autoId()}>おひとり様ストーリー</th>
-                </tr> */}
                 <tr id={autoId()}>
                         {
                           historyList.lesson ? 
                           historyList.lesson.map((item, index) => {
                             return <th key={index} style={{width: '25%'}} className="border-left-0" id={autoId()}>{item.lessonPersona}</th>
                           }) :
-                          'Loading...'
+                          <th>Loading...</th>
                         }
                 </tr>
 
@@ -181,7 +175,7 @@ function HistoryCheck(props) {
                     lessonList ?
                     lessonList.map((item, index) => (
                         <tr key={index}>
-                        <td id={autoId()}><Link to={{pathname:"/history-check-detail",state:{userId:item.userId} }} className={classes.link_txt}>{item.userName}</Link></td>
+                        <td id={autoId()}><Link to={{pathname:`/history-check-detail`,state:{userId:item.userId} }} className={classes.link_txt}>{item.userName}</Link></td>
                         {
                           item ? 
                           item.lessonResult.map((data, index) => {
@@ -192,8 +186,9 @@ function HistoryCheck(props) {
                         </tr>
                     ))
                     :
-                    'Loading...'
+                    <tr><th>Loading...</th></tr>
                 }
+                </tbody>
               </table>
             </div>
         </Col>

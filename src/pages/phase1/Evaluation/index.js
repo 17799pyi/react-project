@@ -27,38 +27,38 @@ const EvaluationPage = () => {
                 {visibleTab === 1 ? 
                     <Row className="smallest-padding-box">   
                         <Col lg="4" className="mb-3">
-                            <Link to="/evaluation_detail"><BackgroundBlueLabel label="アポイント取得（訪問" className={classes.bg_blue_box}/></Link>
+                            <Link to="/evaluation-detail"><BackgroundBlueLabel label="アポイント取得（訪問" className={classes.bg_blue_box}/></Link>
                         </Col>
                         <Col lg="4" className="mb-3">
-                            <Link to="/evaluation_detail"><BackgroundBlueLabel label="アポイント取得（訪問" className={classes.bg_blue_box}/></Link>
+                            <Link to="/evaluation-detail"><BackgroundBlueLabel label="アポイント取得（訪問" className={classes.bg_blue_box}/></Link>
                         </Col>
                         <Col lg="4" className="mb-3">
-                            <Link to="/evaluation_detail"><BackgroundBlueLabel label="介護の実態①（データ訴求)" className={classes.bg_blue_box}/></Link>
+                            <Link to="/evaluation-detail"><BackgroundBlueLabel label="介護の実態①（データ訴求)" className={classes.bg_blue_box}/></Link>
                         </Col>  
                         <Col lg="4" className="mb-3">
-                            <Link to="/evaluation_detail"><BackgroundBlueLabel label="介護の実態②（介護者：配偶者)" className={classes.bg_blue_box}/></Link>
+                            <Link to="/evaluation-detail"><BackgroundBlueLabel label="介護の実態②（介護者：配偶者)" className={classes.bg_blue_box}/></Link>
                         </Col>
                         <Col lg="4" className="mb-3">
-                            <Link to="/evaluation_detail"><BackgroundBlueLabel label="アポイント取得（訪問" className={classes.bg_blue_box}/></Link>
+                            <Link to="/evaluation-detail"><BackgroundBlueLabel label="アポイント取得（訪問" className={classes.bg_blue_box}/></Link>
                         </Col>
                         <Col lg="4" className="mb-3">
-                            <Link to="/evaluation_detail"><BackgroundBlueLabel label="介護の実態①（データ訴求)" className={classes.bg_blue_box}/></Link>
+                            <Link to="/evaluation-detail"><BackgroundBlueLabel label="介護の実態①（データ訴求)" className={classes.bg_blue_box}/></Link>
                         </Col> 
                     </Row>
                 :visibleTab === 2 ?
                 
                     <Row className="smallest-padding-box">   
                         <Col lg="4" className="mb-3">
-                            <Link to="/evaluation_detail"><BackgroundBlueLabel label="アポイント取得（訪問" className={classes.bg_blue_box}/></Link>
+                            <Link to="/evaluation-detail"><BackgroundBlueLabel label="アポイント取得（訪問" className={classes.bg_blue_box}/></Link>
                         </Col>
                     </Row>     
                 : 
                     <Row className="smallest-padding-box">   
                         <Col lg="4" className="mb-3">
-                            <Link to="/evaluation_detail"><BackgroundBlueLabel label="アポイント取得（訪問" className={classes.bg_blue_box}/></Link>
+                            <Link to="/evaluation-detail"><BackgroundBlueLabel label="アポイント取得（訪問" className={classes.bg_blue_box}/></Link>
                         </Col> 
                         <Col lg="4" className="mb-3">
-                            <Link to="/evaluation_detail"><BackgroundBlueLabel label="アポイント取得（訪問" className={classes.bg_blue_box}/></Link>
+                            <Link to="/evaluation-detail"><BackgroundBlueLabel label="アポイント取得（訪問" className={classes.bg_blue_box}/></Link>
                         </Col>                        
                     </Row>
                 }                   

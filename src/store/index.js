@@ -3,9 +3,10 @@ import { persistStore, persistReducer } from 'redux-persist';
 import sessionStorage from 'redux-persist/lib/storage/session';
 import { createLogger } from 'redux-logger';
 
-import { environment } from '../configs/environments';
+// import { environment } from '../configs/environments';
 import { customerFrontEnd } from './reducers/index';
 import { composeWithDevTools } from 'redux-devtools-extension';
+const environment = 'dev'
 
 const logger = createLogger({});
 

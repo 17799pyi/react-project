@@ -8,14 +8,30 @@
         "recruiter_training_ai" : "募集人育成AI",
         "e_learning" : "e-Learning",
         "role_playing_with_ai" : "AIとロープレする",
-        "check_history" : "履歴を確認する"
+        "check_history" : "自分の履歴を確認する",
+        "admin_screen" : "​ASの履歴を確認する"
     },
     "general": {
         "cancel": "キャンセル",
         "del": "削除",
         "edit": "JP Edit",
         "save": "保存",
-        "update": "JP Update"
+        "update": "JP Update",
+        "date" : {
+            "days": {
+                "mon" : "月",
+                "tue" : "火",
+                "wed" : "水",
+                "thurs" : "木",
+                "fri" : "金",
+                "sat" : "土",
+                "sun" : "日"
+            },
+            "year" : "年",
+            "month" : "月",
+            "day" : "日"
+        },
+        "return" : "戻る"
     },
     "lesson": {
         "head_text" : "ペルソナを選択してください。",
@@ -137,7 +153,8 @@
             "header_2": "自己ベスト"
         },
         "chartbar" : {
-            "header" : "実施履歴"
+            "header" : "実施履歴",
+            "line_header" : "合格基準"
         },
         "score_by_process" : "スコア(プロセス別)",
         "process" : "プロセス",
@@ -181,7 +198,15 @@
         "section_name" : "セクション名",
         "progress" : "進捗(正答率)",
         "status" : "ステータス",
-        "attendance" : "受講中(16セクション/24セクション)"
+        "attendance" : "受講中(16セクション/24セクション)",
+        "agency_code": "代理店コード(7桁)",
+        "please_enter_agency_code": "代理店コードを入力してください",
+        "check_on": "出先単位で確認したい場合",
+        "destination_code": "出先コード(3桁)",
+        "please_enter_destination_code": "居場所コードを入力",
+        "search": "検索",
+        "recruiter_list": "ユーザー一覧",
+        "recruiter_name": "ユーザー名 "
     }
 
 }

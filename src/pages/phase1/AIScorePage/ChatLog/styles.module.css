@@ -110,5 +110,7 @@
   color: var(--white);
   font-size: 10px;
 }
-  
-  
+.msg_highlight{
+  background: #E98300;
+  padding: 0.1rem;
+}
