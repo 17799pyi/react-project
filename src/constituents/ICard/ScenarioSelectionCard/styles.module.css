@@ -1,0 +1,86 @@
+.scenario_selection_card{
+    /* margin-top: 1rem;
+    margin-right: 1rem; */
+    position: relative;
+}
+.scenario_selection_card.disable:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(128, 128, 128, 0.4);
+    z-index: 9;
+    left: 0;
+    top: 0;
+    border-radius: 20px;
+}
+.top_wrapper {
+    background: var(--blue-card);
+    padding: 16px 16px 8px;
+    text-align: center;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15), inset 0px -1px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 20px 20px 0 0;
+}
+.disable .top_wrapper {
+    background: rgba(128, 128, 128, 0.4);
+}
+.disable .bottom_wrapper {
+    background: rgba(128, 128, 128, 0.2);
+}
+.scenario_selection_card .lock_img {
+    display: none;
+}
+.scenario_selection_card.disable .lock_img {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+}
+.top_wrapper div{
+    justify-content: center;
+}
+.bottom_wrapper{
+    background: var(--deep-blue-card);
+    padding: 15px 16px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15), inset 0px -1px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 0 0 20px 20px;
+}
+.top_img{
+    /* width: 10%; */
+}
+.top_head_text{
+    color: var(--white);
+    font-size: var(--card-title);
+    margin-top: 1rem;
+}
+.bottom_flex{
+    display: flex;
+    justify-content: space-between;
+}
+.bottom_flex p img {
+    margin-top: 3px;
+}
+.bottom_img{
+    /* width: 45%;
+    float: right; */
+}
+.bottom_text{
+    font-size: var(--content-text);
+    color: var(--white);
+}
+.star_img img {
+    max-width: 17px;
+}
+.cursor_not_allowed{
+    cursor: not-allowed;
+}
+.scenario_selection_card.disable .lock_img {
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+    z-index: 99;
+}

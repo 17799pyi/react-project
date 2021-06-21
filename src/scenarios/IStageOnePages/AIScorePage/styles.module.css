@@ -1,0 +1,102 @@
+.percentage_circle {
+    max-width: 300px;
+    height: 300px;
+    border: 2px solid var(--blue-card);
+    padding: 8px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+.percentage_circle div {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+.percentage_circle>div {
+    border: 10px solid var(--blue-card);
+    padding: 8px;
+}
+.percentage_circle>div>div {
+    background: var(--alice-blue);
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15), inset 0px -1px 0px rgba(0, 0, 0, 0.15);    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.percentage_circle div p {
+    font-size: 18px;
+    line-height: 1;
+}
+.percentage_circle .percent_txt {
+    color: var(--blue-card);
+    font-size: 48px;
+    font-weight: bold;
+}
+.inner_circle_wrapper{
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+}
+.inner_circle{
+    background: #E9FAFF;
+    width: 75%;
+    height: 75%;
+    border-radius: 50%;
+    text-align: center;
+    /* padding: 23px 0; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.2;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15), inset 0px -1px 0px rgba(0, 0, 0, 0.15);
+}
+.inner_circle>div {
+    width: 50%;
+    margin: 0 auto;
+}
+.inner_circle_wrapper>div>div>svg.CircularProgressbar-path{
+    stroke: #00A5D9 !important;
+    stroke-linecap: unset !important;
+}
+.inner_circle_text{
+    font-size: 18px;
+    display: inline-block;
+}
+.inner_circle_p_text{
+    color: var(--yellow-dark);
+    font-weight: bold;
+    font-size: 32px;
+    display: block;
+}
+.inner_circle_personal_best {
+    color: var(--blue-card);
+
+}
+
+@media (max-width: 1199.98px){
+    .inner_circle_wrapper {
+        max-width: 280px;
+        height: 280px;
+    }
+    .inner_circle_text{
+        font-size: 16px;
+        display: inline-block;
+    }
+    .inner_circle_p_text{
+        font-size: 32px;
+    }
+  }
+.score_wrapper>button:first-child div{
+    background-color: var(--blue-light) !important;
+    color: var(--dune) !important;
+}
+.avatar_status_box{
+    background: #FAFAFA;
+    border: 1px solid #E6E6E6;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+.avatar_status_text{
+    color: #00A5D9;
+}

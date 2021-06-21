@@ -1,0 +1,37 @@
+.card_box {
+  background: #ffffff;
+  /* border: 1px solid #00a5d9; */
+  box-sizing: border-box;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  /* padding: 16px 8px; */
+}
+.story_name {
+  background: var(--blue-card);
+  padding: 8px;
+  border-radius: 6px 6px 0px 0px;
+  color: var(--white);
+  border: 1px solid var(--blue-card);
+  text-align: center;
+  font-weight: bold;
+}
+.card_box_content {
+  padding: 16px 8px;
+  border: 1px solid #00a5d9;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+.person{
+  max-width: 60px;
+  display: block;
+  margin: 0 auto;
+}
+.indicate{
+  color: var(--blue-card);
+}
+
+@media (min-width: 992px) and (max-width: 1399.98px) {
+  .image_box>div {
+    display: block !important;
+  }
+}

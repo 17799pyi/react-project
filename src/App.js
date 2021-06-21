@@ -1,11 +1,9 @@
 import React from 'react';
 import { isIE } from 'react-device-detect';
-// import Bowser from 'bowser';
 
-
-import IESupportedPage from './pages/IESupportedPage/index.js';
-import Routes from './routes/routes.js';
-import SnackBar from './components/Snackbar';
+import IESupportedPage from './scenarios/IIESupportedPage/index.js';
+import Routes from './router/routes.js';
+import SnackBar from './constituents/ISnackbar';
 
 function App() {
 

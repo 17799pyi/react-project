@@ -7,7 +7,7 @@ import i18n from './languages';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
-import store, { persistor } from './store';
+import store, { persistor } from './storage';
 import { SnackbarProvider } from 'notistack';
 import { PersistGate } from 'redux-persist/integration/react';
 

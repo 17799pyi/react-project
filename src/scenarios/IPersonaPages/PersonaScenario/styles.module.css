@@ -1,0 +1,99 @@
+.head_text{
+    font-size: var(--heading-text);
+    margin-top: 48px;
+    margin-bottom: 32px;
+}
+.scenaio_content_header{
+    background: var(--mediumSlateBlue);
+    padding: 17px 18px;
+    border-radius: 20px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    height: 64px;
+}
+.scenaio_count{
+    background: var(--slateBlue);
+    padding: 5px 12px;
+    border-radius: 25px;
+    color: var(--white);
+    width: 32px;
+    height: 32px;
+}
+.scenaio_name{
+    font-size: var(--secondary-head-text);
+    color: var(--white);
+}
+.scenaio_content_body{
+    display: grid;
+    grid-template-columns: 25% 74%;
+    grid-column-gap: 8px;
+    margin-top: 24px;
+}
+.left_body_top{
+    background: var(--lightSkyBlue);
+    padding: 16px 0;
+    border-radius: 20px 8px 0 0;
+}
+.left_body_count{
+    background: var(--cornflowerBlue);
+    padding: 7px 17px;
+    margin: 0 auto;
+    display: block;
+    width: 48px;
+    color: var(--white);
+    border-radius: 10px;
+    font-size: var(--secondary-head-text);
+}
+.left_body_bottom{
+    background: var(--cornflowerBlue);
+    color: var(--white);
+    text-align: center;
+    border-radius: 0 0 8px 20px;
+    padding: 16px 13px;
+}
+.left_body_letter{
+    display: block;
+    font-size: var(--heading-text);
+}
+.left_body_time{
+    display: block;
+    font-size: var(--card-title);
+}
+.right_body{
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    border-radius: 8px 20px 20px 8px;
+    padding: 32px;
+}
+.right_body_context_status{
+    background: var(--darkGray);
+    color: var(--white);
+    display: inline;
+    padding: 4px 6px;
+    border-radius: 6px;
+    font-size: var(--card-btn-title);
+}
+.right_body_context_text{
+    font-size: var(--card-title);
+    line-height: 22px;
+    margin-top: 12px;
+}
+.persona_scenaio_footer{
+    position: absolute;
+    width: 100%;
+    background: #dcdce1;
+    left: 0;
+    text-align: center;
+    padding: 33px 0;
+    margin-top: 84px;
+}
+.persona_scenaio_footer_btn{
+    border: none;
+    background: var(--mediumSlateBlue);
+    color: var(--white);
+    padding: 16px 83px;
+    border-radius: 20px;
+    font-size: var(--secondary-head-text);
+    width: 343px;
+}

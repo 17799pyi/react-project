@@ -1,7 +1,7 @@
 {
     "selectionPageHeader" : {
         "start_of_new_role_playing" : "Start of New Role-Playing",
-        "recruiter_selection" : "Recruiter Selection",
+        "recruiter_selection" : "Course Selection",
         "section_selection" : "Section Selection"
     },
     "sidebar" : {
@@ -33,7 +33,7 @@
         },
         "return" : "Back"
     },
-    "lesson": {
+    "persona": {
         "head_text" : "Please select a persona",
         "male" : "Male",
         "female" : "Female",
@@ -173,7 +173,7 @@
         "higher_with_age" : "Higher with age",
         "average_no_of_days_hospital" : "Average number of days in hospital",
         "elderly" : "Elder",
-        "utterance" : "Conversation History",
+        "utterance" : "Conversation history",
         "chat_history" : "チャット履歴"
     },
     "videochat" : {
@@ -200,11 +200,12 @@
         "progress" : "Progress (Correct Answer Rate)",
         "status" : "Status",
         "attendance" : "受講中(16セクション/24セクション)",
+        "manager_screen": "Manager Screen",
         "agency_code": "Agency Code(7 Digits)",
         "please_enter_agency_code": "Please enter agency code",
-        "check_on": "If you want to check on a go-by basis",
-        "destination_code": "Destination Code(3 Digits)",
-        "please_enter_destination_code": "Please enter destination code",
+        "check_on": "If you want to check on a recruiter basis",
+        "recruiter_code": "Recruiter code",
+        "please_enter_recruiter_code": "Please enter the recruiter code",
         "search": "Search",
         "recruiter_list": "Recruiters List",
         "recruiter_name": "Recruiter's Name"

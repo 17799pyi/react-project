@@ -1,7 +1,7 @@
 {
     "selectionPageHeader" : {
         "start_of_new_role_playing" : "新規ロープレの開始",
-        "recruiter_selection" : "募集人の選択",
+        "recruiter_selection" : "コースの選択",
         "section_selection" : "セクションの選択"
     },
     "sidebar" : {
@@ -33,7 +33,7 @@
         },
         "return" : "戻る"
     },
-    "lesson": {
+    "persona": {
         "head_text" : "ペルソナを選択してください。",
         "male" : "男性",
         "female" : "Female",
@@ -172,7 +172,7 @@
         "higher_with_age" : "年齢とともに高く",
         "average_no_of_days_hospital" : "平均在院日数",
         "elderly" : "高齢",
-        "utterance" : "発話箇所",
+        "utterance" : "会話履歴",
         "chat_history" : "チャット履歴"
     },
     "videochat" : {
@@ -199,11 +199,12 @@
         "progress" : "進捗(正答率)",
         "status" : "ステータス",
         "attendance" : "受講中(16セクション/24セクション)",
+        "manager_screen": "管理者画面",
         "agency_code": "代理店コード(7桁)",
         "please_enter_agency_code": "代理店コードを入力してください",
-        "check_on": "出先単位で確認したい場合",
-        "destination_code": "出先コード(3桁)",
-        "please_enter_destination_code": "居場所コードを入力",
+        "check_on": "募集人単位で確認したい場合",
+        "recruiter_code": "募集人コード",
+        "please_enter_recruiter_code": "募集人コードを入力",
         "search": "検索",
         "recruiter_list": "ユーザー一覧",
         "recruiter_name": "ユーザー名 "
