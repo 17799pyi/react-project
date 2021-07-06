@@ -2,10 +2,10 @@ import React from 'react';
 
 import classes from './styles.module.css'
 
-const GeneralButton = ({ onClick, title, className, style, value, id, disabled}) => {
+const GeneralButton = ({ onClick, title, className, style, value, id, disabled, onClickDeleteIcon}) => {
 
     return (
-        <button className={`${classes.add_keyword_btn} ${className}`} style={style} onClick={onClick} value={value} id={id}  disabled={disabled}> {title} <span>x</span></button>
+        <button className={`${classes.add_keyword_btn} ${className}`} style={style} onClick={onClick} value={value} id={id}  disabled={disabled}> {title} <span onClick={onClickDeleteIcon} id={title}>x</span></button>
     )
 }
 

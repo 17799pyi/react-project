@@ -12,7 +12,7 @@ import { SnackbarProvider } from 'notistack';
 import { PersistGate } from 'redux-persist/integration/react';
 
 ReactDOM.render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <Provider store={store}>
       <I18nextProvider i18n={i18n}>
         <PersistGate persistor={persistor}>
@@ -21,8 +21,8 @@ ReactDOM.render(
           </SnackbarProvider>
         </PersistGate>
       </I18nextProvider>
-    </Provider>
-  </React.StrictMode>,
+    </Provider>,
+  // </React.StrictMode>,
   document.getElementById('root')
 );
 

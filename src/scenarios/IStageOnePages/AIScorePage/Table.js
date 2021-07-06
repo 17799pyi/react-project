@@ -6,6 +6,7 @@ import { Row, Col } from 'reactstrap';
 import { useTranslation } from 'react-i18next';
 
 import EvaluationIcon1 from "../../../property/images/evaluation_icon3.svg"
+import classes from './styles.module.css';
 
 const Table = ({selectScore, messages, clickKeyword}) => {
 
@@ -28,28 +29,53 @@ const Table = ({selectScore, messages, clickKeyword}) => {
     }, [selectScore])
 
     const sysmbole = (item) => {
-
-        if(selectScore.matchedWords)
+        let matchKeyword = []
+        selectScore.matchedWords.map((v, k) => {
+            item.keywords.map((v1, k1) => {
+                if(v.word == v1)
+                {
+                    if(!matchKeyword.includes(v1))
+                    {
+                        matchKeyword.push(v1)
+                    }
+                }
+            })
+        })
+        let filterEmptyString = item.keywords.filter(word => word != '')
+        let correctAnswerRate = ((matchKeyword.length/filterEmptyString.length)*100).toFixed(0)
+        if(correctAnswerRate >= 0 && correctAnswerRate <= 69)
         {
-            let checkSysmbol = selectScore.matchedWords
-            if(checkSysmbol.length == item.keywords.length || checkSysmbol.length >= item.keywords.length)
-            {
-                //all correct
-                return <p className="font-weight-bold mb-0 font-24" id="all_mactch_keyword" name="all_mactch_keyword">〇</p>
-            }else if(checkSysmbol.length == 1)
-            {
-                //correct one more
-                return <img src={EvaluationIcon1} alt="Evaluation Icon3" className="mw-100" id="one_match_keyword" name="one_match_keyword"/>
-            }else{
-                //all not correct
-                return <p className="font-weight-bold mb-0 font-24" id="not_match_keyword" name="not_match_keyword">×</p>
-            }
+            return <p className="font-weight-bold mb-0 font-24" id="not_match_keyword" name="not_match_keyword">×</p>
+        }else if(correctAnswerRate >= 70 && correctAnswerRate <= 84)
+        {
+            return <img src={EvaluationIcon1} alt="Evaluation Icon3" className="mw-100" id="one_match_keyword" name="one_match_keyword"/>
+        }else if(correctAnswerRate >= 85)
+        {
+            return <p className="font-weight-bold mb-0 font-24" id="all_mactch_keyword" name="all_mactch_keyword">〇</p>
         }
         return <p className="font-weight-bold mb-0 font-24" id="not_match_keyword" name="not_match_keyword">×</p>
+        // if(matchKeyword.length == item.keywords.length || matchKeyword.length >= item.keywords.length)
+        // {
+        //     //all correct
+        //     return <p className="font-weight-bold mb-0 font-24" id="all_mactch_keyword" name="all_mactch_keyword">〇</p>
+        // }else if(matchKeyword.length >= 1)
+        // {
+        //     //correct one more
+        //     return <img src={EvaluationIcon1} alt="Evaluation Icon3" className="mw-100" id="one_match_keyword" name="one_match_keyword"/>
+        // }else{
+        //     //all not correct
+        //     return <p className="font-weight-bold mb-0 font-24" id="not_match_keyword" name="not_match_keyword">×</p>
+        // }
     }
 
     const checkMatchKey = (keyword) => {
-        return (selectScore.matchedWords.find(element => element.word == keyword) != undefined) ? true : false;
+        let check = selectScore.matchedWords.find(element => element.word == keyword)
+        if(check != undefined)
+        {
+            return true
+        }
+        return false
+        // return (selectScore.matchedWords.find(element => element.word == keyword) != undefined) ? true : false;
     }
 
     const getClickKeyword = (keyword) => {
@@ -59,6 +85,10 @@ const Table = ({selectScore, messages, clickKeyword}) => {
             clickKeyword(check)
         }
         return false;
+    }
+
+    const pointSplit = (item) => {
+        return item.split("\n");
     }
 
     return (
@@ -93,15 +123,18 @@ const Table = ({selectScore, messages, clickKeyword}) => {
                                             <div>
                                                 {
                                                     item.keywords.map((keyword, keyIndex) => {
-                                                        if(checkMatchKey(keyword))
+                                                        if(keyword != '')
                                                         {
-                                                            return <button key={keyIndex} className="w-auto h-100 mb-1 p-0 border-0 bg-transparent" onClick={() => getClickKeyword(keyword)}>
-                                                                <BackgroundBlueChip  key={keyIndex} label={keyword} className="mr-2" id={autoId()} id={`background_blue_chip_${keyIndex}`} name={`background_blue_chip_${keyIndex}`}/>
-                                                            </button>
-                                                        }else{
-                                                            return <button key={keyIndex} className="w-auto h-100 mb-1 p-0 border-0 bg-transparent" onClick={() => getClickKeyword(keyword)}>
-                                                                <BackgroundWhiteChip  key={keyIndex} label={keyword} className="mr-2" id={`background_blue_chip_${keyIndex}`} name={`background_blue_chip_${keyIndex}`}/>
-                                                            </button>
+                                                            if(checkMatchKey(keyword))
+                                                            {
+                                                                return <button key={keyIndex} className="w-auto h-100 mb-1 p-0 border-0 bg-transparent" onClick={() => getClickKeyword(keyword)}>
+                                                                    <BackgroundBlueChip  key={keyIndex} label={keyword} className="mr-2" id={autoId()} id={`background_blue_chip_${keyIndex}`} name={`background_blue_chip_${keyIndex}`}/>
+                                                                </button>
+                                                            }else{
+                                                                return <button key={keyIndex} className="w-auto h-100 mb-1 p-0 border-0 bg-transparent" onClick={() => getClickKeyword(keyword)}>
+                                                                    <BackgroundWhiteChip  key={keyIndex} label={keyword} className="mr-2" id={`background_blue_chip_${keyIndex}`} name={`background_blue_chip_${keyIndex}`}/>
+                                                                </button>
+                                                            }
                                                         }
                                                     })
                                                 }
@@ -110,10 +143,17 @@ const Table = ({selectScore, messages, clickKeyword}) => {
                                     </Col>
                                     <Col xs="2" className="d-flex">
                                         <div  className="cmn-bg-box-inr d-flex align-items-center h-100">
-                                            <ul className="point-list">
-                                                <li>**</li>
-                                                <li>**</li>
-                                            </ul>
+                                            {
+                                                item.point ?
+                                                <ul className={classes.point_list}>
+                                                {
+                                                    pointSplit(item.point).map((v, k) => {
+                                                        return <li key={k}>{v}</li>
+                                                    })
+                                                }
+                                                </ul>
+                                                : <span className="font-weight-bold">-</span>
+                                            }
                                         </div>
                                     </Col>
                                 </Row>

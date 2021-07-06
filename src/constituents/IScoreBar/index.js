@@ -10,7 +10,7 @@ import { useTranslation } from 'react-i18next';
 
 import classes from './styles.module.css'
 
-const ScoreBar = ({ label, className, style, id, item = null}) => {
+const ScoreBar = ({ label, className, style, id, item = null, v_selectScore = null}) => {
 
     const { t } = useTranslation();
     let lastId = 0;
@@ -72,7 +72,9 @@ const ScoreBar = ({ label, className, style, id, item = null}) => {
     const getTwoTime = (item) => {
         let dt1 = new Date(item.start)
         let dt2 = new Date(item.finished)
-        return `${dt1.getHours()}:${dt1.getMinutes()} - ${dt2.getHours()}:${dt2.getMinutes()}`
+        let minute1  = (dt1.getMinutes()<10?'0':'') + dt1.getMinutes()
+        let minute2  = (dt2.getMinutes()<10?'0':'') + dt2.getMinutes()
+        return `${dt1.getHours()}:${minute1} - ${dt2.getHours()}:${minute2}`
     }
 
     const checkSmileFace = (item) => {
@@ -85,13 +87,25 @@ const ScoreBar = ({ label, className, style, id, item = null}) => {
     const percent = (item) => {
         if(item.score)
         {
-            return parseFloat(item.score.precision).toFixed(2) * 100;
+            return (item.score.precision*100).toFixed(0)
         }
         return 0;
     }
 
+    const selectScore = () => {
+        if(v_selectScore)
+        {
+            if(v_selectScore.recordId == item.recordId)
+            {
+                return true
+            }
+            return false
+        }
+        return false
+    }
+
     return (
-       <div className={`${classes.scroll_bar} ${className}`} id={autoId()} name={autoId()}>
+       <div className={`${classes.scroll_bar} ${(v_selectScore) ? ((v_selectScore.recordId == item.recordId) ? classes.selectScore : '' ) : ''} ${className}`} id={autoId()} name={autoId()}>
            <div className={classes.scroll_per_sec}>
                 {/* date */}
                 <span id={`${id}_date_text`} name={`${id}_date_text`}>{date(item)}</span>
@@ -99,15 +113,15 @@ const ScoreBar = ({ label, className, style, id, item = null}) => {
            </div>
            <div className={classes.scroll_btn_sec}>
                 <span className="mr-4 pr-0  pr-xl-2" id={`${id}_correct_answer_text`} name={`${id}_correct_answer_text`}>{t('rateOfRisk.correct_answer_rate')}</span>
-                <span className={classes.score_star}>
-                    {/* star */}
-                    {cardStar(precisionPercentage(item), item)}
-                </span>
+                <span className="mr-2 mr-xl-4" id={`${id}_percent`} name={`${id}_percent`}>({percent(item)}%)</span>
            </div>
            <div className={classes.scroll_btn_sec}>
-                <span className="mr-2 mr-xl-4" id={`${id}_percent`} name={`${id}_percent`}>({percent(item)}%)</span>
-                {/* <img src={precisionPercentage(item)>=70? smileImg : NoSmileImg} alt="Smile Image" className={classes.w_19} id={autoId()}/> */}
-                <img src={checkSmileFace(item) != 'BAD'? smileImg : NoSmileImg} alt="Smile Image" className={classes.w_19} id={`${id}_emotion_icon`} name={`${id}_emotion_icon`}/>
+                <span className={`mr-4 ${classes.score_star}`}>
+                    {/* star */}
+                    {cardStar(percent(item), item)}
+                </span>
+                <img src={percent(item)>=70? smileImg : NoSmileImg} alt="Smile Image" className={classes.w_19} id={autoId()}/>
+                {/* <img src={checkSmileFace(item) != 'BAD'? smileImg : NoSmileImg} alt="Smile Image" className={classes.w_19} id={`${id}_emotion_icon`} name={`${id}_emotion_icon`}/> */}
            </div>
        </div>
     )

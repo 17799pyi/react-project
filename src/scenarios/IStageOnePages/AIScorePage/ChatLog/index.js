@@ -2,14 +2,20 @@ import React, { useEffect, useState, useRef, createRef } from 'react';
 import styles from './styles.module.css'
 import chat_icon from '../../../../property/images/chat_icon.png'
 import bot_person from '../../../../property/images/bot_person.png'
-import {useTranslation} from 'react-i18next'
+import { useTranslation } from 'react-i18next'
+import store from '../../../../storage';
+import boy_img from "../../../../property/images/recruiters/sample_people1.png";
+import old_img from "../../../../property/images/recruiters/sample_people2.png";
+import gril_img from "../../../../property/images/recruiters/sample_people3.png";
+import { render } from '@testing-library/react';
 
-const ChatLog = ({id, messages, selectKeyword}) =>{
-    const {t} = useTranslation();
+const ChatLog = ({ id, messages, selectKeyword, MsgSelectScore }) => {
+    const { t } = useTranslation();
     let lastId = 0;
     const [loading, setLoading] = useState(true)
     const vChatMsgRef = useRef({})
     const vChatRef = useRef()
+    const [vAvatarImg, setAvatarImg] = useState(true)
 
     const autoId = (prefix = '-chatlog-') => {
         lastId++;
@@ -19,85 +25,131 @@ const ChatLog = ({id, messages, selectKeyword}) =>{
     useEffect(() => {
         setLoading(false)
         vChatMsgRef.current = messages.map((element, i) => vChatMsgRef.current[i] ?? createRef());
+
+        let cur_persona = 'boy';
+        let temp_cur_persona = store.getState().currentChosedPersona ? store.getState().currentChosedPersona.name : '松尾さん';
+        switch (temp_cur_persona) {
+            case '松尾さん':
+                cur_persona = boy_img;
+                break;
+            case '岡田さん':
+                cur_persona = old_img;
+                break;
+            case '安田さん':
+                cur_persona = gril_img;
+                break;
+        }
+        setAvatarImg(cur_persona)
     }, [messages])
 
     useEffect(() => {
         //select keyword auto scroll
-        if(selectKeyword != undefined)
-        {
-            let findIndex = messages.findIndex(function(message, index) {
-                if(message.id == selectKeyword.userMessageId)
-                {
+        if (selectKeyword != undefined) {
+            let findIndex = messages.findIndex(function (message, index) {
+                if (message.id == selectKeyword.userMessageId) {
                     return true
                 }
             });
-            if(vChatMsgRef.current[findIndex] != undefined)
-            {
-                if(vChatMsgRef.current[findIndex].current != null)
-                {
+            if (vChatMsgRef.current[findIndex] != undefined) {
+                if (vChatMsgRef.current[findIndex].current != null) {
                     vChatRef.current.scrollTop = vChatMsgRef.current[findIndex].current.offsetTop - 200;
                 }
             }
         }
     }, [selectKeyword])
-    
+
     const getHighlightedText = (text, selectKeyword, msgId, index) => {
         //select keyword auto hightlight
-        if(selectKeyword)
-        {
-            if(msgId == selectKeyword.userMessageId)
-            {
+        if (selectKeyword) {
+            if (msgId == selectKeyword.userMessageId) {
                 const parts = text.split(new RegExp(`(${selectKeyword.word})`, 'gi'));
-    
+
                 return <div className={styles.msg_text} id={`chat_list_user_text_${index}`} name={`chat_list_user_text_${index}`}>
                     {parts.map(part => part.toLowerCase() === selectKeyword.word.toLowerCase() ? <b key={autoId()} className={styles.msg_highlight}>{part}</b> : part)}
                 </div>
-            }else{
+            } else {
                 return <div className={styles.msg_text} id={`chat_list_user_text_${index}`} name={`chat_list_user_text_${index}`}>{text}</div>
             }
-        }else{
+        } else {
             return <div className={styles.msg_text} id={`chat_list_user_text_${index}`} name={`chat_list_user_text_${index}`}>{text}</div>
         }
     }
 
-    return(
+    const hightText = (item, index) => {
+        let keywords = []
+        item.matchedWords.map((v, k) => {
+            keywords.push(v.word)
+        })
+        const pattern = Array.isArray(keywords) ? keywords.filter(arg => !!arg).join('|') : keywords;
+        const regex = new RegExp(pattern.concat('|<[^>]*>'), 'gi');
+        //     console.log( /<[^>]*>/g.test(match), 'match')
+        return (item.text).replace(regex, (match) => {
+            if(match)
+            {
+                return `<b>${match}</b>`
+            }else{
+                return match
+            }
+        });
+        // if (item.matchedWords.length) {
+        //     let html
+        //     item.matchedWords.map((msg, index1) => {
+        //         const parts = item.text.split(new RegExp(`(${msg.word})`, 'gi'));
+        //         html = <div className={styles.msg_text} id={`chat_list_user_text_${index}`} name={`chat_list_user_text_${index}`}>
+        //             {
+        //                 parts.map(part => part.toLowerCase() === msg.word.toLowerCase() ?
+        //                     <b key={autoId()} className={styles.msg_highlight}>{part}</b>
+        //                     : part)
+        //             }
+        //         </div>
+        //     })
+        //     return html
+        // }
+        // return <div
+        //     className={styles.msg_text} id={`chat_list_user_text_${index}`} name={`chat_list_user_text_${index}`}>
+        //     {item.text}
+        // </div>
+    }
+
+    return (
         <div className={`${styles.main_div}`} id="chat_list_container" name="chat_list_container">
             <div className={`${styles.title_div}`}>
-                <img src={chat_icon} alt="chat icon" className={styles.chat_icon} id="chat_list_header_icon" name="chat_list_header_icon"/>
+                <img src={chat_icon} alt="chat icon" className={styles.chat_icon} id="chat_list_header_icon" name="chat_list_header_icon" />
                 <span className="ml-3" id="chat_list_header" name="chat_list_header"><b>{t('aiscore.chat_history')}</b></span>
             </div>
             <div className={`${styles.body_div} ${styles.msger}`} id="chat_lists" name="chat_lists" ref={vChatRef}>
                 <main className={styles.msger_chat}>
                     {
                         !loading ?
-                        messages.map((msg, index) => {
-                            if(msg.type == 'IncomingMessage')
-                            {
-                                return <div key={index} className={`${styles.msg} ${styles.left_msg}`} ref={vChatMsgRef.current[index]}>
-                                            <div className={`${styles.msg_img} d-flex flex-wrap align-items-center`}>
-                                                <img src={bot_person} alt="chat_list_bot_user_icon" className={`${styles.bot_person} d-block mx-auto`} id={`chat_list_bot_user_icon_${index}`} name={`chat_list_bot_user_icon_${index}`}></img>
-                                            </div>
-                    
-                                            <div className={styles.msg_bubble}>
-                                                <div className={styles.msg_info}>
+                            messages.map((msg, index) => {
+                                if (msg.type == 'IncomingMessage') {
+                                    return <div key={index} className={`${styles.msg} ${styles.left_msg}`} ref={vChatMsgRef.current[index]}>
+                                        <div className={`${styles.msg_img} d-flex flex-wrap align-items-center`}>
+                                            <img src={vAvatarImg} alt="chat_list_bot_user_icon" className={`${styles.bot_person} d-block mx-auto`} id={`chat_list_bot_user_icon_${index}`} name={`chat_list_bot_user_icon_${index}`}></img>
+                                        </div>
+
+                                        <div className={styles.msg_bubble}>
+                                            <div className={styles.msg_info}>
                                                 <div className={styles.msg_info_name} id={`chat_list_bot_user_name_${index}`} name={`chat_list_bot_user_name_${index}`}>AIボット</div>
-                                                </div>
-                    
-                                                <div className={styles.msg_text} id={`chat_list_bot_user_text_${index}`} name={`chat_list_bot_user_text_${index}`}>
-                                                    {msg.text}
-                                                </div>
+                                            </div>
+
+                                            <div className={styles.msg_text} id={`chat_list_bot_user_text_${index}`} name={`chat_list_bot_user_text_${index}`}>
+                                                {msg.text}
                                             </div>
                                         </div>
-                            }else{
-                                return <div key={index} ref={vChatMsgRef.current[index]} className={`${styles.msg} ${styles.right_msg}`}>
-                                    <div className={styles.msg_bubble}>
-                                        {getHighlightedText(msg.text, selectKeyword, msg.id, index)}
                                     </div>
-                                </div>
-                            }
-                        })
-                        :
-                        "Loading...."
+                                } else {
+                                    return <div key={index} ref={vChatMsgRef.current[index]} className={`${styles.msg} ${styles.right_msg}`}>
+                                        {/* <div className={styles.msg_bubble}>
+                                            {getHighlightedText(msg.text, selectKeyword, msg.id, index)}
+                                            {hightText(msg, index)}
+                                        </div> */}
+                                        <div className={styles.msg_bubble} dangerouslySetInnerHTML={{ __html: hightText(msg, index) }} />
+                                    </div>
+                                }
+                            })
+                            :
+                            "Loading...."
                     }
                 </main>
             </div>

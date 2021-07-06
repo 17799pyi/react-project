@@ -1,0 +1,109 @@
+.chart_main_box_out {
+    /* min-width: 300px; */
+    height: 300px;
+    overflow-y: auto;
+    padding: 32px 0;
+}
+.chart_main_box {
+    /* min-width: 300px; */
+    height: 190px;
+    position: relative;
+}
+.chart_main_box_inr {
+    width: 100%;
+    height: 100%; 
+    display: table;
+    padding-left: 60px;
+    position: relative;
+    z-index: 1;
+}
+.score_update_label {
+    display: block;
+    position: absolute;
+    width: calc(100% - 60px);
+    border-bottom: 1px solid #E2242C;
+    left: 60px;
+    text-align: center;
+    z-index: 2;
+    color: #E2242C;
+}
+.chart_per_label {    
+    position: absolute !important;
+    height: 100% !important;
+    width: 100%;
+    z-index: 0;
+    left: 0;
+}
+.chart_per_label>p {
+    margin: -10px 0 0 14px;
+}
+.chart_per_label ul {
+    list-style: none;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.chart_per_label ul li {
+    height: 25%;
+    border-top: 1px dashed #4F4F4F;
+    display: flex;
+    align-items: flex-start;
+}
+.chart_per_label ul li p {
+    margin: -12px 0 0;
+    width: 60px;
+    background: #fff;
+    padding-left: 6px;
+}
+.chart_per_label ul li:nth-child(1) p {
+    padding-left: 0;
+}
+.chart_box {
+    height: 100%;
+    width: 90px;
+    display: table-cell;
+    vertical-align: bottom;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+}
+.chart_box>div {
+    width: 40px;
+    height: 100%;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    font-size: 12px;
+    font-weight: bold;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+.score_rate_less {
+    background: #E2242C;
+}
+.score_rate_medium {
+    background: #E98300;
+}
+.score_rate_more {
+    background: #00A5D9;
+}
+.month_label {
+    margin: 0 0 -32px;
+    padding-top: 16px;
+    width: 90px;
+}
+
+.chart_main_box_out::-webkit-scrollbar {
+    width: 12px; /* width of the entire scrollbar */
+}
+.chart_main_box_out::-webkit-scrollbar-track {
+    background: var(--grey-goose);
+    border-radius: 10px; /* roundness of the scroll thumb */
+}
+.chart_main_box_out::-webkit-scrollbar-thumb {
+    background-color: var(--blue-card); /* color of the scroll thumb */
+    border-radius: 10px; /* roundness of the scroll thumb */
+    border: 2px solid var(--grey-goose); /* creates padding around scroll thumb */
+}

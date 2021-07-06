@@ -1,18 +1,9 @@
-import React, { createRef, useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Container, Row, Col } from 'reactstrap';
+import { Row, Col } from 'reactstrap';
 import { useHistory, useLocation } from "react-router-dom";
-
-import ScenarioSelectionCard from '../../../constituents/ICard/ScenarioSelectionCard'
-import BackButton from "../../../constituents/IButton/BackButton"
-import GeneralButton from "../../../constituents/IButton/GeneralButton"
 import Step2 from "./ScenariosSelectionPage"
 import Step1 from "./PersonaSelectionPage"
-
-import humanImg from '../../../property/images/icons/scenario_selection_img.png'
-import smileImg from '../../../property/images/icons/smile.png'
-import starImg from '../../../property/images/icons/star.png'
-
 import classes from './styles.module.css';
 
 const ScenariosSelectionPage = () => {
@@ -22,19 +13,29 @@ const ScenariosSelectionPage = () => {
     const [vStep1, setStep1] = useState(true);
     const [editStep2, setEditStep2] = useState(false);
     const [vLessonId, setLessonId] = useState(null);
+    const [vLessonName, setLessonName] = useState(null);
     const { state } = useLocation();
-    
     useEffect(() => {
-        history.push("/");
+        if(state)
+        {
+            if(state.locationCheck != 'clickLink'){
+                setStep1(false);
+                setEditStep2(true);
+                setLessonId(state.lessonId)
+            }
+        }
     }, []);
 
     useEffect(() => {
-        if(state != undefined){
-            setStep1(false);
-            setEditStep2(true);
-            setLessonId(state.lessonId)
+        if(state)
+        {
+            if(state.locationCheck == 'clickLink')
+            {
+                setStep1(true);
+                setEditStep2(false);
+            }
         }
-    });
+    }, [state])
 
     const onBack = () => {
         setStep1(true);
@@ -49,7 +50,7 @@ const ScenariosSelectionPage = () => {
     return (
        
         <>
-            <h3 id="start_of_new_role_playing" name="start_of_new_role_playing" className="mb-32">{t('selectionPageHeader.start_of_new_role_playing')}</h3>
+            <h3 id="start_of_new_role_playing" name="start_of_new_role_playing" className="mb-32 font-24 font-weight-bold">{t('selectionPageHeader.start_of_new_role_playing')}</h3>
             <Row className="mb-32 pt-2">
                 <Col lg="8">
                     <Row>                        

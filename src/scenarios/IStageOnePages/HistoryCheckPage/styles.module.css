@@ -17,7 +17,7 @@
 .cmn_table tr th,
 .cmn_table tr td {
     border-right: 1px solid var(--granite);
-    border-bottom: 1px solid var(--granite);
+    border-bottom: 1px solid var(--granite) !important;
     border-top: 0;
     vertical-align: middle;
 }

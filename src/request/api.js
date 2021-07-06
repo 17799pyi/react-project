@@ -119,3 +119,92 @@ export function getAuthorizeUserList(){
     method : "post"
   })
 }
+
+export function getSectionList(){
+  return service({
+    url: '/maintain/all-sections',
+    method : "get"
+  })
+}
+
+export function getKeywords(query) {
+  return service({
+    url: `/synonyms?query=${query}`,
+    method: 'GET'
+  })
+}
+
+export function getAllKeywords() {
+  return service({
+    url: '/synonyms/all',
+    method: 'GET'
+  })
+}
+
+export function postKeywords(data) {
+  return service({
+    url: '/synonyms',
+    method: 'POST',
+    data: data
+  })
+}
+
+export function deleteKeywords({ keyword, synonym }) {
+  return service({
+    url: `/synonyms?keyword=${keyword}&synonym=${synonym}`,
+    method: 'DELETE'
+  })
+}
+
+export function getMaintainSection(sectionId){
+  return service({
+    url: `/maintain/section/${sectionId}`,
+    method : "get"
+  })
+}
+
+export function getProcessToken(){
+  return service({
+    url: `/processes/token`,
+    method : "get"
+  })
+}
+
+export function getPersonActions(){
+  return service({
+    url: `/maintain/section/personaAction`,
+    method : "get"
+  })
+}
+
+export function getMaterialToken() {
+  return service({
+    url: '/processes/token',
+    method: 'GET'
+  })
+}
+
+export function uploadMaterail(data) {
+  return service({
+    url: `/processes/reference-materials`,
+    method: 'POST',
+    data: data
+  })
+}
+export function saveAndUpdateMatainSection(data, sectionId) {
+  return service({
+    url: `/maintain/section/${sectionId}`,
+    method: 'PUT',
+    data: {chatProcess:data}
+  })
+}
+
+export function getScoreTable(taskID) {
+  return service({
+    url: `/processes/task/${taskID}`,
+    method: 'GET',
+  })
+}
+
+
+

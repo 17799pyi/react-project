@@ -8,12 +8,13 @@
 .back_btn {
     width: 90px;
     min-height: 36px;
-    padding: 5px;
-    color: var(--cerulean);
-    text-transform: uppercase;
-    border-radius: 4px;
-    border : 1px solid var(--cerulean);
-    background-color: var(--alice-blue);
-    font-weight: bold;
+    background: var(--alice-blue);
+    display: inline-block;
+    padding: 8px 16px;
+    color: var(--blue-card);
+    border-radius: 5px;
+    text-align: center;
+    border: 1px solid var(--cerulean);
+    font-weight: bold; 
 }
 

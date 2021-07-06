@@ -41,6 +41,7 @@ body {
   --blue-card: #00A5D9;
   --deep-blue-card: #0095c4;
   --yellow-dark: #E98300;
+  --gold-border: #A75E00;
   --purple: #1C3664;
   --red: #E2242C;
   --border-soft: #FAFAFA;
@@ -406,6 +407,10 @@ PHASE 1 CODE
 .cmn-link:focus {
   color: var(--blue-card);
   text-decoration: none;
+}
+
+.border_danger {
+  border: 1px solid var(--red) !important;
 }
 
 @media (max-width: 1399.98px){

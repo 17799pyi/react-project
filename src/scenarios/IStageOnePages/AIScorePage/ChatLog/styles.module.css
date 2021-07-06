@@ -71,6 +71,10 @@
   border: 1px solid var(--light-grey-7);
   border-radius: 15px 15px 15px 0px;
 }
+.msg_bubble b{
+  background: #E98300;
+  padding: 0.1rem;
+}
 .msg_text {
   font-size: 14px;
 }

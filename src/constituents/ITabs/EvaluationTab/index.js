@@ -1,39 +1,34 @@
-import { useState, useEffect } from 'react';
-import { useTranslation } from 'react-i18next';
+import React from 'react'
 import styles from './styles.module.css'
+import { connect } from 'react-redux'
 
-const Tab = ({ className, visibleTab, setVisibleTab }) => {
-    const { t } = useTranslation();
-    const category = [
-        {
-            id: 1,
-            name: "配偶者ストーリー",
-        },
-        {
-            id: 2,
-            name: "お子様ストーリー",
-        },
-        {
-            id: 3,
-            name: "おひとり様ストーリー",
-        }
-    ]
 
-    useEffect(() => {
-        setVisibleTab(category[0].id)
-    }, [])
+const Tab = ({ className, selectedTab, onSelect, tabItems }) => {
+    const handleClick = (id, personaInfo) => {
+        onSelect && onSelect(id, personaInfo);
+    }
 
     return (
-        <div className={`${styles.tabs} ${className} `}>
+        <div id="tab_box" name="tab_box" className={`${styles.tabs} ${className} `}>
             <ul className={`${styles.tabs_titles}`}>
-                {category.map((item) => (
-                    <li key={item.id} onClick={() => setVisibleTab(item.id)} className={` ${styles.tab_title} ${visibleTab === item.id && styles.tab_title__active} }`}>
-                        {item.name}
+                {
+                tabItems.map((item, index) => (
+                    <li key={item.id} id={`persona_info_${index+1}`} name={`persona_info_${index+1}`} className={` ${styles.tab_title} ${selectedTab === item.id && styles.tab_title__active} }`}>
+                        {item.personaInfo}
                     </li>
+                    // <li key={item.id} id={`persona_info_${index+1}`} name={`persona_info_${index+1}`} onClick={() => handleClick(item.id, item.personaInfo)} className={` ${styles.tab_title} ${selectedTab === item.id && styles.tab_title__active} }`}>
+                    //     {item.personaInfo}
+                    // </li>
                 ))
                 }
             </ul>
         </div>
     )
 }
-export default Tab;
+const stateToProps = state => {
+    return {
+      evaluation_task_all: state.evaluation_task_all,
+    }
+  }
+  
+export default connect(stateToProps, null)(Tab)

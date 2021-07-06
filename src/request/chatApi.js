@@ -1,13 +1,14 @@
 import openSocket from "socket.io-client";
-import { proxyUrl } from "../configuration/config";
+import { translate_server_url } from '../configuration/config'
 
 let socket;
-// let domain = document.location.origin;
 let subPath = "/proxy/socket.io";
-
 const ChatApi = {
     startConnection: (sampleRate) => {
-        socket = openSocket(proxyUrl, {
+        if(translate_server_url.indexOf('aflac.platformerfuji.com') > -1){
+            subPath = '/apigw/va2roleplay/mvp2/webapp/proxy/socket.io';
+        }
+        socket = openSocket(translate_server_url, {
             path: subPath,
             transports:["websocket"]
         });
@@ -26,11 +27,6 @@ const ChatApi = {
         socket.on("sendTranscription", (transcription) => {
             callbackFun(transcription);       
         });
-    },
-
-    sendBackTranscription:() => {
-        socket.emit('sendBackTranscription');
     }
-
 };
 export default ChatApi;

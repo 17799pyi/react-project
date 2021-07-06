@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react'
-import { VictoryBar, VictoryLabel,VictoryAxis, VictoryChart,VictoryLine } from 'victory';
+import { VictoryBar, VictoryLabel,VictoryAxis, VictoryChart,VictoryLine, VictoryZoomContainer } from 'victory';
 import { useTranslation } from 'react-i18next';
 
 const LineChart = ({aiScore}) => {
@@ -86,7 +86,8 @@ const LineChart = ({aiScore}) => {
           style={{
             data:{
               fill: ({datum}) => shiftColor(datum.percent),
-              width: 35
+              width: 35,
+              overflowX: 'scroll'
             },
             labels: {
               fontSize: 6,

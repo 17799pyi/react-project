@@ -1,29 +1,26 @@
-import React, { createRef, useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Container, Row, Col } from "reactstrap";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
-import { makeStyles } from "@material-ui/core/styles";
-
-import BackButton from "../../../../constituents/IButton/BackButton";
-import GeneralButton from "../../../../constituents/IButton/GeneralButton";
-import { GeneralDropdown } from "../../../../constituents/IDropdowns/GeneralDropdown";
 import InsuranceTypeLabel from "../../../../constituents/ILabel/InsuranceTypeLabel";
 import Radio from "../../../../constituents/IRadioButtons";
 import CancerInsuranceCard from "../../../../constituents/ICard/CancerInsurance/index";
-
 import classes from "./styles.module.css";
-import RadioGroup from "@material-ui/core/RadioGroup";
 import { getAuthorizeUserList, getUserList } from "../../../../request/api";
 import eventShuttle from '../../../../eventShuttle'
 import { connect } from 'react-redux'
-import { loginTaskAll } from '../../../../storage/reduxActions/index'
+import logger from 'redux-logger';
+import { loginTaskAll, lessonAll } from '../../../../storage/reduxActions/index'
+import ErrorMsgApi from "../../../../constituents/IErrorMessage/ErrorMsgApi";
 
-const PersonaSelectionPage = ({ className, style, loginTaskAll, onEditScenerio }) => {
+const PersonaSelectionPage = ({ className, style, loginTaskAll, onEditScenerio, lessonAll }) => {
   const items = [{ name: "test1" }, { name: "test2" }];
 
   const { t } = useTranslation();
   const [rdoPractice, setPractice] = useState();
   const [rdoValue, setRdoValue] = useState();
+  const [vResponseError, setResponseError] = useState(false)
+  const [vErrorMessage, setErrorMessage] = useState();
 
   const handleChange = (event) => {
     setPractice(event.target.value);
@@ -34,16 +31,23 @@ const PersonaSelectionPage = ({ className, style, loginTaskAll, onEditScenerio }
 
   const [vRecruiterApiData, setApiData] = useState();
   const [vRecruiterName , setRecruiterName] = useState();
-  const [authorizeUserList, setAuthorizeUserList] = useState();
 
   useEffect(() => {
     const setData = async () => {
       try {
         const data = getUserList("/lessons").then(res =>{
-        setApiData(res.data)
+        if(res.data){
+          setApiData(res.data)
+          lessonAll(res.data)
+        }
+        else{
+          logger.error("Something-went-wrong ! Please check and try again ")
+        }  
       })
       } catch (error) {
-          eventShuttle.dispatch("something_went_wrong");
+          setResponseError(true)
+          // setErrorMessage("something-went-wrong ! Please check and try again ")
+          setErrorMessage("エラーが発生しました。確認してもう一度お試しください。")
       }
     };
     setData();
@@ -65,11 +69,16 @@ const PersonaSelectionPage = ({ className, style, loginTaskAll, onEditScenerio }
     const setData = async () => {
       try {
         getAuthorizeUserList().then(res =>{
-          // setAuthorizeUserList(res.data)
-          loginTaskAll(res.data)
+          if(res.data){
+            loginTaskAll(res.data)
+          }
+          else{
+          logger.error("Something-went-wrong ! Please check and try again ")
+          }
         })
       } catch (error) {
-          eventShuttle.dispatch("something_went_wrong");
+          // eventShuttle.dispatch("failed to get user authorization, please ask Administrator for help");
+          eventShuttle.dispatch("履歴リストの取得に失敗しました。詳しくは管理者にお問い合わせください。");
       }
     };
     setData();
@@ -77,6 +86,9 @@ const PersonaSelectionPage = ({ className, style, loginTaskAll, onEditScenerio }
 
   return (
     <>
+      {vResponseError== true && <ErrorMsgApi
+      message= {vErrorMessage && vErrorMessage}
+      />}
       <div className={`cmn-bg-box `}>
         <div className={`cmn-bg-box-inr pb-2`}>
           <div className="mb-4">
@@ -163,6 +175,7 @@ const styles = {
 const stateToProps = state => {
   return {
     login_task_all: state.login_task_all,
+    lesson_all: state.lesson_all
   }
 }
 
@@ -170,6 +183,9 @@ const dispatchToProps = dispatch => {
   return {
       loginTaskAll: (login_task_all) => {
           dispatch(loginTaskAll(login_task_all));
+      },
+      lessonAll: (lesson_all) => {
+          dispatch(lessonAll(lesson_all));
       }
   }
 }

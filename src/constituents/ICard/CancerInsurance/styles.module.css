@@ -6,6 +6,9 @@
   border-radius: 6px;
   /* padding: 16px 8px; */
 }
+.choose_persona {
+  border: 1px solid #00a5d9;
+}
 .story_name {
   background: var(--blue-card);
   padding: 8px;
@@ -17,9 +20,12 @@
 }
 .card_box_content {
   padding: 16px 8px;
-  border: 1px solid #00a5d9;
+  /* border: 1px solid #fff; */
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
+}
+.card_box_content.active {
+  border-color: #00a5d9;
 }
 .person{
   max-width: 60px;

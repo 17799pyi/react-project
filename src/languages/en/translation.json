@@ -1,4 +1,20 @@
 {
+    "login_page": {
+		"title": "Welcome to the recruiter training AI (pilot version). Please login.",
+		"username": {
+			"title": "Employee ID*",
+			"placeholder": "Enter Empolyee ID",
+			"require": "Please Enter Valid Employee ID"
+		},
+		"password": {
+			"title": "Password*",
+			"placeholder": "Enter Password",
+			"require": "Please Enter Valid Password"
+		},
+		"forgot password": "Forgot Password?",
+		"success message": "Password Changed Successful.",
+        "login button title":"Sign In"
+	},
     "selectionPageHeader" : {
         "start_of_new_role_playing" : "Start of New Role-Playing",
         "recruiter_selection" : "Course Selection",
@@ -9,7 +25,11 @@
         "e_learning" : "e-Learning",
         "role_playing_with_ai" : "Role-Playing with AI",
         "check_history" : "Check History",
-        "admin_screen" : "Admin Screen"
+        "admin_screen" : "Admin Screen",
+        "spouse_story" : "Spouse Story",
+        "children_story" : "Children's Story",
+        "one_person_story" : "One Person Story",
+        "synonym_registration" : "Synonym Registration"
     },
     "general": {
         "cancel": "Cancel",
@@ -19,13 +39,13 @@
         "update": "Update",
         "date" : {
             "days": {
-                "mon" : "Monday",
-                "tue" : "Tueday",
-                "wed" : "Wednesday",
-                "thurs" : "Thursday",
-                "fri" : "Friday",
-                "sat" : "Saturday",
-                "sun" : "Sunday"
+                "mon" : "Mon",
+                "tue" : "Tue",
+                "wed" : "Wed",
+                "thurs" : "Thurs",
+                "fri" : "Fri",
+                "sat" : "Sat",
+                "sun" : "Sun"
             },
             "year" : "Year",
             "month" : "Month",
@@ -103,12 +123,17 @@
         "recruiter_selection" : "Recruiter selection",
         "section_selection" : "Section selection",
         "return" : "Back",
+        "edit" : "Edit",
+        "reflect" : "Reflect",
         "role_play_started" : "Role Play Started",
         "progress" : "Progress",
         "appointment_acquisition_call": "Call to get appointment",
         "number_of_implementations": "No.Of Implementation",
         "times" : "Times",
-        "maximum_achievement_rate": "Correct Answer Rate"
+        "maximum_achievement_rate": "Correct Answer Rate",
+        "play_time": "Play time",
+        "p_70_text" : "Let's do our best today!",
+        "p_over_70_text" : "Do your best a little more!"
     },
     "rateOfRisk" : {
         "header_1" : "Long-term Care Risk Rate Occurrence",
@@ -190,7 +215,9 @@
         "resume" : "Resume",
         "score" : "Score",
         "reply" : "Reply",
-        "let_get_started" : "Customer role : Let’s get stated."
+        "let_get_started" : "Customer role : Let’s get stated.",
+        "to_score_confirmation": "Do you want to score?",
+        "start_button": "Start"
     },
     "historycheck" : {
         "history_confirmation" : "History Confirmation",
@@ -209,5 +236,49 @@
         "search": "Search",
         "recruiter_list": "Recruiters List",
         "recruiter_name": "Recruiter's Name"
+    },
+    "registerSynonyms": {
+        "register_synonyms": "Register Synonyms",
+        "register_synonyms_search_keywords": "Search for keywords and synonyms",
+        "register_synonyms_add_keywords": "Add keywords",
+        "register_synonyms_export": "Export",
+        "register_synonyms_keywords_label": "Keyword",
+        "register_synonyms_label": "Synonym",
+        "register_synonyms_add_synonyms": "Add Synonyms",
+        "register_synonyms_save": "Save",
+        "register_synonyms_cancel": "Cancel"
+    },
+    "role_play_creation" : {
+        "message": "Message",
+        "process" : {
+            "process_name" : "Process Name",
+            "process": "Process",
+            "point" : "Point",
+            "material_tool" : "Material to use・Tool",
+            "add_process" : "Add Process"
+        },
+        "script" : {
+            "recruiter" : "Recruiter",
+            "keyword" : "Keyword",
+            "persona" : "Persona",
+            "add_message" : "Add Message",
+            "add_to" : "Add To"
+        },
+        "delete" : "Delete",
+        "add_file" : "Add File",
+        "confirm_dia" : {
+            "header" : "Do you want to save your changes?"
+        },
+        "upload_dia" : {
+            "header" : "Upload File",
+            "title" : "Click here to upload",
+            "cancel" : "Cancel",
+            "upload" : "Upload"
+        },
+        "yes" : "Yes",
+        "no" : "No"
+    },
+    "evaluation" : { 
+        "role_playing_creation" : "Role-Play Creation"
     }
 }

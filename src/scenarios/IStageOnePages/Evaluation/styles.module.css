@@ -8,3 +8,29 @@
     padding-left: 16px;
     padding-right: 16px;
 }
+.polygon{
+    position: absolute;
+    right: -3.5%;
+    top: 48%;
+}
+.c_pointer{
+    cursor: pointer;
+}
+.w_100{
+    width: 100px !important;
+}
+.overlay{
+    background: #ffffff94;
+    position: absolute;
+    width: 79%;
+    height: 100%;
+    z-index: 999;
+}
+.btn_blue_color{
+    background: var(--blue-card);
+    color: white;
+}
+.select_card{
+    border: 2px solid var(--blue-card);
+    box-shadow: 0px 3px 4px rgb(0 0 0 / 14%), 0px 3px 3px rgb(0 0 0 / 12%), 0px 1px 8px rgb(0 0 0 / 20%);
+}

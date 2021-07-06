@@ -1,0 +1,41 @@
+.add_btn {
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15), inset 0px -1px 0px rgba(0, 0, 0, 0.15);
+border-radius: 10px;
+}
+.export_btn {
+    min-width: 200px;
+    background-color: var(--white);
+    padding: 5px 24px;
+    color: var(--blue-card);
+    border: 1px solid var(--granite);
+    font-weight: bold; 
+border-radius: 10px;
+}
+.cancel_btn {
+    background: var(--white);
+    color: var(--darkGray);
+    border: 0;
+}
+.search_box {
+    position: relative;
+}
+.search_box img {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+}
+.search_box input {
+    padding-left: 48px;
+}
+.height_64 {
+    min-height: 64px !important;
+}
+.btn-img {
+    width: 10px;
+    max-width: 10px;
+}
+.synonym_text_box {
+    width: 180px !important;
+    display: inline !important;
+}

@@ -1,4 +1,11 @@
 export const RESET_ALL_2_INITIAL_STATE = 'RESET_2_INITIAL_STATE';
 export const HISTORY_TASK_ALL = 'HISTORY_TASK_ALL'
+export const LESSON_ALL = 'LESSON_ALL'
 export const LESSON_TASK_ALL = 'LESSON_TASK_ALL'
 export const LOGIN_TASK_ALL = 'LOGIN_TASK_ALL'
+export const EVALUATION_TASK_ALL = 'EVALUATION_TASK_ALL'
+export const SELECT_TASK = 'SELECT_TASK'
+export const UPDATE_REQUEST_HEADER_GROUP_ID = 'updateRequestHeaderGroupId';
+export const UPDATE_REQUEST_HEADER_USER_ID = 'updateRequestHeaderUserId';
+export const CURRENT_CHOSED_PERSONA = 'updateCurrentChosedPersona';
+export const UPDATE_TRANSCRIPTION = 'updateTranscriptionsInOneTime';

@@ -3,7 +3,6 @@ import { Row, Col } from "reactstrap";
 import {useTranslation} from 'react-i18next'
 
 import classes from "./styles.module.css";
-// import SamplePhoto from "../../../property/images/recruiters/Frame 3.png";
 import SamplePeople1 from "../../../property/images/recruiters/sample_people1.png";
 import SamplePeople2 from "../../../property/images/recruiters/sample_people2.png";
 import SamplePeople3 from "../../../property/images/recruiters/sample_people3.png";
@@ -11,17 +10,24 @@ import SamplePeople3 from "../../../property/images/recruiters/sample_people3.pn
 import GeneralButton from "../../IButton/GeneralButton";
 import PercentageLabelBox from "../../ILabel/PercentageLabelBox";
 import {CardDropdown} from "../../IDropdowns/CardDropdown";
+import store from '../../../storage';
+import { CURRENT_CHOSED_PERSONA } from '../../../storage/consts'
+import { useDispatch } from "react-redux";
 
-function CancerInsuranceCard({id,onEditScenerio,customerData}) {
+function CancerInsuranceCard({id, onEditScenerio, customerData}) {
   const {t,i18n} = useTranslation();
+  // const dispatch = useDispatch();
 
   const chgScenerio = () => {
     onEditScenerio(customerData.id)
+    // save current persona to global storage
+    store.dispatch({type: CURRENT_CHOSED_PERSONA, persona: customerData})
   }
   function ParseFloat(str,val) {
+    str = str.toFixed(2);
     str = str.toString();
     str = str.slice(0, (str.indexOf(".")) + val + 1); 
-    return Number(str);   
+    return Number(str);
   }
 
   const capitalize = ([first,...rest]) => first.toUpperCase() + rest.join('').toLowerCase();
@@ -40,7 +46,7 @@ function CancerInsuranceCard({id,onEditScenerio,customerData}) {
   }
 
   return (
-    <div id={`card_box_${id}`} name={`card_box_${id}`} className={`${classes.card_box}`}>
+    <div id={`card_box_${id}`} name={`card_box_${id}`} className={`${classes.card_box} `}>
       <div className={`${classes.story_name}`}>
         <p id={`persona_${id}`} name={`persona_${id}`} className="mb-0">{customerData.persona}</p>
       </div>
@@ -50,15 +56,15 @@ function CancerInsuranceCard({id,onEditScenerio,customerData}) {
         <img id={`image_icon_${id}`} name={`image_icon_${id}`} src={changePicture(customerData.name)} alt="Sample Photo" className={`${classes.person}`} />
         </Col>
         <Col xs="9" className={`${classes.image_box}`}>
-          <p id={`customer_data_${id}`} name={`customer_data_${id}`} className="mb-0">{customerData.name}　{customerData.age}歳　{capitalize(customerData.gender)}</p>
+          <p id={`customer_data_${id}`} name={`customer_data_${id}`} className="mb-0">{customerData.name}　{customerData.ageGender}</p>
           <p id={`course_${id}`} >{customerData.course}</p>
           <div className={`w-100 flex-wrap mb-2 ${i18n.language == 'en'?'d-block':'d-flex'}`}>   
-            <PercentageLabelBox id={id} label={t('recruiter.progress_rate')} percentage={ParseFloat((customerData.clearedSectionCount/customerData.sectionCount),2)} className="mr-2 mb-2"/>            
+            <PercentageLabelBox id={id} label={t('recruiter.progress_rate')} percentage={ParseFloat((customerData.clearedSectionCount/customerData.sectionCount)*100,2)} className="mr-2 mb-2"/>            
             <GeneralButton idName={`decision_button_${id}`} title={t('recruiter.decision')} onClick={chgScenerio} className="mb-2"/>   
           </div>  
         </Col>
       </Row>
-      <CardDropdown id={id} title={t('recruiter.view_details')} className="offset-3" detail={customerData.details}/>
+      {/* <CardDropdown id={id} title={t('recruiter.view_details')} className="offset-3" detail={customerData.details}/> */}
       </div>
     </div>
   );

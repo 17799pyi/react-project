@@ -1,18 +1,30 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styles from './styles.module.css';
 
-const GeneralTextarea = ({ className, Message }) => {
+const GeneralTextarea = ({ className, Message, name, dataIndex, onChange, id }) => {
     return (
         <>
-            <div className={`${styles.textarea_box} ${className}`} contenteditable="true">
-                <ul className="point-list">
+            {/* <div className={`${styles.textarea_box} ${className}`} contentEditable="true">
+                <span className="point-list">{Message}</span> */}
+                {/* <ul className="point-list">
                     {
                         Message && Message.map( i => (                        
                             <li>{i.name}</li>
                         ))
                     }
-                </ul>
-            </div>
+                </ul> */}
+            {/* </div> */}
+            <textarea 
+                className={`${styles.textarea_box} ${className}`}
+                name={name}
+                id={id}
+                data-index={dataIndex}
+                onChange={onChange}
+                type="text"
+                value={Message}
+            >
+                {/* {vMessage} */}
+            </textarea>
         </>
     )
 }

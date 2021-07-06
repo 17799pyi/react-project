@@ -86,9 +86,10 @@
         font-size: 32px;
     }
   }
-.score_wrapper>button:first-child div{
-    background-color: var(--blue-light) !important;
-    color: var(--dune) !important;
+.score_wrapper>button.selectScore>div{
+    background-color: rgba(233, 131, 0, 0.2) !important;
+    /* color: var(--dune) !important; */
+    border: 2px solid #E98300 !important;
 }
 .avatar_status_box{
     background: #FAFAFA;
@@ -99,4 +100,23 @@
 
 .avatar_status_text{
     color: #00A5D9;
+}
+.score_container{
+    max-height: 270px !important;
+    background: #FAFAFA;
+    border-radius: 10px;
+    margin: 0 -4px 0 -4px;
+}
+.point_list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.point_list li{
+    /* padding-left: 16px; */
+    position: relative;
+    margin-bottom: 0.7rem;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 19px;
 }

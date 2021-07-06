@@ -1,9 +1,7 @@
 import axios from 'axios' // import axios
 import { backend_url } from '../configuration/config'
-// import EventShuttle from './../constituents/eventShuttle'
+import EventShuttle from '../eventShuttle'
 import store from '../storage'
-// let timestamp = `${new Date().getTime()}`;
-
 
 const service = axios.create({
   baseURL: backend_url,
@@ -13,8 +11,10 @@ const service = axios.create({
 })
 
 service.interceptors.request.use(config => {
-  config.headers['x-aanet-user'] = 'test-user-id';
-  config.headers['x-aanet-group'] = 'G1test-agent,G5ARPevaluater,I3ARPadministrators';
+  if(!process.env.REACT_APP_CURRENT_ENV || process.env.REACT_APP_CURRENT_ENV == 'dev'){
+    config.headers['x-aanet-user'] = store.getState().requestHeaderUserId;
+    config.headers['x-aanet-group'] = store.getState().requestHeaderGroupId;
+  }
   config.headers['Access-Control-Allow-Origin'] = '*';
   config.headers['Access-Control-Expose-Headers'] = 'Content-Length,Content-Range';
   config.headers['Access-Control-Allow-Methods'] = 'POST, GET, OPTIONS';

@@ -61,7 +61,7 @@
     left: 12px;
 }
 .progress_bar_msg.msg_left {
-    left: -122px;
+    left: -177px;
 }
 .progress_bar_msg.msg_left:after {
     left: initial;
@@ -107,4 +107,8 @@
     border-radius: 25px;
     position: relative;
     bottom: 0.5px;
+}
+.persona_progress_img{
+    height: 108px;
+    width: 108px;
 }

@@ -1,4 +1,20 @@
 {
+    "login_page": {
+		"title": "募集人育成AI",
+		"username": {
+			"title": "従業員ID*",
+			"placeholder": "従業員IDを入力してください",
+			"require": "正しい従業員IDを入力してください"
+		},
+		"password": {
+			"title": "パスワード*",
+			"placeholder": "パスワードを入力する",
+			"require": "正しいパスワードを入力してください"
+		},
+		"forgot password": "パスワードをお忘れですか？",
+		"success message": "パスワードの変更に成功しました。",
+        "login button title": "ログイン"
+	},
     "selectionPageHeader" : {
         "start_of_new_role_playing" : "新規ロープレの開始",
         "recruiter_selection" : "コースの選択",
@@ -9,7 +25,11 @@
         "e_learning" : "e-Learning",
         "role_playing_with_ai" : "AIとロープレする",
         "check_history" : "自分の履歴を確認する",
-        "admin_screen" : "​ASの履歴を確認する"
+        "admin_screen" : "全社の履歴を確認する",
+        "spouse_story" : "配偶者ストーリー",
+        "children_story" : "お子様ストーリー",
+        "one_person_story" : "おひとり様ストーリー",
+        "synonym_registration" : "類義語登録​"
     },
     "general": {
         "cancel": "キャンセル",
@@ -103,26 +123,31 @@
         "recruiter_selection" : "募集人の選択",
         "section_selection" : "セクションの選択",
         "return" : "戻る",
+        "edit" : "編集",
+        "reflect" : "反映",
         "role_play_started" : "ロールプレイ開始",
         "progress" : "進捗",
         "appointment_acquisition_call": "アポイント取得コール",
-        "number_of_implementations": "実施回数",
+        "number_of_implementations": "プレイ回数",
         "times" : "回",
-        "maximum_achievement_rate": "最大達成率"
+        "maximum_achievement_rate": "自己ベスト",
+        "play_time": "プレイ時間",
+        "p_70_text" : "今日もがんばろう！",
+        "p_over_70_text" : "あともう少し頑張って”！"
     },
     "rateOfRisk" : {
         "header_1" : "介護リスク率発生",
-        "header_2" : "-このセクションの目的-",
-        "s_header_1" : "処理する",
+        "header_2" : "-本セクションの目的-",
+        "s_header_1" : "プロセス",
         "s_header_2" : "ポイント",
-        "s_header_3" : "使用する材料・ツール",
+        "s_header_3" : "パンフレット。フリップ",
         "frequency_of_long_term_care" : "介護の発生頻度",
         "lifespan_and_healthy_lifespan" : "寿命と健康的な寿命",
         "causes_of_long_term_care" : "介護の原因",
         "long_term_care_period" : "介護期間",
         "proceed_to_the_next" : "ロープレ実施画面へ",
         "time": "月 .日",
-        "correct_answer_rate" : "正解率",
+        "correct_answer_rate" : "正答率",
         "accepting" : "受け入れ中",
         "wednesday" : "金"
     },
@@ -156,7 +181,7 @@
             "header" : "実施履歴",
             "line_header" : "合格基準"
         },
-        "score_by_process" : "スコア(プロセス別)",
+        "score_by_process" : "採点詳細（プロセス別)",
         "process" : "プロセス",
         "evaluation" : "評価",
         "point" : "ポイント",
@@ -189,7 +214,9 @@
         "resume" : "やり直す",
         "score" : "採点する",
         "reply" : "応答",
-        "let_get_started" : "お客様役 : それでは始めましょう。"
+        "let_get_started" : "お客様役 : それでは始めましょう。",
+        "to_score_confirmation": "採点を実施しますか？",
+        "start_button": "ロープレ開始"
     },
     "historycheck" : {
         "history_confirmation" : "履歴確認",
@@ -203,11 +230,55 @@
         "agency_code": "代理店コード(7桁)",
         "please_enter_agency_code": "代理店コードを入力してください",
         "check_on": "募集人単位で確認したい場合",
-        "recruiter_code": "募集人コード",
-        "please_enter_recruiter_code": "募集人コードを入力",
+        "recruiter_code": "出先コード",
+        "please_enter_recruiter_code": "出先コードを入力",
         "search": "検索",
         "recruiter_list": "ユーザー一覧",
         "recruiter_name": "ユーザー名 "
+    },
+    "registerSynonyms": {
+        "register_synonyms": "類義語を登録する",
+        "register_synonyms_search_keywords": "キーワードや同義語を探す",
+        "register_synonyms_add_keywords": "+キーワードを追加",
+        "register_synonyms_export": "エクスポート",
+        "register_synonyms_keywords_label": "キーワード",
+        "register_synonyms_label": "同義語",
+        "register_synonyms_add_synonyms": "+同義語を追加",
+        "register_synonyms_save": "保存",
+        "register_synonyms_cancel": "キャンセル"
+    },
+    "role_play_creation" : {
+        "message": "メッセージ",
+        "process" : {
+            "process_name" : "プロセス名",
+            "process": "プロセス",
+            "point" : "ポイント",
+            "material_tool" : "セールスツール",
+            "add_process" : "プロセスを追加"
+        },
+        "script" : {
+            "recruiter" : "募集人",
+            "keyword" : "キーワード",
+            "persona" : "ペルソナ",
+            "add_message" : "メッセージを追加",
+            "add_to" : "追加"
+        },
+        "delete" : "削除",
+        "add_file" : "ファイルを追加",
+        "confirm_dia" : {
+            "header" : "変更を保存しますか？"
+        },
+        "upload_dia" : {
+            "header" : "ファイルをアップロードする",
+            "title" : "アップロードするにはここをクリックしてください",
+            "cancel" : "キャンセル",
+            "upload" : "アップロード"
+        },
+        "yes" : "はい",
+        "no" : "いいえ"
+    },
+    "evaluation" : { 
+        "role_playing_creation" : "ロープレ作成"
     }
 
 }
