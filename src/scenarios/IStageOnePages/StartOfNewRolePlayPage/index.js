@@ -56,7 +56,8 @@ const ScenariosSelectionPage = () => {
                     <Row>                        
                         <Col xs="6" className={`${classes.step_lists}`}>
                             <span className={classes.step_list}>
-                                <span className={classes.step_head}>1</span>
+                            <span className={`${!vStep1 && classes.step2_active} ${classes.step_head}`}>1</span>
+                                {/* <span className={classes.step_head ${!vStep1 && classes.step2_active}}>1</span> */}
                                 <span className={classes.step_text}>{t('selectionPageHeader.recruiter_selection')}</span>
                             </span>
                         </Col>

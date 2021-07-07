@@ -11,11 +11,12 @@
 }
 .chart_main_box_inr {
     width: 100%;
-    height: 100%; 
+    height: 73%; 
     display: table;
     padding-left: 60px;
     position: relative;
     z-index: 1;
+    font-size: 12px;
 }
 .score_update_label {
     display: block;
@@ -91,7 +92,7 @@
 }
 .month_label {
     margin: 0 0 -32px;
-    padding-top: 16px;
+    padding-top: 13px;
     width: 90px;
 }
 
@@ -106,4 +107,17 @@
     background-color: var(--blue-card); /* color of the scroll thumb */
     border-radius: 10px; /* roundness of the scroll thumb */
     border: 2px solid var(--grey-goose); /* creates padding around scroll thumb */
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    .chart_main_box_out {
+        height: 217px;
+        padding: 8px 0;
+    }
+    .chart_main_box {
+        height: 166px;
+    }
+        
 }

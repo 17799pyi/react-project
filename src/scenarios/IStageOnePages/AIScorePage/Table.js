@@ -54,18 +54,6 @@ const Table = ({selectScore, messages, clickKeyword}) => {
             return <p className="font-weight-bold mb-0 font-24" id="all_mactch_keyword" name="all_mactch_keyword">〇</p>
         }
         return <p className="font-weight-bold mb-0 font-24" id="not_match_keyword" name="not_match_keyword">×</p>
-        // if(matchKeyword.length == item.keywords.length || matchKeyword.length >= item.keywords.length)
-        // {
-        //     //all correct
-        //     return <p className="font-weight-bold mb-0 font-24" id="all_mactch_keyword" name="all_mactch_keyword">〇</p>
-        // }else if(matchKeyword.length >= 1)
-        // {
-        //     //correct one more
-        //     return <img src={EvaluationIcon1} alt="Evaluation Icon3" className="mw-100" id="one_match_keyword" name="one_match_keyword"/>
-        // }else{
-        //     //all not correct
-        //     return <p className="font-weight-bold mb-0 font-24" id="not_match_keyword" name="not_match_keyword">×</p>
-        // }
     }
 
     const checkMatchKey = (keyword) => {
@@ -96,29 +84,29 @@ const Table = ({selectScore, messages, clickKeyword}) => {
             <div id="rate_risk_record_score_table_container" name="rate_risk_record_score_table_container">
                 <Row className="smallest-padding-box02 mb-2">
                     <Col xs="2">
-                        <BackgroundBlueLabel label={t('aiscore.process')} id="table_col_process"/>
+                        <BackgroundBlueLabel label={t('aiscore.process')} className={`${classes.point_list} mb-0 p-1`} id="table_col_process"/>
                     </Col>
-                    <Col xs="8">
-                        <BackgroundBlueLabel label={t('aiscore.evaluation')} id="table_col_evaluation"/>
+                    <Col xs="5">
+                        <BackgroundBlueLabel label={t('aiscore.evaluation')} className={`${classes.point_list} mb-0 p-1`} id="table_col_evaluation"/>
                     </Col>
-                    <Col xs="2">
-                        <BackgroundBlueLabel label={t('aiscore.point')} id="table_col_point"/>
+                    <Col xs="5">
+                        <BackgroundBlueLabel label={t('aiscore.point')} className={`${classes.point_list} mb-0 p-1`} id="table_col_point"/>
                     </Col>
                 </Row>
                 {
                     vTableRow.map((item, index) => {
-                        return <Row className="smallest-padding-box02 mb-2" key={index}>
+                        return <Row className="smallest-padding-box02 mb-1" key={index}>
                                     <Col xs="2" className="d-flex">
                                         <div  className="cmn-bg-box-inr d-flex align-items-center h-100 px-3">
                                             <p className="font-16 font-weight-bold mb-0" id={`table_col_name${index}`} name={`table_col_name${index}`}>{item.name}</p>
                                         </div>
                                     </Col>
-                                    <Col xs="2" className="d-flex">
+                                    <Col xs="1" className="d-flex">
                                         <div  className="cmn-bg-box-inr d-flex align-items-center h-100 justify-content-center px-16">
                                             {sysmbole(item)}
                                         </div>
                                     </Col>
-                                    <Col xs="6" className="d-flex">
+                                    <Col xs="4" className="d-flex">
                                         <div  className="cmn-bg-box-inr pb-3 px-32">
                                             <div>
                                                 {
@@ -127,11 +115,11 @@ const Table = ({selectScore, messages, clickKeyword}) => {
                                                         {
                                                             if(checkMatchKey(keyword))
                                                             {
-                                                                return <button key={keyIndex} className="w-auto h-100 mb-1 p-0 border-0 bg-transparent" onClick={() => getClickKeyword(keyword)}>
+                                                                return <button key={keyIndex} className={`w-auto h-100 mb-1 p-0 border-0 bg-transparent ${classes.keyword_adjust}`} onClick={() => getClickKeyword(keyword)}>
                                                                     <BackgroundBlueChip  key={keyIndex} label={keyword} className="mr-2" id={autoId()} id={`background_blue_chip_${keyIndex}`} name={`background_blue_chip_${keyIndex}`}/>
                                                                 </button>
                                                             }else{
-                                                                return <button key={keyIndex} className="w-auto h-100 mb-1 p-0 border-0 bg-transparent" onClick={() => getClickKeyword(keyword)}>
+                                                                return <button key={keyIndex} className={`w-auto h-100 mb-1 p-0 border-0 bg-transparent ${classes.keyword_adjust} ${classes.cursor_auto}`} onClick={() => getClickKeyword(keyword)}>
                                                                     <BackgroundWhiteChip  key={keyIndex} label={keyword} className="mr-2" id={`background_blue_chip_${keyIndex}`} name={`background_blue_chip_${keyIndex}`}/>
                                                                 </button>
                                                             }
@@ -141,7 +129,7 @@ const Table = ({selectScore, messages, clickKeyword}) => {
                                             </div>
                                         </div>
                                     </Col>
-                                    <Col xs="2" className="d-flex">
+                                    <Col xs="5" className="d-flex">
                                         <div  className="cmn-bg-box-inr d-flex align-items-center h-100">
                                             {
                                                 item.point ?

@@ -344,7 +344,8 @@ PHASE 1 CODE
   display: flex;
 }
 .main-content-inr {
-  padding: 32px 40px 48px;
+  /* padding: 32px 40px 48px; */
+  padding: 0.5rem 0.5rem 0.5rem;
 }
 /*------------------ cmn lougout sec  --------------------- */
 .cmn-logout-btn-sec {
@@ -530,4 +531,17 @@ pre{
   border-right: 1px solid var(--granite);
   border-bottom: 1px solid var(--granite);
   border-top: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .main-content-inr {
+      padding: 16px;
+  }
+  .cmn-bg-box,
+  .cmn-bg-box-inr {
+    padding: 8px;
+  }
+  .font-16 {
+    font-size: 14px;
+  }
 }

@@ -64,24 +64,23 @@ function Table({scoreTable, processToken, lessonId, taskId}) {
 
     return (
         <>
-        <Row className="mb-4">
-            </Row>
+            {/* <Row className="mb-4"></Row> */}
             <div id="record_score_table_container" name="record_score_table_container">
             <Row className="smallest-padding-box02">
-                <Col xs="3">                    
-                    <BackgroundBlueLabel key={1} label={t('rateOfRisk.s_header_1')} className="font-18" id={"table_first_header"}/>
+                <Col xs="2">                    
+                    <BackgroundBlueLabel key={1} label={t('rateOfRisk.s_header_1')} className={`font-18 ${classes.padding_chg}`} id={"table_first_header"}/>
+                </Col>
+                <Col xs="7">
+                    <BackgroundBlueLabel key={2} label={t('rateOfRisk.s_header_2')} className={`font-18 ${classes.padding_chg}`} id={"table_second_header"}/>
                 </Col>
                 <Col xs="3">
-                    <BackgroundBlueLabel key={2} label={t('rateOfRisk.s_header_2')} className="font-18" id={"table_second_header"}/>
-                </Col>
-                <Col xs="6">
-                    <BackgroundBlueLabel key={3} label={t('rateOfRisk.s_header_3')} className="font-18" id={"table_third_header"}/>
+                    <BackgroundBlueLabel key={3} label={t('rateOfRisk.s_header_3')} className={`font-18 ${classes.padding_chg}`} id={"table_third_header"}/>
                 </Col>
             </Row>
             {
                 vScoreTableList.map((tableRow, index) => {
-                    return <Row className="smallest-padding-box02 mt-3" key={index} id={`table_row_${index}`} name={`table_row_${index}`}>
-                                <Col xs="3">
+                    return <Row className="smallest-padding-box02 mt-2" key={index} id={`table_row_${index}`} name={`table_row_${index}`}>
+                                <Col xs="2">
                                     <div 
                                     className={`${classes.top_btn} ${classes.content_bottom_extra} ${((index+1) == vScoreTableList.length) ? classes.top_btn_no_triagle : ''}`} 
                                     id={`table_col_name_${index}`} 
@@ -91,7 +90,7 @@ function Table({scoreTable, processToken, lessonId, taskId}) {
                                         {tableRow.name}
                                     </div>
                                 </Col>
-                                <Col xs="3">
+                                <Col xs="7">
                                     <div className={classes.content_outline}>
                                         <ul className={classes.point_list}>
                                         {
@@ -102,7 +101,7 @@ function Table({scoreTable, processToken, lessonId, taskId}) {
                                         </ul>
                                     </div>
                                 </Col>
-                                <Col xs="6">
+                                <Col xs="3">
                                     <div className={classes.content_outline}>
                                         <Row className="w-100">
                                             {
@@ -119,10 +118,10 @@ function Table({scoreTable, processToken, lessonId, taskId}) {
                                                 :
                                                 <Col><span className="font-weight-bold">-</span></Col>
                                             }
-                                            <Col md="8">
+                                            <Col md="8" className="p-0">
                                             {
                                                 tableRow.referenceMaterials.map((material, materialIndex) => {
-                                                    return <a className="mr-3" href={`${material.referencePath}?${processToken}`} target="_blank" key={materialIndex}>
+                                                    return <a className="mr-2" href={`${material.referencePath}?${processToken}`} target="_blank" key={materialIndex}>
                                                             <img className={classes.w_50} src={checkMaterialType(material)} alt="Sample Image"/>
                                                             </a>
                                                 })

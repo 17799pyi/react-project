@@ -71,18 +71,22 @@ const RateOfRiskPage = ({selectTask, select_task}) => {
     
     return (
         <>
-        <Row className="mb-3">
+        <div className={classes.overflow_hidden}>
+        <Row className="mb-1">
             <Col lg="4">
-                <Link to={{pathname:`/start-new-role-play`,state:{lessonId} }}><BackButton idName="rate_of_risk_back_button" title={t('scenario.return')} className="mr-3 mb-5" id={autoId()}/></Link>
+                <Link to={{pathname:`/start-new-role-play`,state:{lessonId} }}>
+                    <BackButton idName="rate_of_risk_back_button" title={t('scenario.return')} className={`mr-3 ${classes.btn_adjust}`} id={autoId()}/>
+                </Link>
             </Col>
-            <Col className="ml-6">        
-                <Link to={`/video-chat/${taskID}/${lessonId}`}><button className={classes.bottom_btn_submit} id="video_chat_page_link" name="video_chat_page_link">{t('rateOfRisk.proceed_to_the_next')}</button></Link>
+            <Col className="text-center" lg="4">        
+                <Link to={`/video-chat/${taskID}/${lessonId}`}><button className={`${classes.bottom_btn_submit} ${classes.btn_adjust}`} id="video_chat_page_link" name="video_chat_page_link">{t('rateOfRisk.proceed_to_the_next')}</button></Link>
             </Col>
+            <Col lg="4"></Col>
         </Row>
             
             {/* <Row>
             </Row> */}
-        <Row className="align-items-start mb-32 pb-2">  
+        <Row className="align-items-start mb-25 pb-2">  
             {/* <Col>
                 <h3 className="">{t('rateOfRisk.header_1')}</h3>    
             </Col>     */}
@@ -107,24 +111,26 @@ const RateOfRiskPage = ({selectTask, select_task}) => {
                 </div>
             </Col>                
         </Row>
-        <div className="cmn-bg-box p-4">
+        {/* <div className="cmn-bg-box p-4"> */}
+        <div className="cmn-bg-box p-2">
             <Table scoreTable={tableRows} processToken={vProcessToken} lessonId={lessonId} taskId={taskID}></Table>
         </div>
-        <div className="cmn-bg-box p-4 mt-5">
-            <p className="font-16 font-weight-bold mb-5" id="table_header" name="table_header">
+        <div className="cmn-bg-box p-2 mt-2">
+            <p className="font-12 font-weight-bold mb-1" id="table_header" name="table_header">
             {t('aiscore.chartbar.header')}
             </p>
-            <Row className={`mt-4 mb-32 pb-4 cmn-scroll-bar ${classes.scroll_container}`}>
+            <Row className={`mt-1 pb-2 cmn-scroll-bar ${classes.scroll_container}`}>
                 <Col lg="10" className={`mx-auto ${classes.score_wrapper} `} id="record_history_lists" name="record_history_lists">
                     {
                         vAiScore.map((item, index) => {
                             return <Link to={{pathname:`/ai-score/${taskID}/${item.section.persona.id}`,state:{item} }} key={index}>
-                                <ScoreBar key={index} className="mb-3" item={item} id={`record_history_list_${index}`}/>
+                                <ScoreBar key={index} className="mb-1" item={item} id={`record_history_list_${index}`}/>
                                 </Link>
                         })
                     }
                 </Col>
             </Row>
+        </div>
         </div>
         </>
     )

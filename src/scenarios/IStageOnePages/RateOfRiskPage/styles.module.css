@@ -7,12 +7,14 @@
 .top_btn{
     background: var(--blue-card);
     border-radius: 10px;
-    padding: 8px;
+    /* padding: 8px; */
+    padding: 2px;
     display: flex;
     width: auto;
     text-align: center;
     color: var(--white);
-    font-size: 18px;
+    /* font-size: 18px; */
+    font-size: 12px;
     align-items: center;
     justify-content: center;
     height: calc( 100% - 12px);
@@ -21,7 +23,8 @@
 .top_btn:after {
     content: '';
     position: absolute;
-    bottom: -12px;
+    /* bottom: -12px; */
+    bottom: -7px;
     border-top: 12px solid var(--blue-card);
     border-left: 12px solid transparent;
     border-right: 12px solid transparent;
@@ -37,7 +40,8 @@
     box-sizing: border-box;
     border-radius: 10px;
     height: 100%;
-    padding: 16px;
+    /* padding: 16px; */
+    padding: 3px;
     display: flex;
     align-items: center;
 }
@@ -96,7 +100,8 @@
 }
 .purpose_sec>span {
     display: block;
-    padding: 8px;
+    padding: 3px;
+    /* padding: 8px; */
     text-align: center;
     color: var(--white);
     font-size: 16px;
@@ -105,13 +110,15 @@
 }
 .purpose_sec>span:first-child {
     border-radius: 4px 4px 0px 0px;
-    font-size: 28px;
+    /* font-size: 28px; */
+    font-size: 16px;
 }
 .purpose_sec>span:last-child {
     background-color: var(--alice-blue);
     /* color: var(--dune); */
     border-radius: 0px 0px 4px 4px;
-    font-size: 18px;
+    /* font-size: 18px; */
+    font-size: 12px;
 }
 .score_wrapper>a:first-child>div{
     background-color: var(--blue-light) !important;
@@ -128,7 +135,8 @@
     color: var(--blue-card);
 }
 .scroll_container{
-    max-height: 268px !important;
+    /* max-height: 268px !important; */
+    max-height: 199px !important;
     background: #80808014;
     border-radius: 10px;
     margin: 0 -4px 0 -4px;
@@ -138,7 +146,7 @@
     width: 100px !important;
 }
 .w_50{
-    width: 25% !important;
+    width: 28% !important;
 }
 .point_list{
     list-style: none;
@@ -148,11 +156,26 @@
 .point_list li{
     /* padding-left: 16px; */
     position: relative;
-    margin-bottom: 0.7rem;
-    font-size: 16px;
+    /* margin-bottom: 0.7rem; */
+    /* font-size: 16px; */
+    font-size: 12px;
     font-weight: bold;
-    line-height: 19px;
+    /* line-height: 19px; */
+    line-height: 18px;
 }
 .w_87{
     width: 87px !important;
+}
+/* /////// */
+.padding_chg{
+    padding: 4px 4px;
+    font-size: 12px;
+}
+.btn_adjust{
+    font-size: 12px !important;
+    padding: 2px !important;
+    min-height: 30px !important;
+}
+.overflow_hidden{
+    overflow: hidden;
 }

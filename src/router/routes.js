@@ -1,12 +1,6 @@
 
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route, useLocation } from 'react-router-dom';
-
-import HeaderBarChatPage from '../constituents/IHeaderBar/HearderBarChatLog';
-import HeaderBar from '../constituents/IHeaderBar/HeaderBar';
-
-import LanguageBar from '../constituents/ILanguageBar';
-
 import PersonaSelection from '../scenarios/IPersonaPages/PersonaSelection/PersonaSelection';
 import PersonaSelected from '../scenarios/IPersonaPages/PersonaSelected/PersonaSelected';
 import PersonaScenaio from '../scenarios/IPersonaPages/PersonaScenario/PersonaScenaio';
@@ -38,8 +32,6 @@ import { base_url } from '../configuration/config'
 import AdminSidebar from '../constituents/IAdminSidebar'
 import store from '../storage'
 import { LastLocationProvider } from 'react-router-last-location';
-import { getAuthorizeUserList } from "../request/api";
-
 
 function CheckLoginStatus(){
   const location = useLocation();
@@ -104,7 +96,7 @@ function CheckLoginStatus(){
 function ShowAdminOrNormalPage(adminJsx, mainJsx){
   const location = useLocation();
   let userAuth = store.getState().login_task_all? store.getState().login_task_all.userRoles : [];
-  if(location.pathname.split("/")[1] == 'admin' && userAuth.includes("ADMINISTRATOR")){
+  if(location.pathname.split("/")[1] == 'admin' && userAuth && userAuth.includes("ADMINISTRATOR")){
     return adminJsx;
   } else {
     return mainJsx;

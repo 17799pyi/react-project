@@ -49,7 +49,7 @@ const Sidebar = ({ isOpen, setIsOpen, className, style, login_task_all }) => {
     // x-aanet-group:"I3ARPadministrators"
     let arr = [];
     // if current user is 'GENERAL_USER', can not access to whole agency's history
-    if (roleList.includes("GENERAL_USER")) {
+    if (roleList && roleList.includes("GENERAL_USER")) {
       arr.push("history");
     }
     setRemoveSidebar(arr);

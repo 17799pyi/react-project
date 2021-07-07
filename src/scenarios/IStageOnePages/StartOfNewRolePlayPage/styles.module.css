@@ -23,9 +23,13 @@
 .step_lists:first-child span.step_head:after {
     display: inline-block;
     content: "";
-    border-top: .3rem solid var(--cerulean);
+    border-top: .3rem solid var(--grey-goose);
     width: 100%;
     margin: 0 1rem;
     transform: translateY(0.5rem);
     position: absolute;
+}
+
+.step_lists .step2_active:after {
+    border-color: var(--cerulean) !important;    
 }

@@ -9,12 +9,12 @@ const CustomChart = ({aiScore, f_scoreClickHandle}) => {
 
     useEffect(() => {
       // wait for a better solution
-      setTimeout(()=>{
-        if(divRef.current != null)
-        {
-          divRef.current.scrollIntoView({ behavior: 'smooth' });
-        }
-      }, 2000)
+      // setTimeout(()=>{
+      //   if(divRef.current != null)
+      //   {
+      //     divRef.current.scrollIntoView({ behavior: 'smooth' });
+      //   }
+      // }, 2000)
     },[aiScore]);
 
     const percentage = (item) => {

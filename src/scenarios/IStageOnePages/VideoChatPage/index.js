@@ -377,24 +377,6 @@ const VideoChatPage = () => {
         }
     }
 
-    const [listStyle, setListStyle] = useState({
-        opacity: 1
-    })
-    useEffect(()=>{
-        // update background-color according to count of matched keywords
-        if(vProcesses){
-            let i = 1;
-            vProcesses.forEach(item =>{
-                if(item.matched){
-                    i = i - 0.1
-                }
-            })
-            setListStyle({
-                opacity: i
-            })
-        }
-    },[vProcesses])
-
     const startCall = () => {
         startCountdown();
         setIsplayed(true);
@@ -411,16 +393,20 @@ const VideoChatPage = () => {
 
     return (
         <>
+            <div className="overflow_hidden">
+            <BackButton title={t('general.return')} className="mx-2 video-chat-btn-click-back" onClick={dealBreak} />
             <Row>
                 <Col lg="4" className="mb-3 m-lg-0">
-                    <div style={listStyle} className="cmn-bg-box mb-3 px-4 pt-4 pb-2 video-left-list">
+                    <div className="cmn-bg-box mb-3 px-4 pt-4 pb-2">
                         <Row>
                             <Col>
-                                <div className="mb-4">
-                                    <p className="font-16 font-weight-bold mb-3" id="ongoing_section" name="ongoing_section">{t('videochat.ongoing_section')}</p>
+                                <div className="mb-3">
+                                    <p className="video-chat-list-first-titile" id="ongoing_section" name="ongoing_section">{t('videochat.ongoing_section')}</p>
                                     <span className="video-chat-top-buttons">
-                                        <div title={vTask && `${vTask.chat.section.name}`} className="mx-2 video-chat-btn-tips" id="long_term_care_insurance" name="long_term_care_insurance">{vTask && `${vTask.chat.section.name}`}</div>
-                                        <GeneralButton title={t('general.return')} className="mx-2 video-chat-btn-click-back" onClick={dealBreak} />
+                                        <div title={vTask && `${vTask.chat.section.name}`} className="video-chat-btn-tips" id="long_term_care_insurance" name="long_term_care_insurance">
+                                            <p>{vTask && `${vTask?.chat?.section?.name?.split('（')[0]?vTask.chat.section.name.split('（')[0]:vTask.chat.section.name}`}</p>
+                                            <p>{vTask && `${vTask?.chat?.section?.name.slice(vTask?.chat?.section?.name?.indexOf('（'))}`}</p>
+                                        </div>
                                     </span>
                                 </div>
                                 <div>
@@ -458,7 +444,7 @@ const VideoChatPage = () => {
                             {vIsplayed ? <WebCam /> : <></>}
                         </div>
                     </div>
-                    <div className="mb-32 chat_text_box">
+                    <div className="mb-20 chat_text_box">
                         <textarea disabled={!vIsplayed || vRecording} type="text" placeholder={t('videochat.reply')} value={vChatMsg} onChange={(e) => onChatMsgType(e)} id="reply" name="reply" autoComplete="off" />
                         {vRecording ?
                             <div className="chat_text_box_recording">
@@ -484,7 +470,7 @@ const VideoChatPage = () => {
                             renderer={countdownRenderer}
                             overtime={true}
                         />
-                        <div className="d-block d-lg-inline-block mt-3 mt-lg-0">
+                        <div className="d-block d-lg-inline-block mt-1 mt-lg-0">
                             <BackButton title={t('videochat.break')} className="ml-4 w-auto" idName="break" onClick={dealBreak} />
                             <GeneralButton title={t('videochat.resume')} onClick={() => { window.location.reload(); }} className="mx-2" idName="resume" />
                             <HistoryButton title={t('videochat.score')} idName="score" onClick={() => setIsOpenConfirmDialog(true)} />
@@ -507,6 +493,7 @@ const VideoChatPage = () => {
                         </>}
                 </Col>
             </Row> */}
+            </div>
         </>
     )
 }

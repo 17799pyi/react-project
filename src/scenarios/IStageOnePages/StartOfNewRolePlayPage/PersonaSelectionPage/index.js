@@ -12,15 +12,26 @@ import { connect } from 'react-redux'
 import logger from 'redux-logger';
 import { loginTaskAll, lessonAll } from '../../../../storage/reduxActions/index'
 import ErrorMsgApi from "../../../../constituents/IErrorMessage/ErrorMsgApi";
+import { useHistory, useLocation } from 'react-router-dom';
 
 const PersonaSelectionPage = ({ className, style, loginTaskAll, onEditScenerio, lessonAll }) => {
   const items = [{ name: "test1" }, { name: "test2" }];
-
+  const history = useHistory();
   const { t } = useTranslation();
   const [rdoPractice, setPractice] = useState();
   const [rdoValue, setRdoValue] = useState();
   const [vResponseError, setResponseError] = useState(false)
   const [vErrorMessage, setErrorMessage] = useState();
+  // const dispatch = useDispatch();
+  // const previousPath = useLastLocation();
+  const location = useLocation();
+  
+  // if(previousPath){
+  //   if(previousPath.pathname == "/" || previousPath.pathname == "/historycheck" || previousPath.pathname == "/history-check-detail"){
+  //     store.dispatch({type: CURRENT_CHOSED_PERSONA, persona: {}})
+  //     previousPath.pathname = "/start-new-role-play"
+  //   }
+  // }
 
   const handleChange = (event) => {
     setPractice(event.target.value);
@@ -66,14 +77,19 @@ const PersonaSelectionPage = ({ className, style, loginTaskAll, onEditScenerio, 
   },[vRecruiterApiData])
 
   useEffect(() => {
+    
+   
     const setData = async () => {
       try {
         getAuthorizeUserList().then(res =>{
           if(res.data){
             loginTaskAll(res.data)
+          } else {
+            logger.error("Something-went-wrong ! Please check and try again ")
           }
-          else{
-          logger.error("Something-went-wrong ! Please check and try again ")
+          let userAuth = res.data.userRoles? res.data.userRoles : [];
+          if(location.pathname.split("/")[1] == 'admin' && userAuth && userAuth.includes("ADMINISTRATOR")){
+            history.push('/admin/create/tab1')
           }
         })
       } catch (error) {

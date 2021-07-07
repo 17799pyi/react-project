@@ -191,20 +191,22 @@ const AIScorePage = ({select_task, selectTask}) => {
     
     return (
         <>
-        <Row className="align-items-center mb-32 pb-2">
+        {/* <Row className="align-items-center mb-32 pb-2"> */}
+        <Row className="align-items-center mb-2 mb-xl-4 pb-0 pb-xl-2">
             <Col lg="5" className="mb-3 mb-lg-0">
-                <h3 className="mb-0 font-24 font-weight-bold" id="ai_score_header" name="ai_score_header">
+                {/* <h3 className="mb-0 font-24 font-weight-bold" id="ai_score_header" name="ai_score_header"> */}
                 {/* {select_task.folder} */}
-                {select_task.name}
+                {/* {select_task.name} */}
                 {/* {t('aiscore.ai_scoring_result')} */}
-                </h3>
+                {/* </h3> */}
+                <h3 className="mb-0" id="ai_score_header" name="ai_score_header">{select_task.name}</h3>
             </Col>
             <Col lg="7" className="text-right">
-                <Link to="/start-new-role-play"><BackButton title="コース一覧" className="w-auto" idName="link_to_scenario_selection"/></Link>
+                <Link to="/start-new-role-play"><BackButton title="コース一覧" className={`w-auto ${classes.keyword_adjust}`} idName="link_to_scenario_selection"/></Link>
 
-                <Link to={{pathname:`/start-new-role-play`,state:{lessonId} }}><BackButton title="セクション一覧" className="mx-2 w-auto px-3" id="link_to_persona_selection"/></Link>
+                <Link to={{pathname:`/start-new-role-play`,state:{lessonId} }}><BackButton title="セクション一覧" className={`mx-2 w-auto px-3 ${classes.keyword_adjust}`} id="link_to_persona_selection"/></Link>
                 
-                <Link to={`/video-chat/${taskID}/${lessonId}`}><HistoryButton title="リトライ" idName="link_to_video_chat"/></Link>
+                <Link to={`/video-chat/${taskID}/${lessonId}`}><HistoryButton className={classes.keyword_adjust}  title="リトライ" idName="link_to_video_chat"/></Link>
             </Col>
         </Row>
         {
@@ -215,18 +217,21 @@ const AIScorePage = ({select_task, selectTask}) => {
                         <img src={vAvatar} alt="Avatar Status" />
                     </Col>
                 </Row>
-            </div> : ""
+            </div>
+             : ""
         }
         <div className="cmn-bg-box">
             <Row>
-                <Col lg="6" className="mb-4 d-flex">
+                {/* <Col lg="6" className="mb-4 d-flex"> */}
+                <Col lg="6" className="mb-2 mb-xl-4 d-flex">
                     <div className="cmn-bg-box-inr d-flex align-items-center">
                         <div className={classes.inner_circle_wrapper} id="circle_chart_container" name="circle_chart_container">
                             <CircleChart precisionPercent={vPrecisionPercent} bestUserPrecision={vBestUserPrecision}></CircleChart>
                         </div>
                     </div>           
                 </Col>
-                <Col lg="6" className="mb-4 d-flex">
+                <Col lg="6" className="mb-2 mb-xl-4 d-flex">
+                {/* <Col lg="6" className="mb-4 d-flex"> */}
                     <div className="cmn-bg-box-inr" id="line_chart_container" name="line_chart_container">
                         <p className="font-16 font-weight-bold text-center m-0" id="line_chart_header" name="line_chart_header">{t('aiscore.chartbar.header')}</p>
                         <CustomChart f_scoreClickHandle={scoreClickHandle} aiScore={vAiScore}></CustomChart>
@@ -234,7 +239,8 @@ const AIScorePage = ({select_task, selectTask}) => {
                 </Col>
             </Row>
             <div className="cmn-bg-box-inr">
-                <p className="font-16 font-weight-bold mb-3" id="table_header" name="table_header">{t('aiscore.score_by_process')}</p>
+                {/* <p className="font-16 font-weight-bold mb-3" id="table_header" name="table_header">{t('aiscore.score_by_process')}</p> */}
+                <p className="font-16 font-weight-bold mb-1 mb-xl-3" id="table_header" name="table_header">{t('aiscore.score_by_process')}</p>
                 
                 <Table selectScore={vSelectScore} messages={vMessages} clickKeyword={clickKeyword}></Table>
 
@@ -259,7 +265,8 @@ const AIScorePage = ({select_task, selectTask}) => {
                 </Row> */}
                 <Row>
                     <Col id="chat_container" name="chat_container">
-                        <p className="font-16 font-weight-bold mb-3 mt-6" id="chat_wrapper" name="chat_wrapper">{t('aiscore.utterance')}</p>
+                        {/* <p className="font-16 font-weight-bold mb-3 mt-6" id="chat_wrapper" name="chat_wrapper">{t('aiscore.utterance')}</p> */}
+                        <p className="font-16 font-weight-bold mb-3" id="chat_wrapper" name="chat_wrapper">{t('aiscore.utterance')}</p>
                         <ChatLog messages={vMessages} id="chat_list" selectKeyword={vSelectKeyword} MsgSelectScore={vSelectScore}/>
                     </Col>
                 </Row>

@@ -241,6 +241,39 @@ const ScenariosSelectionPage = ({ className, style, onBack, showStep2, lessonId,
         onBack()
     }
 
+    const dialogus = () => {
+        if(vProgress)
+        {
+            if(vProgress < 14)
+            {
+                return "今日もがんばろう！"
+            }else if(vProgress >= 14 && vProgress < 29)
+            {
+                return "さあ、始めよう！"
+            }else if(vProgress >= 29 && vProgress < 43)
+            {
+                return "今日も頑張ろう"
+            }else if(vProgress >= 43 && vProgress < 57)
+            {
+                return "もっと頑張ろう！"
+            }else if(vProgress >= 57 && vProgress < 71)
+            {
+                return "これからこれから！"
+            }else if(vProgress >= 71 && vProgress < 86)
+            {
+                return "よくやったね！"
+            }else if(vProgress >= 86 && vProgress < 100)
+            {
+                return "ゴールまでもう少し！"
+            }else if(vProgress >= 100)
+            {
+                return "おめでとう！"
+            }
+        }else{
+            return "今日もがんばろう！"
+        }
+    }
+
     return (
         <>
             <div className='cmn-bg-box'>
@@ -260,12 +293,13 @@ const ScenariosSelectionPage = ({ className, style, onBack, showStep2, lessonId,
                                     { vProgress ?
                                         <div className={classes.progress_bar_img} style={{left: vProgress + '%'}}>
                                             <img src={vPersonaProgress} alt="progress_img" id="progress_img" className={classes.persona_progress_img} name="progress_img"/>
-                                            <p className={`${classes.progress_bar_msg} ${(vProgress == 100) ? 'd-none':(vProgress >= 70 && vProgress < 100)? classes.msg_left:'' }`} id="progress_text" name="progress_text">
-                                                {
+                                            <p className={`${classes.progress_bar_msg} ${(vProgress >= 70)? classes.msg_left:'' }`} id="progress_text" name="progress_text">
+                                                {/* {
                                                     (vProgress < 70) ? 
                                                     t('scenario.p_70_text') : 
                                                     t('scenario.p_over_70_text')
-                                                }
+                                                } */}
+                                                {dialogus()}
                                             </p>
                                         </div>
                                         : ''
